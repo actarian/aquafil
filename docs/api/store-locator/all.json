@@ -1,0 +1,6900 @@
+[
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 334,
+    "distance": 11631.657868829896,
+    "latitude": -34.8314185,
+    "longitude": -58.2863287,
+    "name": "VEKO Ltd",
+    "address": "Highway Tirana - Durres, 1 km",
+    "city": "Tirana",
+    "phone": "+355.42.407400",
+    "id": 158,
+    "country": {
+      "id": 2,
+      "name": "Albania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 665.7071950965287,
+    "latitude": 21.2854067,
+    "longitude": 39.2375507,
+    "name": "UDG Design Gallery",
+    "address": "Prince Sultan Street Al-Qadi Center",
+    "city": "Jeddah",
+    "phone": "+966.12.6980798",
+    "email": "sales@udg.com.sa",
+    "id": 114,
+    "country": {
+      "id": 8,
+      "name": "Arabia Saudita"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 47.102365308984794,
+    "latitude": 40.1801676,
+    "longitude": 44.50358470000003,
+    "name": "Euroluce LLC",
+    "address": "1, Leo str.",
+    "city": "Yerevan",
+    "phone": "+374.10.536.797",
+    "email": "info@euroluceinteriors.com",
+    "id": 121,
+    "country": {
+      "id": 10,
+      "name": "Armenia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 1934.9656541431905,
+    "latitude": -33.9176247,
+    "longitude": 151.1937474,
+    "name": "SPACE FURNITURE Ltd. Pty Ltd.",
+    "address": "Sydney Showroom 84, O'Riordan Street",
+    "city": "Sydney",
+    "phone": "+61.2.83397588",
+    "fax": "+61.2.83397599",
+    "email": "info@spacefurniture.com.au",
+    "id": 74,
+    "country": {
+      "id": 12,
+      "name": "Australia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1934.9656541431905,
+    "latitude": -33.9176247,
+    "longitude": 151.1937474,
+    "name": "SPACE FURNITURE Ltd. Pty Ltd.",
+    "address": "Melbourne Showroom 629 Church Street Richmond",
+    "city": "Melbourne",
+    "phone": "+61.3.94263000",
+    "email": "info@spacefurniture.com.au",
+    "id": 75,
+    "country": {
+      "id": 12,
+      "name": "Australia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 83.39557232270273,
+    "latitude": 47.0692933,
+    "longitude": 15.4380713,
+    "name": "Steinwender Viktor Graz",
+    "address": "Landhausgasse 7",
+    "city": "Graz",
+    "phone": "+43.316.817257",
+    "email": "rene.rauschl@viktorsteinwender.at",
+    "id": 153,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 89.33798287124802,
+    "latitude": 48.3009984,
+    "longitude": 14.2931842,
+    "name": "Schantl Interiors",
+    "address": "Dametzstraße 53",
+    "city": "Linz",
+    "phone": "+43.732.779863",
+    "email": "info@schantl.at",
+    "id": 151,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 101.78366703378543,
+    "latitude": 46.6101754,
+    "longitude": 14.3589288,
+    "name": "ROOMS-ATELIER ARMW GMBH",
+    "address": "Miegererstraße 25B",
+    "city": "Ebenthal in Kärnten",
+    "phone": "+43.463.2646790",
+    "email": "office@rooms.co.at",
+    "id": 157,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 116.33192416679019,
+    "latitude": 46.8538471,
+    "longitude": 15.741640899999993,
+    "name": "Schaden Lebensräume",
+    "address": "Jagerberg 91",
+    "city": "Jagerberg",
+    "phone": "+43.31.848209",
+    "email": "office@schaden.co.at",
+    "id": 12013,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 116.41555535543324,
+    "latitude": 47.7999128,
+    "longitude": 13.053821599999992,
+    "name": "SCHÖNER WOHNEN",
+    "address": "Imbergstrasse 43 & 51-55",
+    "city": "Salzburg",
+    "phone": "+43.662.640474",
+    "email": "info@schoener-wohnen.cc",
+    "id": 2794,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 117.22846891853057,
+    "latitude": 47.8077787,
+    "longitude": 13.045746399999985,
+    "name": "FAMLER EINRICHTUNGEN",
+    "address": "Haydnstraße 16",
+    "city": "Salzburg",
+    "phone": "+ 43 662 8746400",
+    "email": "info@famler.at",
+    "id": 2793,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 154.9248664228975,
+    "latitude": 48.2041253,
+    "longitude": 16.3560047,
+    "name": "SMART LIVING GmbH",
+    "address": "Burggasse 7-9",
+    "city": "Wien",
+    "phone": "+43.1.5352505",
+    "email": "office@smartliving.co.at",
+    "id": 156,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 155.93884825541863,
+    "latitude": 48.2116619,
+    "longitude": 16.3653828,
+    "name": "Einwaller & Partner GmbH",
+    "address": "Freyung 3",
+    "city": "Wien",
+    "phone": "+43.1.5353730",
+    "email": "web@einwaller.cc",
+    "id": 148,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 156.29909506325242,
+    "latitude": 48.2106049,
+    "longitude": 16.3718196,
+    "name": "Steinwender Viktor GesmbH",
+    "address": "Wildpretmarkt 9",
+    "city": "Wien",
+    "phone": "+43.1.53333020",
+    "email": "verkauf@viktorsteinwender.at",
+    "id": 152,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 162.15358540247883,
+    "latitude": 47.4443943,
+    "longitude": 12.394900199999938,
+    "name": "Kitzbüheler Werkstätten",
+    "address": "Jochberger Strasse 1",
+    "city": "Kitzbühel",
+    "phone": "+43.5356.64757",
+    "email": "office@kitzwerk.at",
+    "id": 12012,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 17,
+    "distance": 203.67181330200404,
+    "latitude": 47.3385661,
+    "longitude": 11.855234,
+    "name": "Wetscher GmbH & CO.KG",
+    "address": "Zillertal Bundestr.",
+    "city": "Fügen",
+    "phone": "+ 43 5288 6000",
+    "email": "mail@wetscher.com",
+    "id": 154,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 203.79958624746547,
+    "latitude": 47.3678395,
+    "longitude": 11.848912400000017,
+    "name": "Möbel Freudling GmbH",
+    "address": "Gewerbeweg 3",
+    "city": "Fügen / Tirol",
+    "phone": "+43.5288.62215",
+    "email": "wohndesign@freudling.at",
+    "id": 13330,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 25,
+    "distance": 235.74427200266035,
+    "latitude": 47.2768865,
+    "longitude": 11.4378986,
+    "name": "Reiter Design GmbH",
+    "address": "Haller Str. 201",
+    "city": "Innsbruck",
+    "phone": "+43.512.24433346",
+    "email": "a.peer@reiter.design",
+    "id": 150,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 48,
+    "distance": 371.770400915173,
+    "latitude": 47.2893633,
+    "longitude": 9.6208819,
+    "name": "Reiter Design GmbH",
+    "address": "Bundesstraße 102",
+    "city": "Rankweil",
+    "phone": "+43.5522.81770",
+    "email": "office@reiter.design",
+    "id": 149,
+    "country": {
+      "id": 13,
+      "name": "Austria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 194.08859188324587,
+    "latitude": 40.4002229,
+    "longitude": 49.8397288,
+    "name": "COLLEZIONE ITALIA",
+    "address": "Hasan Aliyev 139A,",
+    "city": "Baku",
+    "phone": "+994.12.5681100",
+    "email": "office@collezioneitalia.az",
+    "id": 124,
+    "country": {
+      "id": 14,
+      "name": "Azerbaigian"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 39.12862716544793,
+    "latitude": 50.84818079999999,
+    "longitude": 4.355162800000016,
+    "name": "Ligne",
+    "address": "Galerie du Roi 14",
+    "city": "Bruxelles",
+    "phone": "+32.2.5116030",
+    "email": "info@ligne.be",
+    "id": 25872,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 66.93428214587813,
+    "latitude": 50.9670462,
+    "longitude": 5.07745060000002,
+    "name": "Mira Verde",
+    "address": "Gervi Rijksweg 539",
+    "city": "Maasmechelen",
+    "phone": "+32.13.782500",
+    "email": "info@miraverde.be",
+    "id": 10514,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 69.27369604282448,
+    "latitude": 51.0036491,
+    "longitude": 3.8819796,
+    "name": "OOSTERLINCK WOONINRICHTING",
+    "address": "Hoenderstraat 45",
+    "city": "Wetteren",
+    "phone": "+32.9.3690999",
+    "fax": "+32.9.3660999",
+    "email": "info@wooninrichting-oosterlinck.be",
+    "id": 97,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 77.18270017096857,
+    "latitude": 51.1654608,
+    "longitude": 4.1373265,
+    "name": "SWINNEN STORE",
+    "address": "Onze Lieve Vrouwstraat 24",
+    "city": "Sint Niklaas",
+    "phone": "+32.3.7101151",
+    "fax": "+32.3.7714856",
+    "email": "info@swinnenstore.com",
+    "id": 102,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 9,
+      "name": "Giorgetti Atelier"
+    },
+    "rank": 5,
+    "distance": 78.71704668520843,
+    "latitude": 51.2106791,
+    "longitude": 4.4066706,
+    "name": "GIORGETTI ATELIER",
+    "address": "Britselei 16",
+    "city": "Antwerpen",
+    "phone": "+32.3.3361694",
+    "fax": "+32.3.3361697",
+    "email": "atelier@aquafilantwerp.be",
+    "id": 94,
+    "related": {
+      "id": 4485,
+      "url": "/it/aquafil-atelier/antwerp"
+    },
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 79.62789279235268,
+    "latitude": 51.2184805,
+    "longitude": 4.3961176,
+    "name": "La Garnerie N.V.",
+    "address": "Sint-Jansvliet 6",
+    "city": "Antwerpen",
+    "phone": "+32.3.2481737",
+    "fax": "+32.3.2481737",
+    "email": "info@lagarnerie.be",
+    "id": 103,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 79.93557125645894,
+    "latitude": 51.0882387,
+    "longitude": 3.8074879,
+    "name": "CLASSO NV",
+    "address": "Antwerpse Steenweg 97",
+    "city": "Lochristi",
+    "phone": "+32.9.3550007",
+    "fax": "+32.9.3552904",
+    "email": "info@classo.be",
+    "id": 96,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 82.4034968223607,
+    "latitude": 51.2414099,
+    "longitude": 4.5847426,
+    "name": "BOURBON-SLEECKX",
+    "address": "Turnhoutsebaan 217-221",
+    "city": "Schilde",
+    "phone": "+32.3.3830669",
+    "email": "info@bourbon-sleeckx.com",
+    "id": 106,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 84.67031218548821,
+    "latitude": 51.26345569999999,
+    "longitude": 4.554917700000033,
+    "name": "De Vos Interieur",
+    "address": "Kerkstraat 37",
+    "city": "Gravenwezel",
+    "phone": "+32.3.6802020",
+    "email": "info@devos-interieur.be",
+    "id": 10513,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 88.07974174509876,
+    "latitude": 51.1834509,
+    "longitude": 5.1145155,
+    "name": "VAN DER VOORT INTERIORS",
+    "address": "Markt 34",
+    "city": "Mol",
+    "phone": "+32.14.318851",
+    "email": "info@vandervoortinteriors.be",
+    "id": 105,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 92.38774971905445,
+    "latitude": 51.2763842,
+    "longitude": 4.9549068,
+    "name": "MASTER MEUBEL NV",
+    "address": "Steenweg op Diest 111",
+    "city": "Turnhout",
+    "phone": "+32.14.416113",
+    "fax": "+32.14.421447",
+    "email": "admin@mastermeubel.be",
+    "id": 99,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 13,
+    "distance": 104.16285814316043,
+    "latitude": 50.9339185,
+    "longitude": 3.1554386,
+    "name": "'T CASTEELKEN",
+    "address": "Sint-Petrus-en-Paulusstraat 2",
+    "city": "Roeselare-Rumbeke",
+    "phone": "+32.51.209811",
+    "fax": "+32.51.221063",
+    "email": "info@casteelken.be",
+    "id": 95,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 117.07994357504289,
+    "latitude": 51.2086666,
+    "longitude": 3.2306829,
+    "name": "MICHELANGELO BUONARROTI INTERIORS",
+    "address": "Predikherenstraat 19",
+    "city": "Brugge",
+    "phone": "+32.50.337632",
+    "fax": "+32.50.336886",
+    "email": "info@michelangelo-interiors.com",
+    "id": 100,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 17,
+    "distance": 122.85931347860826,
+    "latitude": 51.3246775,
+    "longitude": 3.2966910999999754,
+    "name": "RR Interieur",
+    "address": "Natiënlaan 215",
+    "city": "Knokke",
+    "phone": "+32.50.622633",
+    "email": "info@rrinterieur.be",
+    "id": 10512,
+    "country": {
+      "id": 19,
+      "name": "Belgio"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 56.627879921476165,
+    "latitude": 43.8792233,
+    "longitude": 18.3839893,
+    "name": "MICAM BOSNIA D.O.O.",
+    "address": "Ulica Kobilja Glava",
+    "city": "Sarajevo",
+    "phone": "+385.1.4813901",
+    "fax": "+385.1.4618690",
+    "email": "info@trgovina-micam.hr",
+    "id": 159,
+    "country": {
+      "id": 27,
+      "name": "Bosnia-Herzeg."
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 461.7909510436255,
+    "latitude": -15.827034,
+    "longitude": -47.953467,
+    "name": "CASUAL MOVEIS - BRASILIA",
+    "address": "SGCV Sul Lote 22 - Loja 143/146 - Shopping Casa Park",
+    "city": "Brasília",
+    "phone": "+55.61.32023922",
+    "id": 79,
+    "country": {
+      "id": 30,
+      "name": "Brasile"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1060.0119040929858,
+    "latitude": -19.9410402,
+    "longitude": -43.9311843,
+    "name": "CASUAL MOVEIS - BELO HORIZONTE",
+    "address": "Rua Andaluzita, 125 - Carmo",
+    "city": "Belo Horizonte",
+    "phone": "+55  31 36549285",
+    "id": 78,
+    "country": {
+      "id": 30,
+      "name": "Brasile"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 1177.6790332172072,
+    "latitude": -23.6021599,
+    "longitude": -46.6924588,
+    "name": "CASUAL INTERIORES",
+    "address": "Ronaldo Sampaio Ferreira Building Praça João Duran Alonso, 34 – 15° andar – Brooklin",
+    "city": "São Paulo",
+    "phone": "+55.11.51031019",
+    "id": 77,
+    "country": {
+      "id": 30,
+      "name": "Brasile"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 176.14469982494893,
+    "latitude": 42.638891,
+    "longitude": 23.334622999999965,
+    "name": "ARTGRES",
+    "address": "Boulevard Simeonovsko Shose 91",
+    "city": "Sofia",
+    "phone": "+359.2.8312032",
+    "id": 26729,
+    "country": {
+      "id": 32,
+      "name": "Bulgaria"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 760.958921849818,
+    "latitude": 51.0426699,
+    "longitude": -114.07751680000001,
+    "name": "SHAUN FORD",
+    "address": "715 11th Avenue SW",
+    "city": "Calgary, AB",
+    "phone": "+1.403.2550333",
+    "email": "info@shaunfordandco.com",
+    "id": 12010,
+    "country": {
+      "id": 37,
+      "name": "Canada"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1356.2141447430772,
+    "latitude": 49.2836066,
+    "longitude": -123.1055905,
+    "name": "INFORM INTERIORS A",
+    "address": "50 Water St",
+    "city": "Vancouver",
+    "phone": "+1.604.6823868",
+    "fax": "+1.604.6820293",
+    "email": "info@informinteriors.com",
+    "id": 195,
+    "country": {
+      "id": 37,
+      "name": "Canada"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 2552.875988751416,
+    "latitude": 45.5195791,
+    "longitude": -73.5854559,
+    "name": "Latitude Nord",
+    "address": "4410, Boul. Saint-Laurent",
+    "city": "Montréal (Québec)",
+    "phone": "+1.514.2870762",
+    "email": "info@latitudenord.com",
+    "id": 197,
+    "country": {
+      "id": 37,
+      "name": "Canada"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 1162.4470945898747,
+    "latitude": 39.915521,
+    "longitude": 116.42127400000004,
+    "name": "GIORGETTI STORE",
+    "address": "Jinbao Place 3F, No. 88 Jinbao Street, Dongcheng District",
+    "city": "Beijing",
+    "phone": "+86.010.85221508",
+    "email": "info@domustiandi.com",
+    "id": 27282,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1166.7882413469438,
+    "latitude": 39.9339228,
+    "longitude": 116.4668614,
+    "name": "BEIJING CLASSIC LIVING CO.,LTD",
+    "address": "No.10 Nongzhanguan South Road, Chaoyang District",
+    "city": "Beijing",
+    "phone": "+86.10.65060099",
+    "email": "info@classicliving.com.cn",
+    "id": 51,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 1406.268380342158,
+    "latitude": 32.013526,
+    "longitude": 118.73496999999998,
+    "name": "NANJING YONGLONG",
+    "address": "No. 168 Jiangdong zhong Road Jianye District",
+    "city": "Nanjing",
+    "phone": "+86.025.68526668",
+    "email": "info@yonglong-furniture.com",
+    "id": 13698,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 1614.2317097958223,
+    "latitude": 30.2149695,
+    "longitude": 120.1791217,
+    "name": "Hangzhou For D Home Furniture",
+    "address": "9 Feiyunjiang Road",
+    "city": "Hangzhou",
+    "phone": "+86.400.885.7770",
+    "email": "marketing@fordcasa.com",
+    "id": 52,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 9,
+      "name": "Giorgetti Atelier"
+    },
+    "rank": 5,
+    "distance": 1663.8091600667283,
+    "latitude": 23.12911,
+    "longitude": 113.264385,
+    "name": "GIORGETTI ATELIER",
+    "address": "2001-2002 T19, the Canton Mansion, Zhujiang New Town, Tianhe District",
+    "city": "Guangzhou",
+    "phone": "+86.400.1881222",
+    "id": 57,
+    "related": {
+      "id": 4486,
+      "url": "/it/aquafil-atelier/guangzhou"
+    },
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 6,
+    "distance": 1668.247998920634,
+    "latitude": 23.125532976131712,
+    "longitude": 113.34504575707854,
+    "name": "GIORGETTI STORE",
+    "address": "4F, Building C, Louvre Furnishing Art Center,  No. 666, the middle section of Huangpu Dadao. Tianhe District, Guangzhou, Guangdong",
+    "city": "Guangzhou",
+    "phone": "+86.400.1881222",
+    "email": "service@louvre-furniture.com",
+    "id": 31423,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 7,
+    "distance": 1672.0965500715781,
+    "latitude": 22.9517839,
+    "longitude": 113.08613500000001,
+    "name": "GIORGETTI STORE",
+    "address": "5-6F, Louvre International Furniture Exhibition Center,  Shunde District, Foshan, Guangdong",
+    "city": "Foshan City",
+    "phone": "+86.400.1881222",
+    "fax": "+86.757.28906208",
+    "email": "service@louvre-furniture.com",
+    "id": 11156,
+    "related": {
+      "id": 4477,
+      "url": "/it/aquafil-store/foshan"
+    },
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 1679.2916501654684,
+    "latitude": 31.2303904,
+    "longitude": 121.4737021,
+    "name": "SHANGHAI PELLINI INTERNI CO.LTD.",
+    "address": "Add. Rd. Lou Shan Guan n.75-401, ChangNing 200336",
+    "city": "Shanghai",
+    "phone": "+86.21.62080110",
+    "email": "pellinisales@pellinish.com",
+    "id": 53,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 1679.4493405528476,
+    "latitude": 31.2410182,
+    "longitude": 121.4806403,
+    "name": "AREA LIVING",
+    "address": "No.600, Building N 5 ,ShanXi N. Road",
+    "city": "Shanghai",
+    "phone": "+86.21.60751000",
+    "email": "info@arealiving.cn",
+    "id": 55,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 1760.978880799065,
+    "latitude": 22.543096,
+    "longitude": 114.057865,
+    "name": "Ritz Design Co., Ltd",
+    "address": "Unit 024-028, Floor F1, OCT Coastal  O'PLAZA, Nanshan District",
+    "city": "Shenzhen",
+    "phone": "+86.755.86717889",
+    "email": "info@ritzshanghai.com",
+    "id": 56,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 1836.2060347787292,
+    "latitude": 24.479833,
+    "longitude": 118.089425,
+    "name": "Xiamen CasaBella Co. Ltd",
+    "address": "SCE Building, No.208, Gaoqi Nanwu Road",
+    "city": "Xiamen",
+    "phone": "+86.0592.5668399",
+    "email": "info@casabellamobili.com",
+    "id": 59,
+    "country": {
+      "id": 41,
+      "name": "Cina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 7.862674904031368,
+    "latitude": 35.1682517,
+    "longitude": 33.36014339999997,
+    "name": "ESSERE",
+    "address": "25 Demosthenis Severis Ave. 1080 P.O. BOX 28339",
+    "city": "Nicosia",
+    "phone": "+357.22445353",
+    "email": "info@essere.com.cy",
+    "id": 14349,
+    "country": {
+      "id": 42,
+      "name": "Cipro"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 59.66282629947748,
+    "latitude": 34.6867322,
+    "longitude": 33.05485250000004,
+    "name": "DELOUDIS SA",
+    "address": "Maximos Plaza 217E Leoforos Archiepiskopou Makariou III",
+    "city": "Limassol",
+    "phone": "+357.25333420",
+    "id": 2792,
+    "country": {
+      "id": 42,
+      "name": "Cipro"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 190.78900544248188,
+    "latitude": 37.5236571,
+    "longitude": 127.0471318,
+    "name": "INFINI",
+    "address": "777, Samseong-ro, Gangnam-gu",
+    "city": "Seoul",
+    "phone": "+82.2.34476000",
+    "fax": "+82.2.3443.6289",
+    "email": "infini@infini.co.kr",
+    "id": 62,
+    "country": {
+      "id": 50,
+      "name": "Corea del Sud"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 99.82299924077542,
+    "latitude": 45.810849,
+    "longitude": 15.9816482,
+    "name": "THEMELIA",
+    "address": "Palmotićeva ul. 26",
+    "city": "Zagreb",
+    "phone": "+385.14922764",
+    "email": "themelia@themelia.hr",
+    "id": 161,
+    "country": {
+      "id": 53,
+      "name": "Croazia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 202.29273333976843,
+    "latitude": 55.68014299999999,
+    "longitude": 12.581237999999985,
+    "name": "INTERSTUDIO Home",
+    "address": "Galleri K, 1. sal, Pilestræde 12E",
+    "city": "København",
+    "phone": "+45.3526.3100",
+    "id": 14163,
+    "country": {
+      "id": 55,
+      "name": "Danimarca"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 360.9705433086075,
+    "latitude": 30.0444196,
+    "longitude": 31.2357116,
+    "name": "ART OF FORM",
+    "address": "KM 38 Cairo/Alex Desert road El Shiekh Zayed,",
+    "city": "Cairo",
+    "phone": "+20.2.01110061900",
+    "fax": "+20.2.38572226",
+    "email": "info@artofform.com.eg",
+    "id": 118,
+    "country": {
+      "id": 58,
+      "name": "Egitto"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 234.17303532894834,
+    "latitude": 25.141303,
+    "longitude": 55.18534289999999,
+    "name": "OBEGI HOME",
+    "address": "Jumeira Beach Road, next to Burj Al Arab",
+    "city": "Dubai",
+    "phone": "+971 4 3948161 . +971 4 3948162",
+    "email": "dubai@obegihome.com",
+    "id": 115,
+    "country": {
+      "id": 60,
+      "name": "Emirati Arabi Uniti"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 202.1006700261532,
+    "latitude": 14.553297,
+    "longitude": 121.0442481,
+    "name": "FURNITALIA",
+    "address": "30th St. Corner Rizal Drive - Crescent Park - West Bonifacio, Global City - Taguig City",
+    "city": "Manila                                                                                       ",
+    "phone": "+63.2.5626401",
+    "fax": "+63.2.8191433",
+    "email": "gmphils@witco.com.ph",
+    "id": 63,
+    "country": {
+      "id": 65,
+      "name": "Filippine"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 292.2226567888073,
+    "latitude": 48.8543967,
+    "longitude": 2.334467399999994,
+    "name": "GIORGETTI STORE",
+    "address": "Rue de l’Abbaye 10",
+    "city": "Paris",
+    "phone": "+33.1.42019825",
+    "email": "info@aquafilparis.fr",
+    "id": 12301,
+    "country": {
+      "id": 67,
+      "name": "Francia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 292.6501646143347,
+    "latitude": 48.8584177,
+    "longitude": 2.3258106,
+    "name": "SILVERA UNIVERSITE",
+    "address": "47, Rue de L'Université",
+    "city": "Paris",
+    "phone": "+33.1.45482106",
+    "fax": "+33.1.45482113",
+    "email": "contact@silvera.fr",
+    "id": 125,
+    "country": {
+      "id": 67,
+      "name": "Francia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 303.83694422433877,
+    "latitude": 45.89804609999999,
+    "longitude": 6.12343450000003,
+    "name": "D DESIGN",
+    "address": "24 Place Sainte Claire",
+    "city": "Annecy",
+    "phone": "+33.4.50512424",
+    "email": "d.design74@orange.fr",
+    "id": 128,
+    "country": {
+      "id": 67,
+      "name": "Francia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 15,
+    "distance": 481.8213640383662,
+    "latitude": 43.5509893,
+    "longitude": 7.0259393,
+    "name": "DANISH DESIGN HOUSE",
+    "address": "Rond-Point Duboys d'Angers",
+    "city": "Cannes",
+    "phone": "+33.4.93686866",
+    "email": "info@danishdesignhouse.net",
+    "id": 126,
+    "country": {
+      "id": 67,
+      "name": "Francia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 130.68908770334173,
+    "latitude": 41.7287867,
+    "longitude": 44.7278644,
+    "name": "SAPHARELI",
+    "address": "7a  B.Zhgenti st.",
+    "city": "Tbilisi",
+    "phone": "+995.322.040011",
+    "email": "Info@saphareli.ge",
+    "id": 32643,
+    "country": {
+      "id": 70,
+      "name": "Georgia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 133.44403841717244,
+    "latitude": 41.7287496,
+    "longitude": 44.7661945,
+    "name": "MOTIF LTD.",
+    "address": "Budapeshti st. 7",
+    "city": "Tbilisi",
+    "phone": "+995.32.389192",
+    "fax": "+995.32.389192",
+    "email": "info@motif.ge",
+    "id": 31768,
+    "country": {
+      "id": 70,
+      "name": "Georgia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 133.44403841717244,
+    "latitude": 41.7287496,
+    "longitude": 44.7661945,
+    "name": "MOTIF LTD.",
+    "address": "Chavchavadze Ave. 50",
+    "city": "Tbilisi",
+    "phone": "+995.32.389192",
+    "fax": "+995.32.389192",
+    "email": "info@motif.ge",
+    "id": 122,
+    "country": {
+      "id": 70,
+      "name": "Georgia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 61.497756092392954,
+    "latitude": 50.8671021,
+    "longitude": 9.7115141,
+    "name": "ELLENBERGER WOHNDESIGN",
+    "address": "Breitenstr. 46",
+    "city": "Bad Hersfeld",
+    "phone": "+49.6621.51220",
+    "email": "info@wohndesign-ellenberger.de",
+    "id": 297,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 82.29248721449022,
+    "latitude": 51.9056326,
+    "longitude": 10.4290107,
+    "name": "Altmann Wohnkonzepte",
+    "address": "Wohldenbergstr. 22-23",
+    "city": "Goslar",
+    "phone": "+49.5321.303233",
+    "email": "jaltmann@altmann-goslar.de",
+    "id": 289,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 106.97960190662252,
+    "latitude": 50.2598803,
+    "longitude": 10.9636004,
+    "name": "WOHNDESIGN HIRSCH",
+    "address": "Webergasse 22a-24",
+    "city": "Coburg",
+    "phone": "+49.9561.80210",
+    "email": "info@hirsch-wohndesign.de",
+    "id": 306,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 126.3981472463776,
+    "latitude": 50.0371298,
+    "longitude": 10.2372407,
+    "name": "La Cucina GmbH",
+    "address": "Carl-Zeiss-Str. 9",
+    "city": "Schweinfurt",
+    "phone": "+49.09721.207220",
+    "email": "info@lacucina-kuechen.de",
+    "id": 253,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 135.05118093010975,
+    "latitude": 51.3398754,
+    "longitude": 12.372046400000045,
+    "name": "Deutsche Werkstätten",
+    "address": "Thomaskirchhof 20",
+    "city": "Leipzig",
+    "phone": "+49.341.26897513",
+    "email": "leipzig@dwh.de",
+    "id": 2799,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 135.27670099417332,
+    "latitude": 51.3393809,
+    "longitude": 12.3754247,
+    "name": "INTERIEURTEAM GmbH",
+    "address": "Mädlerpassage Grimmaische Straße 2 – 4",
+    "city": "Leipzig",
+    "phone": "+49.341.3191260",
+    "email": "info@interieurteam.de",
+    "id": 337,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 140.32268711394988,
+    "latitude": 50.58676,
+    "longitude": 8.67438,
+    "name": "HAHN MÖBEL GMBH",
+    "address": "Marktstr. 4",
+    "city": "Gießen",
+    "phone": "+49.641.93603614",
+    "email": "info@moebel-hahn.de",
+    "id": 300,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 143.57975188573997,
+    "latitude": 52.3809488,
+    "longitude": 9.7461551,
+    "name": "Bock Inneneinrichtungen GmbH & Co. KG",
+    "address": "Friesenstr. 15-19",
+    "city": "Hannover",
+    "phone": "+49.0511.340200",
+    "email": "info@hansgbock.de",
+    "id": 226,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 144.64742572860445,
+    "latitude": 49.89441739999999,
+    "longitude": 10.88543679999998,
+    "name": "S O M M E R EINRICHTUNG GBR",
+    "address": "Kapuzinerstraße 34 /  Eingang Holzmarkt",
+    "city": "Bamberg",
+    "phone": "+49 0951 51.95.36.70",
+    "email": "info@sommer-einrichtung.de",
+    "id": 12009,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 157.25005624540108,
+    "latitude": 49.9457698,
+    "longitude": 11.5775878,
+    "name": "SCHAUTZ EINRICHTUNGEN",
+    "address": "Luitpoldplatz 10",
+    "city": "Bayreuth",
+    "phone": "+49.921.789110",
+    "email": "info@schautz.de",
+    "id": 323,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 159.48035766770818,
+    "latitude": 50.1142025,
+    "longitude": 8.9133475,
+    "name": "Meiser GmbH & Co. KG",
+    "address": "Ludwigstr. 71",
+    "city": "Hanau-Steinheim",
+    "phone": "+49.06181.67340",
+    "email": "k.mieth@meiser-wohnen.de",
+    "id": 258,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 12,
+    "distance": 162.25349822598727,
+    "latitude": 51.7767854,
+    "longitude": 8.3241824,
+    "name": "Christmann GmbH",
+    "address": "Rietberger Str. 9",
+    "city": "Langenberg",
+    "phone": "+49.05248.81060",
+    "email": "info@christmann.de",
+    "id": 229,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 13,
+    "distance": 165.38613999653256,
+    "latitude": 51.8968604,
+    "longitude": 8.3693095,
+    "name": "Hunke & Bullmann GmbH",
+    "address": "Unter den Ulmen 75",
+    "city": "Gütersloh",
+    "phone": "+49.05241.95000",
+    "fax": "+49.05241.950040",
+    "email": "info@hunke-bullmann.de",
+    "id": 247,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 165.89845110615727,
+    "latitude": 50.120992,
+    "longitude": 8.7716975,
+    "name": "Heide & Bechthold GmbH",
+    "address": "Schießhüttenstr. 16",
+    "city": "Frankfurt/M",
+    "phone": "+49.069.9421660",
+    "email": "c.heide@heide-bechthold.de",
+    "id": 244,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 15,
+    "distance": 165.98477422513463,
+    "latitude": 50.2245531,
+    "longitude": 8.6222108,
+    "name": "MÖBEL MEISS",
+    "address": "Louisenstr. 98",
+    "city": "Bad Homburg",
+    "phone": "+49.6172.67900",
+    "email": "info@moebelmeiss.de",
+    "id": 259,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 16,
+    "distance": 178.97969233421634,
+    "latitude": 49.5953196,
+    "longitude": 11.00551,
+    "name": "DÖRFLER Intern. Wohnkultur",
+    "address": "Friedrichstraße 3-5",
+    "city": "Erlangen",
+    "phone": "+49.09131.26038",
+    "email": "info@doerfler.de",
+    "id": 232,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 17,
+    "distance": 184.98820925057984,
+    "latitude": 52.3111254,
+    "longitude": 8.5029418,
+    "name": "SPREEN & KÖSTER GMBH",
+    "address": "Engerhauser Str. 9",
+    "city": "Preussisch Oldendorf",
+    "phone": "+49.5742.922270",
+    "email": "info@spreen-koester.de",
+    "id": 327,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 195.51870160948806,
+    "latitude": 49.4530071,
+    "longitude": 11.0749991,
+    "name": "Renner Raum & Idee",
+    "address": "Trödelmarkt 10-26",
+    "city": "Nürnberg",
+    "phone": "+49.0911.232839",
+    "email": "renner@renner-raumundidee.de",
+    "id": 265,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 19,
+    "distance": 195.55959889130943,
+    "latitude": 49.45299199999999,
+    "longitude": 11.077437000000032,
+    "name": "DESIGNFUNKTION",
+    "address": "Hauptmarkt 2",
+    "city": "Nürnberg",
+    "phone": "+49 911 99804 - 0",
+    "email": "nuernberg@designfunktion.de",
+    "id": 2801,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 20,
+    "distance": 201.04670772234675,
+    "latitude": 49.99906,
+    "longitude": 8.27583,
+    "name": "Jung e.K. Möbelhandel seit 1984",
+    "address": "Fischtorstr. 2",
+    "city": "Mainz",
+    "phone": "+49.06131.216862",
+    "email": "marion@jungpunkt.de",
+    "id": 249,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 21,
+    "distance": 201.06679323119315,
+    "latitude": 50.00289,
+    "longitude": 8.27029,
+    "name": "Holz Einrichtungshaus KG",
+    "address": "Flachsmarktstr. 13-17",
+    "city": "Mainz",
+    "phone": "+49.06131.288550",
+    "email": "info@einrichtungshaus-holz.de",
+    "id": 246,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 22,
+    "distance": 207.80744824860398,
+    "latitude": 49.3056697,
+    "longitude": 10.167676,
+    "name": "M. Jursa GmbH Einrichtungshaus",
+    "address": "Lerchenweg 4",
+    "city": "Insingen",
+    "phone": "+49.09869.1244",
+    "email": "Info@jursa.de",
+    "id": 256,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 23,
+    "distance": 209.2669821513172,
+    "latitude": 49.35551,
+    "longitude": 11.257100000000037,
+    "name": "H²O GALERIE PFAFF",
+    "address": "Zum Schwarzachtal 3a",
+    "city": "Schwarzenbruck",
+    "phone": "+49.9128.922122",
+    "email": "info@jpfaff.de",
+    "id": 12008,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 24,
+    "distance": 216.82623918275033,
+    "latitude": 49.5640933,
+    "longitude": 8.7074531,
+    "name": "Einrichtungshaus Willi Jäger GmbH",
+    "address": "Hauptstr. 91",
+    "city": "Birkenau",
+    "phone": "+49.06201.3980",
+    "email": "mail@jaeger-birkenau.de",
+    "id": 238,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 25,
+    "distance": 229.36627464479335,
+    "latitude": 51.07431949999999,
+    "longitude": 13.734808599999951,
+    "name": "Wohn Art Müller",
+    "address": "Großenhainer Strasse 34",
+    "city": "Dresden",
+    "phone": "+49.351.257070",
+    "email": "info@wohnart-mueller.de",
+    "id": 2797,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 26,
+    "distance": 231.47502338307905,
+    "latitude": 50.964788,
+    "longitude": 7.1541819,
+    "name": "PATT EINRICHTUNGEN GMBH",
+    "address": "Falltorstr. 2-6",
+    "city": "Bergisch Gladbach",
+    "phone": "+49.2204.95470",
+    "email": "info@patt-wohnen.de",
+    "id": 316,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 27,
+    "distance": 231.62257489118346,
+    "latitude": 53.05655,
+    "longitude": 9.02816,
+    "name": "Einrichtungshaus Kehlbeck",
+    "address": "Industriestr. 1",
+    "city": "Oyten",
+    "phone": "+49.04207.911515",
+    "email": "kehlbeck@kehlbeck.de",
+    "id": 236,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 28,
+    "distance": 231.8817674518886,
+    "latitude": 53.2509141,
+    "longitude": 10.4121183,
+    "name": "Thomas Cordes Einrichtungen",
+    "address": "Auf dem Kauf 6",
+    "city": "Lüneburg",
+    "phone": "+49.04131.38483",
+    "email": "cordes.einrichtungen@t-online.de",
+    "id": 279,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 29,
+    "distance": 233.30587712270048,
+    "latitude": 50.6439793,
+    "longitude": 7.2284996,
+    "name": "WALKEMBACH EINRICHTUNGSHAUS GMBH",
+    "address": "Hauptstr. 82",
+    "city": "Bad Honnef",
+    "phone": "+49.2224.2471",
+    "email": "info@walkembach.de",
+    "id": 331,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 30,
+    "distance": 233.61947013211102,
+    "latitude": 49.4856121,
+    "longitude": 8.475056300000006,
+    "name": "DOERR Planen & Einrichten",
+    "address": "Q7,17",
+    "city": "Mannheim",
+    "phone": "+49.0621.86241132",
+    "email": "info@doerr-lu.de",
+    "id": 2802,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 31,
+    "distance": 233.66543173491743,
+    "latitude": 49.4820919,
+    "longitude": 8.481412,
+    "name": "Seyfarth Augusta",
+    "address": "Augustaanlage 21-23",
+    "city": "Mannheim",
+    "phone": "+49.6.214609755",
+    "fax": "+49 6 21 4 60 97 57",
+    "email": "seyfarth-augusta@gmx.de",
+    "id": 341,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 32,
+    "distance": 234.16778460247394,
+    "latitude": 49.11055,
+    "longitude": 9.73413,
+    "name": "GRÄTER EINRICHTUNG",
+    "address": "Mauerstr. 21",
+    "city": "Schwäbisch Hall",
+    "phone": "+49.791.7427",
+    "email": "graeter-einrichtung@t-online.de",
+    "id": 299,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 33,
+    "distance": 236.65120985933527,
+    "latitude": 50.6803,
+    "longitude": 7.16395,
+    "name": "VS INTERIOR DESIGN",
+    "address": "Koblenzer Strasse 121-123",
+    "city": "Bonn Bad-Godesberg",
+    "phone": "+49.228.93296866",
+    "email": "info@vs-interiordesign.de",
+    "id": 336,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 34,
+    "distance": 239.01202882141155,
+    "latitude": 51.16547,
+    "longitude": 7.0234,
+    "name": "GALERIE LICHT FACTORY",
+    "address": "Bebelallee 10",
+    "city": "Solingen",
+    "phone": "+49.212.336622",
+    "email": "mail@licht-factory.de",
+    "id": 329,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 35,
+    "distance": 241.39049332367583,
+    "latitude": 51.4542834,
+    "longitude": 7.0092028,
+    "name": "KRAMM EINRICHTUNGSHAUS GmbH",
+    "address": "Lindenallee 10-24",
+    "city": "Essen",
+    "phone": "+49.0201.1778830",
+    "email": "info@kramm-wohnen.de",
+    "id": 252,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 36,
+    "distance": 242.52019746635082,
+    "latitude": 52.4843708,
+    "longitude": 13.2628363,
+    "name": "Ulrich Stein Einrichtungen GmbH",
+    "address": "Douglasstraße 9, Villa Harteneck",
+    "city": "Berlin",
+    "phone": "+49.30.96596769",
+    "email": "as@ulrichstein.com",
+    "id": 343,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 37,
+    "distance": 243.70918254617484,
+    "latitude": 49.29352,
+    "longitude": 8.66966,
+    "name": "Weckesser wohnen GmbH",
+    "address": "In den Weinäckern 11",
+    "city": "Wiesloch",
+    "phone": "+49.62.2292300",
+    "fax": "+49.62.2252615",
+    "email": "info@weckesser.de",
+    "id": 340,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 38,
+    "distance": 245.9317606761553,
+    "latitude": 52.49146649999999,
+    "longitude": 13.316595600000028,
+    "name": "UNICO INTERIORS",
+    "address": "Hohenzollerndamm 29",
+    "city": "Berlin",
+    "phone": "+49.30.88708484",
+    "email": "info@unico-interiors.de",
+    "id": 12007,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 39,
+    "distance": 246.5222839686487,
+    "latitude": 50.9434528,
+    "longitude": 6.9419043,
+    "name": "GIORGETTI STORE",
+    "address": "Kaiser-Wilhelm-Ring 30-32",
+    "city": "Köln",
+    "phone": "+49.221.12071851",
+    "fax": "+49.221.12071852",
+    "email": "info@aquafil.de",
+    "id": 222,
+    "related": {
+      "id": 6033,
+      "url": "/it/aquafil-store/cologne"
+    },
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 40,
+    "distance": 246.56038824127836,
+    "latitude": 52.499495,
+    "longitude": 13.3185408,
+    "name": "Thomas Herrendorf Inneneinrichtungen GmbH & Co. KG",
+    "address": "Lietzenburger Str. 99",
+    "city": "Berlin",
+    "phone": "+49.030.8838838",
+    "email": "mail@thomas-herrendorf.de",
+    "id": 281,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 41,
+    "distance": 247.43106898732935,
+    "latitude": 52.5053205,
+    "longitude": 13.327495399999975,
+    "name": "LIPARI design",
+    "address": "Kantstr.154a",
+    "city": "Berlin",
+    "phone": "+49 (30) 31014188",
+    "email": "info@lipari-design.com",
+    "id": 27990,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 42,
+    "distance": 251.32749496929284,
+    "latitude": 51.2986891,
+    "longitude": 6.8477602,
+    "name": "Form und Raum",
+    "address": "Lintorfer Str. 31",
+    "city": "Ratingen",
+    "phone": "+49.02102.27037",
+    "email": "info@form-raum.de",
+    "id": 240,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 43,
+    "distance": 251.61862725873831,
+    "latitude": 51.468297,
+    "longitude": 6.8631512,
+    "name": "Einrichtungshaus Hülskemper GmbH",
+    "address": "Marktstraße 193-195",
+    "city": "Oberhausen",
+    "phone": "+49.0208.806563",
+    "email": "mail@huelskemper.de",
+    "id": 346,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 44,
+    "distance": 256.765390669225,
+    "latitude": 48.8573261,
+    "longitude": 10.3580016,
+    "name": "SCHIEBER WERKSTÄTTEN GMBH",
+    "address": "Neue Nördlinger Str. 16",
+    "city": "Bopfingen",
+    "phone": "+49.7362.4004",
+    "email": "info@schieber-werkstaetten.de",
+    "id": 324,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 45,
+    "distance": 256.81050672193567,
+    "latitude": 48.9507,
+    "longitude": 9.43235,
+    "name": "KURT NOLLER GMBH EINRICHTUNGSHAUS",
+    "address": "Sulzbacher Str. 99",
+    "city": "Backnang",
+    "phone": "+49.7191.95600",
+    "email": "info@moebelhaus-noller.de",
+    "id": 314,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 46,
+    "distance": 258.2089448079779,
+    "latitude": 51.232341,
+    "longitude": 6.7468423,
+    "name": "Malzkorn Interiors",
+    "address": "Lanker Straße 3-5",
+    "city": "Düsseldorf",
+    "phone": "+49.0211.554874",
+    "fax": "+49.0211.5570719",
+    "email": "dm.malzkorn@gmx.de",
+    "id": 342,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 47,
+    "distance": 259.05003460894426,
+    "latitude": 51.769196,
+    "longitude": 6.8390029,
+    "name": "HETKAMP EINRICHTEN UND MODE GMBH & CO. KG",
+    "address": "Weseler Str. 8",
+    "city": "Raesfeld",
+    "phone": "+49.2865.60940",
+    "email": "info@hetkamp.de",
+    "id": 305,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 48,
+    "distance": 259.07698543632,
+    "latitude": 51.3012553,
+    "longitude": 6.736369999999965,
+    "name": "Malzkorn Interiors",
+    "address": "Kaiserswerther Markt 43",
+    "city": "Düsseldorf",
+    "phone": "+49.0211.43615726",
+    "email": "dm.malzkorn@gmx.de",
+    "id": 25873,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 49,
+    "distance": 266.7342096886632,
+    "latitude": 53.5448157,
+    "longitude": 9.9493238,
+    "name": "CLIC Inneneinrichtung GmbH",
+    "address": "Große Elbstraße 68",
+    "city": "Hamburg",
+    "phone": "+49.40.46896890",
+    "email": "info@clic.de",
+    "id": 345,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 50,
+    "distance": 266.7342096886632,
+    "latitude": 53.5448157,
+    "longitude": 9.9493238,
+    "name": "Scala Wohnen GmbH",
+    "address": "Kleiner Burstah 12/NikolaiKontor",
+    "city": "Hamburg",
+    "phone": "+49.040.37519881",
+    "email": "vh@scala-wohnen.de",
+    "id": 11729,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 51,
+    "distance": 267.0404900918718,
+    "latitude": 53.5505007,
+    "longitude": 9.9877951,
+    "name": "Bornhold - Die Einrichter GmbH & Co. KG",
+    "address": "Neuer Wall 70-82",
+    "city": "Hamburg",
+    "phone": "+49.040.471020",
+    "email": "info@bornhold-die-einrichter.de",
+    "id": 228,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 52,
+    "distance": 268.014776613921,
+    "latitude": 53.1462204,
+    "longitude": 8.211662499999989,
+    "name": "Einrichtungshaus Rosenbohm GmbH & Co. KG",
+    "address": "Pferdemarkt 7",
+    "city": "Oldenburg",
+    "phone": "+49.441.88081",
+    "email": "info@moebel-rosenbohm.de",
+    "id": 4637,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 53,
+    "distance": 272.8563078767302,
+    "latitude": 51.3467342,
+    "longitude": 6.5408346,
+    "name": "design collection Franz Knuffmann",
+    "address": "Birkschenweg 2",
+    "city": "Krefeld",
+    "phone": "+49.02151.9272600",
+    "fax": "+49.02151.9272609",
+    "email": "info@design-collection.com",
+    "id": 250,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 54,
+    "distance": 278.37233690385943,
+    "latitude": 48.800995,
+    "longitude": 9.1728096,
+    "name": "Fleiner GmbH Internationale Einrichtungen",
+    "address": "Stresemannstraße 1",
+    "city": "Stuttgart",
+    "phone": "+49.0711.63500",
+    "email": "infoline@fleiner-moebel.de",
+    "id": 239,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 55,
+    "distance": 278.37233690385943,
+    "latitude": 48.800995,
+    "longitude": 9.1728096,
+    "name": "ARCHITARE Barbara Benz Einrichten",
+    "address": "Stresemannstraße 1, Killesberghöhe",
+    "city": "Stuttgart",
+    "phone": "+49.711.63500",
+    "email": "fleiner@architare.de",
+    "id": 344,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 56,
+    "distance": 279.8168244243616,
+    "latitude": 48.7013446,
+    "longitude": 9.6597419,
+    "name": "Einrichtungshaus Grimm GmbH & Co.",
+    "address": "Mittlere Karlstr. 93",
+    "city": "Göppingen",
+    "phone": "+49.07161.963370",
+    "email": "info@grimm-einrichtungen.de",
+    "id": 235,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 57,
+    "distance": 281.37982619694094,
+    "latitude": 49.007077,
+    "longitude": 8.3926984,
+    "name": "BURGER inneneinrichtung GmbH",
+    "address": "Waldstr. 89-91",
+    "city": "Karlsruhe",
+    "phone": "+49.721.9132221",
+    "fax": "+49.721.9132222",
+    "email": "info@burger.de",
+    "id": 311,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 58,
+    "distance": 282.2404230003759,
+    "latitude": 48.8999758,
+    "longitude": 8.669562,
+    "name": "Schweizer Wohnen und Objekt GmbH & Co. KG",
+    "address": "Karlsruher Str. 10",
+    "city": "Pforzheim",
+    "phone": "+49.07231.91660",
+    "email": "info@schweizer-wohnen.de",
+    "id": 270,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 59,
+    "distance": 286.0544629982175,
+    "latitude": 48.6244615,
+    "longitude": 9.8300041,
+    "name": "STECK EINRICHTUNGSHAUS",
+    "address": "Stuttgarter Str. 50",
+    "city": "Geislingen/Steige",
+    "phone": "+49.7331.95490",
+    "email": "steck-wohnen@t-online.de",
+    "id": 328,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 60,
+    "distance": 287.45105077014614,
+    "latitude": 48.67495,
+    "longitude": 9.37614,
+    "name": "Behr Einrichtungen",
+    "address": "Behrstr. 100",
+    "city": "Wendlingen",
+    "phone": "+49.07024.469590",
+    "email": "info@behr-einrichtung.de",
+    "id": 225,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 61,
+    "distance": 288.04756699585465,
+    "latitude": 48.6992186,
+    "longitude": 9.2207993,
+    "name": "HESELSCHWERDT GMBH CREATIVES HANDWERK",
+    "address": "Neuhauser Str. 57",
+    "city": "Stuttgart",
+    "phone": "+49.711.457687",
+    "email": "info@heselschwerdt.de",
+    "id": 304,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 62,
+    "distance": 294.40547739539807,
+    "latitude": 48.7172237,
+    "longitude": 8.885376,
+    "name": "WOHNKONZEPTE ALEXANDER MEEH",
+    "address": "Rathausplatz 4",
+    "city": "Grafenau",
+    "phone": "+49.07033.304333",
+    "email": "alexander@meeh.de",
+    "id": 287,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 65,
+    "distance": 306.67884098139825,
+    "latitude": 51.7901519,
+    "longitude": 6.13746,
+    "name": "Rexing Einrichtungshaus",
+    "address": "Kavariner Str. 39-41",
+    "city": "Kleve",
+    "phone": "+49.02821.24427",
+    "email": "info@rexing.de",
+    "id": 266,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 67,
+    "distance": 308.68346316843065,
+    "latitude": 50.773048,
+    "longitude": 6.086869500000034,
+    "name": "LIECK & MÜLLER",
+    "address": "Theaterplatz 1",
+    "city": "Aachen",
+    "phone": "+49 241 470331-0",
+    "email": "info@lieck-mueller.de",
+    "id": 2803,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 68,
+    "distance": 308.68723427826495,
+    "latitude": 48.5053213,
+    "longitude": 9.2211893,
+    "name": "Lukaszewitz Einrichten & Wohnen GmbH",
+    "address": "In Laisen 15-19",
+    "city": "Reutlingen",
+    "phone": "+49.07121.94470",
+    "email": "info@lukaszewitz.de",
+    "id": 255,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 71,
+    "distance": 311.18747952886133,
+    "latitude": 48.7550405,
+    "longitude": 8.240877599999976,
+    "name": "IP Interior Design",
+    "address": "Ludwig-Wilhelm-Straße 22",
+    "city": "Baden-Baden",
+    "phone": "+49.7221.33824",
+    "email": "info@ip-interior-design.de",
+    "id": 28382,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 72,
+    "distance": 311.2791851080391,
+    "latitude": 48.7558344,
+    "longitude": 8.2362458,
+    "name": "Renate Maria Buschert",
+    "address": "Winterhalterstr. 1",
+    "city": "Baden-Baden",
+    "phone": "+49.07221.23615",
+    "email": "klaus.buschert@t-online.de",
+    "id": 264,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 73,
+    "distance": 311.7223393965405,
+    "latitude": 48.48228,
+    "longitude": 11.70977,
+    "name": "BIRGIT OTTE INTERIOR GMBH",
+    "address": "Im Schlossgutfeld 1-2",
+    "city": "Wolfersdorf",
+    "phone": "+49.8168.9989055",
+    "email": "info@birgitotte.com",
+    "id": 291,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 75,
+    "distance": 329.21121862002235,
+    "latitude": 48.2279755,
+    "longitude": 9.882367,
+    "name": "MÖBEL MOCK EINRICHTUNGEN",
+    "address": "Rabenstr. 25",
+    "city": "Laupheim",
+    "phone": "+49.7392.3606",
+    "email": "kontakt@moebelmock.de",
+    "id": 313,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 77,
+    "distance": 334.96719490752207,
+    "latitude": 48.303746,
+    "longitude": 11.907049400000005,
+    "name": "Thalmeier Einrichtungen GmbH",
+    "address": "Haager Straße 10",
+    "city": "Erding",
+    "phone": "+49 08122 95984-30",
+    "email": "erding@thalmeier.com",
+    "id": 2800,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 78,
+    "distance": 343.94597059095844,
+    "latitude": 48.2734052,
+    "longitude": 12.1485693,
+    "name": "Thalmeier Einrichtungen GmbH",
+    "address": "Marienplatz 1",
+    "city": "Dorfen",
+    "phone": "+49.08081.93670",
+    "email": "einrichtungen@thalmeier.org",
+    "id": 278,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 79,
+    "distance": 344.27236837033826,
+    "latitude": 48.1507619,
+    "longitude": 11.5402716,
+    "name": "Egetemeier Wohnkultur GmbH",
+    "address": "Nymphenburger Str. 121",
+    "city": "München",
+    "phone": "+49.089.595512",
+    "email": "info@egetemeier.de",
+    "id": 233,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 80,
+    "distance": 344.30087839899994,
+    "latitude": 48.0992744,
+    "longitude": 9.7877366,
+    "name": "Heinzel Einrichtungen",
+    "address": "Gymnasiumstr. 20",
+    "city": "Biberach",
+    "phone": "+49.07351.80169",
+    "email": "heinzel_einrichtungen@t-online.de",
+    "id": 245,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 81,
+    "distance": 345.9125864500192,
+    "latitude": 48.1405643,
+    "longitude": 11.5725545,
+    "name": "Neue Werkstätten Einrichtungshaus",
+    "address": "Promenadenplatz 8",
+    "city": "München",
+    "phone": "+49.089.2420500",
+    "email": "angela.brandner@neue-werkstaetten.de",
+    "id": 261,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 83,
+    "distance": 346.4631775944779,
+    "latitude": 48.1364438,
+    "longitude": 11.5787611,
+    "name": "BÖHMLER EINRICHTUNGSHAUS GMBH",
+    "address": "Tal 11",
+    "city": "München",
+    "phone": "+49.89.21360",
+    "email": "info@boehmler.de",
+    "id": 293,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 87,
+    "distance": 355.43692707078156,
+    "latitude": 48.0686362,
+    "longitude": 11.673498300000006,
+    "name": "Casa Idea GmbH",
+    "address": "Putzbrunner Str. 75",
+    "city": "Ottobrunn",
+    "phone": "+49.89.81305535",
+    "id": 11586,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 88,
+    "distance": 365.40498337088263,
+    "latitude": 48.3393,
+    "longitude": 7.85531,
+    "name": "ERNST SCHAUB KG",
+    "address": "Schwarzwaldstr. 15",
+    "city": "Lahr",
+    "phone": "+49 7821 9247-0",
+    "email": "info@schaub-einrichtungen.de",
+    "id": 322,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 89,
+    "distance": 365.6553426921788,
+    "latitude": 47.9936292,
+    "longitude": 9.1134506,
+    "name": "HAUBER GMBH & CO. KG",
+    "address": "Hauptstr. 10-12",
+    "city": "Messkirch",
+    "phone": "+49.7575.92080",
+    "email": "info@hauber-einrichten.de",
+    "id": 302,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 91,
+    "distance": 373.5329653811252,
+    "latitude": 47.98062,
+    "longitude": 8.80394,
+    "name": "Schatz GmbH & Co. KG",
+    "address": "Möhringer Str. 114",
+    "city": "Tuttlingen",
+    "phone": "+49.07461.94940",
+    "email": "info@schatz-wohnen.de",
+    "id": 269,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 93,
+    "distance": 380.97359295141297,
+    "latitude": 47.7833671,
+    "longitude": 9.6099677,
+    "name": "MAURER WOHNEN KG",
+    "address": "Eisenbahnstr. 26",
+    "city": "Ravensburg",
+    "phone": "+49.751.362340",
+    "email": "info@maurer-wohnen.de",
+    "id": 312,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 95,
+    "distance": 385.1403149895104,
+    "latitude": 47.72642,
+    "longitude": 9.82008,
+    "name": "JOCHAM WOHNCOCKTAIL",
+    "address": "Ungerhaus 2",
+    "city": "Wangen",
+    "phone": "+49.7506.9550",
+    "email": "info@jocham-wangen.de",
+    "id": 310,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 96,
+    "distance": 385.57168428322166,
+    "latitude": 48.0952648,
+    "longitude": 7.9622292,
+    "name": "WOERNER MÖBEL UND DEKORATION",
+    "address": "Lange Str. 71-73",
+    "city": "Waldkirch",
+    "phone": "+49.7681.6040",
+    "email": "info@woerner-einrichten.de",
+    "id": 332,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 97,
+    "distance": 398.1534146029518,
+    "latitude": 47.68595,
+    "longitude": 9.15259,
+    "name": "Leopold Fretz GmbH & Co. KG",
+    "address": "Fürstenbergstr. 38-41",
+    "city": "Konstanz",
+    "phone": "+49.07531.924090",
+    "email": "kontakt@fretz.de",
+    "id": 254,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 98,
+    "distance": 399.3846500737072,
+    "latitude": 47.9959298,
+    "longitude": 7.8444486,
+    "name": "Krämer Einrichtungen GmbH",
+    "address": "Bertoldstr. 49",
+    "city": "Freiburg",
+    "phone": "+49.0761.368050",
+    "email": "info@kraemer-einrichtungen.de",
+    "id": 251,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 99,
+    "distance": 404.64419628987883,
+    "latitude": 47.5609572,
+    "longitude": 9.6852935,
+    "name": "DIE EINRICHTUNGSLOUNGE GMBH & CO. KG",
+    "address": "Friedrichshafener Str. 57",
+    "city": "Lindau",
+    "phone": "+49.8382.2748031",
+    "email": "waldburg-zeil@dieeinrichtungslounge.com",
+    "id": 295,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 101,
+    "distance": 406.3059848577652,
+    "latitude": 47.5459657,
+    "longitude": 9.684346,
+    "name": "Viktor Einrichtungen",
+    "address": "Ludwigstrasse 22",
+    "city": "Lindau",
+    "phone": "+49.08373.8349",
+    "email": "lindau@viktor-einrichtungen.de",
+    "id": 284,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 102,
+    "distance": 406.3241321965065,
+    "latitude": 47.54593,
+    "longitude": 9.68291,
+    "name": "Böhm - Die Einrichtung",
+    "address": "Maximilianstr. 21",
+    "city": "Lindau",
+    "phone": "+49.08382.6051",
+    "email": "boehm.dieeinrichtungen@t-online.de",
+    "id": 227,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 111,
+    "distance": 422.820492783188,
+    "latitude": 47.6341584,
+    "longitude": 8.2834371,
+    "name": "Seipp Wohnen GmbH",
+    "address": "Schaffhauser Str. 36",
+    "city": "Tiengen",
+    "phone": "+49.07741.60900",
+    "email": "s.berger@seipp.com",
+    "id": 274,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 114,
+    "distance": 425.8364072947026,
+    "latitude": 47.6227488,
+    "longitude": 8.2158569,
+    "name": "Seipp Wohnen",
+    "address": "Bismarckstr. 35",
+    "city": "Waldshut",
+    "phone": "+49.07751.8360",
+    "email": "wohnen@seipp.com",
+    "id": 273,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 119,
+    "distance": 436.41049351494166,
+    "latitude": 47.6466677,
+    "longitude": 7.7785269,
+    "name": "Einrichten Schweigert KG",
+    "address": "Hauptstr. 28",
+    "city": "Maulburg",
+    "phone": "+49.07622.39930",
+    "email": "info@schweigert.de",
+    "id": 234,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 133,
+    "distance": 496.16889450821884,
+    "latitude": 48.2330686,
+    "longitude": 15.6551428,
+    "name": "Thomas Cordes Einrichtungen",
+    "address": "Lange Str. 36",
+    "city": "Dannenberg",
+    "phone": "+49.05861.8422",
+    "email": "cordes.einrichtungen@t-online.de",
+    "id": 280,
+    "country": {
+      "id": 72,
+      "name": "Germania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 154.09136148057388,
+    "latitude": 31.9453666,
+    "longitude": 35.9283716,
+    "name": "Andrea’s design N art",
+    "address": "Zahran Gate, floor B1 Isma’eel Haqqi Abdoh no. 25 Al Suwaifia",
+    "city": "Amman",
+    "phone": "+962.6.5856669",
+    "fax": "+962.6.5859669",
+    "email": "info@andreasdna.com",
+    "id": 117,
+    "country": {
+      "id": 77,
+      "name": "Giordania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 330,
+    "distance": 10217.76594638946,
+    "latitude": 29.4561708,
+    "longitude": -98.6633953,
+    "name": "DELOUDIS SA",
+    "address": "217 Kifisias Ave. & Parnassou 2 Str.",
+    "city": "Athens",
+    "phone": "+30.210.8061759",
+    "fax": "+30.210.8065382",
+    "email": "info@deloudis.gr",
+    "id": 110,
+    "country": {
+      "id": 79,
+      "name": "Grecia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 2.711505385385904,
+    "latitude": 22.3042296,
+    "longitude": 114.19007999999997,
+    "name": "ViA - Giorgetti Store",
+    "address": "G/F 43 Queen’s Road East, Wanchai",
+    "city": "Hong Kong",
+    "phone": "+852.3102.0808",
+    "email": "info@viahk.biz",
+    "id": 13466,
+    "country": {
+      "id": 91,
+      "name": "Hong Kong SAR"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 4.724441266424382,
+    "latitude": 22.2768205,
+    "longitude": 114.16869120000001,
+    "name": "ViA",
+    "address": "Shop C, G/F 29-31 Queen’s Road East, Wanchai",
+    "city": "Hong Kong",
+    "phone": "+852.3102.3190",
+    "email": "info@viahk.biz",
+    "id": 65,
+    "country": {
+      "id": 91,
+      "name": "Hong Kong SAR"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 4.85700473337938,
+    "latitude": 22.2772536,
+    "longitude": 114.1821369,
+    "name": "E Bon Building Materials Co., Ltd.",
+    "address": "16-18/F, First Commercial Building, 33 Leighton Road, Causeway Bay",
+    "city": "Hong Kong",
+    "phone": "+852.2891.3389",
+    "email": "ebon@ebon.com.hk",
+    "id": 64,
+    "country": {
+      "id": 91,
+      "name": "Hong Kong SAR"
+    }
+  },
+  {
+    "category": {
+      "id": 9,
+      "name": "Giorgetti Atelier"
+    },
+    "rank": 1,
+    "distance": 662.3675641619528,
+    "latitude": 19.0756146,
+    "longitude": 72.8388983,
+    "name": "GIORGETTI ATELIER",
+    "address": "Sangolda, Floor No 10 & 11, Plot No 17, St. Francis Road, Santacruz, West",
+    "city": "Mumbai",
+    "phone": "+91.0845.1000984",
+    "email": "info@sourcesunlimited.co.in",
+    "id": 30411,
+    "country": {
+      "id": 93,
+      "name": "India"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 2,
+    "distance": 897.2047335790927,
+    "latitude": 28.4956835,
+    "longitude": 77.1664945,
+    "name": "GIORGETTI DESIGN STUDIO",
+    "address": "357, Mehrauli-Gurgaon Rd, Sultanpur, New Delhi, Delhi 110030, India",
+    "city": "New Delhi",
+    "phone": "",
+    "id": 61,
+    "related": {
+      "id": 4483,
+      "url": "/it/aquafil-store/new-delhi"
+    },
+    "country": {
+      "id": 93,
+      "name": "India"
+    }
+  },
+  {
+    "category": {
+      "id": 9,
+      "name": "Giorgetti Atelier"
+    },
+    "rank": 1,
+    "distance": 993.5468223621635,
+    "latitude": -6.252347,
+    "longitude": 106.834699,
+    "name": "GIORGETTI ATELIER PT. PRODOTTI INDONESIA",
+    "address": "Jl. Duren Tiga No. 33 Pancoran Selatan",
+    "city": "Jakarta",
+    "phone": "+62.21.7991521",
+    "email": "info@prodotti-id.com",
+    "id": 66,
+    "related": {
+      "id": 4487,
+      "url": "/it/aquafil-atelier/jakarta"
+    },
+    "country": {
+      "id": 94,
+      "name": "Indonesia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 124.01026023899844,
+    "latitude": 32.1606516,
+    "longitude": 34.8068943,
+    "name": "TOLLMAN’S",
+    "address": "3, Hamenofim Str. Herzelia Pituach",
+    "city": "Tel Aviv",
+    "phone": "+972.9.9554531",
+    "fax": "+972.9.9562047",
+    "email": "info@tollmans.co.il",
+    "id": 112,
+    "country": {
+      "id": 113,
+      "name": "Israele"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 3.0565538551099354,
+    "latitude": 41.8583531,
+    "longitude": 12.5994668,
+    "name": "REMIGI INTERNI",
+    "address": "Via Stefano Della Bella 5/7",
+    "city": "Roma",
+    "phone": "+39 06  20419966",
+    "fax": "+39 06  2022407",
+    "email": "remigiinterni@gmail.com",
+    "id": 419,
+    "provinciaDescription": "189",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 12.830658413730115,
+    "latitude": 41.8936412,
+    "longitude": 12.415159700000004,
+    "name": "FRATTALI Perfect Living since 1963",
+    "address": "Via Aurelia 678",
+    "city": "Roma",
+    "phone": "+39.06.66418943",
+    "email": "infoaurelia@frattali.org",
+    "id": 14412,
+    "provinciaDescription": "189",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 137.81915289131058,
+    "latitude": 41.116157,
+    "longitude": 13.8789204,
+    "name": "FRANCHINO MARIO & CO. SAS",
+    "address": "Via Domitiana 249",
+    "city": "Mondragone",
+    "phone": "+39.0823.975170",
+    "email": "info@franchino.it",
+    "id": 429,
+    "provinciaDescription": "128",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 140.59513617495122,
+    "latitude": 42.743318,
+    "longitude": 13.80630199999996,
+    "name": "DI PAOLO ARREDAMENTI",
+    "address": "Viale Cesare Battisti, 80",
+    "city": "Bellante",
+    "phone": "+39.0861.616436",
+    "id": 22918,
+    "provinciaDescription": "198",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 142.699997592174,
+    "latitude": 41.3360469,
+    "longitude": 14.1268779,
+    "name": "VINCENZO CANTONE MOBILI",
+    "address": "Via Acerbo, 153",
+    "city": "Lusciano",
+    "phone": "+39.081.8141311",
+    "email": "info@cantonemobili.it",
+    "id": 22604,
+    "provinciaDescription": "128",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 171.1038189546193,
+    "latitude": 41.4738961,
+    "longitude": 14.5573903,
+    "name": "ARLEM DESIGN S.R.L.",
+    "address": "C.Da S.Maria Delle Macchie S.N.",
+    "city": "Vinchiaturo",
+    "phone": "+39 0874 340005-12",
+    "fax": "+39.0874.340004",
+    "email": "info@arlemarredamenti.it",
+    "id": 428,
+    "provinciaDescription": "126",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 173.23432009379758,
+    "latitude": 40.928334,
+    "longitude": 14.220110400000067,
+    "name": "ARREDO MORELLI",
+    "address": "Via Colonne, 17",
+    "city": "Giugliano in Campania",
+    "phone": "+39.081.8954328",
+    "email": "info@arredomorelli.it",
+    "id": 22596,
+    "provinciaDescription": "164",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 175.97071844788292,
+    "latitude": 40.9297926,
+    "longitude": 14.2626214,
+    "name": "ARREDAMENTI TROMBETTA",
+    "address": "Corso Garibaldi, 180",
+    "city": "Grumo Nevano",
+    "phone": "+39.081.8337494",
+    "email": "info@arredamentitrombetta.it",
+    "id": 437,
+    "provinciaDescription": "164",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 176.05081664948165,
+    "latitude": 43.4415419,
+    "longitude": 12.8496113,
+    "name": "ARREDAMENTI CAMILLETTI",
+    "address": "via Crocefisso 41/A",
+    "city": "Sassoferrato",
+    "phone": "+39.0732.959436",
+    "email": "info@arredamenticamilletti.it",
+    "id": 426,
+    "provinciaDescription": "110",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 179.73177639610876,
+    "latitude": 40.8350948,
+    "longitude": 14.219383900000025,
+    "name": "FRANCHINO MARIO & CO. SAS",
+    "address": "Corso Vittorio Emanuele, 674",
+    "city": "Napoli",
+    "phone": "+39.081.7617591",
+    "email": "info@franchino.it",
+    "id": 22597,
+    "provinciaDescription": "164",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 181.57120112834426,
+    "latitude": 40.8317995,
+    "longitude": 14.2443517,
+    "name": "NABI SRL",
+    "address": "Via Chiatamone, 5bis",
+    "city": "Napoli",
+    "phone": "+39.081.0605284",
+    "email": "info@nabidesign.eu",
+    "id": 436,
+    "provinciaDescription": "164",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 12,
+    "distance": 194.83979396511674,
+    "latitude": 41.2086929,
+    "longitude": 14.7343244,
+    "name": "VITALE ARREDAMENTI",
+    "address": "c.da Torrepalazzo",
+    "city": "Torrecuso",
+    "phone": "+39.0824.876583",
+    "fax": "+39.0824.876828",
+    "email": "info@vitalearredamenti.it",
+    "id": 433,
+    "provinciaDescription": "117",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 13,
+    "distance": 195.75950321322975,
+    "latitude": 43.5289563,
+    "longitude": 11.758043300000054,
+    "name": "STUDIO D'INTERNI",
+    "address": "Via G. Fracassi, 1",
+    "city": "Castiglion Fibocchi",
+    "phone": "+39.0575.47055",
+    "email": "info@studiodiinterni.com",
+    "id": 2806,
+    "provinciaDescription": "111",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 201.82098391090256,
+    "latitude": 41.9883609,
+    "longitude": 15.002113,
+    "name": "ARLEM DESIGN S.R.L.",
+    "address": "Via Corsica 15",
+    "city": "Termoli",
+    "phone": "+39.0875.709940",
+    "fax": "+39.0875.714784",
+    "email": "arlemdesign@virgilio.it",
+    "id": 427,
+    "provinciaDescription": "126",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 15,
+    "distance": 244.3629058525137,
+    "latitude": 43.720196,
+    "longitude": 10.946885,
+    "name": "BORGIOLI ARREDAMENTO S.N.C.",
+    "address": "Via Del Giglio 40",
+    "city": "Empoli",
+    "phone": "+39.0571.711555",
+    "email": "info@borgioliarredamento.com",
+    "id": 417,
+    "provinciaDescription": "139",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 16,
+    "distance": 250.35587958746103,
+    "latitude": 41.45578649999999,
+    "longitude": 15.529448900000034,
+    "name": "ARREDAMENTI D'ANGELO SAS",
+    "address": "Via Telesforo 178",
+    "city": "Foggia",
+    "phone": "+39.0881.741743",
+    "fax": "+39.0881.718497",
+    "email": "dangelo@dangeloarredamenti.com",
+    "id": 11211,
+    "provinciaDescription": "140",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 17,
+    "distance": 296.87354472435385,
+    "latitude": 40.5805699,
+    "longitude": 15.674690599999963,
+    "name": "Interni Espressioni",
+    "address": "Via Roma, 154",
+    "city": "Tito (PZ)",
+    "phone": "+39.0971.798648",
+    "email": "info@interniespressioni.it",
+    "id": 25398,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 316.67147669062825,
+    "latitude": 44.0404263,
+    "longitude": 10.044285299999956,
+    "name": "INTERNI NOW",
+    "address": "Via Fiorillo 11",
+    "city": "Carrara",
+    "phone": "+39.0585.633084",
+    "email": "Info@interninow.it",
+    "id": 2805,
+    "provinciaDescription": "158",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 19,
+    "distance": 317.7125243389951,
+    "latitude": 41.2215,
+    "longitude": 16.28524,
+    "name": "GAN Design Lab",
+    "address": "Don R. Lotti, 68",
+    "city": "Andria",
+    "phone": "+39.0883.8963",
+    "email": "info@gandesignlab.com",
+    "id": 33555,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 20,
+    "distance": 326.4235118649833,
+    "latitude": 44.5310663,
+    "longitude": 10.860647100000051,
+    "name": "Mancini Italian Design & Art S.r.l.",
+    "address": "Via Ascari, 2",
+    "city": "Maranello",
+    "phone": "",
+    "email": "info@mancinimida.com",
+    "id": 27801,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 21,
+    "distance": 351.8950616349812,
+    "latitude": 40.816093,
+    "longitude": 16.541690000000017,
+    "name": "Carlucci Home Project",
+    "address": "Via Selva 224",
+    "city": "Altamura",
+    "phone": "+39.080.3146657",
+    "email": "info@carlucciarredamento.it",
+    "id": 10986,
+    "provinciaDescription": "115",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 22,
+    "distance": 362.5940815485373,
+    "latitude": 40.666159,
+    "longitude": 16.59896500000002,
+    "name": "ABITARE CANARIO SRL",
+    "address": "Via Pietro Nenni 52",
+    "city": "Matera",
+    "phone": "+39.0835.382345",
+    "email": "tiziana.olivieri@abitarecanario.it",
+    "id": 11993,
+    "provinciaDescription": "159",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 23,
+    "distance": 368.62418175958607,
+    "latitude": 41.1077974,
+    "longitude": 16.8743843,
+    "name": "ATTANASIO ARREDAMENTI SRL",
+    "address": "Viale Della Repubblica 118/130",
+    "city": "Bari",
+    "phone": "+39 080  5421618",
+    "fax": "+39 080  5427759",
+    "email": "attanasioarredamenti@tiscali.it",
+    "id": 445,
+    "provinciaDescription": "115",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 24,
+    "distance": 379.8788866460969,
+    "latitude": 45.0163157,
+    "longitude": 10.7267263,
+    "name": "Mondini Arredamenti srl",
+    "address": "",
+    "city": "Suzzara",
+    "phone": "",
+    "email": "nicolo.mondini@mondiniarredamenti.it",
+    "id": 36291,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 25,
+    "distance": 406.88067927188536,
+    "latitude": 45.4764997,
+    "longitude": 11.6960854,
+    "name": "AD DAL POZZO",
+    "address": "Via Mazzini 24",
+    "city": "Grisignano Di Zocco",
+    "phone": "+39.0444.614521",
+    "fax": "+39.0444.614058",
+    "email": "info@arredodalpozzo.it",
+    "id": 400,
+    "provinciaDescription": "213",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 26,
+    "distance": 408.75229717277557,
+    "latitude": 44.8707899,
+    "longitude": 9.6413303,
+    "name": "ClassicDesign.it SRL",
+    "address": "via Acerbi, 44",
+    "city": "Ponte dell'Olio (PC)",
+    "phone": "+39.0523.874003",
+    "email": "info@classicdesign.it",
+    "id": 32377,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 27,
+    "distance": 421.92680792119023,
+    "latitude": 38.1257824,
+    "longitude": 13.3557946,
+    "name": "SCILLUFO ARREDAMENTI S.R.L.",
+    "address": "Via Nicolo'gallo 8",
+    "city": "Palermo",
+    "phone": "+39 091  6124383",
+    "fax": "+39 091  6124379",
+    "email": "info@scillufoarredamenti.it",
+    "id": 453,
+    "provinciaDescription": "171",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 28,
+    "distance": 424.33080099782705,
+    "latitude": 45.609343,
+    "longitude": 11.499513,
+    "name": "FONTANA S.R.L.",
+    "address": "Via Pasubio 17",
+    "city": "Costabissara",
+    "phone": "+39.0444.557013",
+    "fax": "+39.0444.557661",
+    "email": "perinemanuela@fontanasrl.net",
+    "id": 399,
+    "provinciaDescription": "213",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 29,
+    "distance": 425.52067382973115,
+    "latitude": 45.6734926,
+    "longitude": 11.9592068,
+    "name": "INTERNI D'INSIEME SAS",
+    "address": "via Sile, 24",
+    "city": "Castelfranco Veneto",
+    "phone": "+39.0423.724004",
+    "email": "interni.dinsieme@hotmail.it",
+    "id": 405,
+    "provinciaDescription": "203",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 30,
+    "distance": 429.31064535588314,
+    "latitude": 44.004373,
+    "longitude": 8.169558,
+    "name": "ADM ARREDAMENTI DI SILVIO MELGRATI",
+    "address": "Via Dante 128",
+    "city": "Alassio",
+    "phone": "+39.0182.644557",
+    "email": "silvio.melgrati@uno.it",
+    "id": 414,
+    "provinciaDescription": "193",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 31,
+    "distance": 430.6166648205013,
+    "latitude": 45.01283,
+    "longitude": 9.445645,
+    "name": "MFD DELFANTI ARREDAMENTI S.N.C.",
+    "address": "Via Pianello 23",
+    "city": "Borgonovo Val Tidone",
+    "phone": "+39.0523.862474",
+    "fax": "+39.0523.863141",
+    "email": "info@delfantiarredamenti.it",
+    "id": 395,
+    "provinciaDescription": "177",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 32,
+    "distance": 434.02639287627284,
+    "latitude": 40.5293332,
+    "longitude": 17.439574499999935,
+    "name": "ABITARE & CO.SRL",
+    "address": "Via Buonarroti 29",
+    "city": "Grottaglie",
+    "phone": "+39.099.5667576",
+    "fax": "+39.099.5667576",
+    "email": "abitaredinegrorita@tin.it",
+    "id": 11210,
+    "provinciaDescription": "197",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 33,
+    "distance": 437.80422907177615,
+    "latitude": 45.8090095,
+    "longitude": 12.6222376,
+    "name": "L'AMBIENTE S.R.L.",
+    "address": "Via Pordenone 29",
+    "city": "Motta Di Livenza",
+    "phone": "+39 0422 863768/69",
+    "fax": "+39.0422.764037",
+    "email": "comunicazioni@lambiente.it",
+    "id": 402,
+    "provinciaDescription": "203",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 34,
+    "distance": 443.2166584579348,
+    "latitude": 37.9798912,
+    "longitude": 13.6895665,
+    "name": "SCILLUFO SNC DI SCILLUFO G&C",
+    "address": "Via Enrico Mattei 4",
+    "city": "Termini Imerese",
+    "phone": "+39 091  8142754",
+    "fax": "+39 091  8143635",
+    "email": "scillufo@hsoft.it",
+    "id": 452,
+    "provinciaDescription": "171",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 35,
+    "distance": 443.76615295491206,
+    "latitude": 37.88141359999999,
+    "longitude": 12.4976346,
+    "name": "Lombardo Arredi",
+    "address": "Contrada Birgi Nivaloro 131 A",
+    "city": "Marsala",
+    "phone": "+39.0923.966218",
+    "email": "info@lombardoarredi.it",
+    "id": 36458,
+    "provinciaDescription": "TP",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 36,
+    "distance": 449.67226996931726,
+    "latitude": 45.5303879,
+    "longitude": 10.182113699999945,
+    "name": "Zenucchi design code",
+    "address": "via Orzinuovi 129",
+    "city": "Brescia",
+    "phone": "+39.030.3776654",
+    "email": "info@zenucchi.it",
+    "id": 392,
+    "provinciaDescription": "122",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 37,
+    "distance": 454.0509258370918,
+    "latitude": 45.278763,
+    "longitude": 9.458226999999965,
+    "name": "ARREDO BONGIORNI",
+    "address": "Via Leonardo Da Vinci 15",
+    "city": "Pieve Fissiraga",
+    "phone": "+39.0371.239940",
+    "email": "arredobongiorni@arredobongiorni.it",
+    "id": 11403,
+    "provinciaDescription": "154",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 38,
+    "distance": 456.61544625359556,
+    "latitude": 43.8659272,
+    "longitude": 7.6677652,
+    "name": "ARREDAMENTI FOGLIARINI S.P.A.",
+    "address": "Strada Provinciale Km.9.6",
+    "city": "Perinaldo",
+    "phone": "+39.0184.672023",
+    "fax": "+29.0184.672338",
+    "email": "info@fogliarini.com",
+    "id": 412,
+    "provinciaDescription": "120",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 41,
+    "distance": 473.6187070507496,
+    "latitude": 45.57095,
+    "longitude": 9.64335,
+    "name": "LAZZARINI S.R.L.",
+    "address": "Via Provinciale 15",
+    "city": "Lurano",
+    "phone": "+39 035  4877483",
+    "fax": "+39 035  4877728",
+    "email": "lazzariniarredamento@virgilio.it",
+    "id": 378,
+    "provinciaDescription": "118",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 42,
+    "distance": 478.419449350698,
+    "latitude": 45.713705,
+    "longitude": 9.88175,
+    "name": "Zenucchi design code",
+    "address": "Piazzale A. Meli 80",
+    "city": "Luzzana",
+    "phone": "+39.035.822484",
+    "email": "info@zenucchi.it",
+    "id": 391,
+    "provinciaDescription": "118",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 43,
+    "distance": 479.62633641715587,
+    "latitude": 46.16049,
+    "longitude": 13.210640000000012,
+    "name": "WALCHER S.N.C.",
+    "address": "Via Nazionale 20",
+    "city": "Tricesimo",
+    "phone": "+39.0432.851270",
+    "email": "walcher@walcher.it",
+    "id": 11998,
+    "provinciaDescription": "205",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 44,
+    "distance": 479.7936871276663,
+    "latitude": 44.68147,
+    "longitude": 8.06705,
+    "name": "MARCARINO ARREDAMENTI",
+    "address": "Fraz. San Rocco Seno d'Elvio, 3",
+    "city": "Alba",
+    "phone": "+39.0173.441914",
+    "email": "marcarino@marcarino.com",
+    "id": 416,
+    "provinciaDescription": "136",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 45,
+    "distance": 481.2662090109032,
+    "latitude": 38.1962701,
+    "longitude": 15.5537337,
+    "name": "FRANCA MOLLURA ARREDAMENTI",
+    "address": "Via XXIV Maggio, 96/161",
+    "city": "Messina",
+    "phone": "+39.090.42135",
+    "fax": "+39.090.46228",
+    "email": "info@francamollura.it",
+    "id": 456,
+    "provinciaDescription": "161",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 46,
+    "distance": 482.5962441588441,
+    "latitude": 45.4639743,
+    "longitude": 9.1975533,
+    "name": "GIORGETTI STORE",
+    "address": "Via Durini 5",
+    "city": "Milano",
+    "phone": "+39.02.36638440",
+    "email": "showroom@aquafilmilano.it",
+    "id": 390,
+    "related": {
+      "id": 4481,
+      "url": "/it/aquafil-store/milan"
+    },
+    "provinciaDescription": "162",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 47,
+    "distance": 482.9552899031167,
+    "latitude": 45.4722564,
+    "longitude": 9.2062775,
+    "name": "SPOTTI  S.R.L.",
+    "address": "Viale Piave 27",
+    "city": "Milano",
+    "phone": "+39 02 781953 ",
+    "fax": "+39.02.794272",
+    "email": "consegne@spotti.com",
+    "id": 386,
+    "provinciaDescription": "162",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 48,
+    "distance": 483.7641194546931,
+    "latitude": 45.4730426,
+    "longitude": 9.1898976,
+    "name": "BREDAQUARANTA",
+    "address": "via Fatebenefratelli, 10",
+    "city": "Milano",
+    "phone": "+39.02.36557430",
+    "email": "marketing@bredaquaranta.it",
+    "id": 387,
+    "provinciaDescription": "162",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 49,
+    "distance": 485.615847666606,
+    "latitude": 38.1365592,
+    "longitude": 15.523067900000001,
+    "name": "MOHD - MOLLURA HOME DESIGN",
+    "address": "S.S. 114 Km 6,400",
+    "city": "Tremestieri",
+    "phone": "+39.090.6258945",
+    "fax": "+39.090.6255948",
+    "email": "info@mohd.it",
+    "id": 454,
+    "provinciaDescription": "161",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 52,
+    "distance": 489.91525190226406,
+    "latitude": 46.2607199,
+    "longitude": 13.1081284,
+    "name": "CUMINI CASA SRL",
+    "address": "Via San Daniele  1  ",
+    "city": "Gemona Del Friuli",
+    "phone": "+39 0432  971181  ",
+    "fax": "+39 0432  980249  ",
+    "email": "casa@cumini.it",
+    "id": 409,
+    "provinciaDescription": "205",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 53,
+    "distance": 491.8730272066188,
+    "latitude": 45.1381282,
+    "longitude": 8.451903300000026,
+    "name": "PAGLIANO ARREDAMENTI",
+    "address": "Via Paleologi n.30 (80,25 km)",
+    "city": "Casale Monferrato",
+    "phone": "+39.0142.73695",
+    "id": 5278,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 54,
+    "distance": 493.927518503455,
+    "latitude": 45.5807043,
+    "longitude": 9.1820067,
+    "name": "CARNABY S.R.L.",
+    "address": "Via Valassina 350",
+    "city": "Lissone",
+    "phone": "+39 039  483267",
+    "fax": "+39 039  2457478",
+    "email": "info@carnabysrl.it",
+    "id": 383,
+    "provinciaDescription": "215",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 10,
+      "name": "Distributori"
+    },
+    "rank": 55,
+    "distance": 493.98740354363196,
+    "latitude": 45.6071069,
+    "longitude": 9.236,
+    "name": "UNOVIAMATTEOTTI SRL",
+    "address": "Via Matteotti 1 ",
+    "city": "Lissone",
+    "phone": "+39.039.484916",
+    "fax": "+39.039.2453553",
+    "email": "info@unoviamatteotti.it",
+    "id": 382,
+    "provinciaDescription": "215",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 10,
+      "name": "Distributori"
+    },
+    "rank": 56,
+    "distance": 494.3883754120959,
+    "latitude": 45.61142,
+    "longitude": 9.23592819999999,
+    "name": "Gelosa",
+    "address": "Via Matteotti, 84",
+    "city": "Lissone",
+    "phone": "+39.039.482683",
+    "fax": "+39.039.2451280",
+    "email": "info@gelosaarredi.it",
+    "id": 25155,
+    "provinciaDescription": "MB",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 57,
+    "distance": 497.6109220476102,
+    "latitude": 40.3597107,
+    "longitude": 18.1594975,
+    "name": "MAXXI DI CONOCI VALENTINA",
+    "address": "Via Taranto 110",
+    "city": "Lecce",
+    "phone": "+39.0832.090126",
+    "email": "info@maxxilecce.it",
+    "id": 446,
+    "provinciaDescription": "151",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 10,
+      "name": "Distributori"
+    },
+    "rank": 58,
+    "distance": 501.68076157925475,
+    "latitude": 45.6820007,
+    "longitude": 9.2181689,
+    "name": "INTERNI S.P.A",
+    "address": "Via Achille Grandi 73",
+    "city": "Verano Brianza",
+    "phone": "+39.0362.902641",
+    "fax": "+39.0362.990463",
+    "email": "verano@internionline.it",
+    "id": 384,
+    "provinciaDescription": "215",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 10,
+      "name": "Distributori"
+    },
+    "rank": 59,
+    "distance": 503.0956982360616,
+    "latitude": 45.6581932,
+    "longitude": 9.1350771,
+    "name": "VAGO FORNITURE SRL",
+    "address": "Via Marconi 52",
+    "city": "Barlassina",
+    "phone": "+39.0362.565906",
+    "email": "info@vago.com",
+    "id": 389,
+    "provinciaDescription": "215",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 10,
+      "name": "Distributori"
+    },
+    "rank": 60,
+    "distance": 505.5790133483359,
+    "latitude": 45.7226245,
+    "longitude": 9.2151528,
+    "name": "SALVIONI DESIGN SOLUTIONS",
+    "address": "Via Don Gnocchi 1",
+    "city": "Inverigo",
+    "phone": "+39 031  3591311",
+    "fax": "+39 031  3591319",
+    "email": "info@salvioniarredamenti.it",
+    "id": 381,
+    "provinciaDescription": "132",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 61,
+    "distance": 509.1048660130777,
+    "latitude": 45.6021477,
+    "longitude": 8.8902418,
+    "name": "6B ARREDAMENTI SRL",
+    "address": "Viale Borri 6/b",
+    "city": "Castellanza",
+    "phone": "+39.0331.1773048",
+    "email": "sara@6b-arredamenti.com",
+    "id": 388,
+    "provinciaDescription": "207",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 62,
+    "distance": 515.7313604777817,
+    "latitude": 37.3086,
+    "longitude": 13.644407,
+    "name": "MILIA LIVING HOME",
+    "address": "Viale Aldo Moro 236",
+    "city": "Favara",
+    "phone": "+39.0922.420200",
+    "fax": "+39.06.91273626",
+    "email": "customerservice@miliashop.com",
+    "id": 451,
+    "provinciaDescription": "108",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 64,
+    "distance": 519.7187947236662,
+    "latitude": 45.810179,
+    "longitude": 9.0746204,
+    "name": "PEVERELLI ARREDAMENTI",
+    "address": "Via Recchi 2/A",
+    "city": "Como",
+    "phone": "+39.031.264688",
+    "fax": "+39.031.4141495",
+    "email": "info-como@peverelliarredamenti.it",
+    "id": 393,
+    "provinciaDescription": "132",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 65,
+    "distance": 523.4989889359642,
+    "latitude": 46.4971027,
+    "longitude": 11.3403785,
+    "name": "CREA S.R.L.",
+    "address": "Corso Italia 31",
+    "city": "Bolzano",
+    "phone": "+39.0471.083030",
+    "email": "info@crea-interior.it",
+    "id": 407,
+    "provinciaDescription": "121",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 68,
+    "distance": 530.6849436881217,
+    "latitude": 37.5150053,
+    "longitude": 15.1008715,
+    "name": "Arredamento Abitare",
+    "address": "Via Pasubio 2",
+    "city": "Catania",
+    "phone": "+39.095.376766",
+    "email": "info@arredamentoabitare.it | postmaster@arredamentoabitare.it",
+    "id": 35846,
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 72,
+    "distance": 547.8887824918804,
+    "latitude": 37.2110026,
+    "longitude": 14.641429099999982,
+    "name": "Interni Attaguile",
+    "address": "Viale Raffaele Failla, 31",
+    "city": "Grammichele (CT)",
+    "phone": "+39.0933.940234",
+    "email": "info@interniattaguille.it",
+    "id": 25880,
+    "provinciaDescription": "Catania",
+    "country": {
+      "id": 114,
+      "name": "Italia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 22.49809540063975,
+    "latitude": 42.6629138,
+    "longitude": 21.1655028,
+    "name": "ARCHIDES",
+    "address": "Rr. Bekim Berisha nr. 1",
+    "city": "Prishtine",
+    "phone": "+377.044.115145",
+    "fax": "+381.038.243011",
+    "email": "gbaholli@consultant.com",
+    "id": 171,
+    "country": {
+      "id": 119,
+      "name": "Kosovo"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 44.587502090619076,
+    "latitude": 29.3392856,
+    "longitude": 47.940597,
+    "name": "PRO DESIGN GROUP",
+    "address": "Al Tilal Mall, Shuwaikh",
+    "city": "Kuwait City",
+    "phone": "+965 222 55205/206",
+    "id": 116,
+    "country": {
+      "id": 120,
+      "name": "Kuwait"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 30.40431951531942,
+    "latitude": 56.9785529,
+    "longitude": 24.1360372,
+    "name": "KRASSKY",
+    "address": "Duntes iela 11",
+    "city": "Riga",
+    "phone": "+371.67781400",
+    "email": "krassky@krassky.lv",
+    "id": 145,
+    "country": {
+      "id": 123,
+      "name": "Lettonia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 26.548655623078087,
+    "latitude": 33.9096388,
+    "longitude": 35.5824005,
+    "name": "OBEGI HOME",
+    "address": "Jal El Dib Highway, Jal El Dib",
+    "city": "Beirut",
+    "phone": "+961.4.711623",
+    "fax": "+961.4.711624",
+    "email": "Beirut@obegihome.com",
+    "id": 113,
+    "country": {
+      "id": 124,
+      "name": "Libano"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 3.61922644776356,
+    "latitude": 47.1676767,
+    "longitude": 9.5075617,
+    "name": "THÖNY WOHNEN",
+    "address": "Bahnhofstr. 16",
+    "city": "Schaan",
+    "phone": "+42.32374141",
+    "email": "info@moebelthoeny.li",
+    "id": 369,
+    "country": {
+      "id": 127,
+      "name": "Liechtenstein"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 30.42097967177538,
+    "latitude": 54.896468,
+    "longitude": 23.913199,
+    "name": "STUDIO CASA INTERJERO SALONAS",
+    "address": "Daukanto str. 13",
+    "city": "Kaunas",
+    "phone": "+370.37792555",
+    "email": "info@studiocasa.lt",
+    "id": 146,
+    "country": {
+      "id": 128,
+      "name": "Lituania"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 22.65668770836546,
+    "latitude": 49.6115185,
+    "longitude": 6.1281911,
+    "name": "MOBILIER BONN",
+    "address": "9 Rue Philippe II",
+    "city": "Luxembourg",
+    "phone": "+352.22.3201",
+    "fax": "+352.46.7228",
+    "email": "info@bonn.lu",
+    "id": 107,
+    "country": {
+      "id": 129,
+      "name": "Lussemburgo"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 120.05238866307414,
+    "latitude": 3.1613896,
+    "longitude": 101.7201644,
+    "name": "Space Furniture Kuala Lumpur",
+    "address": "106 Jalan Maarof, Bangsar, 59000",
+    "city": "Kuala Lumpur",
+    "phone": "+603.2201.6000",
+    "email": "info@spacefurniture.com.my",
+    "id": 67,
+    "country": {
+      "id": 134,
+      "name": "Malaysia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 206.11602323421263,
+    "latitude": 33.5901172,
+    "longitude": -7.6263183,
+    "name": "HWM Maroc",
+    "address": "17 Bd Moulay Youssef",
+    "city": "Casablanca",
+    "phone": "+212.6.61215788",
+    "email": "jouaknine@hwm.ma",
+    "id": 72,
+    "country": {
+      "id": 140,
+      "name": "Marocco"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 206.71140640451452,
+    "latitude": 33.591606,
+    "longitude": -7.645200999999999,
+    "name": "Klarte International Architecture & Design",
+    "address": "3 rue Bab El Mendeb Triangle d'or",
+    "city": "Casablanca",
+    "phone": "+212.522.250.857",
+    "fax": "+212 614 18 18 18",
+    "email": "Klarte@klarte.ma",
+    "id": 37897,
+    "country": {
+      "id": 140,
+      "name": "Marocco"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 582.0539976883753,
+    "latitude": 19.4192123,
+    "longitude": -99.21539869999998,
+    "name": "GIORGETTI STORE",
+    "address": "Monte Everest 635, Lomas De Chapultepec",
+    "city": "Mexico City",
+    "phone": "",
+    "email": "info@aquafilmx.com",
+    "id": 4007,
+    "country": {
+      "id": 145,
+      "name": "Messico"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 582.2209045435545,
+    "latitude": 19.382277,
+    "longitude": -99.2676637,
+    "name": "BENETTI CASA",
+    "address": "Pabellón Bosques - Loc. 153 Prolongación Bosques de Reforma #1813",
+    "city": "Lomas de Vista Hermosa",
+    "phone": "+52.55.21675008",
+    "email": "contacto@benetticasa.com",
+    "id": 221,
+    "country": {
+      "id": 145,
+      "name": "Messico"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 1.1187442992252237,
+    "latitude": 43.7471502,
+    "longitude": 7.4315322,
+    "name": "WOOD WORK MONACO",
+    "address": "15, Boulevard d'Italie",
+    "city": "Monaco",
+    "phone": "+377.93.302226",
+    "email": "sima.ganoudi@woodwork.mc",
+    "id": 127,
+    "country": {
+      "id": 148,
+      "name": "Monaco"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1.3328615362138332,
+    "latitude": 43.7478781,
+    "longitude": 7.434804399999962,
+    "name": "SABRINA MONTECARLO",
+    "address": "Avenue Princesse Grace, 39",
+    "city": "Monaco",
+    "phone": "+377.97.975760",
+    "email": "contact@sabrinamontecarlo.com",
+    "id": 3331,
+    "country": {
+      "id": 148,
+      "name": "Monaco"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 32.17097407526337,
+    "latitude": 42.4312748,
+    "longitude": 19.2627982,
+    "name": "ARTEFACTO+ Design Center d.o.o.",
+    "address": "Bulevar Svetog Petra Cetinjskog Ulica II",
+    "city": "Podgorica",
+    "phone": "+381.11.3226467",
+    "fax": "+382 20 220-597",
+    "email": "info@artefactoplus.me",
+    "id": 172,
+    "country": {
+      "id": 246,
+      "name": "Montenegro"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 126.32021788636878,
+    "latitude": 60.7965831,
+    "longitude": 10.6891382,
+    "name": "Kiil Interiør Design AS",
+    "address": "Øvre Torvgate 11",
+    "city": "Gjøvik",
+    "phone": "+47.61.247380",
+    "email": "gjovik@kiil.no",
+    "id": 143,
+    "country": {
+      "id": 159,
+      "name": "Norvegia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 130.53862038444467,
+    "latitude": 59.8646266,
+    "longitude": 10.4886393,
+    "name": "Blåmann Møbler AS",
+    "address": "Fekjan 3",
+    "city": "Nesbru",
+    "phone": "+47.66.846828",
+    "email": "blamann@blamann.com ",
+    "id": 144,
+    "country": {
+      "id": 159,
+      "name": "Norvegia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 448.68487837584496,
+    "latitude": -36.8665658,
+    "longitude": 174.763289,
+    "name": "ECC LIGHTING AND LIVING Ltd",
+    "address": "39 Nugent Street, Grafton",
+    "city": "Auckland",
+    "phone": "+64.9.3799680",
+    "fax": "+64.9.3735614",
+    "email": "living@ecc.co.nz",
+    "id": 76,
+    "country": {
+      "id": 161,
+      "name": "Nuova Zelanda"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 25.847604800710354,
+    "latitude": 51.9463071,
+    "longitude": 5.5172166,
+    "name": "Doornebal Interieurs",
+    "address": "Dr. van Noortstraat 7",
+    "city": "Lienden",
+    "phone": "+31.0344.602914",
+    "fax": "+31.0344.602684",
+    "email": "info@doornebal.nl",
+    "id": 85,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 35.207057064647316,
+    "latitude": 52.2891382,
+    "longitude": 4.8420807,
+    "name": "CO VAN DER HORST",
+    "address": "Binderij 2",
+    "city": "Amstelveen",
+    "phone": "+31.020.6412505",
+    "fax": "+31.020.6470173",
+    "email": "info@vanderhorst.nl",
+    "id": 84,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 43.79986631632168,
+    "latitude": 52.0742438,
+    "longitude": 4.6570632,
+    "name": "EUROHOME INTERIEUR",
+    "address": "Zijde 36",
+    "city": "Boskoop",
+    "phone": "+31.0344.602914",
+    "email": "info@eurohome-interieur.nl",
+    "id": 89,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 61.53580547290322,
+    "latitude": 52.1493658,
+    "longitude": 6.1925809,
+    "name": "EIJERKAMP / CILO",
+    "address": "Gerritsenweg 11 G",
+    "city": "Zutphen",
+    "phone": "+31.57.5583656",
+    "email": "info@cilo.nl",
+    "id": 87,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 67.02684354881052,
+    "latitude": 52.6361572,
+    "longitude": 4.7483228,
+    "name": "VAN TIL INTERIEUR",
+    "address": "Noorderkade 1038",
+    "city": "Alkmaar",
+    "phone": "+31.72.5112760",
+    "fax": "+31.72.5158974",
+    "email": "info@vantil.nl",
+    "id": 86,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 69.3468067921122,
+    "latitude": 52.0861353,
+    "longitude": 4.278623899999957,
+    "name": "LINEA DESIGN",
+    "address": "Valeriusstraat 94",
+    "city": "Den Haag",
+    "phone": "+31.70.3606044",
+    "email": "info@lineadesign.nl",
+    "id": 12015,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 69.4021818458156,
+    "latitude": 52.5153457,
+    "longitude": 6.0979674,
+    "name": "NIBOURG INTERIEURS B.V.",
+    "address": "Spinhuisplein 2",
+    "city": "Zwolle",
+    "phone": "+31.038.4223088",
+    "fax": "+31.038.4226047",
+    "email": "info@nibourginterieurs.nl",
+    "id": 80,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 70.54839946958644,
+    "latitude": 51.9665482,
+    "longitude": 6.2869727,
+    "name": "REVELMAN WOONKUNST B.V.",
+    "address": "Grutstraat 41 - 45",
+    "city": "Doetinchem",
+    "phone": "+31.0314.323221",
+    "fax": "+31.0314.335646",
+    "email": "revelman@revelman.nl",
+    "id": 81,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 79.22920364310664,
+    "latitude": 51.4305372,
+    "longitude": 5.4876093,
+    "name": "PGA Groep B.V.",
+    "address": "Schoonhoeve 1",
+    "city": "Eindhoven",
+    "phone": "+31.040.2130130",
+    "email": "info@pga.nl",
+    "id": 88,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 87.63554595701595,
+    "latitude": 51.3516578,
+    "longitude": 5.46233529999995,
+    "name": "STUDIO BLOEMEX",
+    "address": "Leenderweg 13",
+    "city": "Valkenswaard",
+    "phone": "+31.40.2043781",
+    "email": "info@bloemex.nl",
+    "id": 3708,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 16,
+    "distance": 112.75314657879981,
+    "latitude": 51.2297204,
+    "longitude": 6.0356067,
+    "name": "HAWINKELS INTERIEUR",
+    "address": "Rjksweg Zuid 18",
+    "city": "Swalmen",
+    "phone": "+31 0475 50 19 28",
+    "email": "info@hawinkelsinterieur.nl",
+    "id": 93,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 114.6738381005414,
+    "latitude": 51.2008347,
+    "longitude": 6.0038385,
+    "name": "SIJBEN WOONCENTER B.V.",
+    "address": "Maasnielderweg 33",
+    "city": "Roermond",
+    "phone": "+31.0475.392828",
+    "fax": "+31.0475.317630",
+    "email": "info@sijben.nl",
+    "id": 82,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 22,
+    "distance": 125.69761671645793,
+    "latitude": 52.7941219,
+    "longitude": 6.7958961,
+    "name": "HET OUDE AMBACHT STIJLVOL WONEN",
+    "address": "Dorpsstraat 5",
+    "city": "Noord Sleen",
+    "phone": "+31.591.361656",
+    "email": "info@het-oude-ambacht.nl",
+    "id": 91,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 26,
+    "distance": 134.89053915711483,
+    "latitude": 51.2740576,
+    "longitude": 3.9083073,
+    "name": "POT INTERIEUR",
+    "address": "Nieuwendijk 89",
+    "city": "Axel",
+    "phone": "+31.0115.532526",
+    "fax": "+31.077.3248801",
+    "email": "verkoop@pot.nl",
+    "id": 83,
+    "country": {
+      "id": 163,
+      "name": "Paesi Bassi"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 130.73982543842772,
+    "latitude": 52.254324,
+    "longitude": 20.9794298,
+    "name": "ATELIER MESMETRIC",
+    "address": "ul. Burakowska 5/7",
+    "city": "Warszawa",
+    "phone": "+48.797.333998",
+    "email": "info@mesmetric.com",
+    "id": 163,
+    "country": {
+      "id": 172,
+      "name": "Polonia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 130.73982543842772,
+    "latitude": 52.254324,
+    "longitude": 20.9794298,
+    "name": "IDEAMM",
+    "address": "Otworzyliśmy Krucza 24/26",
+    "city": "Warszawa",
+    "phone": "+48.505.106905",
+    "email": "z.bartosz@ideamm.pl",
+    "id": 22433,
+    "country": {
+      "id": 172,
+      "name": "Polonia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 132.5754061836536,
+    "latitude": 52.2298517,
+    "longitude": 21.0181227,
+    "name": "Space Design",
+    "address": "Nowogrodzka 11",
+    "city": "Warsaw",
+    "phone": "+48.723.088883",
+    "email": "hello@space-design.pl",
+    "id": 36353,
+    "country": {
+      "id": 172,
+      "name": "Polonia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 196.57022002234038,
+    "latitude": 41.142464,
+    "longitude": -8.6143653,
+    "name": "Causaefeito-decorações Lda",
+    "address": "R. de Mouzinho da Silveira 35",
+    "city": "Porto",
+    "phone": "+351.22.3394650",
+    "email": "carla.pinto@causaefeito.com.pt",
+    "id": 28925,
+    "country": {
+      "id": 173,
+      "name": "Portogallo"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 33.12187207672847,
+    "latitude": 25.2653605,
+    "longitude": 51.4981728,
+    "name": "DESIGN LOUNGE",
+    "address": "Althuraya Souq, Salwa Road",
+    "city": "Doha",
+    "phone": "+974.4451.6627",
+    "fax": "Box 23391",
+    "email": "info@designlounge.me",
+    "id": 120,
+    "country": {
+      "id": 175,
+      "name": "Qatar"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 76.48467388346519,
+    "latitude": 55.8726012,
+    "longitude": -4.2827307,
+    "name": "DESIGNWORKS",
+    "address": "38 Gibson Street",
+    "city": "Glasgow",
+    "phone": "+44.141.3399520",
+    "email": "Joanna@designworks-scotland.co.uk",
+    "id": 372,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 182.77264779718644,
+    "latitude": 54.5838972,
+    "longitude": -5.9441196,
+    "name": "KRIS TURNBULL",
+    "address": "135, Lisburn Road",
+    "city": "Belfast",
+    "phone": "+44.28.90688600",
+    "email": "sales@kristurnbull.com",
+    "id": 373,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 481.27794770593033,
+    "latitude": 51.5157854,
+    "longitude": -0.15143620000003466,
+    "name": "GLOBAL LUXURY",
+    "address": "87-89 Wigmore Street",
+    "city": "Londra",
+    "phone": "+44.207.4868445",
+    "email": "info@globalluxurylondon.com",
+    "id": 21810,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 4,
+    "distance": 483.0838474032414,
+    "latitude": 51.4916127,
+    "longitude": -0.1723721,
+    "name": "GIORGETTI STORE",
+    "address": "Fulham Road 52-58 SW3 6HH London",
+    "city": "Londra",
+    "phone": "+44.2.075810022",
+    "email": "info@aquafiluk.com",
+    "id": 32051,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 484.257957880469,
+    "latitude": 51.4869943,
+    "longitude": -0.1484146000000237,
+    "name": "TOLLGÅRD DESIGN GROUP",
+    "address": "Grosvenor Waterside Gatliff Road SW1W",
+    "city": "London",
+    "phone": "+44.0207.5753185",
+    "email": "info@tollgard.com",
+    "id": 28127,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 484.35002631970474,
+    "latitude": 51.4758933,
+    "longitude": -0.183071899999959,
+    "name": "TOLLGÅRD DESIGN GROUP",
+    "address": "Chelsea Harbour Design Centre 1st Floor, Centre Dome",
+    "city": "London",
+    "phone": "+44.208.0672123",
+    "email": "info@tollgard.com",
+    "id": 28128,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 526.9904828990294,
+    "latitude": 50.75263,
+    "longitude": -1.7141199999999799,
+    "name": "DREAM DESIGN",
+    "address": "Unit 5 Somerford Business Park, Wilverley Road,",
+    "city": "Christchurch, Dorset",
+    "phone": "+44.1202.879997",
+    "email": "enquiries@dreamdesign.co.uk",
+    "id": 370,
+    "country": {
+      "id": 95,
+      "name": "Regno Unito"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 80.86565087572481,
+    "latitude": 50.0901841,
+    "longitude": 14.4251142,
+    "name": "NOBIS STUDIO",
+    "address": "Dlouha' 32",
+    "city": "Praha 1",
+    "phone": "+420.222.212859",
+    "email": "studio@nobis.cz",
+    "id": 164,
+    "country": {
+      "id": 176,
+      "name": "Repubblica Ceca"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 868.1510818105412,
+    "latitude": 53.9130121,
+    "longitude": 102.0389454,
+    "name": "PERFETTO INTERIORS",
+    "address": "Bograda st.,1",
+    "city": "Irkutsk",
+    "phone": "+7.395.2201435",
+    "fax": "+7.395.2201435",
+    "email": "rmakarov2007@yandex.ru",
+    "id": 182,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 1485.319205924841,
+    "latitude": 55.00975,
+    "longitude": 82.936626,
+    "name": "RELAN ZERO",
+    "address": "Inskaya Str., 56 3rd floor",
+    "city": "Novosibirsk",
+    "phone": "+7.383.2644633",
+    "email": "relan@relan-zero.ru",
+    "id": 185,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 2352.831459750756,
+    "latitude": 48.47783542889971,
+    "longitude": 135.050901516008,
+    "name": "VIVID",
+    "address": "Turgeneva str., 96",
+    "city": "Khabarovsk",
+    "phone": "+7.914.2148887",
+    "email": "info@vivid.space",
+    "id": 30865,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 2709.467309374416,
+    "latitude": 57.987846,
+    "longitude": 56.2456295,
+    "name": "DEN I NOCH",
+    "address": "Komsomolskiy prospect, 86",
+    "city": "Perm",
+    "phone": "+7.342.2443223",
+    "fax": "+7.342.2459017",
+    "email": "giorno_e_notte@mail.ru",
+    "id": 181,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 3206.100426223453,
+    "latitude": 55.7764985,
+    "longitude": 49.1284383,
+    "name": "SOLO CENTRE",
+    "address": "Esperanto str. 16",
+    "city": "Kazan",
+    "phone": "+7.843.5705873",
+    "fax": "+7.843.2770599",
+    "email": "koeln@mi.ru",
+    "id": 186,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 3429.2180218371486,
+    "latitude": 56.3178636,
+    "longitude": 44.0607548,
+    "name": "CALIPSO",
+    "address": "Rodionova str. 23/A",
+    "city": "Nizhny Novgorod",
+    "phone": "+7.831.2789117",
+    "fax": "+7.831.4329008",
+    "id": 187,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 3786.8017447306156,
+    "latitude": 55.774425,
+    "longitude": 37.604552,
+    "name": "FLAT INTERIORS",
+    "address": "Dolgorukovskaya str. 2",
+    "city": "Moscow",
+    "phone": "+7.495.7883300",
+    "fax": "+7.499.9787879",
+    "email": "flat@flat-interiors.ru",
+    "id": 179,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 15,
+    "distance": 3787.318809580446,
+    "latitude": 55.779447161189665,
+    "longitude": 37.587076202902225,
+    "name": "Contract projects Office Solutions LTD",
+    "address": "4th Lesnoy lane, 4",
+    "city": "Moscow",
+    "phone": "+7.495.2585599",
+    "email": "info@office-solutions.ru",
+    "id": 35442,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 16,
+    "distance": 3789.5242723477454,
+    "latitude": 55.750643,
+    "longitude": 37.58236690000001,
+    "name": "STUDIO OBJECT",
+    "address": "1/2 Novinsky Boulevard",
+    "city": "Moscow",
+    "phone": "+7.499.2414846",
+    "email": "novinsky@studio-object.ru",
+    "id": 28294,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 17,
+    "distance": 3790.2110752674034,
+    "latitude": 55.744701,
+    "longitude": 37.57669499999997,
+    "name": "INTERIOR MARKET",
+    "address": "Rostovskaya Naberezhnaya, 1",
+    "city": "Moscow",
+    "phone": "+7.495.5450551",
+    "email": "info@interior-market.ru",
+    "id": 28293,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 3791.6410265051736,
+    "latitude": 55.72306400000001,
+    "longitude": 37.57778489999998,
+    "name": "EXTRA CLASS INTERIORS",
+    "address": "Komsomolskiy prospect, 35",
+    "city": "Moscow",
+    "phone": "+7.495.9541753",
+    "email": "info@extraint.ru",
+    "id": 12355,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 19,
+    "distance": 3791.688441922069,
+    "latitude": 55.7141969,
+    "longitude": 37.589162,
+    "name": "GIORGETTI STORE",
+    "address": "Extra Class Interiors Komsomolskiy prosp., 37",
+    "city": "Moscow",
+    "phone": "+7.495.6091180",
+    "email": "info@extraint.ru",
+    "id": 30410,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 20,
+    "distance": 3853.9056810549014,
+    "latitude": 59.93421180000001,
+    "longitude": 30.31412509999999,
+    "name": "ROSSI Grand",
+    "address": "Bolshaya Morskaya st. 26 / ул. Большая Морская 26 •",
+    "city": "St. Petersburg / г. Санкт-Петербург",
+    "phone": "+7.812.3157600",
+    "email": "rossi.info@yandex.ru",
+    "id": 190,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 38,
+    "distance": 4534.541796813723,
+    "latitude": 45.0471235,
+    "longitude": 38.9723345,
+    "name": "HOME DESIGN",
+    "address": "Babushkina str. 246",
+    "city": "Krasnodar",
+    "phone": "+7.861.2156557",
+    "fax": "+7.861.2153476",
+    "email": "info@homedesign-co.ru",
+    "id": 183,
+    "country": {
+      "id": 182,
+      "name": "Russia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 98.3107743202427,
+    "latitude": 44.8132706,
+    "longitude": 20.4693034,
+    "name": "ARTEFACTO",
+    "address": "Svetogorska 39",
+    "city": "Beograd",
+    "phone": "+381.11.3226467",
+    "email": "info@artefacto.rs",
+    "id": 167,
+    "country": {
+      "id": 248,
+      "name": "Serbia"
+    }
+  },
+  {
+    "category": {
+      "id": 9,
+      "name": "Giorgetti Atelier"
+    },
+    "rank": 1,
+    "distance": 6.740393871620805,
+    "latitude": 1.2998558,
+    "longitude": 103.850615,
+    "name": "Space Furniture",
+    "address": "77 Bencoolen Street",
+    "city": "Singapore",
+    "phone": "+65.64150000",
+    "fax": "+65.64150100",
+    "id": 68,
+    "related": {
+      "id": 4491,
+      "url": "/it/aquafil-atelier/singapore"
+    },
+    "country": {
+      "id": 197,
+      "name": "Singapore"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 200.0112947299202,
+    "latitude": 48.1309878,
+    "longitude": 17.113642,
+    "name": "ZENO SHOWROOM",
+    "address": "Atrium - Einsteinova 9",
+    "city": "Bratislava",
+    "phone": "+421.903.634868",
+    "email": "info@zeno.sk",
+    "id": 170,
+    "country": {
+      "id": 199,
+      "name": "Slovacchia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 43.1154033149448,
+    "latitude": 46.0310564,
+    "longitude": 14.463892900000019,
+    "name": "KULT INTERIER d.o.o.",
+    "address": "Cesta v Gorice 34B Poslovni Objekt Imparo",
+    "city": "Ljubljana",
+    "phone": "+386.8.2053865",
+    "email": "info@kultinterier.si",
+    "id": 23362,
+    "country": {
+      "id": 200,
+      "name": "Slovenia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 5.306354655075294,
+    "latitude": 40.4483916,
+    "longitude": -3.6898033999999598,
+    "name": "Gunni & Trentino Madrid",
+    "address": "Paseo de La Habana, 3",
+    "city": "Madrid",
+    "phone": "+34.911.960127",
+    "email": "madrid@gth.es",
+    "id": 13106,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 355.6607872200717,
+    "latitude": 37.9877574,
+    "longitude": -1.1345135,
+    "name": "QUARTA MOBILIARIO CONTEMPORANEO",
+    "address": "Callejón de Burruezo, 1",
+    "city": "Murcia",
+    "phone": "+34.968.281837",
+    "email": "info@quarta.es",
+    "id": 349,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 450.9628252494529,
+    "latitude": 36.51005,
+    "longitude": -4.904537000000005,
+    "name": "Pedro Peña",
+    "address": "C.C.Tembo. Bloque C. CN 340",
+    "city": "Marbella",
+    "phone": "+34.952.824962",
+    "email": "info@pedropena.com",
+    "id": 13107,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 505.4781443838289,
+    "latitude": 41.396359,
+    "longitude": 2.1410567,
+    "name": "Espai Rö",
+    "address": "Carrer Ferrán Agulló, 14 local",
+    "city": "Barcelona",
+    "phone": "+34 936 672962, +34 669 405728",
+    "email": "info@espairo.com",
+    "id": 36566,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 506.8491311751402,
+    "latitude": 41.3938908,
+    "longitude": 2.1583109000000604,
+    "name": "Gunni & Trentino Barcelona",
+    "address": "Roselló, 214",
+    "city": "Barcelona",
+    "phone": "+34.932.411494",
+    "email": "barcelona@gth.es",
+    "id": 13104,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 7,
+    "distance": 530.4994475634907,
+    "latitude": 41.952317,
+    "longitude": 2.2774850000000697,
+    "name": "Idees",
+    "address": "Carretera de Roda-Pol.Industrial Malloles",
+    "city": "Vic",
+    "phone": "+34.93.8890307",
+    "email": "web@ideesdisseny.com",
+    "id": 13103,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 542.9572869374081,
+    "latitude": 39.5312664,
+    "longitude": 2.508975899999996,
+    "name": "Stork Interior Design y Cocina S.L.",
+    "address": "Calle Islas Baleares 37, Poligono Son Bugadelles, Santa Ponsa",
+    "city": "Marbella",
+    "phone": "+34.971.694154",
+    "email": "info@stork-mallorca.de",
+    "id": 13091,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 599.3634519248599,
+    "latitude": 42.2406514,
+    "longitude": 3.0325855,
+    "name": "EUROMUEBLE BRU",
+    "address": "Ctra. Figueres a Roses, km 33'5",
+    "city": "Fortià Girona",
+    "phone": "+34.972.503962",
+    "email": "info@euromoblebru.com",
+    "id": 347,
+    "country": {
+      "id": 202,
+      "name": "Spagna"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 111.11322789265769,
+    "latitude": 36.113501,
+    "longitude": -95.9757037,
+    "name": "S R HUGHES",
+    "address": "3410 S. Peoria #100",
+    "city": "Tulsa",
+    "phone": "+1.918.7425515",
+    "fax": "+1.918.7471617",
+    "email": "showroom@srhughes.com",
+    "id": 205,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 488.09792070263245,
+    "latitude": 32.7952922,
+    "longitude": -96.8193991,
+    "name": "SCOTT + COONER DALLAS",
+    "address": "1617 Hi-Line Drive #100",
+    "city": "Dallas",
+    "phone": "+1.214.7489838",
+    "fax": "+1.214.7485006",
+    "email": "info@scottcooner.com",
+    "id": 204,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 531.9075285556876,
+    "latitude": 41.5895517,
+    "longitude": -93.6108912,
+    "name": "PROJECTS CONTEMPORARY FURNITURE",
+    "address": "501 East Locust Street, Iowa",
+    "city": "Des Moines",
+    "phone": "+1.515.5571833",
+    "fax": "+1.515.5571835",
+    "email": "sales@projectsfurniture.com",
+    "id": 216,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 781.2388737915106,
+    "latitude": 30.2699662,
+    "longitude": -97.7431756,
+    "name": "SCOTT + COONER AUSTIN",
+    "address": "115 West 8th Street",
+    "city": "Austin",
+    "phone": "+1.512.4800436",
+    "fax": "+1.512.3809272",
+    "email": "wendy@scottcooner.com",
+    "id": 203,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 5,
+    "distance": 817.6641987223493,
+    "latitude": 29.74087849999999,
+    "longitude": -95.41938379999999,
+    "name": "CASA",
+    "address": "2800 Kirby Dr.",
+    "city": "Houston",
+    "phone": "+1.713.7148105",
+    "email": "info@casa-houston.com",
+    "id": 212,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 6,
+    "distance": 859.9076864191902,
+    "latitude": 39.7612762,
+    "longitude": -104.9830559,
+    "name": "SOLESDI",
+    "address": "2800 Walnut Street",
+    "city": "Denver",
+    "phone": "+1.303.9996334",
+    "email": "infodenver@solesdi.com",
+    "id": 220,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 1012.7866930217482,
+    "latitude": 39.1546165,
+    "longitude": -84.4276435,
+    "name": "VOLTAGE",
+    "address": "3209 Madison Road",
+    "city": "Cincinnati",
+    "phone": "+1.513.8715483",
+    "fax": "+1.513.8715540",
+    "email": "info@voltagefurniture.com",
+    "id": 206,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 1087.0956844255984,
+    "latitude": 33.786028,
+    "longitude": -84.409386,
+    "name": "SWITCH MODERN",
+    "address": "670 14th Street",
+    "city": "Atlanta",
+    "phone": "+1.404.6050196",
+    "email": "info@switchmodern.com",
+    "id": 209,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 10,
+    "distance": 1457.6189369175313,
+    "latitude": 43.47918,
+    "longitude": -110.7606088,
+    "name": "WRJ Design Showroom",
+    "address": "30 South King Street",
+    "city": "Jackson",
+    "phone": "+1.307.2004881",
+    "email": "info@wrjdesign.com",
+    "id": 4634,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 1643.0996507153732,
+    "latitude": 27.3429066,
+    "longitude": -82.5426916,
+    "name": "HOME RESOURCE",
+    "address": "741 Central Avenue",
+    "city": "Sarasota",
+    "phone": "+1.941.3666690",
+    "fax": "+1.941.3666640",
+    "email": "info@homeresource.com",
+    "id": 217,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 12,
+    "distance": 1918.33892133097,
+    "latitude": 40.7504872,
+    "longitude": -73.9806266,
+    "name": "GIORGETTI USA INC Corporate Office",
+    "address": "261 Madison Ave, Unit 1030",
+    "city": "New York",
+    "phone": "+1.212.8893261",
+    "fax": "+1.212.8893294",
+    "email": "info@aquafilusa.com",
+    "id": 199,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 16,
+    "distance": 2071.095079180922,
+    "latitude": 34.0762167,
+    "longitude": -118.3705041,
+    "name": "GIORGETTI STORE",
+    "address": "Robina Benson - Melrose Ave 8315,",
+    "city": "Los Angeles - CA",
+    "phone": "+1.323.5910888",
+    "id": 32050,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 18,
+    "distance": 2178.9651279335117,
+    "latitude": 42.34274790000001,
+    "longitude": -71.06491019999999,
+    "name": "GIORGETTI STORE",
+    "address": "450 Harrison Avenue, Suite 19",
+    "city": "Boston",
+    "phone": "+1.888.2466451",
+    "email": "info@aquafilboston.com",
+    "id": 207,
+    "country": {
+      "id": 204,
+      "name": "Stati Uniti d'America"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 707.1240915113688,
+    "latitude": -26.0894766,
+    "longitude": 28.0788155,
+    "name": "IL Lusso PTY LTD",
+    "address": "39 Commerce Crescent, Kramerville - Sandton",
+    "city": "Johannesburg",
+    "phone": "T +27 (0) 10 6002100",
+    "email": "info@illusso.co.za",
+    "id": 30408,
+    "country": {
+      "id": 205,
+      "name": "Sudafrica"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 566.7292647868471,
+    "latitude": 56.090095,
+    "longitude": 12.7446238,
+    "name": "Inredningsgalleriet",
+    "address": "Kanongatan 155, Väla Norra",
+    "city": "Helsingborg",
+    "phone": "+46.42.142505",
+    "email": "info@inredningsgalleriet.se       ",
+    "id": 142,
+    "country": {
+      "id": 208,
+      "name": "Svezia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 587.9730340398968,
+    "latitude": 55.6898174,
+    "longitude": 13.2200412,
+    "name": "TORNBO MÖBLER",
+    "address": "Kalkstensvägen 23",
+    "city": "Lund",
+    "phone": "+46.46.184488",
+    "email": "info@tornbo.se",
+    "id": 141,
+    "country": {
+      "id": 208,
+      "name": "Svezia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 23.22966276045396,
+    "latitude": 47.0221911,
+    "longitude": 8.2934104,
+    "name": "MÖBEL AMREIN AG",
+    "address": "Schlundstr. 80",
+    "city": "Kriens",
+    "phone": "+41.41.3185005",
+    "email": "info@amrein.ch",
+    "id": 364,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 2,
+    "distance": 63.545803032816075,
+    "latitude": 47.3405626,
+    "longitude": 8.56785709999997,
+    "name": "CONCEPT CI INTERIORS",
+    "address": "Seestrasse 37",
+    "city": "Zollikon",
+    "phone": "+41.44.3962200",
+    "email": "info@ci-interiors.ch",
+    "id": 14474,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 3,
+    "distance": 65.31915448259699,
+    "latitude": 47.3635371,
+    "longitude": 8.5481945,
+    "name": "OTTAGONO+RECHSTEINER INNENEINRICHTUNGEN AG",
+    "address": "Dufourstrasse 29",
+    "city": "Zürich",
+    "phone": "+41.44.2014500",
+    "email": "info@ottagono.ch",
+    "id": 367,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 73.45220145434295,
+    "latitude": 47.4191162,
+    "longitude": 8.6306159,
+    "name": "ZINGG-LAMPRECHT AG",
+    "address": "Stationstrasse 1-3",
+    "city": "Bruettisellen",
+    "phone": "+41.43.2557070",
+    "email": "info@zingg-lamprecht.ch",
+    "id": 350,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 81.37854521671305,
+    "latitude": 46.8056527,
+    "longitude": 7.1583156,
+    "name": "STYLEDESIGN CARRIERO",
+    "address": "Rue de Lausanne 53",
+    "city": "Fribourg",
+    "phone": "+41.26.3231750",
+    "email": "webmaster@styledesigninteriors.com",
+    "id": 353,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 8,
+    "distance": 93.05826935920717,
+    "latitude": 46.155916,
+    "longitude": 8.9706502,
+    "name": "DELCO' MOBILI",
+    "address": "via Gorelle 1",
+    "city": "S. Antonino",
+    "phone": "+41.91.2242727",
+    "email": "info@delcomobili.ch",
+    "id": 359,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 9,
+    "distance": 95.17512646659573,
+    "latitude": 47.4628952,
+    "longitude": 9.0552311,
+    "name": "GAMMA AG EINRICHTUNGSHAUS",
+    "address": "St. Gallerstrasse 45",
+    "city": "Wil",
+    "phone": "+41.71.9148888",
+    "email": "info@gamma.ch",
+    "id": 358,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 11,
+    "distance": 102.10783877297305,
+    "latitude": 47.416657,
+    "longitude": 9.2510096,
+    "name": "WIDMER WOHNEN",
+    "address": "St. Gallenstr.71",
+    "city": "Gossau",
+    "phone": "+41.71.3800411",
+    "id": 356,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 13,
+    "distance": 105.87223756488487,
+    "latitude": 46.0072567,
+    "longitude": 8.951216199999976,
+    "name": "SALVIONI LUGANO DESIGN SOLUTIONS",
+    "address": "Via Ferruccio Pelli 2",
+    "city": "Lugano",
+    "phone": "+41 (0) 91 9213525",
+    "email": "info.online@salvionilugano.ch",
+    "id": 2796,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 14,
+    "distance": 107.33563698137954,
+    "latitude": 45.9869267,
+    "longitude": 8.9391381,
+    "name": "INTERNI ARREDAMENTI",
+    "address": "Via Alla Sguancia 5",
+    "city": "Pazzallo",
+    "phone": "+41.91.9949433",
+    "email": "interni@interni-arredamenti.com",
+    "id": 361,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 15,
+    "distance": 110.32923900589736,
+    "latitude": 46.4407135,
+    "longitude": 6.8912563,
+    "name": "VIQUERAT DECORATION",
+    "address": "Rue Du Lac,107",
+    "city": "Clarens-Montreux",
+    "phone": "+41.21.9642221",
+    "email": "info@viqueratdecoration.com",
+    "id": 357,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 18,
+    "distance": 119.85643122947351,
+    "latitude": 45.8728137,
+    "longitude": 8.9776621,
+    "name": "ARREDAMENTI BERNASCONI",
+    "address": "Via Borromini 8",
+    "city": "Mendrisio",
+    "phone": "+41.91.6461878",
+    "email": "info@arredamentibernasconi.ch",
+    "id": 352,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 40,
+    "distance": 173.2408941395755,
+    "latitude": 46.2001877,
+    "longitude": 6.149376800000001,
+    "name": "Camille Aryeh interiors & Architecture",
+    "address": "7 place du bourg-de-four",
+    "city": "genève",
+    "phone": "+41.22.8102555",
+    "email": "info@aryeharchitecture.com",
+    "id": 34674,
+    "country": {
+      "id": 209,
+      "name": "Svizzera"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 241.94431262291292,
+    "latitude": 13.730718,
+    "longitude": 100.581781,
+    "name": "Euro Creations Gallery at Thonglor",
+    "address": "119 Sukhumvit 55, North Klong Ton, Wattana",
+    "city": "Bangkok",
+    "phone": "+66.2.7129555",
+    "fax": "+66.2.7128033",
+    "email": "marketing@eurocreations.co.th",
+    "id": 69,
+    "country": {
+      "id": 211,
+      "name": "Tailandia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 160.60864636185383,
+    "latitude": 25.0329694,
+    "longitude": 121.5654177,
+    "name": "YI&C FURNITURE & PROJECT CONSULTING Co., Ltd.",
+    "address": "23, Lane 252, Sec. 1 - Tun Hua S. Road",
+    "city": "Taipei",
+    "phone": "+886.2.27766628",
+    "fax": "+886.2.27716515",
+    "email": "yi8chang@ms65.hinet.net",
+    "id": 70,
+    "country": {
+      "id": 212,
+      "name": "Taiwan China"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 4,
+    "distance": 572.6859062096167,
+    "latitude": 40.9746464,
+    "longitude": 29.0543045,
+    "name": "Konak Mobilya",
+    "address": "Bagdat Cad. No: 189/A, Ciftehavuzlar",
+    "city": "Istanbul",
+    "phone": "+90.216.3555530",
+    "email": "irem@konakmobilya.com",
+    "id": 37007,
+    "country": {
+      "id": 222,
+      "name": "Turchia"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 5,
+    "distance": 578.9471535628616,
+    "latitude": 41.086168,
+    "longitude": 29.032306,
+    "name": "ISMETMOBILYA",
+    "address": "Nispetiye Cad. Alkent Yolu – S. Ahmet Acarkan Sok. No: 9 Etiler",
+    "city": "Istanbul",
+    "phone": "+90.212.2878727",
+    "fax": "+90.212.2876585",
+    "email": "ismetmobilya@mynet.com",
+    "id": 109,
+    "country": {
+      "id": 222,
+      "name": "Turchia"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 234.9188059622773,
+    "latitude": 50.44922690000001,
+    "longitude": 30.514446099999986,
+    "name": "Giorgetti Store",
+    "address": "Volodymyrska str.,38",
+    "city": "Kyiv",
+    "phone": "+38.044.4656721",
+    "email": "info@aquafil.ua",
+    "id": 28380,
+    "country": {
+      "id": 226,
+      "name": "Ucraina"
+    }
+  },
+  {
+    "category": {
+      "id": 11,
+      "name": "Distributori progetti 30"
+    },
+    "rank": 1,
+    "distance": 50.92063986600376,
+    "latitude": 47.500933,
+    "longitude": 19.048129,
+    "name": "INTERNI BUDAPEST",
+    "address": "Vigyázó Ferenc u. 3",
+    "city": "Budapest",
+    "phone": "+36.12690708",
+    "email": "Info@internibudapest.hu",
+    "id": 166,
+    "country": {
+      "id": 92,
+      "name": "Ungheria"
+    }
+  },
+  {
+    "category": {
+      "id": 8,
+      "name": "Giorgetti Store"
+    },
+    "rank": 1,
+    "distance": 401.7551921783294,
+    "latitude": 10.8230989,
+    "longitude": 106.6296638,
+    "name": "EURASIA CONCEPT CORPORATION",
+    "address": "Times Square building, 22-36 Nguyen Hue Boulevard & 57-69F Dong Khoi Street, Ben Nghe Ward, District 1",
+    "city": "Ho Chi Minh City",
+    "phone": "+848.3838.9911",
+    "id": 71,
+    "related": {
+      "id": 4478,
+      "url": "/it/aquafil-store/ho-chi-minh-city"
+    },
+    "country": {
+      "id": 232,
+      "name": "Vietnam"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "user": {
+    "firstName": "Jhon",
+    "lastName": "Appleseed",
+    "country": 114,
+    "city": "Pesaro",
+    "company": "Websolute",
+    "occupation": 5,
+    "email": "jhonappleseed@gmail.com",
+    "privacy": true,
+    "newsletter": true,
+    "newsletterLanguage": 1,
+    "commercial": false,
+    "promotion": false
+  },
+  "responseMessage": null
+}

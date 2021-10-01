@@ -1,0 +1,149 @@
+.sustainability-proposition {
+	padding: 240px 0 0 0;
+	background: $background;
+
+	&__category {
+		@extend .category;
+	}
+
+	&__title {
+		@extend .h1;
+	}
+}
+
+.listing--sustainability {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media-up(sm) {
+		&>.listing__item {
+			flex: 0 0 50%;
+			max-width: 50%;
+
+			&:first-child {
+				margin-left: 50vw;
+			}
+
+			&:nth-child(even) {
+				&>.card--product {
+					margin-top: -12.5vw;
+				}
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		&>.listing__item {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.card--sustainability {
+	display: flex;
+
+	.card__head,
+	.card__content {
+		flex: 1 0 50%;
+		max-width: 50%;
+	}
+
+	.card__picture {
+		@include aspect-clip(1, 1);
+		opacity: 0;
+		transition: opacity ease-in-out $fast;
+	}
+
+	.card__content {
+		padding: 4.16666vw 2.083333vw;
+	}
+
+	.card__title {
+		font-family: Noto Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 49px;
+		margin-bottom: 40px;
+		color: #003A56;
+	}
+
+	.card__abstract {
+		font-family: Noto Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 1.5;
+		color: #003A56;
+	}
+
+	.card__cta {
+		padding-top: 40px;
+	}
+
+	cursor: pointer;
+
+	&:hover {
+		.card__picture {
+			opacity: 1;
+		}
+	}
+
+	.listing__item:nth-child(3n+1)>& {
+		.card__content {
+			background: $border;
+			color: $foreground;
+		}
+
+		.card__title {
+			color: $foreground;
+		}
+
+		.card__abstract {
+			color: $foreground;
+		}
+	}
+
+	.listing__item:nth-child(3n+2)>& {
+		.card__content {
+			background: $background-primary;
+			color: $foreground-negative;
+		}
+
+		.card__title {
+			color: $foreground-negative;
+		}
+
+		.card__abstract {
+			color: $foreground-negative;
+		}
+	}
+
+	.listing__item:nth-child(3n+3)>& {
+		.card__content {
+			background: $background-negative;
+			color: $foreground-negative;
+		}
+
+		.card__title {
+			color: $foreground-negative;
+		}
+
+		.card__abstract {
+			color: $foreground-negative;
+		}
+	}
+
+	.listing__item:nth-child(4n+2)>&,
+	.listing__item:nth-child(4n+3)>& {
+		.card__head {
+			order: 2;
+		}
+
+		.card__content {
+			order: 1;
+		}
+	}
+
+}

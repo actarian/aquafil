@@ -1,0 +1,59 @@
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/*
+html {
+	&:not(.has-scroll-smooth) {
+		position: fixed;
+		min-height: 100%;
+		overflow: hidden;
+
+		body {
+			height: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+			overscroll-behavior: none;
+			scroll-behavior: smooth;
+			@include scrollbar();
+		}
+	}
+}
+*/
+
+body {
+	overscroll-behavior: none;
+	scroll-behavior: smooth;
+	@include scrollbar();
+
+	&.fixed {
+		position: fixed;
+	}
+}
+
+.app,
+.page,
+.wrapper,
+main {
+	position: relative;
+	min-height: 100vh;
+}
+
+.hidden {
+	display: none;
+}
+
+[unselectable] {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+.background-primary {
+	background: $background-primary;
+	color: $foreground-negative;
+}

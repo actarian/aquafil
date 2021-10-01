@@ -1,0 +1,71 @@
+body {
+	font-size: $font-size;
+	font-family: $font-primary;
+	font-weight: $font-light;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	background: $background;
+	color: $text;
+}
+
+::selection {
+	background: $primary;
+	color: $foreground-negative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.primary {
+	color: $foreground-primary !important;
+}
+
+.h1 {
+	font-weight: bold;
+	font-size: Max(34px, Min(120px, 6.25vw));
+	line-height: 1.2;
+	margin-bottom: 20px;
+	color: $foreground;
+}
+
+.h2 {
+	font-weight: bold;
+	font-size: Max(30px, Min(120px, 3.75vw));
+	font-size: 72px;
+	line-height: 1.36;
+	margin-bottom: 40px;
+	color: $foreground;
+}
+
+.h3 {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 1.5;
+	margin-bottom: 60px;
+	color: $foreground;
+}
+
+.h4 {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.36;
+	margin-bottom: 40px;
+	color: $foreground;
+}
+
+.category {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+	color: $foreground-primary;
+}

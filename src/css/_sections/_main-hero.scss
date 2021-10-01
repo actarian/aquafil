@@ -1,0 +1,155 @@
+.main-hero {
+	position: relative;
+	min-height: 100vh;
+	background: $background-negative;
+	color: $foreground-negative;
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		right: 8.33333vw;
+		transform: translateY(-50%);
+		z-index: 1000;
+	}
+
+	&__bullets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&>.swiper-pagination-bullet {
+			margin: 18px 0;
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			border-radius: 50%;
+			background: transparent;
+			border: 1px solid $foreground-negative;
+			opacity: 1;
+			transition: ease-in-out $fast;
+			transition-property: background-color, border;
+
+			&:hover,
+			&.swiper-pagination-bullet-active {
+				background: $background-primary;
+				border-color: $foreground-primary;
+			}
+		}
+	}
+}
+
+.btn--up,
+.btn--down {
+	@extend %btn;
+	margin: 18px 0;
+
+	svg {
+		width: 16px;
+		height: 10px;
+		fill: $foreground-primary;
+	}
+}
+
+.scroll-proposition {
+	position: absolute;
+	left: 4.16666vw;
+	bottom: 0;
+	padding-bottom: 8.33333vw;
+	font-size: 12px;
+	color: $foreground-negative;
+	z-index: 1000;
+
+	&>span {
+		display: block;
+		position: absolute;
+		transform: translateX(-50%) translateY(-20px) rotate(-90deg);
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 25px;
+		left: 0;
+		width: 1px;
+		height: 8.33333vw;
+		background: $foreground-negative;
+		animation: scroll-indicator 2000ms linear infinite;
+	}
+}
+
+.card--main-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+
+	.card__background {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-height: 100vh;
+
+		&>img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.card__content {}
+
+	.card__category {
+		@extend .category;
+	}
+
+	.card__title {
+		@extend .h2;
+		color: $foreground-negative;
+	}
+
+	.card__abstract {
+		color: $foreground-negative;
+	}
+
+	.card__cta {
+		padding-top: 60px;
+	}
+}
+
+@keyframes scroll-indicator {
+	0% {
+		transform-origin: top;
+		transform: scale(1, 0);
+	}
+
+	30% {
+		transform-origin: top;
+		transform: scale(1, 1);
+	}
+
+	31% {
+		transform-origin: bottom;
+		transform: scale(1, 1);
+	}
+
+	60% {
+		transform-origin: bottom;
+		transform: scale(1, 0);
+	}
+
+	100% {
+		transform-origin: bottom;
+		transform: scale(1, 0);
+	}
+}
+
+[swiper-homepage] {
+	@extend %swiper-hero;
+}

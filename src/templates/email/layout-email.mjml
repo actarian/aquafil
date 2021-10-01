@@ -1,0 +1,463 @@
+<mjml owa="desktop">
+  <mj-head>
+    <mj-title>GIORGETTI S.p.A. - Oggetti senza tempo</mj-title>
+    <mj-preview>GIORGETTI S.p.A. - Oggetti senza tempo</mj-preview>
+    <mj-style>
+      @font-face {
+        font-family: 'AvantGarde';
+        src: url('https://aquafil21.wslabs.it/Client/docs/fonts/avant-garde/AvantGarde-Book.otf') format('opentype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/avant-garde/AvantGarde-Book.woff') format('woff'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/AvantGarde-Book.ttf') format('truetype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/AvantGarde-Book.svg#AvantGarde-Book') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'BauerBodoni';
+        src: url('https://aquafil21.wslabs.it/Client/docs/fonts/bauer-bodoni/BauerBodoniBT-Roman.otf') format('opentype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/bauer-bodoni/BauerBodoniBT-Roman.woff') format('woff'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/BauerBodoniBT-Roman.ttf') format('truetype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/BauerBodoniBT-Roman.svg#BauerBodoniBT-Roman') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      p {
+        margin: 0 0 5px 0;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text padding="20px 0 5px 0" />
+      <mj-all font-family="AvantGarde" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+
+    <!-- Header -->
+    <mj-section padding="5px 10px 5px 10px" border-bottom="1px solid #d1cdca">
+      <mj-column>
+        <mj-image width="220px" height="63px" href="https://aquafil21.wslabs.it" src="https://aquafil21.wslabs.it/Client/docs/img/email/aquafil.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Body -->
+
+    <!-- Simple Body -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-column width="100%">
+        <!-- Title -->
+        <mj-text align="left" color="#35302C" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Title
+        </mj-text>
+        <!-- Abstract -->
+        <mj-text align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="19px" line-height="26px" text-transform="uppercase">
+          Abstract
+        </mj-text>
+        <!-- Text -->
+        <mj-text align="left" font-size="15px" color="#35302C" line-height="22px">
+          Text
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- End Simple Body -->
+
+    <!-- Hero -->
+    <mj-hero background-url="https://www.aquafilmeda.com/media/immagini/7677_n_newsletter-proposta01.jpg" mode="fixed-height" height="330px" background-width="600px" background-height="330px" background-color="#d1cdca" padding="80px 15px">
+      <mj-text padding="40px 0 20px 0" align="center" color="#ffffff" font-family="BauerBodoni, serif" font-size="48px" line-height="48px" letter-spacing="-2px" text-transform="uppercase">
+        Nuovi arrivi
+      </mj-text>
+      <mj-button href="#" align="center" inner-padding="15px 25px" width="180px" font-size="15px" background-color="#ffffff" color="#35302C" border-radius="0" text-transform="uppercase">
+        Nuovi arrivi
+      </mj-button>
+    </mj-hero>
+
+    <!-- Text -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-column width="100%">
+        <mj-text align="left" color="#35302C" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Giorgetti's places to live in Spain
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="19px" line-height="26px" text-transform="uppercase">
+          <p padding="0">
+            The three villas designed by Femont Galvan Designers are in the most wonderful locations in Spain and they will make you dream!
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text align="left" font-size="15px" color="#35302C" line-height="22px">
+          <p>
+            Giorgetti pieces design the spaces of these projects in a wonderful sequence of environments and moods.
+          </p>
+          <p>
+            Proportions, materials, light and colour are signature elements of Luis Barragan’s architecture in <a href="https://www.aquafilmeda.com/en/projects/reserva-de-sotogrande" style="color:#35302C; font-weight:bold;" target="_blank">"La Reserva de Sotogrande"</a>. This project combines a seamless design with a timeless flair. The building gracefully emerges from a wide golf course to enjoy the outdoor environment. From the building to every detail, this villa has been entirely customised and is characterised by wide spaces, bright rooms and precious materials.
+          </p>
+          <p>
+            A fresh, elegant and sophisticated aesthetic interior shared by the <a href="https://www.aquafilmeda.com/en/projects/mews-ii" style="color:#35302C; font-weight:bold;" target="_blank">"Mews II"</a> project in the British Gibraltar. Influenced by the detailing of historic Arab ornaments, the studio developed its own contemporary Moroccan decoration in a minimal space. The combination between light colours and bold materials defines the space aesthetically and functionally.
+          </p>
+          <p>
+            A refined and warm atmosphere like that of the <a href="https://www.aquafilmeda.com/en/projects/valderrama" style="color:#35302C; font-weight:bold;" target="_blank">"Valderrama"</a> project: a selection of natural materials, wood, leather, textiles and marble, in combination with a subtle sandy palette. The balance between materials and colours is the key to achieve this home feeling of effortless cosiness.
+          </p>
+          <p>
+            <a href="https://www.aquafilmeda.com/en/projects" style="color:#35302C; font-weight:bold;" target="_blank">Click here to discover all the Giorgetti's projects</a>
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Cta Primary -->
+    <mj-section padding="20px 10px 30px 10px">
+      <mj-column>
+        <mj-button href="#" align="center" padding="15px 0 15px 0" inner-padding="15px 25px" width="180px" font-size="15px" font-weight="bold" background-color="#35302C" color="#ffffff" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+          CTA Primary
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Cta Secondary -->
+    <mj-section padding="20px 10px 30px 10px">
+      <mj-column>
+        <mj-button href="#" align="center" padding="15px 0 15px 0" inner-padding="15px 25px" width="180px" font-size="15px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+          CTA Secondary
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Carousel -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-column>
+        <mj-carousel icon-width="72px" left-icon="https://aquafil21.wslabs.it/Client/docs/img/email/arrow-left.png" right-icon="https://aquafil21.wslabs.it/Client/docs/img/email/arrow-right.png" border-radius="0" tb-border="14px solid transparent" tb-border-radius="0" tb-hover-border-color="#d1cdca" tb-selected-border-color="transparent">
+          <mj-carousel-image src="https://www.aquafilmeda.com/media/immagini/7677_n_newsletter-proposta01.jpg" />
+          <mj-carousel-image src="https://www.aquafilmeda.com/media/immagini/5965_n_ARTICOLI_principali_secondari4.jpg" />
+          <mj-carousel-image src="https://www.aquafilmeda.com/media/immagini/7677_n_newsletter-proposta01.jpg" />
+        </mj-carousel>
+      </mj-column>
+    </mj-section>
+
+    <!-- Index -->
+    <!--
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-column width="100%">
+        <mj-text padding="10px 0 30px 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Index
+        </mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text padding="10px 10px 0 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          01.
+        </mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text padding="10px 10px 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="16px" text-transform="uppercase">
+          <a href="#" style="color: #A19C96; text-decoration: none;">Godron Giorgetti Atmosphere Collection</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text padding="10px 10px 0 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          02.
+        </mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text padding="10px 10px 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="16px" text-transform="uppercase">
+          <a href="#" style="color: #A19C96; text-decoration: none;">Space Black Moodboard Giorgetti</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text padding="10px 10px 0 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          03.
+        </mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text padding="10px 10px 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="16px" text-transform="uppercase">
+          <a href="#" style="color: #A19C96; text-decoration: none;">Press Highlights</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="10%">
+        <mj-text padding="10px 10px 0 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          04.
+        </mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text padding="10px 10px 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="16px" text-transform="uppercase">
+          <a href="#" style="color: #A19C96; text-decoration: none;">News</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+	-->
+
+    <!-- Picture Text -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-column width="100%">
+        <mj-image padding="0 0 10px 0" width="600px" src="https://www.aquafilmeda.com/media/immagini/5965_n_ARTICOLI_principali_secondari4.jpg" />
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text align="left" color="#35302C" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Godron
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text padding="0 0 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="19px" line-height="26px" text-transform="uppercase">
+          <p>Giorgetti Atmosphere Collection</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text padding="0 0 20px 0" align="left" font-size="15px" color="#35302C" line-height="22px">
+          <p>Realized in collaboration with Listone Giordano, Godron is an architectural surface made up of triangle and rhombus-shaped tiles that enables to obtain multiple patterns thanks to two directions of laying it. The decoration is obtained from the characteristic geometry of the tiles and from 3 different gloss levels and colour saturation of walnut canaletto wood. Godron can be used both as parquet and boiserie.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Picture Text -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-column width="100%">
+        <mj-image padding="0 0 10px 0" width="600px" src="https://www.aquafilmeda.com/media/immagini/5966_n_ARTICOLI_principali_secondari5-min.jpg" />
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text align="left" color="#35302C" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Space Black
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text padding="0 0 20px 0" align="left" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="19px" line-height="26px" text-transform="uppercase">
+          <p>Moodboard Giorgetti</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text padding="0 0 20px 0" align="left" font-size="15px" color="#35302C" line-height="22px">
+          <p>Characterized by white, gray and black shades, it gives volume to the different patterns of the fabrics.</p>
+          <p>They recall the contrast between the black outer space and the brightness of stars and planets. Black is synonym of elegance both in fashion and in interior design and the veining of Portoro marble enhance it.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Press Highlights -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <!--
+      <mj-column width="100%">
+        <mj-text padding="10px 0 30px 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          Press Highlights
+        </mj-text>
+      </mj-column>
+	  -->
+      <mj-group width="100%">
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://aquafil21.wslabs.it/Client/docs/img/email/test/news-01.jpg" />
+          <mj-text align="center" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            INTERNI Italy
+          </mj-text>
+          <mj-text align="center" padding="0 0 5px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            October 2019
+          </mj-text>
+          <mj-button href="#" align="center" padding="15px 0 15px 0" inner-padding="15px 25px" font-size="15px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            Download
+          </mj-button>
+        </mj-column>
+        <mj-column width="6%">
+        </mj-column>
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://aquafil21.wslabs.it/Client/docs/img/email/test/news-02.jpg" />
+          <mj-text align="center" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            ELLE Decoration Spain
+          </mj-text>
+          <mj-text align="center" padding="0 0 5px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            September 2019
+          </mj-text>
+          <mj-button href="#" align="center" padding="15px 0 15px 0" inner-padding="15px 25px" font-size="15px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            Download
+          </mj-button>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- News -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <!--
+      <mj-column width="100%">
+        <mj-text padding="10px 0 30px 0" align="left" color="#A19C96" font-family="BauerBodoni, serif" font-size="36px" line-height="36px" letter-spacing="-2px" text-transform="uppercase">
+          News from Milan
+        </mj-text>
+      </mj-column>
+	  -->
+      <mj-group width="100%">
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://www.aquafilmeda.com/media/immagini/5967_n_NewsMilan-min.jpg" />
+          <mj-text align="left" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            DANIEL STEEGMANN MANGRANÉ
+          </mj-text>
+          <mj-text align="left" padding="0 0 10px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            Until February 19th, 2020
+          </mj-text>
+          <mj-text align="left" padding="0" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px">
+            <a href="https://pirellihangarbicocca.org" style="color:#35302C">pirellihangarbicocca.org</a>
+          </mj-text>
+          <mj-text align="left" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="22px">
+            <p>Daniel Steegmann Mangrané’s first exhibition in Italy ponders on the relationship between culture and nature.</p>
+            <p>The artist’s interest in biology has led him to analyse complex ecological systems and introduce the natural world into his works.</p>
+            <p>In Steegmann Mangrané’s practice numerous are the references to the rain forest in Brazil—such as branches, leaves, and insects—which interwoven with geometric forms and abstract motifs engender a reflection on the complex dynamics between the elements that surround us.</p>
+          </mj-text>
+          <mj-button href="#" align="left" padding="10px 0 10px 0" inner-padding="10px 15px" font-size="12px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            More
+          </mj-button>
+        </mj-column>
+        <mj-column width="6%">
+        </mj-column>
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://www.aquafilmeda.com/media/immagini/5968_n_NewsMilan2-min.jpg" />
+          <mj-text align="left" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            FRAGILITY AND BEAUTY
+          </mj-text>
+          <mj-text align="left" padding="0 0 10px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            Until October 31st, 2019
+          </mj-text>
+          <mj-text align="left" padding="0" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px">
+            <a href="https://museoscienza.org" style="color:#35302C">museoscienza.org</a>
+          </mj-text>
+          <mj-text align="left" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="22px">
+            <p>The exhibit promoted by the European Space Agency (ESA) in collaboration with the Italian Space Agency (ASI) returns to the Science Museum for a new installation with the most recent Earth images taken by satellites.</p>
+            <p>The exhibition, curated by Viviana Panaccia, aims to raise public awareness on climate change and sustainable development, their impact on terrestrial ecosystems and the consequences on the planet's future.</p>
+          </mj-text>
+          <mj-button href="#" align="left" padding="10px 0 10px 0" inner-padding="10px 15px" font-size="12px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            More
+          </mj-button>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Text + Image -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-group width="100%">
+        <mj-column width="47%">
+          <mj-text align="left" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            DANIEL STEEGMANN MANGRANÉ
+          </mj-text>
+          <mj-text align="left" padding="0 0 10px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            Until February 19th, 2020
+          </mj-text>
+          <mj-text align="left" padding="0" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px">
+            <a href="https://pirellihangarbicocca.org" style="color:#35302C">pirellihangarbicocca.org</a>
+          </mj-text>
+          <mj-text align="left" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="22px">
+            <p>Daniel Steegmann Mangrané’s first exhibition in Italy ponders on the relationship between culture and nature.</p>
+            <p>The artist’s interest in biology has led him to analyse complex ecological systems and introduce the natural world into his works.</p>
+          </mj-text>
+          <mj-button href="#" align="left" padding="10px 0 10px 0" inner-padding="10px 15px" font-size="12px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            More
+          </mj-button>
+        </mj-column>
+        <mj-column width="6%">
+        </mj-column>
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://www.aquafilmeda.com/media/immagini/5967_n_NewsMilan-min.jpg" />
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Image + Text -->
+    <mj-section padding="20px 10px 20px 10px" border-top="1px solid #d1cdca">
+      <mj-group width="100%">
+        <mj-column width="47%">
+          <mj-image padding="0 0 30px 0" width="282px" src="https://www.aquafilmeda.com/media/immagini/5968_n_NewsMilan2-min.jpg" />
+        </mj-column>
+        <mj-column width="6%">
+        </mj-column>
+        <mj-column width="47%">
+          <mj-text align="left" padding="0 0 5px 0" color="#35302C" font-family="BauerBodoni, serif" font-size="19px" line-height="21px" text-transform="uppercase">
+            FRAGILITY AND BEAUTY
+          </mj-text>
+          <mj-text align="left" padding="0 0 10px 0" color="#A19C96" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px" text-transform="uppercase">
+            Until October 31st, 2019
+          </mj-text>
+          <mj-text align="left" padding="0" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="19px">
+            <a href="https://museoscienza.org" style="color:#35302C">museoscienza.org</a>
+          </mj-text>
+          <mj-text align="left" color="#35302C" font-family="AvantGarde, sans-serif" font-size="14px" line-height="22px">
+            <p>The exhibit promoted by the European Space Agency (ESA) in collaboration with the Italian Space Agency (ASI) returns to the Science Museum for a new installation with the most recent Earth images taken by satellites.</p>
+          </mj-text>
+          <mj-button href="#" align="left" padding="10px 0 10px 0" inner-padding="10px 15px" font-size="12px" background-color="#ffffff" color="#35302C" border="1px solid #A19C96" border-radius="0" text-transform="uppercase">
+            More
+          </mj-button>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Body -->
+
+    <!-- Footer Battaglia -->
+    <mj-section padding="45px 10px 5px 10px">
+      <mj-column>
+        <mj-image width="220px" height="40px" href="https://aquafil21.wslabs.it" src="https://aquafil21.wslabs.it/Client/docs/img/email/aquafil-battaglia.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Social -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-group>
+        <mj-column width="25%">
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#35302C" line-height="20px" font-family="AvantGarde, serif">
+            Follow us on
+          </mj-text>
+        </mj-column>
+        <mj-column width="75%">
+          <mj-social padding="0" inner-padding="6px" icon-size="20px" font-size="0" mode="horizontal" align="right">
+            <mj-social-element name="instagram" src="https://aquafil21.wslabs.it/Client/docs/img/email/instagram.png" href="https://www.instagram.com/aquafilofficial/" background-color="transparent"></mj-social-element>
+            <mj-social-element name="youtube" src="https://aquafil21.wslabs.it/Client/docs/img/email/youtube.png" href="https://www.youtube.com/channel/UCoE9AlLZLvTTRlEIcNArZxQ" background-color="transparent"></mj-social-element>
+            <mj-social-element name="pinterest" src="https://aquafil21.wslabs.it/Client/docs/img/email/pinterest.png" href="https://it.pinterest.com/aquafilofficial/" background-color="transparent"></mj-social-element>
+            <mj-social-element name="linkedin" src="https://aquafil21.wslabs.it/Client/docs/img/email/linkedin.png" href="https://it.linkedin.com/company/aquafil-spa" background-color="transparent"></mj-social-element>
+            <mj-social-element name="wechat" src="https://aquafil21.wslabs.it/Client/docs/img/email/wechat.png" href="https://aquafil21.wslabs.it/Client/docs/img/footer/aquafil-wechat-qr.jpg" background-color="transparent"></mj-social-element>
+            <mj-social-element name="facebook" src="https://aquafil21.wslabs.it/Client/docs/img/email/facebook.png" href="https://www.facebook.com/GiorgettiOfficial" background-color="transparent"></mj-social-element>
+          </mj-social>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Footer Actions -->
+    <mj-section padding="20px 10px 0 10px" border-top="1px solid #d1cdca">
+      <mj-group>
+        <mj-column>
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#A19C96">View in browser</a>
+          </mj-text>
+          <!--
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#A19C96">Unsubscribe</a>
+          </mj-text>
+		  -->
+        </mj-column>
+        <mj-column>
+          <mj-text padding="6px 0 0 0" align="right" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#A19C96">Unsubscribe</a>
+          </mj-text>
+          <!--
+          <mj-text padding="6px 0 0 0" align="right" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="https://aquafil21.wslabs.it" style="color:#A19C96">Giorgetti website</a>
+          </mj-text>
+		  -->
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Footer Colophon -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-column>
+        <mj-text padding="6px 0 0 0" align="left" font-size="15px" line-height="20px" font-family="AvantGarde, serif" color="#35302C">
+          Giorgetti S.p.A.<br>
+          I 20821 Meda (MB) Via Manzoni 20
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Privacy -->
+    <mj-section padding="20px 10px 80px 10px" border-top="1px solid #d1cdca">
+      <mj-column>
+        <mj-text padding="6px 0 0 0" align="left" font-size="12px" line-height="16px" font-family="AvantGarde, serif" color="#d1cdca">
+          <p>
+            This message and its attachments contain information for the named person’s use only. This e-mail is confidential and is legally protected by the law 2016/679 “GDPR”. Reading, copying or any other unauthorised use or any other action deriving from the knowledge of this information are strictly forbidden. If you receive this correspondence in error you are kindly requested to notify the sender immediately to the above mentioned numbers and to delete the message.I confirm herewith the free subscription to the Mailing list “Newsletter” of Giorgetti Spa and I authorize the personal data treatment in accordance with EU law nr. n. 2016/679. To cancel to the Mailing list please send an e-mail to the address aquafil_news@aquafil.eu writing “Cancellation Mailing list”.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

@@ -1,0 +1,19 @@
+.report-proposition {
+	background: $background-quaternary;
+
+	&__content {
+		padding: 200px 0 200px 0;
+	}
+
+	&__picture {
+		@include aspect-clip(1, 1);
+	}
+
+	&__title {
+		@extend .h3;
+	}
+
+	&__cta {
+		padding-top: 60px;
+	}
+}

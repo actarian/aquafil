@@ -1,0 +1,41 @@
+$spinner-size: 48px;
+$spinner-thickness: 3px;
+$spinner-background: rgba(#A19C96, 0.3);
+$spinner-foreground: $background-secondary;
+
+.spinner,
+.spinner:after {
+	border-radius: 50%;
+	width: $spinner-size;
+	height: $spinner-size;
+}
+
+.spinner {
+	margin: $spinner-size auto;
+	font-size: 0;
+	position: relative;
+	text-indent: -9999em;
+	border-top: $spinner-thickness solid $spinner-background;
+	border-right: $spinner-thickness solid $spinner-background;
+	border-bottom: $spinner-thickness solid $spinner-background;
+	border-left: $spinner-thickness solid $spinner-foreground;
+	transform: translateZ(0);
+	animation: spinner 1.1s infinite linear;
+}
+
+.spinner--contrasted {
+	border-top: $spinner-thickness solid $background;
+	border-right: $spinner-thickness solid $background;
+	border-bottom: $spinner-thickness solid $background;
+	border-left: $spinner-thickness solid $foreground;
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,107 @@
+<div class="section--user-detail" user-detail>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="title">Dati personali</div>
+				<div class="card--address">
+					<div class="card__content">
+						<div class="card__name" [innerHTML]="user.firstName + ' ' + user.lastName"></div>
+						<div class="card__occupation" [innerHTML]="occupationName"></div>
+						<div class="card__company" [innerHTML]="user.company"></div>
+						<div class="card__address" [innerHTML]="user.address" *if="user.address"></div>
+						<div class="card__address">
+							<span class="card__zipcode" [innerHTML]="user.zipCode" *if="user.zipCode"></span>
+							<span class="card__city" [innerHTML]="user.city"></span>
+							<span class="card__country" [innerHTML]="countryName"></span>
+						</div>
+						<div class="card__phones" *if="user.telephone">
+							<a class="card__phone" [href]="'tel:' + user.telephone" [innerHTML]="user.telephone"></a>
+						</div>
+						<a class="card__email" [href]="'mailto:' + user.email" [innerHTML]="user.email"></a>
+						<div class="card__newsletter" *if="user.newsletter">
+							<span>Lingua newsletter</span> <span [innerHTML]="newsletterLanguageName"></span>
+						</div>
+					</div>
+				</div>
+				<div class="group--cta">
+					<button type="button" class="btn--primary" (click)="onModalUserUpdate($event)">Modifica</a>
+				</div>
+			</div>
+			<div class="col-md-6" *if="gdpr">
+				<div class="title">Consensi GDPR</div>
+				<div class="card--gdpr" *for="let item of gdpr">
+					<label class="active">
+						<div class="group--headline">
+							<svg class="radio-checked"><use xlink:href="#radio-checked"></use></svg>
+							<span class="name" [innerHTML]="item.title"></span>
+							<span class="group--date">
+								<span class="date" [innerHTML]="item.date | date : {
+									year: 'numeric', month: 'numeric', day: 'numeric',
+									hour: 'numeric', minute: 'numeric', second: 'numeric',
+								}"></span>
+							</span>
+						</div>
+						<div *if="item.legalNotes">
+							<div class="abstract">Note legali</div>
+							<div class="group--cta" *if="item.legalNotes.length">
+								<button type="button" class="btn--link" (click)="onModalGdpr(legalNote)" *for="let legalNote of item.legalNotes">
+									<span [innerHTML]="legalNote.title"></span>
+								</button>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-6" user-access-data>
+				<div class="title">Dati di accesso</div>
+				<div class="abstract">
+					<p>L'operazione aggiornerà la tua password di accesso.</p>
+				</div>
+				<form class="form" [formGroup]="form" (submit)="onSubmit($event)" name="form" role="form" novalidate autocomplete="off">
+					<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+					<div control-text [control]="controls.email" label="Email"></div>
+					<div control-password [control]="controls.password" label="Vecchia password" secure></div>
+					<div control-password [control]="controls.newPassword" label="Nuova password" secure></div>
+					<div class="group--error" *if="error">
+						<span class="status-code" [innerHTML]="error.statusCode"></span>
+						<span class="status-message" [innerHTML]="error.statusMessage"></span>
+						<span class="friendly-message" [innerHTML]="error.friendlyMessage"></span>
+					</div>
+					<div class="group--cta">
+						<button type="submit" class="btn--submit" data-title="Modifica" *if="!form.submitted">
+							<span>Modifica</span>
+						</button>
+						<button type="button" class="btn--submit" data-title="Inviato!" *if="form.submitted">
+							<span>Inviato!</span>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6" user-delete>
+				<div class="title">Rimuovi account</div>
+				<div class="abstract">
+					<p>L'operazione rimuoverà il tuo account dai nostri archivi.</p>
+					<p>La tua area personale non sarà più accessibile.</p>
+				</div>
+				<form class="form" [formGroup]="form" (submit)="onSubmit($event)" name="form" role="form" novalidate autocomplete="off">
+					<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+					<div control-text [control]="controls.email" label="Email"></div>
+					<div control-password [control]="controls.password" label="Password" secure></div>
+					<div class="group--error" *if="error">
+						<span class="status-code" [innerHTML]="error.statusCode"></span>
+						<span class="status-message" [innerHTML]="error.statusMessage"></span>
+						<span class="friendly-message" [innerHTML]="error.friendlyMessage"></span>
+					</div>
+					<div class="group--cta">
+						<button type="submit" class="btn--submit" data-title="Rimuovi account" *if="!form.submitted">
+							<span>Rimuovi account</span>
+						</button>
+						<button type="button" class="btn--submit" data-title="Inviato!" *if="form.submitted">
+							<span>Inviato!</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

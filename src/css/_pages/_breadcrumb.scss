@@ -1,0 +1,38 @@
+.section--breadcrumb {
+
+	$x: 50px;
+	$y: 50px;
+
+	position: absolute;
+	top: $y;
+	transform: rotate(90deg);
+	left: calc(100% - #{$x});
+	transform-origin: left;
+}
+
+.nav--breadcrumb {
+	@extend %nav;
+
+	&>.nav__item {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		font-size: 12px;
+		color: $foreground-secondary;
+
+		&:last-child {
+			color: $foreground;
+		}
+	}
+
+	&>.nav__item+.nav__item {
+		&:before {
+			content: '/';
+			padding: 0 0.4em;
+		}
+	}
+
+	@include media-down(xs) {
+		flex-wrap: wrap;
+	}
+}

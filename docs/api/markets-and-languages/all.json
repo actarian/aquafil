@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "code": "IT",
+    "name": "Italia",
+    "languages": [
+      {
+        "id": 101,
+        "code": "it",
+        "name": "Italiano",
+        "url": "#"
+      },
+      {
+        "id": 102,
+        "code": "en",
+        "name": "English",
+        "url": "#"
+      },
+      {
+        "id": 103,
+        "code": "de",
+        "name": "Deutsch",
+        "url": "#"
+      },
+      {
+        "id": 104,
+        "code": "ch",
+        "name": "中文",
+        "url": "#"
+      }
+    ]
+  }, {
+    "id": 2,
+    "code": "EU",
+    "name": "Europa",
+    "languages": [
+      {
+        "id": 102,
+        "code": "en",
+        "name": "English",
+        "url": "#"
+      },
+      {
+        "id": 103,
+        "code": "de",
+        "name": "Deutsch",
+        "url": "#"
+      },
+      {
+        "id": 101,
+        "code": "it",
+        "name": "Italiano",
+        "url": "#"
+      }
+    ]
+  }, {
+    "id": 3,
+    "code": "AS",
+    "name": "Asia",
+    "languages": [
+      {
+        "id": 104,
+        "code": "ch",
+        "name": "中文",
+        "url": "#"
+      }, {
+        "id": 102,
+        "code": "en",
+        "name": "English",
+        "url": "#"
+      }
+    ]
+  }, {
+    "id": 4,
+    "code": "AM",
+    "name": "America",
+    "languages": [
+      {
+        "id": 102,
+        "code": "en",
+        "name": "English",
+        "url": "#"
+      },
+      {
+        "id": 101,
+        "code": "it",
+        "name": "Italiano",
+        "url": "#"
+      },
+      {
+        "id": 103,
+        "code": "de",
+        "name": "Deutsch",
+        "url": "#"
+      },
+      {
+        "id": 104,
+        "code": "ch",
+        "name": "中文",
+        "url": "#"
+      }
+    ]
+  }, {
+    "id": 5,
+    "code": "IN",
+    "name": "Internazionale",
+    "languages": [
+      {
+        "id": 102,
+        "code": "en",
+        "name": "English",
+        "url": "#"
+      },
+      {
+        "id": 101,
+        "code": "it",
+        "name": "Italiano",
+        "url": "#"
+      },
+      {
+        "id": 103,
+        "code": "de",
+        "name": "Deutsch",
+        "url": "#"
+      }
+    ]
+  }
+]

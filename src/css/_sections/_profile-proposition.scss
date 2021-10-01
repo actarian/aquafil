@@ -1,0 +1,35 @@
+.profile-proposition {
+	background: $background;
+
+	.background-primary {
+		display: flex;
+		align-items: center;
+	}
+
+	&__picture {
+		position: absolute;
+		right: 0;
+		transform: translateX(50%);
+		width: auto;
+
+		&>img {
+			max-width: 50vw;
+		}
+	}
+
+	&__content {
+		padding: 340px 0;
+	}
+
+	&__category {
+		@extend .category;
+	}
+
+	&__title {
+		@extend .h1;
+	}
+
+	&__cta {
+		padding-top: 60px;
+	}
+}

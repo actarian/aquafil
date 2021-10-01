@@ -1,0 +1,127 @@
+.product-proposition {
+
+	&__head {
+		padding: 320px 0 300px 0;
+		background: $background-quaternary;
+	}
+
+	&__category {
+		@extend .category;
+	}
+
+	&__title {
+		@extend .h1;
+	}
+}
+
+.listing--product {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media-up(sm) {
+		&>.listing__item {
+			flex: 0 0 50%;
+			max-width: 50%;
+
+			&:nth-child(even) {
+				&>.card--product {
+					margin-top: -12.5vw;
+				}
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		&>.listing__item {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.card--product {
+	padding: 8.33333vw;
+
+	.card__title {
+		position: relative;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 1.36;
+		margin-bottom: 60px;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			left: -4.166666vw;
+			bottom: 0.3em;
+		}
+	}
+
+	.card__picture {
+		margin-bottom: 60px;
+	}
+
+	.card__cta {
+		padding-top: 60px;
+	}
+
+	.listing__item:nth-child(4n+1)>& {
+		background: $background-negative;
+
+		.card__title {
+			color: $foreground-negative;
+
+			&:before {
+				background: $foreground-negative;
+			}
+		}
+
+		.card__abstract {
+			color: $foreground-negative;
+		}
+	}
+
+	.listing__item:nth-child(4n+2)>& {
+		background: $background;
+
+		.card__title {
+			color: $foreground;
+
+			&:before {
+				background: $foreground;
+			}
+		}
+	}
+
+	.listing__item:nth-child(4n+3)>& {
+		background: $background-quaternary;
+
+		.card__title {
+			color: $foreground;
+
+			&:before {
+				background: $foreground;
+			}
+		}
+	}
+
+	.listing__item:nth-child(4n+4)>& {
+		background: $background-tertiary;
+
+		.card__title {
+			color: $foreground-negative;
+
+			&:before {
+				background: $foreground-negative;
+			}
+		}
+
+		.card__abstract {
+			color: $foreground-negative;
+		}
+	}
+}

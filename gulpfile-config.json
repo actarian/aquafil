@@ -1,0 +1,85 @@
+﻿{
+  "targets": {
+    "browser": {
+      "compile": [
+        {
+          "input": "src/*.html",
+          "output": "docs/",
+          "minify": true
+        },
+        {
+          "input": "src/templates/modals/*.html",
+          "output": "docs/partials/modals/",
+          "minify": true
+        },
+        {
+          "input": "src/css/main-cssvars.scss",
+          "output": "docs/css/main.css",
+          "minify": true
+        },
+        {
+          "input": "src/js/main.js",
+          "output": {
+            "file": "docs/js/main.js",
+            "format": "umd"
+          },
+          "globals": {
+            "gsap": "gsap",
+            "locomotive-scroll": "LocomotiveScroll",
+            "motion": "motion",
+            "rxjs": "rxjs",
+            "rxjs/operators": "rxjs.operators",
+            "rxcomp": "rxcomp",
+            "rxcomp-form": "rxcomp.form",
+            "swiper": "Swiper"
+          },
+          "minify": true
+        },
+        {
+          "input": "src/templates/emails/*.mjml",
+          "output": "docs/templates/emails/",
+          "minify": false
+        }
+      ],
+      "bundle": [],
+      "copy": []
+    },
+    "vendors": {
+      "compile": [],
+      "bundle": [
+        {
+          "input": [
+            "node_modules/swiper/swiper-bundle.css"
+          ],
+          "output": "docs/css/vendors.css",
+          "minify": true
+        },
+        {
+          "input": [
+            "node_modules/gsap/dist/EasePack.js",
+            "node_modules/gsap/dist/gsap.js",
+            "node_modules/locomotive-scroll/dist/locomotive-scroll.js",
+            "node_modules/rxjs/bundles/rxjs.umd.js",
+            "node_modules/rxcomp/dist/iife/rxcomp.js",
+            "node_modules/rxcomp-form/dist/iife/rxcomp-form.js",
+            "node_modules/swiper/swiper-bundle.js"
+          ],
+          "output": "docs/js/vendors.js",
+          "minify": true
+        }
+      ],
+      "copy": []
+    }
+  },
+  "tfs": false,
+  "server": {
+    "root": "./docs",
+    "path": "/aquafil/",
+    "host": "localhost",
+    "port": 45432,
+    "log": false,
+    "https": {
+      "cert": "certs/server.crt"
+    }
+  }
+}

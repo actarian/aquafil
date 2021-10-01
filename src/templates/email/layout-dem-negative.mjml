@@ -1,0 +1,131 @@
+<mjml owa="desktop">
+  <mj-head>
+    <mj-title>GIORGETTI S.p.A. - Oggetti senza tempo</mj-title>
+    <mj-preview>GIORGETTI S.p.A. - Oggetti senza tempo</mj-preview>
+    <mj-style>
+      @font-face {
+        font-family: 'AvantGarde';
+        src: url('https://aquafil21.wslabs.it/Client/docs/fonts/avant-garde/AvantGarde-Book.otf') format('opentype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/avant-garde/AvantGarde-Book.woff') format('woff'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/AvantGarde-Book.ttf') format('truetype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/AvantGarde-Book.svg#AvantGarde-Book') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'BauerBodoni';
+        src: url('https://aquafil21.wslabs.it/Client/docs/fonts/bauer-bodoni/BauerBodoniBT-Roman.otf') format('opentype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/bauer-bodoni/BauerBodoniBT-Roman.woff') format('woff'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/BauerBodoniBT-Roman.ttf') format('truetype'),
+          url('https://aquafil21.wslabs.it/Client/docs/fonts/BauerBodoniBT-Roman.svg#BauerBodoniBT-Roman') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      p {
+        margin: 0 0 5px 0;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-text padding="20px 0 5px 0" />
+      <mj-all font-family="AvantGarde" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#1a1816">
+
+    <!-- Header -->
+    <mj-section padding="5px 10px 5px 10px" border-bottom="1px solid #3c3a39">
+      <mj-column>
+        <mj-image width="220px" height="63px" href="https://aquafil21.wslabs.it" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/aquafil.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Body -->
+
+    <!-- Dem -->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image padding="0" width="600px" href="#" src="https://www.aquafilmeda.com/media/immagini/7712_n_Giorgetti_invitation_LondonDesignWeek_202105.jpg"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Body -->
+
+    <!-- Footer Battaglia -->
+    <mj-section padding="45px 10px 5px 10px">
+      <mj-column>
+        <mj-image width="220px" height="40px" href="https://aquafil21.wslabs.it" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/aquafil-battaglia.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Social -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-group>
+        <mj-column width="25%">
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#ffffff" line-height="20px" font-family="AvantGarde, serif">
+            Follow us on
+          </mj-text>
+        </mj-column>
+        <mj-column width="75%">
+          <mj-social padding="0" inner-padding="6px" icon-size="20px" font-size="0" mode="horizontal" align="right">
+            <mj-social-element name="instagram" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/instagram.png" href="https://www.instagram.com/aquafilofficial/" background-color="transparent"></mj-social-element>
+            <mj-social-element name="youtube" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/youtube.png" href="https://www.youtube.com/channel/UCoE9AlLZLvTTRlEIcNArZxQ" background-color="transparent"></mj-social-element>
+            <mj-social-element name="pinterest" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/pinterest.png" href="https://it.pinterest.com/aquafilofficial/" background-color="transparent"></mj-social-element>
+            <mj-social-element name="linkedin" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/linkedin.png" href="https://it.linkedin.com/company/aquafil-spa" background-color="transparent"></mj-social-element>
+            <mj-social-element name="wechat" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/wechat.png" href="https://aquafil21.wslabs.it/Client/docs/img/footer/aquafil-wechat-qr.jpg" background-color="transparent"></mj-social-element>
+            <mj-social-element name="facebook" src="https://aquafil21.wslabs.it/Client/docs/img/email/negative/facebook.png" href="https://www.facebook.com/GiorgettiOfficial" background-color="transparent"></mj-social-element>
+          </mj-social>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Footer Actions -->
+    <mj-section padding="20px 10px 0 10px" border-top="1px solid #3c3a39">
+      <mj-group>
+        <mj-column>
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#A19C96">View in browser</a>
+          </mj-text>
+          <!--
+          <mj-text padding="6px 0 0 0" align="left" font-size="15px" color="#ffffff" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#ffffff">Unsubscribe</a>
+          </mj-text>
+		  -->
+        </mj-column>
+        <mj-column>
+          <mj-text padding="6px 0 0 0" align="right" font-size="15px" color="#A19C96" line-height="20px" font-family="AvantGarde, serif">
+            <a href="#" style="color:#A19C96">Unsubscribe</a>
+          </mj-text>
+          <!--
+          <mj-text padding="6px 0 0 0" align="right" font-size="15px" color="#ffffff" line-height="20px" font-family="AvantGarde, serif">
+            <a href="https://aquafil21.wslabs.it" style="color:#ffffff">Giorgetti website</a>
+          </mj-text>
+		  -->
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Footer Colophon -->
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-column>
+        <mj-text padding="6px 0 0 0" align="left" font-size="15px" line-height="20px" font-family="AvantGarde, serif" color="#ffffff">
+          Giorgetti S.p.A.<br>
+          I 20821 Meda (MB) Via Manzoni 20
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Privacy -->
+    <mj-section padding="20px 10px 80px 10px" border-top="1px solid #3c3a39">
+      <mj-column>
+        <mj-text padding="6px 0 0 0" align="left" font-size="12px" line-height="16px" font-family="AvantGarde, serif" color="#A19C96">
+          <p>
+            This message and its attachments contain information for the named person’s use only. This e-mail is confidential and is legally protected by the law 2016/679 “GDPR”. Reading, copying or any other unauthorised use or any other action deriving from the knowledge of this information are strictly forbidden. If you receive this correspondence in error you are kindly requested to notify the sender immediately to the above mentioned numbers and to delete the message.I confirm herewith the free subscription to the Mailing list “Newsletter” of Giorgetti Spa and I authorize the personal data treatment in accordance with EU law nr. n. 2016/679. To cancel to the Mailing list please send an e-mail to the address aquafil_news@aquafil.eu writing “Cancellation Mailing list”.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

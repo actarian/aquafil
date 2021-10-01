@@ -1,0 +1,294 @@
+{
+  "country": {
+    "label": "Paese",
+    "mode": "select",
+    "options": [
+      {
+        "value": 114,
+        "label": "Italia"
+      },
+      {
+        "value": 2,
+        "label": "Albania"
+      },
+      {
+        "value": 8,
+        "label": "Arabia Saudita"
+      },
+      {
+        "value": 10,
+        "label": "Armenia"
+      },
+      {
+        "value": 12,
+        "label": "Australia"
+      },
+      {
+        "value": 13,
+        "label": "Austria"
+      },
+      {
+        "value": 14,
+        "label": "Azerbaigian"
+      },
+      {
+        "value": 19,
+        "label": "Belgio"
+      },
+      {
+        "value": 27,
+        "label": "Bosnia-Herzeg."
+      },
+      {
+        "value": 30,
+        "label": "Brasile"
+      },
+      {
+        "value": 32,
+        "label": "Bulgaria"
+      },
+      {
+        "value": 37,
+        "label": "Canada"
+      },
+      {
+        "value": 41,
+        "label": "Cina"
+      },
+      {
+        "value": 42,
+        "label": "Cipro"
+      },
+      {
+        "value": 50,
+        "label": "Corea del Sud"
+      },
+      {
+        "value": 53,
+        "label": "Croazia"
+      },
+      {
+        "value": 55,
+        "label": "Danimarca"
+      },
+      {
+        "value": 58,
+        "label": "Egitto"
+      },
+      {
+        "value": 60,
+        "label": "Emirati Arabi Uniti"
+      },
+      {
+        "value": 65,
+        "label": "Filippine"
+      },
+      {
+        "value": 67,
+        "label": "Francia"
+      },
+      {
+        "value": 70,
+        "label": "Georgia"
+      },
+      {
+        "value": 72,
+        "label": "Germania"
+      },
+      {
+        "value": 77,
+        "label": "Giordania"
+      },
+      {
+        "value": 79,
+        "label": "Grecia"
+      },
+      {
+        "value": 91,
+        "label": "Hong Kong SAR"
+      },
+      {
+        "value": 93,
+        "label": "India"
+      },
+      {
+        "value": 94,
+        "label": "Indonesia"
+      },
+      {
+        "value": 113,
+        "label": "Israele"
+      },
+      {
+        "value": 119,
+        "label": "Kosovo"
+      },
+      {
+        "value": 120,
+        "label": "Kuwait"
+      },
+      {
+        "value": 123,
+        "label": "Lettonia"
+      },
+      {
+        "value": 124,
+        "label": "Libano"
+      },
+      {
+        "value": 127,
+        "label": "Liechtenstein"
+      },
+      {
+        "value": 128,
+        "label": "Lituania"
+      },
+      {
+        "value": 129,
+        "label": "Lussemburgo"
+      },
+      {
+        "value": 134,
+        "label": "Malaysia"
+      },
+      {
+        "value": 140,
+        "label": "Marocco"
+      },
+      {
+        "value": 145,
+        "label": "Messico"
+      },
+      {
+        "value": 148,
+        "label": "Monaco"
+      },
+      {
+        "value": 246,
+        "label": "Montenegro"
+      },
+      {
+        "value": 159,
+        "label": "Norvegia"
+      },
+      {
+        "value": 161,
+        "label": "Nuova Zelanda"
+      },
+      {
+        "value": 163,
+        "label": "Paesi Bassi"
+      },
+      {
+        "value": 172,
+        "label": "Polonia"
+      },
+      {
+        "value": 173,
+        "label": "Portogallo"
+      },
+      {
+        "value": 175,
+        "label": "Qatar"
+      },
+      {
+        "value": 95,
+        "label": "Regno Unito"
+      },
+      {
+        "value": 176,
+        "label": "Repubblica Ceca"
+      },
+      {
+        "value": 182,
+        "label": "Russia"
+      },
+      {
+        "value": 248,
+        "label": "Serbia"
+      },
+      {
+        "value": 197,
+        "label": "Singapore"
+      },
+      {
+        "value": 199,
+        "label": "Slovacchia"
+      },
+      {
+        "value": 200,
+        "label": "Slovenia"
+      },
+      {
+        "value": 202,
+        "label": "Spagna"
+      },
+      {
+        "value": 204,
+        "label": "Stati Uniti d'America"
+      },
+      {
+        "value": 205,
+        "label": "Sudafrica"
+      },
+      {
+        "value": 208,
+        "label": "Svezia"
+      },
+      {
+        "value": 209,
+        "label": "Svizzera"
+      },
+      {
+        "value": 211,
+        "label": "Tailandia"
+      },
+      {
+        "value": 212,
+        "label": "Taiwan China"
+      },
+      {
+        "value": 222,
+        "label": "Turchia"
+      },
+      {
+        "value": 226,
+        "label": "Ucraina"
+      },
+      {
+        "value": 92,
+        "label": "Ungheria"
+      },
+      {
+        "value": 232,
+        "label": "Vietnam"
+      }
+    ]
+  },
+  "category": {
+    "label": "Tipologia",
+    "mode": "select",
+    "options": [
+      {
+        "value": 8,
+        "label": "Giorgetti Store"
+      },
+      {
+        "value": 9,
+        "label": "Giorgetti Atelier"
+      },
+      {
+        "value": 10,
+        "label": "Distributori"
+      },
+      {
+        "value": 11,
+        "label": "Distributori progetti 30"
+      }
+    ]
+  },
+  "search": {
+    "label": "Cerca",
+    "mode": "query"
+  }
+}

@@ -1,0 +1,49 @@
+.innovation-proposition {
+	padding: 200px 0;
+	background: $background;
+
+	&__content {
+		padding: 0 0 100px 0;
+	}
+
+	&__category {
+		@extend .category;
+	}
+
+	&__title {
+		@extend .h1;
+	}
+}
+
+.card--innovation {
+	background: $background-negative;
+	color: $foreground-negative;
+
+	.card__picture {
+		@include aspect-clip(426, 400);
+	}
+
+	.card__content {
+		position: relative;
+		padding: 4.16666vw 2.083333vw;
+	}
+
+	.card__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 33px;
+		color: $foreground-negative;
+		margin-bottom: 40px;
+	}
+
+	.card__abstract {
+		font-size: 18px;
+		line-height: 150%;
+		color: #BDCFD8;
+	}
+
+	.card__cta {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
