@@ -150,6 +150,60 @@
 	}
 }
 
+
+@mixin stagger-transition($count: 5) {
+	&>* {
+		@for $i from 1 through $count {
+			&:nth-child(#{$i}) {
+				transition-delay: #{0.2 + $i * .1}s;
+			}
+		}
+	}
+}
+
+
+[swiper-main] {
+
+	.card--main-hero {
+		.card__background {
+			overflow: hidden;
+
+			&>img {
+				transform: scale(1.1, 1.1);
+				transition: transform ease-in-out 600ms 250ms;
+			}
+		}
+
+		.card__content {
+			overflow: hidden;
+
+			&>* {
+				transform: translateX(-100%);
+				transition: transform ease-in-out 600ms 250ms;
+			}
+
+			@include stagger-transition(5);
+		}
+	}
+
+	.swiper-slide-active {
+		.card--main-hero {
+			.card__background {
+
+				&>img {
+					transform: scale(1, 1);
+				}
+			}
+
+			.card__content {
+				&>* {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+}
+
 [swiper-homepage] {
 	@extend %swiper-hero;
 }

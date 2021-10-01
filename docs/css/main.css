@@ -6817,6 +6817,34 @@ test-component code {
     transform-origin: bottom;
     transform: scale(1, 0); } }
 
+[swiper-main] .card--main-hero .card__background {
+  overflow: hidden; }
+  [swiper-main] .card--main-hero .card__background > img {
+    transform: scale(1.1, 1.1);
+    transition: transform ease-in-out 600ms 250ms; }
+
+[swiper-main] .card--main-hero .card__content {
+  overflow: hidden; }
+  [swiper-main] .card--main-hero .card__content > * {
+    transform: translateX(-100%);
+    transition: transform ease-in-out 600ms 250ms; }
+  [swiper-main] .card--main-hero .card__content > *:nth-child(1) {
+    transition-delay: 0.3s; }
+  [swiper-main] .card--main-hero .card__content > *:nth-child(2) {
+    transition-delay: 0.4s; }
+  [swiper-main] .card--main-hero .card__content > *:nth-child(3) {
+    transition-delay: 0.5s; }
+  [swiper-main] .card--main-hero .card__content > *:nth-child(4) {
+    transition-delay: 0.6s; }
+  [swiper-main] .card--main-hero .card__content > *:nth-child(5) {
+    transition-delay: 0.7s; }
+
+[swiper-main] .swiper-slide-active .card--main-hero .card__background > img {
+  transform: scale(1, 1); }
+
+[swiper-main] .swiper-slide-active .card--main-hero .card__content > * {
+  transform: translateX(0); }
+
 .profile-proposition {
   background: var(--background); }
   .profile-proposition .background-primary {
