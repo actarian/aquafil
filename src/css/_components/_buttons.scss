@@ -1,3 +1,8 @@
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 %btn-reset {
 	display: inline-block;
 	padding: 0;
@@ -45,6 +50,10 @@
 		opacity: 0.5;
 		pointer-events: none;
 	}
+}
+
+.btn {
+	@extend %btn;
 }
 
 @mixin btn($fill: transparent,
@@ -204,6 +213,10 @@
 	}
 }
 
+.btn--link {
+	@extend %btn-link;
+}
+
 %link {
 	@extend %btn;
 	font-weight: 400;
@@ -223,9 +236,9 @@
 
 %btn-primary {
 	@extend %btn;
-	padding: 20px 58px;
+	padding: 1.0416vw 3.02083vw;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: Max(11px, Min(18px, 0.9375vw));
 	line-height: 1.38;
 
 	&,
@@ -261,25 +274,42 @@
 	}
 }
 
+.btn--primary {
+	@extend %btn-primary;
+}
+
 %btn-more {
 	@extend %btn;
+	display: inline-flex;
+	align-items: center;
 	font-weight: bold;
-	font-size: 18px;
-	line-height: 25px;
+	font-size: Max(11px, Min(18px, 0.9375vw));
+	line-height: 1.38888;
 
 	svg {
 		width: 16px;
 		height: 9px;
+		margin-left: var(--p10);
+		transition: transform ease-in-out $fast;
 	}
+
+	&:hover {
+		svg {
+			transform: translateX(10px);
+		}
+	}
+}
+
+.btn--more {
+	@extend %btn-more;
 }
 
 %btn-download {
 	@extend %btn;
-	padding: 20px 20px;
+	padding: var(--p20);
 	font-weight: bold;
-	font-size: 18px;
+	font-size: Max(11px, Min(18px, 0.9375vw));
 	line-height: 1.38;
-	min-width: 25vw;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
@@ -287,6 +317,7 @@
 	svg {
 		width: 33px;
 		height: 29px;
+		margin-left: var(--p20);
 	}
 
 	&,
@@ -300,6 +331,72 @@
 	&:hover {
 		background-color: $foreground-primary;
 		color: $foreground-negative;
+	}
+
+	&:active:hover {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+		transition: none;
+	}
+
+	&.disabled {
+
+		&,
+		&:active,
+		&:focus,
+		&:hover,
+		&:visited {
+			background-color: $foreground-primary;
+			color: $foreground-negative;
+			pointer-events: none;
+		}
+	}
+
+	@include media-up(md) {
+		min-width: 25vw;
+	}
+
+	@include media-down(xs) {
+		min-width: 75vw;
+	}
+}
+
+.btn--download {
+	@extend %btn-download;
+}
+
+%btn-more-md {
+	@extend %btn;
+	display: inline-flex;
+	align-items: center;
+	font-size: Max(10px, Min(18px, 0.9375vw));
+	line-height: 1.5;
+	padding: var(--p20);
+	font-weight: bold;
+	line-height: 1.38888;
+
+	svg {
+		width: 21px;
+		height: 15px;
+		margin-left: var(--p50);
+		transition: transform ease-in-out $fast;
+	}
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+	}
+
+	&:hover {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+
+		svg {
+			transform: translateX(5px);
+		}
 	}
 
 	&:active:hover {
@@ -322,50 +419,8 @@
 	}
 }
 
-%btn-more-md {
-	@extend %btn;
-	padding: 20px;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 25px;
-
-	svg {
-		width: 21px;
-		height: 15px;
-		margin-left: 50px;
-	}
-
-	&,
-	&:active,
-	&:focus,
-	&:visited {
-		background-color: $foreground-primary;
-		color: $foreground-negative;
-	}
-
-	&:hover {
-		background-color: $foreground-primary;
-		color: $foreground-negative;
-	}
-
-	&:active:hover {
-		background-color: $foreground-primary;
-		color: $foreground-negative;
-		transition: none;
-	}
-
-	&.disabled {
-
-		&,
-		&:active,
-		&:focus,
-		&:hover,
-		&:visited {
-			background-color: $foreground-primary;
-			color: $foreground-negative;
-			pointer-events: none;
-		}
-	}
+.btn--more-md {
+	@extend %btn-more-md;
 }
 
 %btn-submit {
@@ -407,30 +462,6 @@
 			pointer-events: none;
 		}
 	}
-}
-
-.btn {
-	@extend %btn;
-}
-
-.btn--link {
-	@extend %btn-link;
-}
-
-.btn--primary {
-	@extend %btn-primary;
-}
-
-.btn--more {
-	@extend %btn-more;
-}
-
-.btn--download {
-	@extend %btn-download;
-}
-
-.btn--more-md {
-	@extend %btn-more-md;
 }
 
 .btn--submit {

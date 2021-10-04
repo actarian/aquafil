@@ -1,5 +1,5 @@
 import { fromEvent, ReplaySubject } from 'rxjs';
-import { delay, switchMap } from 'rxjs/operators';
+import { delay, first, map, startWith, switchMap } from 'rxjs/operators';
 
 export class ScrollService {
 
@@ -10,10 +10,16 @@ export class ScrollService {
 	}
 
 	static init$(node) {
+		let previousY = window.pageYOffset;
+		const event = { direction: null, scroll: { x: 0, y: 0 }, speed: 0 };
 		return fromEvent(window, 'DOMContentLoaded').pipe(
+			// tap(_ => console.log('ScrollService.DOMContentLoaded')),
+			first(),
 			delay(1),
-			switchMap(_ => {
-				const event = { direction: null, scroll: { x: 0, y: 0 }, speed: 0 };
+			switchMap(_ => fromEvent(window, 'scroll')),
+			startWith(true),
+			// tap(_ => console.log('ScrollService.scroll')),
+			map(_ => {
 				/*
 				const body = document.querySelector('body');
 				let previousY = body.scrollTop;
@@ -29,19 +35,17 @@ export class ScrollService {
 					}
 				}, true);
 				*/
-				let previousY = window.pageYOffset;
-				window.addEventListener('scroll', () => {
-					const y = window.pageYOffset;
-					const direction = y >= previousY ? 'down' : 'up';
-					if (Math.abs(y - previousY) > 90) {
-						previousY = y;
-						event.direction = direction;
-						event.scroll.y = y;
-						ScrollService.scroll(event);
-					}
-				}, true)
-				return ScrollService.scroll$;
-			})
+				const y = window.pageYOffset;
+				const direction = y >= previousY ? 'down' : 'up';
+				// console.log(Math.abs(y - previousY) > 90);
+				// if (Math.abs(y - previousY) > 90) {
+				previousY = y;
+				event.direction = direction;
+				event.scroll.y = y;
+				ScrollService.scroll(event);
+				// }
+				return event;
+			}),
 		);
 	}
 

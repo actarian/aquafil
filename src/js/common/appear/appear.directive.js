@@ -1,5 +1,5 @@
 import { Directive, getContext } from 'rxcomp';
-import { first, takeUntil } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { IntersectionService } from '../intersection/intersection.service';
 
 export class AppearDirective extends Directive {
@@ -14,10 +14,10 @@ export class AppearDirective extends Directive {
 			this.appeared = true;
 			const { node } = getContext(this);
 			IntersectionService.intersection$(node).pipe(
-				first(),
+				// first(),
 				takeUntil(this.unsubscribe$),
-			).subscribe(src => {
-				node.classList.add('appeared');
+			).subscribe(entry => {
+				entry.intersectionRatio > 0.5 ? node.classList.add('appeared') : node.classList.remove('appeared');
 			});
 		}
 	}

@@ -208,3 +208,34 @@
 		}
 	}
 }
+
+@mixin make-grid-vars($columns: $grid-columns, $gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+	body {
+		$cw: 100vw / $grid-columns;
+		$hw: $cw / 2;
+
+		--cw: #{$cw};
+		--hw: #{$hw};
+
+		@for $i from 1 through $columns {
+			--cw#{$i}: #{$cw * $i};
+			--hw#{$i}: #{$hw * $i};
+		}
+
+		/*
+		@each $breakpoint in map-keys($breakpoints) {
+			$infix: breakpoint-infix($breakpoint, $breakpoints);
+		}
+		*/
+	}
+}
+
+@mixin make-paddings() {
+	body {
+		$p10: 10 / 1920 * 100vw;
+
+		@for $i from 1 through 30 {
+			--p#{$i}0: #{$p10 * $i};
+		}
+	}
+}

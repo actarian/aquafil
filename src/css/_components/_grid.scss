@@ -24,6 +24,10 @@
 
 @include make-grid-columns();
 
+@include make-grid-vars();
+
+@include make-paddings();
+
 @include media-between(md, lg) {
 	@for $i from 1 through 20 {
 		.o-md-#{$i} {

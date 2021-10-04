@@ -61,90 +61,7 @@ function _assertThisInitialized(self) {
 
 function _readOnlyError(name) {
   throw new TypeError("\"" + name + "\" is read-only");
-}var ModalEvent = function ModalEvent(data) {
-  this.data = data;
-}; // export class ModalLoadEvent extends ModalEvent { }
-// export class ModalLoadedEvent extends ModalEvent { }
-
-var ModalResolveEvent = /*#__PURE__*/function (_ModalEvent) {
-  _inheritsLoose(ModalResolveEvent, _ModalEvent);
-
-  function ModalResolveEvent() {
-    return _ModalEvent.apply(this, arguments) || this;
-  }
-
-  return ModalResolveEvent;
-}(ModalEvent);
-var ModalRejectEvent = /*#__PURE__*/function (_ModalEvent2) {
-  _inheritsLoose(ModalRejectEvent, _ModalEvent2);
-
-  function ModalRejectEvent() {
-    return _ModalEvent2.apply(this, arguments) || this;
-  }
-
-  return ModalRejectEvent;
-}(ModalEvent);
-var ModalService = /*#__PURE__*/function () {
-  function ModalService() {}
-
-  ModalService.open$ = function open$(modal) {
-    var _this = this;
-
-    this.busy$.next(true);
-    return this.getTemplate$(modal.src).pipe( // startWith(new ModalLoadEvent(Object.assign({}, modal.data, { $src: modal.src }))),
-    operators.map(function (template) {
-      return {
-        node: _this.getNode(template),
-        data: modal.data,
-        modal: modal
-      };
-    }), operators.tap(function (node) {
-      _this.modal$.next(node);
-
-      _this.hasModal = true;
-
-      _this.busy$.next(false); // this.events$.next(new ModalLoadedEvent(Object.assign({}, modal.data, { $src: modal.src })));
-
-    }), operators.switchMap(function (node) {
-      return _this.events$;
-    }), operators.tap(function (_) {
-      return _this.hasModal = false;
-    }));
-  };
-
-  ModalService.load$ = function load$(modal) {};
-
-  ModalService.getTemplate$ = function getTemplate$(url) {
-    return rxjs.from(fetch(url).then(function (response) {
-      return response.text();
-    }));
-  };
-
-  ModalService.getNode = function getNode(template) {
-    var div = document.createElement('div');
-    div.innerHTML = template;
-    var node = div.firstElementChild;
-    return node;
-  };
-
-  ModalService.reject = function reject(data) {
-    this.modal$.next(null);
-    this.events$.next(new ModalRejectEvent(data));
-  };
-
-  ModalService.resolve = function resolve(data) {
-    this.modal$.next(null);
-    this.events$.next(new ModalResolveEvent(data));
-  };
-
-  return ModalService;
-}();
-
-_defineProperty(ModalService, "hasModal", false);
-
-ModalService.modal$ = new rxjs.Subject();
-ModalService.events$ = new rxjs.Subject();
-ModalService.busy$ = new rxjs.Subject();var ScrollService = /*#__PURE__*/function () {
+}var ScrollService = /*#__PURE__*/function () {
   function ScrollService() {}
 
   ScrollService.scroll = function scroll(_scroll) {
@@ -153,15 +70,20 @@ ModalService.busy$ = new rxjs.Subject();var ScrollService = /*#__PURE__*/functio
   };
 
   ScrollService.init$ = function init$(node) {
-    return rxjs.fromEvent(window, 'DOMContentLoaded').pipe(operators.delay(1), operators.switchMap(function (_) {
-      var event = {
-        direction: null,
-        scroll: {
-          x: 0,
-          y: 0
-        },
-        speed: 0
-      };
+    var previousY = window.pageYOffset;
+    var event = {
+      direction: null,
+      scroll: {
+        x: 0,
+        y: 0
+      },
+      speed: 0
+    };
+    return rxjs.fromEvent(window, 'DOMContentLoaded').pipe( // tap(_ => console.log('ScrollService.DOMContentLoaded')),
+    operators.first(), operators.delay(1), operators.switchMap(function (_) {
+      return rxjs.fromEvent(window, 'scroll');
+    }), operators.startWith(true), // tap(_ => console.log('ScrollService.scroll')),
+    operators.map(function (_) {
       /*
       const body = document.querySelector('body');
       let previousY = body.scrollTop;
@@ -177,20 +99,16 @@ ModalService.busy$ = new rxjs.Subject();var ScrollService = /*#__PURE__*/functio
       	}
       }, true);
       */
+      var y = window.pageYOffset;
+      var direction = y >= previousY ? 'down' : 'up'; // console.log(Math.abs(y - previousY) > 90);
+      // if (Math.abs(y - previousY) > 90) {
 
-      var previousY = window.pageYOffset;
-      window.addEventListener('scroll', function () {
-        var y = window.pageYOffset;
-        var direction = y >= previousY ? 'down' : 'up';
+      previousY = y;
+      event.direction = direction;
+      event.scroll.y = y;
+      ScrollService.scroll(event); // }
 
-        if (Math.abs(y - previousY) > 90) {
-          previousY = y;
-          event.direction = direction;
-          event.scroll.y = y;
-          ScrollService.scroll(event);
-        }
-      }, true);
-      return ScrollService.scroll$;
+      return event;
     }));
   };
 
@@ -252,7 +170,203 @@ ModalService.busy$ = new rxjs.Subject();var ScrollService = /*#__PURE__*/functio
   return ScrollService;
 }();
 
-_defineProperty(ScrollService, "scroll$", new rxjs.ReplaySubject(1));var Utils = /*#__PURE__*/function () {
+_defineProperty(ScrollService, "scroll$", new rxjs.ReplaySubject(1));var AppComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(AppComponent, _Component);
+
+  function AppComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = AppComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    node.classList.remove('hidden');
+    console.log('AppComponent.onInit');
+    ScrollService.init$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
+  };
+
+  return AppComponent;
+}(rxcomp.Component);
+AppComponent.meta = {
+  selector: '[app-component]'
+};var AltDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(AltDirective, _Directive);
+
+  function AltDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = AltDirective.prototype;
+
+  _proto.onChanges = function onChanges() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    node.setAttribute('alt', this.alt);
+  };
+
+  return AltDirective;
+}(rxcomp.Directive);
+AltDirective.meta = {
+  selector: '[[alt]]',
+  inputs: ['alt']
+};var IntersectionService = /*#__PURE__*/function () {
+  function IntersectionService() {}
+
+  IntersectionService.observer = function observer() {
+    var _this = this;
+
+    if (!this.observer_) {
+      this.readySubject_ = new rxjs.BehaviorSubject(false);
+      this.observerSubject_ = new rxjs.Subject();
+      this.observer_ = new IntersectionObserver(function (entries) {
+        // console.log('IntersectionService.observer', entries);
+        _this.observerSubject_.next(entries);
+      }, {
+        // root: document.querySelector('body'),
+        root: null,
+        // sets the framing element to the viewport
+        rootMargin: '100px 0px 100px 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+      });
+    }
+
+    return this.observer_;
+  };
+
+  IntersectionService.intersection$ = function intersection$(node) {
+    if ('IntersectionObserver' in window) {
+      var observer = this.observer();
+      observer.observe(node);
+      return this.observerSubject_.pipe( // tap(entries => console.log(entries.length)),
+      operators.map(function (entries) {
+        return entries.find(function (entry) {
+          return entry.target === node;
+        });
+      }), // tap(entry => console.log('IntersectionService.intersection$', entry)),
+      operators.filter(function (entry) {
+        return entry !== undefined;
+      }), // filter(entry => entry !== undefined && entry.isIntersecting && entry.intersectionRatio > 0), // entry.intersectionRatio > 0
+      // first(),
+      operators.finalize(function () {
+        return observer.unobserve(node);
+      }));
+    } else {
+      return rxjs.of({
+        target: node
+      });
+    }
+    /*
+    function observer() {
+    	if ('IntersectionObserver' in window) {
+    		return new IntersectionObserver(entries => {
+    			entries.forEach(function(entry) {
+    				if (entry.isIntersecting) {
+    					entry.target.classList.add('appear');
+    				}
+    			})
+    		});
+    	} else {
+    		return { observe: function(node) { node.classList.add('appear')}, unobserve: function() {} };
+    	}
+    }
+    observer.observe(node);
+    observer.unobserve(node);
+    */
+
+  };
+
+  return IntersectionService;
+}();var AppearDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(AppearDirective, _Directive);
+
+  function AppearDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = AppearDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    node.classList.add('appear');
+  };
+
+  _proto.onChanges = function onChanges() {
+    if (!this.appeared) {
+      this.appeared = true;
+
+      var _getContext2 = rxcomp.getContext(this),
+          node = _getContext2.node;
+
+      IntersectionService.intersection$(node).pipe( // first(),
+      operators.takeUntil(this.unsubscribe$)).subscribe(function (entry) {
+        entry.intersectionRatio > 0.5 ? node.classList.add('appeared') : node.classList.remove('appeared');
+      });
+    }
+  };
+
+  return AppearDirective;
+}(rxcomp.Directive);
+AppearDirective.meta = {
+  selector: '[appear]'
+};var ClickOutsideDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(ClickOutsideDirective, _Directive);
+
+  function ClickOutsideDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = ClickOutsideDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    this.initialFocus = false;
+
+    var _getContext = rxcomp.getContext(this),
+        module = _getContext.module,
+        node = _getContext.node,
+        parentInstance = _getContext.parentInstance,
+        selector = _getContext.selector;
+
+    var event$ = this.event$ = rxjs.fromEvent(document, 'click').pipe(operators.filter(function (event) {
+      var target = event.target; // console.log('ClickOutsideDirective.onClick', this.element.nativeElement, target, this.element.nativeElement.contains(target));
+      // const documentContained: boolean = Boolean(document.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_CONTAINED_BY);
+      // console.log(target, documentContained);
+
+      var clickedInside = node.contains(target) || !document.contains(target);
+
+      if (!clickedInside) {
+        if (_this.initialFocus) {
+          _this.initialFocus = false;
+          return true;
+        }
+      } else {
+        _this.initialFocus = true;
+      }
+    }), operators.shareReplay(1));
+    var expression = node.getAttribute("(clickOutside)");
+
+    if (expression) {
+      var outputFunction = module.makeFunction(expression, ['$event']);
+      event$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
+        module.resolve(outputFunction, parentInstance, event);
+      });
+    } else {
+      parentInstance.clickOutside$ = event$;
+    }
+  };
+
+  return ClickOutsideDirective;
+}(rxcomp.Directive);
+ClickOutsideDirective.meta = {
+  selector: "[(clickOutside)]"
+};var Utils = /*#__PURE__*/function () {
   function Utils() {}
 
   Utils.merge = function merge(target, source) {
@@ -482,1307 +596,7 @@ var environmentOptions = window.STATIC ? environmentStatic : environmentServed;
 var options = Object.assign(defaultOptions, environmentOptions);
 options = Utils.merge(options, window.environment);
 var environment = new Environment(options); // console.log('environment', environment);
-var HttpService = /*#__PURE__*/function () {
-  function HttpService() {}
-
-  HttpService.http$ = function http$(method, url, data, format, userPass, options) {
-    var _this = this;
-
-    if (userPass === void 0) {
-      userPass = null;
-    }
-
-    if (options === void 0) {
-      options = {};
-    }
-
-    var methods = ['POST', 'PUT', 'PATCH'];
-    var response_ = null; // url = this.getUrl(url, format);
-
-    options = Object.assign({
-      method: method,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }, options, {
-      body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
-    });
-
-    if (userPass) {
-      // options.mode = 'no-cors';
-      options.credentials = 'include';
-      userPass = window.btoa(userPass);
-      options.headers['Authorization'] = "Basic " + userPass;
-    }
-
-    options.headers = new Headers(options.headers);
-    return rxjs.from(fetch(url, options).then(function (response) {
-      response_ = response; // console.log(response);
-
-      try {
-        var contentType = response.headers.get('content-type');
-        var typedResponse;
-
-        if (contentType && contentType.indexOf('application/json') !== -1) {
-          typedResponse = response.json();
-        } else {
-          typedResponse = response.text();
-        }
-
-        if (response.ok) {
-          return typedResponse;
-        } else {
-          return typedResponse.then(function (data) {
-            return Promise.reject(data);
-          });
-        }
-      } catch (error) {
-        if (response.ok) {
-          console.warn('HttpService.http$', 'Cannot parse response');
-          return Promise.resolve();
-        } else {
-          return Promise.reject(error);
-        }
-      }
-    })).pipe(operators.catchError(function (error) {
-      return rxjs.throwError(_this.getError(error, response_));
-    }));
-  }
-  /*
-  // !!! todo mapping response.data
-  static http$(method, url, data, format = 'json') {
-  	const methods = ['POST', 'PUT', 'PATCH'];
-  	const body = (data && methods.indexOf(method) !== -1) ? JSON.stringify(data) : undefined;
-  	const queryString = (data && methods.indexOf(method) !== -1) ? Object.keys(data).map(function(key) {
-  		return key + '=' + encodeURI(data[key]);
-  	}).join('&') : undefined;
-  	if (queryString) {
-  		url = `${url}?${queryString}`;
-  	}
-  	let response_ = null;
-  	return from(fetch(url, {
-  		method: method,
-  		headers: {
-  			'Accept': 'application/json',
-  			'Content-Type': 'application/json',
-  		},
-  		body: body,
-  	}).then((response) => {
-  		response_ = new HttpResponse(response);
-  		try {
-  			const contentType = response.headers.get('content-type');
-  			let typedResponse;
-  			if (contentType && format === 'json' && contentType.indexOf('application/json') !== -1) {
-  				typedResponse = response.json();
-  			} else if (format === 'blob') {
-  				typedResponse = response.blob();
-  			} else {
-  				typedResponse = response.text();
-  			}
-  			return typedResponse.then(data => {
-  				response_.data = data;
-  				if (response.ok) {
-  					return Promise.resolve(response_);
-  				} else {
-  					return Promise.reject(response_);
-  				}
-  			});
-  		} catch(error) {
-  			if (response.ok) {
-  				console.warn('HttpService.http$', 'Cannot parse response');
-  				return Promise.resolve(response_);
-  			} else {
-  				return Promise.reject(this.getError(error, response_));
-  			}
-  		}
-  	})).pipe(
-  		catchError(error => {
-  			return throwError(this.getError(error, response_));
-  		}),
-  	);
-  }
-  */
-  ;
-
-  HttpService.get$ = function get$(url, data, format) {
-    var query = this.query(data);
-    return this.http$('GET', "" + url + query, undefined, format);
-  };
-
-  HttpService.delete$ = function delete$(url) {
-    return this.http$('DELETE', url);
-  };
-
-  HttpService.post$ = function post$(url, data) {
-    return this.http$('POST', url, data);
-  };
-
-  HttpService.put$ = function put$(url, data) {
-    return this.http$('PUT', url, data);
-  };
-
-  HttpService.patch$ = function patch$(url, data) {
-    return this.http$('PATCH', url, data);
-  };
-
-  HttpService.query = function query(data) {
-    return ''; // todo
-  };
-
-  HttpService.getError = function getError(object, response) {
-    var error = typeof object === 'object' ? object : {};
-
-    if (!error.status) {
-      error.status = response ? response.status : 0;
-    }
-
-    if (!error.statusCode) {
-      error.statusCode = response ? response.status : 0;
-    }
-
-    if (!error.statusMessage) {
-      error.statusMessage = response ? response.statusText : object;
-    } // console.log('HttpService.getError', error, response);
-
-
-    return error;
-  };
-
-  return HttpService;
-}();var LabelPipe = /*#__PURE__*/function (_Pipe) {
-  _inheritsLoose(LabelPipe, _Pipe);
-
-  function LabelPipe() {
-    return _Pipe.apply(this, arguments) || this;
-  }
-
-  LabelPipe.transform = function transform(key) {
-    var labels = LabelPipe.labels_;
-    return labels[key] || key; // `#${key}#`;
-  };
-
-  LabelPipe.getKeys = function getKeys() {
-    for (var _len = arguments.length, keys = new Array(_len), _key = 0; _key < _len; _key++) {
-      keys[_key] = arguments[_key];
-    }
-
-    return LabelPipe.transform(keys.map(function (x) {
-      return x.replace('-', '_');
-    }).join('_'));
-  };
-
-  LabelPipe.setLabels = function setLabels() {
-    var LABELS = Utils.merge({
-      select: 'Seleziona',
-      browse: 'Sfoglia',
-      cancel: 'Annulla',
-      error_email: 'Email non valida',
-      error_match: 'I campi non corrispondono',
-      error_required: 'Campo obbligatorio',
-      loading: 'caricamento',
-      remove: 'Rimuovi',
-      required: 'Richiesto',
-      select_file: 'Seleziona una file...',
-      update: 'Aggiorna',
-      upload: 'Carica',
-      drag_and_drop_images: 'Drag And Drop your images here'
-    }, environment.labels);
-    this.labels_ = LABELS;
-  };
-
-  return LabelPipe;
-}(rxcomp.Pipe);
-LabelPipe.setLabels();
-LabelPipe.meta = {
-  name: 'label'
-};var LocationService = /*#__PURE__*/function () {
-  function LocationService() {}
-
-  LocationService.has = function has(key) {
-    var params = new URLSearchParams(window.location.search); // console.log('LocationService.has', params);
-
-    return params.has(key);
-  };
-
-  LocationService.get = function get(key) {
-    var params = new URLSearchParams(window.location.search); // console.log('LocationService.get', params);
-
-    return params.get(key);
-  };
-
-  LocationService.set = function set(keyOrValue, value) {
-    var params = new URLSearchParams(window.location.search);
-
-    if (typeof keyOrValue === 'string') {
-      params.set(keyOrValue, value);
-    } else {
-      params.set(keyOrValue, '');
-    }
-
-    this.pushParams(params); // console.log('LocationService.set', params, keyOrValue, value);
-  };
-
-  LocationService.pushParams = function pushParams(params) {
-    if (window.history && window.history.pushState) {
-      var title = document.title;
-      var url = window.location.href.split('?')[0] + "?" + params.toString();
-      window.history.pushState(params.toString(), title, url);
-    }
-  };
-
-  LocationService.replace = function replace(from, to) {
-    var history = window.history;
-
-    if (history && history.replaceState) {
-      var location = window.location;
-      var title = document.title;
-
-      if (location.pathname === '/') {
-        var url = location.origin + to + location.search;
-        history.replaceState(history.state, title, url);
-      } else if (location.href.indexOf(from) !== -1) {
-        var _url = location.href.replace(from, to);
-
-        history.replaceState(history.state, title, _url);
-      }
-    }
-  };
-
-  LocationService.deserialize = function deserialize(key) {
-    var encoded = this.get('params');
-    return this.decode(key, encoded);
-  };
-
-  LocationService.serialize = function serialize(keyOrValue, value) {
-    var params = this.deserialize();
-    var encoded = this.encode(keyOrValue, value, params);
-    this.set('params', encoded);
-  };
-
-  LocationService.decode = function decode(key, encoded) {
-    var decoded = null;
-
-    if (encoded) {
-      var json = window.atob(encoded);
-      decoded = JSON.parse(json);
-    }
-
-    if (key && decoded) {
-      decoded = decoded[key];
-    }
-
-    return decoded || null;
-  };
-
-  LocationService.encode = function encode(keyOrValue, value, params) {
-    params = params || {};
-    var encoded = null;
-
-    if (typeof keyOrValue === 'string') {
-      params[keyOrValue] = value;
-    } else {
-      params = keyOrValue;
-    }
-
-    var json = JSON.stringify(params);
-    encoded = window.btoa(json);
-    return encoded;
-  };
-
-  return LocationService;
-}();var LanguageService = /*#__PURE__*/function () {
-  function LanguageService() {}
-
-  LanguageService.getDefaultLanguages = function getDefaultLanguages() {
-    return environment.alternates || [];
-  };
-
-  LanguageService.getDefaultLanguage = function getDefaultLanguage() {
-    return environment.defaultLanguage || (this.languages ? this.languages[0].lang : null);
-  };
-
-  LanguageService.setLanguage = function setLanguage(language) {
-    this.selectedLanguage = language.lang;
-  };
-
-  LanguageService.setLanguage$ = function setLanguage$(language) {
-    var _this = this;
-
-    return rxjs.from(fetch(language.href).then(function (response) {
-      return response.text();
-    })).pipe(operators.tap(function (html) {
-      // console.log('html', html);
-      var labelsMatch = /(window\.labels[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
-
-      if (labelsMatch) {
-        // console.log('labels', labelsMatch[0]);
-        new Function(labelsMatch[0]).call(window);
-        LabelPipe.setLabels();
-      }
-
-      var bhereMatch = /(window\.bhere[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
-
-      if (bhereMatch) {
-        // console.log('bhere', bhereMatch[0]);
-        var data = {};
-        new Function(bhereMatch[0].replace('window', 'this')).call(data);
-
-        if (data.bhere) {
-          Utils.merge(environment, data.bhere);
-        }
-      }
-
-      LocationService.replace(_this.activeLanguage.href, language.href); // console.log(window.labels);
-
-      _this.selectedLanguage = language.lang;
-    }));
-  };
-
-  LanguageService.toggleLanguages = function toggleLanguages() {
-    this.showLanguages = !this.showLanguages;
-    this.pushChanges();
-  };
-
-  _createClass(LanguageService, null, [{
-    key: "hasLanguages",
-    get: function get() {
-      return this.languages.length > 1;
-    }
-  }, {
-    key: "activeLanguage",
-    get: function get() {
-      var _this2 = this;
-
-      return this.languages.find(function (language) {
-        return language.lang === _this2.selectedLanguage;
-      });
-    }
-  }]);
-
-  return LanguageService;
-}();
-
-_defineProperty(LanguageService, "languages", LanguageService.getDefaultLanguages());
-
-_defineProperty(LanguageService, "defaultLanguage", LanguageService.getDefaultLanguage());
-
-_defineProperty(LanguageService, "selectedLanguage", LanguageService.defaultLanguage);var ApiService = /*#__PURE__*/function (_HttpService) {
-  _inheritsLoose(ApiService, _HttpService);
-
-  function ApiService() {
-    return _HttpService.apply(this, arguments) || this;
-  }
-
-  ApiService.get$ = function get$(url, data, format) {
-    return _HttpService.get$.call(this, "" + environment.api + url, data, format);
-  };
-
-  ApiService.delete$ = function delete$(url) {
-    return _HttpService.delete$.call(this, "" + environment.api + url);
-  };
-
-  ApiService.post$ = function post$(url, data) {
-    return _HttpService.post$.call(this, "" + environment.api + url, data);
-  };
-
-  ApiService.put$ = function put$(url, data) {
-    return _HttpService.put$.call(this, "" + environment.api + url, data);
-  };
-
-  ApiService.patch$ = function patch$(url, data) {
-    return _HttpService.patch$.call(this, "" + environment.api + url, data);
-  };
-
-  return ApiService;
-}(HttpService);
-
-_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var LocalStorageService = /*#__PURE__*/function () {
-  function LocalStorageService() {}
-
-  LocalStorageService.delete = function _delete(name) {
-    if (this.isLocalStorageSupported()) {
-      window.localStorage.removeItem(name);
-    }
-  };
-
-  LocalStorageService.exist = function exist(name) {
-    if (this.isLocalStorageSupported()) {
-      return window.localStorage[name] !== undefined;
-    }
-  };
-
-  LocalStorageService.get = function get(name) {
-    var value = null;
-
-    if (this.isLocalStorageSupported() && window.localStorage[name] !== undefined) {
-      try {
-        value = JSON.parse(window.localStorage[name]);
-      } catch (e) {
-        console.log('LocalStorageService.get.error parsing', name, e);
-      }
-    }
-
-    return value;
-  };
-
-  LocalStorageService.set = function set(name, value) {
-    if (this.isLocalStorageSupported()) {
-      try {
-        var cache = [];
-        var json = JSON.stringify(value, function (key, value) {
-          if (typeof value === 'object' && value !== null) {
-            if (cache.indexOf(value) !== -1) {
-              // Circular reference found, discard key
-              return;
-            }
-
-            cache.push(value);
-          }
-
-          return value;
-        });
-        window.localStorage.setItem(name, json);
-      } catch (e) {
-        console.log('LocalStorageService.set.error serializing', name, value, e);
-      }
-    }
-  };
-
-  LocalStorageService.isLocalStorageSupported = function isLocalStorageSupported() {
-    if (this.supported) {
-      return true;
-    }
-
-    var supported = false;
-
-    try {
-      supported = 'localStorage' in window && window.localStorage !== null;
-
-      if (supported) {
-        window.localStorage.setItem('test', '1');
-        window.localStorage.removeItem('test');
-      } else {
-        supported = false;
-      }
-    } catch (e) {
-      supported = false;
-    }
-
-    this.supported = supported;
-    return supported;
-  };
-
-  return LocalStorageService;
-}();var HeaderService = /*#__PURE__*/function () {
-  function HeaderService() {}
-
-  HeaderService.setHeader = function setHeader(id) {
-    this.header$_.next(id);
-  };
-
-  HeaderService.toggleHeader = function toggleHeader(id) {
-    this.header$_.next(this.currentHeader === id ? -1 : id);
-  };
-
-  HeaderService.onBack = function onBack() {
-    this.header$_.next(-1);
-  };
-
-  HeaderService.header$ = function header$() {
-    return this.header$_;
-  };
-
-  _createClass(HeaderService, null, [{
-    key: "currentHeader",
-    get: function get() {
-      return this.header$_.getValue();
-    }
-  }]);
-
-  return HeaderService;
-}();
-
-_defineProperty(HeaderService, "header$_", new rxjs.BehaviorSubject(-1));var CartMiniService = /*#__PURE__*/function () {
-  function CartMiniService() {}
-
-  CartMiniService.hasItem = function hasItem(item) {
-    var items = CartMiniService.currentItems;
-    var index = CartMiniService.indexOf(item, items);
-    return index !== -1;
-  };
-
-  CartMiniService.setItems = function setItems(items, skip) {
-    if (items) {
-      LocalStorageService.set(CartMiniService.STORAGE_KEY, items);
-    } else {
-      LocalStorageService.delete(CartMiniService.STORAGE_KEY);
-    }
-
-    if (!skip) {
-      CartMiniService.items$_.next(items);
-    }
-  };
-
-  CartMiniService.items$ = function items$() {
-    var localItems = LocalStorageService.get(CartMiniService.STORAGE_KEY) || [];
-    return rxjs.of(localItems).pipe(operators.switchMap(function (items) {
-      CartMiniService.setItems(items);
-      return CartMiniService.items$_;
-    }));
-  };
-
-  CartMiniService.incrementItem$ = function incrementItem$(item) {
-    return rxjs.of(item).pipe(operators.map(function (item) {
-      var items = CartMiniService.currentItems.slice();
-      var item_ = CartMiniService.find(item, items);
-
-      if (item_) {
-        item_.qty++;
-        CartMiniService.setItems(items);
-        return item_;
-      } else {
-        return null;
-      }
-    }));
-  };
-
-  CartMiniService.decrementItem$ = function decrementItem$(item) {
-    return rxjs.of(item).pipe(operators.switchMap(function (item) {
-      var items = CartMiniService.currentItems.slice();
-      var item_ = CartMiniService.find(item, items);
-
-      if (item_) {
-        item_.qty--;
-
-        if (item_.qty > 0) {
-          CartMiniService.setItems(items);
-          return rxjs.of(item_);
-        } else {
-          return CartMiniService.removeItem$(item);
-        }
-      } else {
-        return rxjs.of(null);
-      }
-    }));
-  };
-
-  CartMiniService.addItem$ = function addItem$(item, qty) {
-    if (qty === void 0) {
-      qty = 1;
-    }
-
-    // const count = CartMiniService.count;
-    return rxjs.of(Object.assign({}, item, {
-      qty: qty
-    })).pipe(operators.map(function (item) {
-      var items = CartMiniService.currentItems.slice();
-      var item_ = CartMiniService.find(item, items);
-
-      if (item_) {
-        item_.qty += item.qty;
-        item_.price = item.price;
-        CartMiniService.setItems(items);
-        return item_;
-      } else {
-        items.push(item);
-        CartMiniService.setItems(items);
-        return item;
-      }
-    }), operators.tap(function (_) {
-      // if (count === 0) {
-      HeaderService.setHeader('cart'); // }
-    }));
-  };
-
-  CartMiniService.removeItem$ = function removeItem$(item) {
-    return rxjs.of(item).pipe(operators.map(function (item) {
-      var items = CartMiniService.currentItems.slice();
-      var index = CartMiniService.indexOf(item, items);
-
-      if (index !== -1) {
-        items.splice(index, 1);
-
-        if (items.length === 0) {
-          HeaderService.onBack();
-        }
-
-        CartMiniService.setItems(items);
-        return item;
-      } else {
-        return null;
-      }
-    }));
-  };
-
-  CartMiniService.removeAll$ = function removeAll$() {
-    return rxjs.of([]).pipe(operators.map(function (items) {
-      HeaderService.onBack();
-      CartMiniService.setItems(items);
-      return items;
-    }));
-  };
-
-  CartMiniService.getPrice$ = function getPrice$(item) {
-    if (environment.flags.production) {
-      return ApiService.post$('/cart-mini/price', item);
-    } else {
-      return ApiService.get$('/cart-mini/price.json');
-    }
-  };
-
-  CartMiniService.getPriceAndAddItem$ = function getPriceAndAddItem$(item, qty) {
-    if (qty === void 0) {
-      qty = 1;
-    }
-
-    return CartMiniService.getPrice$(item).pipe(operators.switchMap(function (item) {
-      return CartMiniService.addItem$(item, qty);
-    }));
-  };
-
-  CartMiniService.match = function match(item, item_) {
-    return item_.id === item.id && item_.code === item.code && (!item_.showefy && !item.showefy || item_.showefy && item.showefy && item_.showefy.internalstr === item.showefy.internalstr);
-  };
-
-  CartMiniService.find = function find(item, items) {
-    return items.find(function (item_) {
-      return CartMiniService.match(item, item_);
-    });
-  };
-
-  CartMiniService.indexOf = function indexOf(item, items) {
-    return items.reduce(function (p, item_, i) {
-      return p !== -1 ? p : CartMiniService.match(item, item_) ? i : p;
-    }, -1);
-  };
-
-  _createClass(CartMiniService, null, [{
-    key: "STORAGE_KEY",
-    get: function get() {
-      return "cartItems_" + environment.currentMarket;
-    }
-  }, {
-    key: "currentItems",
-    get: function get() {
-      return CartMiniService.items$_.getValue();
-    }
-  }, {
-    key: "count",
-    get: function get() {
-      return CartMiniService.currentItems.length;
-    }
-  }]);
-
-  return CartMiniService;
-}();
-
-_defineProperty(CartMiniService, "items$_", new rxjs.BehaviorSubject([]));/*
-export class Cart {
-	constructor() {
-		this.step = CartSteps.Items; // number
-		this.items = []; // CartItem[]
-		this.shipmentCountry = null; // number
-		this.user = null; // User
-		this.guest = null; // boolean
-		this.data = {
-			firstName: null, // string
-			lastName: null, // string
-			email: null, // string
-			telephone: null, // string
-			address: null, // string
-			zipCode: null, // string
-			city: null, // string
-			province: null, // string
-			country: null, // number
-			message: null, // string
-			invoice: null, // boolean
-			invoiceData: {
-				taxNumber: null, // string
-				sdi: null, // string
-				pec: null, // string
-			},
-			billing: null, // boolean
-			billingData: {
-				company: null, // string
-				firstName: null, // string
-				lastName: null, // string
-				telephone: null, // string
-				address: null, // string
-				zipCode: null, // string
-				city: null, // string
-				province: null, // string
-				country: null, // number
-			},
-			conditions: false, // boolean
-			privacy: false, // boolean
-			terms: false, // boolean
-		};
-		this.deliveryData = null; // {
-			firstName: null, // string
-			lastName: null, // string
-			email: null, // string
-			telephone: null, // string
-			address: null, // string
-			zipCode: null, // string
-			city: null, // string
-			province: null, // string
-			country: null, // { id: number, name: string }
-		}
-		this.billingData = null; // {
-			firstName: null, // string
-			lastName: null, // string
-			address: null, // string
-			zipCode: null, // string
-			city: null, // string
-			province: null, // string
-			country: null, // { id: number, name: string }
-		}
-		this.deliveryType = null; // number
-		this.delivery = null; // { id: number, name: string }
-		this.discountCode = null; // string
-		this.discount = null; // { code: string, price: number }
-		this.paymentMethod = null; // number
-		this.store = null; // Store
-	}
-}
-*/
-
-var CartService = /*#__PURE__*/function () {
-  function CartService() {}
-
-  CartService.setStep = function setStep(step) {
-    var cart = CartService.currentCart;
-
-    if (cart) {
-      cart.step = step;
-      CartService.setCart(cart);
-    }
-  };
-
-  CartService.setCart = function setCart(cart, skip) {
-    if (cart) {
-      LocalStorageService.set(CartService.STORAGE_KEY, cart);
-    } else {
-      LocalStorageService.delete(CartService.STORAGE_KEY);
-    }
-
-    if (!skip) {
-      CartService.cart$_.next(cart);
-    }
-  };
-
-  CartService.cart$ = function cart$() {
-    var localCart = LocalStorageService.get(CartService.STORAGE_KEY) || null;
-    return rxjs.of(localCart).pipe(operators.switchMap(function (cart) {
-      CartService.setCart(cart);
-      return CartService.cart$_;
-    }));
-  };
-
-  CartService.clear$ = function clear$() {
-    return rxjs.of(null).pipe(operators.map(function (cart) {
-      CartMiniService.setItems([]);
-      CartService.setCart(cart);
-      return cart;
-    }));
-  };
-
-  CartService.data$ = function data$() {
-    if (environment.flags.production) {
-      return ApiService.get$('/cart/data');
-    } else {
-      return ApiService.get$('/cart/data.json');
-    }
-  };
-
-  CartService.estimatedDelivery$ = function estimatedDelivery$(cart) {
-    if (environment.flags.production) {
-      return ApiService.post$('/cart/estimated-delivery', cart);
-    } else {
-      return ApiService.get$('/cart/estimated-delivery.json');
-    }
-  };
-
-  CartService.getDeliveryType$ = function getDeliveryType$(cart) {
-    if (environment.flags.production) {
-      return ApiService.post$('/cart/delivery-type', cart);
-    } else {
-      return ApiService.get$('/cart/delivery-type.json');
-    }
-  };
-
-  CartService.getStores$ = function getStores$(cart) {
-    if (environment.flags.production) {
-      return ApiService.post$('/cart/stores', cart);
-    } else {
-      return ApiService.get$('/cart/stores.json');
-    }
-  };
-
-  CartService.getDiscount$ = function getDiscount$(payload) {
-    if (environment.flags.production) {
-      return ApiService.post$('/cart/discount', payload);
-    } else {
-      return ApiService.get$('/cart/discount.json');
-    }
-  };
-
-  CartService.doPayment$ = function doPayment$(cart) {
-    return (environment.flags.production ? ApiService.post$('/cart/payment', cart) : ApiService.get$('/cart/payment.json')).pipe(operators.tap(function (_) {
-      // !!! clearing cart with skip option!
-      CartMiniService.setItems([], true);
-      CartService.setCart(cart, true);
-    }));
-  };
-
-  _createClass(CartService, null, [{
-    key: "STORAGE_KEY",
-    get: function get() {
-      return "cart_" + environment.currentMarket;
-    }
-  }, {
-    key: "currentCart",
-    get: function get() {
-      return CartService.cart$_.getValue();
-    }
-  }]);
-
-  return CartService;
-}();
-
-_defineProperty(CartService, "cart$_", new rxjs.BehaviorSubject(null));var SessionStorageService = /*#__PURE__*/function () {
-  function SessionStorageService() {}
-
-  SessionStorageService.delete = function _delete(name) {
-    if (this.isSessionStorageSupported()) {
-      window.sessionStorage.removeItem(name);
-    }
-  };
-
-  SessionStorageService.exist = function exist(name) {
-    if (this.isSessionStorageSupported()) {
-      return window.sessionStorage[name] !== undefined;
-    }
-  };
-
-  SessionStorageService.get = function get(name) {
-    var value = null;
-
-    if (this.isSessionStorageSupported() && window.sessionStorage[name] !== undefined) {
-      try {
-        value = JSON.parse(window.sessionStorage[name]);
-      } catch (e) {
-        console.log('SessionStorageService.get.error parsing', name, e);
-      }
-    }
-
-    return value;
-  };
-
-  SessionStorageService.set = function set(name, value) {
-    if (this.isSessionStorageSupported()) {
-      try {
-        var cache = [];
-        var json = JSON.stringify(value, function (key, value) {
-          if (typeof value === 'object' && value !== null) {
-            if (cache.indexOf(value) !== -1) {
-              // Circular reference found, discard key
-              return;
-            }
-
-            cache.push(value);
-          }
-
-          return value;
-        });
-        window.sessionStorage.setItem(name, json);
-      } catch (e) {
-        console.log('SessionStorageService.set.error serializing', name, value, e);
-      }
-    }
-  };
-
-  SessionStorageService.isSessionStorageSupported = function isSessionStorageSupported() {
-    if (this.supported) {
-      return true;
-    }
-
-    var supported = false;
-
-    try {
-      supported = 'sessionStorage' in window && window.sessionStorage !== null;
-
-      if (supported) {
-        window.sessionStorage.setItem('test', '1');
-        window.sessionStorage.removeItem('test');
-      } else {
-        supported = false;
-      }
-    } catch (e) {
-      supported = false;
-    }
-
-    this.supported = supported;
-    return supported;
-  };
-
-  return SessionStorageService;
-}();var UserViews = {
-  SIGN_IN: 1,
-  SIGN_UP: 2,
-  FORGOTTEN: 3,
-  EDIT: 4
-};
-var User = /*#__PURE__*/function () {
-  function User(data) {
-    if (data) {
-      Object.assign(this, data);
-    }
-  }
-
-  _createClass(User, [{
-    key: "shortName",
-    get: function get() {
-      return (this.firstName || '?').substr(0, 1).toUpperCase() + (this.lastName || '?').substr(0, 1).toUpperCase();
-    }
-  }, {
-    key: "fullName",
-    get: function get() {
-      return this.firstName + ' ' + this.lastName;
-    }
-  }]);
-
-  return User;
-}();
-var UserService = /*#__PURE__*/function () {
-  function UserService() {}
-
-  UserService.setUser = function setUser(user) {
-    if (user) {
-      SessionStorageService.set('user', user);
-    } else {
-      SessionStorageService.delete('user');
-    }
-
-    this.user$_.next(user);
-  };
-
-  UserService.data$ = function data$() {
-    if (environment.flags.production) {
-      return ApiService.get$('/aquafil/user/data');
-    } else {
-      return ApiService.get$('/user/data.json');
-    }
-  };
-
-  UserService.forgot$ = function forgot$(payload) {
-    if (environment.flags.production) {
-      return ApiService.post$('/aquafil/user/forgot', payload);
-    } else {
-      return ApiService.get$("/user/forgot.json");
-    }
-  };
-
-  UserService.me$ = function me$() {
-    var _this = this;
-
-    if (UserService.busyMe) {
-      return this.user$_;
-    } else {
-      UserService.busyMe = true;
-      return rxjs.of(1).pipe(operators.switchMap(function (_) {
-        if (environment.flags.production) {
-          return ApiService.get$("/aquafil/user/me");
-        } else {
-          var sessionUser = SessionStorageService.get('user');
-
-          if (sessionUser) {
-            return rxjs.of(sessionUser);
-          } else {
-            return ApiService.get$("/user/me.json");
-          }
-        }
-      }), operators.map(function (user) {
-        console.log('UserService.user$', user);
-        return _this.mapUser(user);
-      }), operators.catchError(function (_) {
-        return rxjs.of(null);
-      }), operators.switchMap(function (user) {
-        _this.setUser(user);
-
-        return _this.user$_;
-      }));
-    }
-  };
-
-  UserService.signin$ = function signin$(payload) {
-    var _this2 = this;
-
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signin", payload) : ApiService.get$("/user/signin.json")).pipe(operators.map(function (response) {
-      return _this2.mapUser(response);
-    }), operators.tap(function (user) {
-      return _this2.setUser(user);
-    }));
-  };
-
-  UserService.signout$ = function signout$() {
-    var _this3 = this;
-
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signout") : ApiService.get$("/user/signout.json")).pipe(operators.tap(function (_) {
-      return _this3.setUser(null);
-    }));
-  };
-
-  UserService.signup$ = function signup$(payload) {
-    var _this4 = this;
-
-    // console.log('UserService.signup$', payload);
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signup", payload) : ApiService.get$("/user/signup.json")).pipe(operators.map(function (response) {
-      response.user = _this4.mapUser(response.user);
-      return response;
-    }), operators.tap(function (response) {
-      return _this4.setUser(response.user);
-    }) //document.location.reload(),
-    );
-  };
-
-  UserService.edit$ = function edit$(payload) {
-    var _this5 = this;
-
-    // console.log('UserService.edit$', payload);
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/edit", payload) : ApiService.get$("/user/edit.json")).pipe(operators.map(function (response) {
-      response.user = _this5.mapUser(response.user);
-      return response;
-    }), operators.tap(function (response) {
-      return _this5.setUser(response.user);
-    }) //document.location.reload(),
-    );
-  };
-
-  UserService.editPassword$ = function editPassword$(payload) {
-    // console.log('UserService.editPassword$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/edit-password", payload) : ApiService.get$("/user/edit-password.json");
-  };
-
-  UserService.accessData$ = function accessData$(payload) {
-    // console.log('UserService.accessData$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/access-data", payload) : ApiService.get$("/user/access-data.json");
-  };
-
-  UserService.delete$ = function delete$(payload) {
-    // console.log('UserService.delete$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/delete", payload) : ApiService.get$("/user/delete.json");
-  };
-
-  UserService.gdpr$ = function gdpr$() {
-    if (environment.flags.production) {
-      return ApiService.get$('/aquafil/user/gdpr');
-    } else {
-      return ApiService.get$('/user/gdpr.json');
-    }
-  };
-
-  UserService.tryFacebook$ = function tryFacebook$(me) {
-    return rxjs.of(null);
-  };
-
-  UserService.tryGoogle$ = function tryGoogle$(me) {
-    return rxjs.of(null);
-  };
-
-  UserService.tryLinkedin$ = function tryLinkedin$(me) {
-    return rxjs.of(null);
-  };
-
-  UserService.sessionStorage$ = function sessionStorage$() {
-    return rxjs.of(SessionStorageService.get('user') || null);
-  };
-
-  UserService.mapUser = function mapUser(user) {
-    return user ? new User(user) : null;
-  };
-
-  UserService.mapUsers = function mapUsers(users) {
-    return users ? users.map(function (x) {
-      return UserService.mapUser(x);
-    }) : [];
-  };
-
-  _createClass(UserService, null, [{
-    key: "currentUser",
-    get: function get() {
-      return this.user$_.getValue();
-    }
-  }]);
-
-  return UserService;
-}();
-
-_defineProperty(UserService, "user$_", new rxjs.BehaviorSubject(null));var AppComponent = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(AppComponent, _Component);
-
-  function AppComponent() {
-    return _Component.apply(this, arguments) || this;
-  }
-
-  var _proto = AppComponent.prototype;
-
-  _proto.onInit = function onInit() {
-    var _this = this;
-
-    var _getContext = rxcomp.getContext(this),
-        node = _getContext.node;
-
-    node.classList.remove('hidden'); // console.log('AppComponent.onInit');
-
-    ScrollService.init$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
-    this.header = HeaderService.currentHeader;
-    HeaderService.header$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (header) {
-      _this.header = header;
-
-      _this.pushChanges();
-    });
-    CartMiniService.items$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
-      return _this.pushChanges();
-    });
-  };
-
-  _proto.onOpenMarketAndLanguage = function onOpenMarketAndLanguage() {
-    HeaderService.onBack();
-    ModalService.open$({
-      src: environment.template.modal.marketsAndLanguagesModal
-    }).pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
-      console.log('AppComponent.onOpenMarketAndLanguage', event);
-    });
-  };
-
-  _proto.onLogin = function onLogin() {
-    HeaderService.onBack();
-    ModalService.open$({
-      src: environment.template.modal.userModal,
-      data: {
-        view: 1
-      }
-    }).pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
-      console.log('AppComponent.onLogin', event);
-
-      if (event instanceof ModalResolveEvent) {
-        window.location.href = environment.slug.reservedArea;
-      }
-    });
-  };
-
-  _proto.onLogout = function onLogout() {
-    UserService.signout$().pipe(operators.first()).subscribe();
-  };
-
-  _proto.onProjectRegistration = function onProjectRegistration(event) {
-    ModalService.open$({
-      src: environment.template.modal.projectsRegistrationModal
-    }).pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
-      console.log('AppComponent.onProjectRegistration', event);
-      /*
-      if (event instanceof ModalResolveEvent) {
-      	// window.location.href = environment.slug.reservedArea;
-      }
-      */
-    });
-  };
-
-  _proto.onAddToCart = function onAddToCart(item) {
-    var _this2 = this;
-
-    // resetting purchase procedure
-    CartService.setCart(null); // getting showefy price and adding to mini cart
-
-    CartMiniService.getPriceAndAddItem$(item).pipe(operators.first()).subscribe(function (_) {
-      _this2.pushChanges();
-    });
-  };
-
-  _proto.onOpenMiniCart = function onOpenMiniCart() {
-    HeaderService.setHeader('cart');
-  };
-
-  return AppComponent;
-}(rxcomp.Component);
-AppComponent.meta = {
-  selector: '[app-component]'
-};var AltDirective = /*#__PURE__*/function (_Directive) {
-  _inheritsLoose(AltDirective, _Directive);
-
-  function AltDirective() {
-    return _Directive.apply(this, arguments) || this;
-  }
-
-  var _proto = AltDirective.prototype;
-
-  _proto.onChanges = function onChanges() {
-    var _getContext = rxcomp.getContext(this),
-        node = _getContext.node;
-
-    node.setAttribute('alt', this.alt);
-  };
-
-  return AltDirective;
-}(rxcomp.Directive);
-AltDirective.meta = {
-  selector: '[[alt]]',
-  inputs: ['alt']
-};var ClickOutsideDirective = /*#__PURE__*/function (_Directive) {
-  _inheritsLoose(ClickOutsideDirective, _Directive);
-
-  function ClickOutsideDirective() {
-    return _Directive.apply(this, arguments) || this;
-  }
-
-  var _proto = ClickOutsideDirective.prototype;
-
-  _proto.onInit = function onInit() {
-    var _this = this;
-
-    this.initialFocus = false;
-
-    var _getContext = rxcomp.getContext(this),
-        module = _getContext.module,
-        node = _getContext.node,
-        parentInstance = _getContext.parentInstance,
-        selector = _getContext.selector;
-
-    var event$ = this.event$ = rxjs.fromEvent(document, 'click').pipe(operators.filter(function (event) {
-      var target = event.target; // console.log('ClickOutsideDirective.onClick', this.element.nativeElement, target, this.element.nativeElement.contains(target));
-      // const documentContained: boolean = Boolean(document.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_CONTAINED_BY);
-      // console.log(target, documentContained);
-
-      var clickedInside = node.contains(target) || !document.contains(target);
-
-      if (!clickedInside) {
-        if (_this.initialFocus) {
-          _this.initialFocus = false;
-          return true;
-        }
-      } else {
-        _this.initialFocus = true;
-      }
-    }), operators.shareReplay(1));
-    var expression = node.getAttribute("(clickOutside)");
-
-    if (expression) {
-      var outputFunction = module.makeFunction(expression, ['$event']);
-      event$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
-        module.resolve(outputFunction, parentInstance, event);
-      });
-    } else {
-      parentInstance.clickOutside$ = event$;
-    }
-  };
-
-  return ClickOutsideDirective;
-}(rxcomp.Directive);
-ClickOutsideDirective.meta = {
-  selector: "[(clickOutside)]"
-};var DatePipe = /*#__PURE__*/function (_Pipe) {
+var DatePipe = /*#__PURE__*/function (_Pipe) {
   _inheritsLoose(DatePipe, _Pipe);
 
   function DatePipe() {
@@ -2490,7 +1304,136 @@ IdDirective.meta = {
 LabelForDirective.meta = {
   selector: '[[labelFor]]',
   inputs: ['labelFor']
-};var ModalOutletComponent = /*#__PURE__*/function (_Component) {
+};var LabelPipe = /*#__PURE__*/function (_Pipe) {
+  _inheritsLoose(LabelPipe, _Pipe);
+
+  function LabelPipe() {
+    return _Pipe.apply(this, arguments) || this;
+  }
+
+  LabelPipe.transform = function transform(key) {
+    var labels = LabelPipe.labels_;
+    return labels[key] || key; // `#${key}#`;
+  };
+
+  LabelPipe.getKeys = function getKeys() {
+    for (var _len = arguments.length, keys = new Array(_len), _key = 0; _key < _len; _key++) {
+      keys[_key] = arguments[_key];
+    }
+
+    return LabelPipe.transform(keys.map(function (x) {
+      return x.replace('-', '_');
+    }).join('_'));
+  };
+
+  LabelPipe.setLabels = function setLabels() {
+    var LABELS = Utils.merge({
+      select: 'Seleziona',
+      browse: 'Sfoglia',
+      cancel: 'Annulla',
+      error_email: 'Email non valida',
+      error_match: 'I campi non corrispondono',
+      error_required: 'Campo obbligatorio',
+      loading: 'caricamento',
+      remove: 'Rimuovi',
+      required: 'Richiesto',
+      select_file: 'Seleziona una file...',
+      update: 'Aggiorna',
+      upload: 'Carica',
+      drag_and_drop_images: 'Drag And Drop your images here'
+    }, environment.labels);
+    this.labels_ = LABELS;
+  };
+
+  return LabelPipe;
+}(rxcomp.Pipe);
+LabelPipe.setLabels();
+LabelPipe.meta = {
+  name: 'label'
+};var ModalEvent = function ModalEvent(data) {
+  this.data = data;
+}; // export class ModalLoadEvent extends ModalEvent { }
+// export class ModalLoadedEvent extends ModalEvent { }
+
+var ModalResolveEvent = /*#__PURE__*/function (_ModalEvent) {
+  _inheritsLoose(ModalResolveEvent, _ModalEvent);
+
+  function ModalResolveEvent() {
+    return _ModalEvent.apply(this, arguments) || this;
+  }
+
+  return ModalResolveEvent;
+}(ModalEvent);
+var ModalRejectEvent = /*#__PURE__*/function (_ModalEvent2) {
+  _inheritsLoose(ModalRejectEvent, _ModalEvent2);
+
+  function ModalRejectEvent() {
+    return _ModalEvent2.apply(this, arguments) || this;
+  }
+
+  return ModalRejectEvent;
+}(ModalEvent);
+var ModalService = /*#__PURE__*/function () {
+  function ModalService() {}
+
+  ModalService.open$ = function open$(modal) {
+    var _this = this;
+
+    this.busy$.next(true);
+    return this.getTemplate$(modal.src).pipe( // startWith(new ModalLoadEvent(Object.assign({}, modal.data, { $src: modal.src }))),
+    operators.map(function (template) {
+      return {
+        node: _this.getNode(template),
+        data: modal.data,
+        modal: modal
+      };
+    }), operators.tap(function (node) {
+      _this.modal$.next(node);
+
+      _this.hasModal = true;
+
+      _this.busy$.next(false); // this.events$.next(new ModalLoadedEvent(Object.assign({}, modal.data, { $src: modal.src })));
+
+    }), operators.switchMap(function (node) {
+      return _this.events$;
+    }), operators.tap(function (_) {
+      return _this.hasModal = false;
+    }));
+  };
+
+  ModalService.load$ = function load$(modal) {};
+
+  ModalService.getTemplate$ = function getTemplate$(url) {
+    return rxjs.from(fetch(url).then(function (response) {
+      return response.text();
+    }));
+  };
+
+  ModalService.getNode = function getNode(template) {
+    var div = document.createElement('div');
+    div.innerHTML = template;
+    var node = div.firstElementChild;
+    return node;
+  };
+
+  ModalService.reject = function reject(data) {
+    this.modal$.next(null);
+    this.events$.next(new ModalRejectEvent(data));
+  };
+
+  ModalService.resolve = function resolve(data) {
+    this.modal$.next(null);
+    this.events$.next(new ModalResolveEvent(data));
+  };
+
+  return ModalService;
+}();
+
+_defineProperty(ModalService, "hasModal", false);
+
+ModalService.modal$ = new rxjs.Subject();
+ModalService.events$ = new rxjs.Subject();
+ModalService.busy$ = new rxjs.Subject();var ModalOutletComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(ModalOutletComponent, _Component);
 
   function ModalOutletComponent() {
@@ -2773,6 +1716,69 @@ RelativeDatePipe.meta = {
 ScrollStickyDirective.meta = {
   selector: '[scroll-sticky],[[scroll-sticky]]',
   inputs: ['target', 'until', 'bottom']
+};var ScrollDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(ScrollDirective, _Directive);
+
+  function ScrollDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = ScrollDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    this.scroll$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {// console.log('ScrollDirective', event);
+    });
+  };
+
+  _proto.scroll$ = function scroll$() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    var target = this.scroll && node.querySelector(this.scroll) || node;
+    var container = target === node ? window : node;
+    var speed = this.scrollSpeed ? parseFloat(this.scrollSpeed) : 1.5;
+    return ScrollService.scroll$.pipe(operators.tap(function (_) {
+      var containerRect = container === window ? {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      } : container.getBoundingClientRect();
+      var wh = containerRect.height;
+      var rect = target.getBoundingClientRect();
+      var currentY = gsap.getProperty(target, 'y');
+      var top = rect.top - currentY;
+      var height = rect.height;
+      var space = wh + height;
+      var pow;
+
+      if (top > -height && top < wh) {
+        pow = (top + height) / space;
+        pow = 1 - pow * 2;
+        var y = pow * speed * -100;
+        gsap.to(target, {
+          y: y,
+          duration: 0.250
+        });
+      }
+      /*
+      const wh2 = wh / 2;
+      const bottom = rect.bottom - currentY;
+      if (top < wh && bottom > 0) {
+      	pow = (top - wh2) / wh2;
+      	const y = pow * speed * 40;
+      	gsap.set(node, { y });
+      }
+      */
+
+    }));
+  };
+
+  return ScrollDirective;
+}(rxcomp.Directive);
+ScrollDirective.meta = {
+  selector: '[scroll]',
+  inputs: ['scroll', 'scrollSpeed']
 };var ShareDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(ShareDirective, _Directive);
 
@@ -3468,12 +2474,12 @@ ThronComponent.meta = {
 TitleDirective.meta = {
   selector: '[[title]]',
   inputs: ['title']
-};var factories = [AltDirective, ClickOutsideDirective, DownloadDirective, // DropDirective,
+};var factories = [AltDirective, AppearDirective, ClickOutsideDirective, DownloadDirective, // DropDirective,
 DropdownDirective, DropdownItemDirective, // DropdownItemDirective,
 FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
 // LazyDirective,
 // ModalComponent,
-ModalOutletComponent, NameDirective, ScrollStickyDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
+ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
 // VirtualStructure
 ];
 var pipes = [DatePipe, EnvPipe, FlagPipe, HighlightPipe, HtmlPipe, LabelPipe, NumberPipe, RelativeDatePipe, SlugPipe];
@@ -4215,36 +3221,7 @@ ErrorComponent.meta = {
   template:
   /* html */
   "\n\t<div class=\"error\" (click)=\"onDetailToggle($event)\">\n\t\t<div class=\"status\">Error <span [innerHTML]=\"error.status\"></span></div>\n\t\t<div class=\"exception-message\" [innerHTML]=\"error.exceptionMessage\"></div>\n\t\t<button type=\"button\" class=\"btn--detail\"><svg class=\"caret-down\"><use xlink:href=\"#caret-down\"></use></svg></button>\n\t</div>\n\t<div class=\"error-details\" *if=\"showDetail\">\n\t\t<div class=\"message\" [innerHTML]=\"error.message\"></div>\n\t\t<div class=\"exception-type\" [innerHTML]=\"error.exceptionType\"></div>\n\t\t<div class=\"stack-trace\" [innerHTML]=\"error.stackTrace\"></div>\n\t</div>\n\t"
-};var MenuService = /*#__PURE__*/function () {
-  function MenuService() {}
-
-  MenuService.setMenu = function setMenu(id) {
-    this.menu$_.next(id);
-  };
-
-  MenuService.toggleMenu = function toggleMenu(id) {
-    this.menu$_.next(this.currentMenu === id ? -1 : id);
-  };
-
-  MenuService.onBack = function onBack() {
-    this.menu$_.next(-1);
-  };
-
-  MenuService.menu$ = function menu$() {
-    return this.menu$_;
-  };
-
-  _createClass(MenuService, null, [{
-    key: "currentMenu",
-    get: function get() {
-      return this.menu$_.getValue();
-    }
-  }]);
-
-  return MenuService;
-}();
-
-_defineProperty(MenuService, "menu$_", new rxjs.BehaviorSubject(-1));var HeaderComponent = /*#__PURE__*/function (_Component) {
+};var HeaderComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(HeaderComponent, _Component);
 
   function HeaderComponent() {
@@ -4268,73 +3245,10 @@ _defineProperty(MenuService, "menu$_", new rxjs.BehaviorSubject(-1));var HeaderC
   _proto.onInit = function onInit() {
     var _this2 = this;
 
-    var body = document.querySelector('body');
-    this.header = HeaderService.currentHeader;
-    HeaderService.header$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (header) {
-      _this2.header = header;
-
-      _this2.pushChanges();
-
-      body.setAttribute('class', header !== -1 ? header + "-active" : '');
-    });
-    this.menu = MenuService.currentMenu;
-    MenuService.menu$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (menu) {
-      _this2.menu = menu;
-
-      _this2.pushChanges();
-    });
-    this.cart = CartMiniService;
-    this.user = null;
-    UserService.me$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (user) {
-      _this2.user = user;
-
-      _this2.pushChanges();
-    });
-    var pictogram = document.querySelector('.page > .pictogram');
     ScrollService.scroll$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
       _this2.direction = event.direction;
-      _this2.scrolled = event.scroll.y > 100;
-      var opacity = 0.1 - 0.1 * Math.min(1, Math.max(0, (event.scroll.y - window.innerHeight * 3) / window.innerHeight / 3));
-
-      if (pictogram) {
-        gsap.set(pictogram, {
-          opacity: opacity
-        });
-      } // console.log('HeaderComponent', event.scroll.y, event.direction, event.speed);
-
+      _this2.scrolled = event.scroll.y > 100; // console.log('HeaderComponent', event.scroll.y, event.direction, event.speed);
     });
-  };
-
-  _proto.onOpenMarketAndLanguage = function onOpenMarketAndLanguage() {
-    MenuService.onBack();
-    HeaderService.onBack();
-    ModalService.open$({
-      src: environment.template.modal.marketsAndLanguagesModal
-    }).pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
-      console.log('HeaderComponent.onOpenMarketAndLanguage', event);
-    });
-  };
-
-  _proto.onLogin = function onLogin() {
-    MenuService.onBack();
-    HeaderService.onBack();
-
-    {
-      window.location.href = environment.slug.reservedArea;
-    }
-  };
-
-  _proto.onLogout = function onLogout() {
-    UserService.signout$().pipe(operators.first()).subscribe();
-  };
-
-  _proto.onToggle = function onToggle(id) {
-    MenuService.onBack();
-    HeaderService.toggleHeader(id);
-  };
-
-  _proto.onBack = function onBack(event) {
-    MenuService.onBack();
   };
 
   _createClass(HeaderComponent, [{
@@ -4373,7 +3287,102 @@ _defineProperty(MenuService, "menu$_", new rxjs.BehaviorSubject(-1));var HeaderC
 }(rxcomp.Component);
 HeaderComponent.meta = {
   selector: '[header]'
-};var NewsletterPropositionComponent = /*#__PURE__*/function (_Component) {
+};var LocationService = /*#__PURE__*/function () {
+  function LocationService() {}
+
+  LocationService.has = function has(key) {
+    var params = new URLSearchParams(window.location.search); // console.log('LocationService.has', params);
+
+    return params.has(key);
+  };
+
+  LocationService.get = function get(key) {
+    var params = new URLSearchParams(window.location.search); // console.log('LocationService.get', params);
+
+    return params.get(key);
+  };
+
+  LocationService.set = function set(keyOrValue, value) {
+    var params = new URLSearchParams(window.location.search);
+
+    if (typeof keyOrValue === 'string') {
+      params.set(keyOrValue, value);
+    } else {
+      params.set(keyOrValue, '');
+    }
+
+    this.pushParams(params); // console.log('LocationService.set', params, keyOrValue, value);
+  };
+
+  LocationService.pushParams = function pushParams(params) {
+    if (window.history && window.history.pushState) {
+      var title = document.title;
+      var url = window.location.href.split('?')[0] + "?" + params.toString();
+      window.history.pushState(params.toString(), title, url);
+    }
+  };
+
+  LocationService.replace = function replace(from, to) {
+    var history = window.history;
+
+    if (history && history.replaceState) {
+      var location = window.location;
+      var title = document.title;
+
+      if (location.pathname === '/') {
+        var url = location.origin + to + location.search;
+        history.replaceState(history.state, title, url);
+      } else if (location.href.indexOf(from) !== -1) {
+        var _url = location.href.replace(from, to);
+
+        history.replaceState(history.state, title, _url);
+      }
+    }
+  };
+
+  LocationService.deserialize = function deserialize(key) {
+    var encoded = this.get('params');
+    return this.decode(key, encoded);
+  };
+
+  LocationService.serialize = function serialize(keyOrValue, value) {
+    var params = this.deserialize();
+    var encoded = this.encode(keyOrValue, value, params);
+    this.set('params', encoded);
+  };
+
+  LocationService.decode = function decode(key, encoded) {
+    var decoded = null;
+
+    if (encoded) {
+      var json = window.atob(encoded);
+      decoded = JSON.parse(json);
+    }
+
+    if (key && decoded) {
+      decoded = decoded[key];
+    }
+
+    return decoded || null;
+  };
+
+  LocationService.encode = function encode(keyOrValue, value, params) {
+    params = params || {};
+    var encoded = null;
+
+    if (typeof keyOrValue === 'string') {
+      params[keyOrValue] = value;
+    } else {
+      params = keyOrValue;
+    }
+
+    var json = JSON.stringify(params);
+    encoded = window.btoa(json);
+    return encoded;
+  };
+
+  return LocationService;
+}();var NewsletterPropositionComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(NewsletterPropositionComponent, _Component);
 
   function NewsletterPropositionComponent() {
@@ -4485,7 +3494,549 @@ var GtmService = /*#__PURE__*/function () {
   };
 
   return GtmService;
-}();var UserDeleteComponent = /*#__PURE__*/function (_Component) {
+}();var HttpService = /*#__PURE__*/function () {
+  function HttpService() {}
+
+  HttpService.http$ = function http$(method, url, data, format, userPass, options) {
+    var _this = this;
+
+    if (userPass === void 0) {
+      userPass = null;
+    }
+
+    if (options === void 0) {
+      options = {};
+    }
+
+    var methods = ['POST', 'PUT', 'PATCH'];
+    var response_ = null; // url = this.getUrl(url, format);
+
+    options = Object.assign({
+      method: method,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }, options, {
+      body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+    });
+
+    if (userPass) {
+      // options.mode = 'no-cors';
+      options.credentials = 'include';
+      userPass = window.btoa(userPass);
+      options.headers['Authorization'] = "Basic " + userPass;
+    }
+
+    options.headers = new Headers(options.headers);
+    return rxjs.from(fetch(url, options).then(function (response) {
+      response_ = response; // console.log(response);
+
+      try {
+        var contentType = response.headers.get('content-type');
+        var typedResponse;
+
+        if (contentType && contentType.indexOf('application/json') !== -1) {
+          typedResponse = response.json();
+        } else {
+          typedResponse = response.text();
+        }
+
+        if (response.ok) {
+          return typedResponse;
+        } else {
+          return typedResponse.then(function (data) {
+            return Promise.reject(data);
+          });
+        }
+      } catch (error) {
+        if (response.ok) {
+          console.warn('HttpService.http$', 'Cannot parse response');
+          return Promise.resolve();
+        } else {
+          return Promise.reject(error);
+        }
+      }
+    })).pipe(operators.catchError(function (error) {
+      return rxjs.throwError(_this.getError(error, response_));
+    }));
+  }
+  /*
+  // !!! todo mapping response.data
+  static http$(method, url, data, format = 'json') {
+  	const methods = ['POST', 'PUT', 'PATCH'];
+  	const body = (data && methods.indexOf(method) !== -1) ? JSON.stringify(data) : undefined;
+  	const queryString = (data && methods.indexOf(method) !== -1) ? Object.keys(data).map(function(key) {
+  		return key + '=' + encodeURI(data[key]);
+  	}).join('&') : undefined;
+  	if (queryString) {
+  		url = `${url}?${queryString}`;
+  	}
+  	let response_ = null;
+  	return from(fetch(url, {
+  		method: method,
+  		headers: {
+  			'Accept': 'application/json',
+  			'Content-Type': 'application/json',
+  		},
+  		body: body,
+  	}).then((response) => {
+  		response_ = new HttpResponse(response);
+  		try {
+  			const contentType = response.headers.get('content-type');
+  			let typedResponse;
+  			if (contentType && format === 'json' && contentType.indexOf('application/json') !== -1) {
+  				typedResponse = response.json();
+  			} else if (format === 'blob') {
+  				typedResponse = response.blob();
+  			} else {
+  				typedResponse = response.text();
+  			}
+  			return typedResponse.then(data => {
+  				response_.data = data;
+  				if (response.ok) {
+  					return Promise.resolve(response_);
+  				} else {
+  					return Promise.reject(response_);
+  				}
+  			});
+  		} catch(error) {
+  			if (response.ok) {
+  				console.warn('HttpService.http$', 'Cannot parse response');
+  				return Promise.resolve(response_);
+  			} else {
+  				return Promise.reject(this.getError(error, response_));
+  			}
+  		}
+  	})).pipe(
+  		catchError(error => {
+  			return throwError(this.getError(error, response_));
+  		}),
+  	);
+  }
+  */
+  ;
+
+  HttpService.get$ = function get$(url, data, format) {
+    var query = this.query(data);
+    return this.http$('GET', "" + url + query, undefined, format);
+  };
+
+  HttpService.delete$ = function delete$(url) {
+    return this.http$('DELETE', url);
+  };
+
+  HttpService.post$ = function post$(url, data) {
+    return this.http$('POST', url, data);
+  };
+
+  HttpService.put$ = function put$(url, data) {
+    return this.http$('PUT', url, data);
+  };
+
+  HttpService.patch$ = function patch$(url, data) {
+    return this.http$('PATCH', url, data);
+  };
+
+  HttpService.query = function query(data) {
+    return ''; // todo
+  };
+
+  HttpService.getError = function getError(object, response) {
+    var error = typeof object === 'object' ? object : {};
+
+    if (!error.status) {
+      error.status = response ? response.status : 0;
+    }
+
+    if (!error.statusCode) {
+      error.statusCode = response ? response.status : 0;
+    }
+
+    if (!error.statusMessage) {
+      error.statusMessage = response ? response.statusText : object;
+    } // console.log('HttpService.getError', error, response);
+
+
+    return error;
+  };
+
+  return HttpService;
+}();var LanguageService = /*#__PURE__*/function () {
+  function LanguageService() {}
+
+  LanguageService.getDefaultLanguages = function getDefaultLanguages() {
+    return environment.alternates || [];
+  };
+
+  LanguageService.getDefaultLanguage = function getDefaultLanguage() {
+    return environment.defaultLanguage || (this.languages ? this.languages[0].lang : null);
+  };
+
+  LanguageService.setLanguage = function setLanguage(language) {
+    this.selectedLanguage = language.lang;
+  };
+
+  LanguageService.setLanguage$ = function setLanguage$(language) {
+    var _this = this;
+
+    return rxjs.from(fetch(language.href).then(function (response) {
+      return response.text();
+    })).pipe(operators.tap(function (html) {
+      // console.log('html', html);
+      var labelsMatch = /(window\.labels[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
+
+      if (labelsMatch) {
+        // console.log('labels', labelsMatch[0]);
+        new Function(labelsMatch[0]).call(window);
+        LabelPipe.setLabels();
+      }
+
+      var bhereMatch = /(window\.bhere[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
+
+      if (bhereMatch) {
+        // console.log('bhere', bhereMatch[0]);
+        var data = {};
+        new Function(bhereMatch[0].replace('window', 'this')).call(data);
+
+        if (data.bhere) {
+          Utils.merge(environment, data.bhere);
+        }
+      }
+
+      LocationService.replace(_this.activeLanguage.href, language.href); // console.log(window.labels);
+
+      _this.selectedLanguage = language.lang;
+    }));
+  };
+
+  LanguageService.toggleLanguages = function toggleLanguages() {
+    this.showLanguages = !this.showLanguages;
+    this.pushChanges();
+  };
+
+  _createClass(LanguageService, null, [{
+    key: "hasLanguages",
+    get: function get() {
+      return this.languages.length > 1;
+    }
+  }, {
+    key: "activeLanguage",
+    get: function get() {
+      var _this2 = this;
+
+      return this.languages.find(function (language) {
+        return language.lang === _this2.selectedLanguage;
+      });
+    }
+  }]);
+
+  return LanguageService;
+}();
+
+_defineProperty(LanguageService, "languages", LanguageService.getDefaultLanguages());
+
+_defineProperty(LanguageService, "defaultLanguage", LanguageService.getDefaultLanguage());
+
+_defineProperty(LanguageService, "selectedLanguage", LanguageService.defaultLanguage);var ApiService = /*#__PURE__*/function (_HttpService) {
+  _inheritsLoose(ApiService, _HttpService);
+
+  function ApiService() {
+    return _HttpService.apply(this, arguments) || this;
+  }
+
+  ApiService.get$ = function get$(url, data, format) {
+    return _HttpService.get$.call(this, "" + environment.api + url, data, format);
+  };
+
+  ApiService.delete$ = function delete$(url) {
+    return _HttpService.delete$.call(this, "" + environment.api + url);
+  };
+
+  ApiService.post$ = function post$(url, data) {
+    return _HttpService.post$.call(this, "" + environment.api + url, data);
+  };
+
+  ApiService.put$ = function put$(url, data) {
+    return _HttpService.put$.call(this, "" + environment.api + url, data);
+  };
+
+  ApiService.patch$ = function patch$(url, data) {
+    return _HttpService.patch$.call(this, "" + environment.api + url, data);
+  };
+
+  return ApiService;
+}(HttpService);
+
+_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var SessionStorageService = /*#__PURE__*/function () {
+  function SessionStorageService() {}
+
+  SessionStorageService.delete = function _delete(name) {
+    if (this.isSessionStorageSupported()) {
+      window.sessionStorage.removeItem(name);
+    }
+  };
+
+  SessionStorageService.exist = function exist(name) {
+    if (this.isSessionStorageSupported()) {
+      return window.sessionStorage[name] !== undefined;
+    }
+  };
+
+  SessionStorageService.get = function get(name) {
+    var value = null;
+
+    if (this.isSessionStorageSupported() && window.sessionStorage[name] !== undefined) {
+      try {
+        value = JSON.parse(window.sessionStorage[name]);
+      } catch (e) {
+        console.log('SessionStorageService.get.error parsing', name, e);
+      }
+    }
+
+    return value;
+  };
+
+  SessionStorageService.set = function set(name, value) {
+    if (this.isSessionStorageSupported()) {
+      try {
+        var cache = [];
+        var json = JSON.stringify(value, function (key, value) {
+          if (typeof value === 'object' && value !== null) {
+            if (cache.indexOf(value) !== -1) {
+              // Circular reference found, discard key
+              return;
+            }
+
+            cache.push(value);
+          }
+
+          return value;
+        });
+        window.sessionStorage.setItem(name, json);
+      } catch (e) {
+        console.log('SessionStorageService.set.error serializing', name, value, e);
+      }
+    }
+  };
+
+  SessionStorageService.isSessionStorageSupported = function isSessionStorageSupported() {
+    if (this.supported) {
+      return true;
+    }
+
+    var supported = false;
+
+    try {
+      supported = 'sessionStorage' in window && window.sessionStorage !== null;
+
+      if (supported) {
+        window.sessionStorage.setItem('test', '1');
+        window.sessionStorage.removeItem('test');
+      } else {
+        supported = false;
+      }
+    } catch (e) {
+      supported = false;
+    }
+
+    this.supported = supported;
+    return supported;
+  };
+
+  return SessionStorageService;
+}();var UserViews = {
+  SIGN_IN: 1,
+  SIGN_UP: 2,
+  FORGOTTEN: 3,
+  EDIT: 4
+};
+var User = /*#__PURE__*/function () {
+  function User(data) {
+    if (data) {
+      Object.assign(this, data);
+    }
+  }
+
+  _createClass(User, [{
+    key: "shortName",
+    get: function get() {
+      return (this.firstName || '?').substr(0, 1).toUpperCase() + (this.lastName || '?').substr(0, 1).toUpperCase();
+    }
+  }, {
+    key: "fullName",
+    get: function get() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  }]);
+
+  return User;
+}();
+var UserService = /*#__PURE__*/function () {
+  function UserService() {}
+
+  UserService.setUser = function setUser(user) {
+    if (user) {
+      SessionStorageService.set('user', user);
+    } else {
+      SessionStorageService.delete('user');
+    }
+
+    this.user$_.next(user);
+  };
+
+  UserService.data$ = function data$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/aquafil/user/data');
+    } else {
+      return ApiService.get$('/user/data.json');
+    }
+  };
+
+  UserService.forgot$ = function forgot$(payload) {
+    if (environment.flags.production) {
+      return ApiService.post$('/aquafil/user/forgot', payload);
+    } else {
+      return ApiService.get$("/user/forgot.json");
+    }
+  };
+
+  UserService.me$ = function me$() {
+    var _this = this;
+
+    if (UserService.busyMe) {
+      return this.user$_;
+    } else {
+      UserService.busyMe = true;
+      return rxjs.of(1).pipe(operators.switchMap(function (_) {
+        if (environment.flags.production) {
+          return ApiService.get$("/aquafil/user/me");
+        } else {
+          var sessionUser = SessionStorageService.get('user');
+
+          if (sessionUser) {
+            return rxjs.of(sessionUser);
+          } else {
+            return ApiService.get$("/user/me.json");
+          }
+        }
+      }), operators.map(function (user) {
+        console.log('UserService.user$', user);
+        return _this.mapUser(user);
+      }), operators.catchError(function (_) {
+        return rxjs.of(null);
+      }), operators.switchMap(function (user) {
+        _this.setUser(user);
+
+        return _this.user$_;
+      }));
+    }
+  };
+
+  UserService.signin$ = function signin$(payload) {
+    var _this2 = this;
+
+    return (environment.flags.production ? ApiService.post$("/aquafil/user/signin", payload) : ApiService.get$("/user/signin.json")).pipe(operators.map(function (response) {
+      return _this2.mapUser(response);
+    }), operators.tap(function (user) {
+      return _this2.setUser(user);
+    }));
+  };
+
+  UserService.signout$ = function signout$() {
+    var _this3 = this;
+
+    return (environment.flags.production ? ApiService.post$("/aquafil/user/signout") : ApiService.get$("/user/signout.json")).pipe(operators.tap(function (_) {
+      return _this3.setUser(null);
+    }));
+  };
+
+  UserService.signup$ = function signup$(payload) {
+    var _this4 = this;
+
+    // console.log('UserService.signup$', payload);
+    return (environment.flags.production ? ApiService.post$("/aquafil/user/signup", payload) : ApiService.get$("/user/signup.json")).pipe(operators.map(function (response) {
+      response.user = _this4.mapUser(response.user);
+      return response;
+    }), operators.tap(function (response) {
+      return _this4.setUser(response.user);
+    }) //document.location.reload(),
+    );
+  };
+
+  UserService.edit$ = function edit$(payload) {
+    var _this5 = this;
+
+    // console.log('UserService.edit$', payload);
+    return (environment.flags.production ? ApiService.post$("/aquafil/user/edit", payload) : ApiService.get$("/user/edit.json")).pipe(operators.map(function (response) {
+      response.user = _this5.mapUser(response.user);
+      return response;
+    }), operators.tap(function (response) {
+      return _this5.setUser(response.user);
+    }) //document.location.reload(),
+    );
+  };
+
+  UserService.editPassword$ = function editPassword$(payload) {
+    // console.log('UserService.editPassword$', payload);
+    return environment.flags.production ? ApiService.post$("/aquafil/user/edit-password", payload) : ApiService.get$("/user/edit-password.json");
+  };
+
+  UserService.accessData$ = function accessData$(payload) {
+    // console.log('UserService.accessData$', payload);
+    return environment.flags.production ? ApiService.post$("/aquafil/user/access-data", payload) : ApiService.get$("/user/access-data.json");
+  };
+
+  UserService.delete$ = function delete$(payload) {
+    // console.log('UserService.delete$', payload);
+    return environment.flags.production ? ApiService.post$("/aquafil/user/delete", payload) : ApiService.get$("/user/delete.json");
+  };
+
+  UserService.gdpr$ = function gdpr$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/aquafil/user/gdpr');
+    } else {
+      return ApiService.get$('/user/gdpr.json');
+    }
+  };
+
+  UserService.tryFacebook$ = function tryFacebook$(me) {
+    return rxjs.of(null);
+  };
+
+  UserService.tryGoogle$ = function tryGoogle$(me) {
+    return rxjs.of(null);
+  };
+
+  UserService.tryLinkedin$ = function tryLinkedin$(me) {
+    return rxjs.of(null);
+  };
+
+  UserService.sessionStorage$ = function sessionStorage$() {
+    return rxjs.of(SessionStorageService.get('user') || null);
+  };
+
+  UserService.mapUser = function mapUser(user) {
+    return user ? new User(user) : null;
+  };
+
+  UserService.mapUsers = function mapUsers(users) {
+    return users ? users.map(function (x) {
+      return UserService.mapUser(x);
+    }) : [];
+  };
+
+  _createClass(UserService, null, [{
+    key: "currentUser",
+    get: function get() {
+      return this.user$_.getValue();
+    }
+  }]);
+
+  return UserService;
+}();
+
+_defineProperty(UserService, "user$_", new rxjs.BehaviorSubject(null));var UserDeleteComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(UserDeleteComponent, _Component);
 
   function UserDeleteComponent() {

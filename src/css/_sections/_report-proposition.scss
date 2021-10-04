@@ -1,12 +1,26 @@
 .report-proposition {
 	background: $background-quaternary;
 
+	.row {
+		align-items: stretch;
+	}
+
 	&__content {
-		padding: 200px 0 200px 0;
+		padding: var(--cw2) 0;
 	}
 
 	&__picture {
-		@include aspect-clip(1, 1);
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		&>img {
+			width: 100%;
+			height: 150%;
+			object-fit: cover;
+		}
 	}
 
 	&__title {
@@ -14,6 +28,14 @@
 	}
 
 	&__cta {
-		padding-top: 60px;
+		padding-top: var(--p60);
+	}
+
+	@include media-down(xs) {
+		&__picture {
+			margin-left: -15px;
+			margin-right: -15px;
+			width: auto;
+		}
 	}
 }

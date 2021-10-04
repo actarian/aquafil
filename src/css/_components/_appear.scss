@@ -1,0 +1,19 @@
+.appear {
+	overflow: hidden;
+
+	&>* {
+		opacity: 0;
+		transform: translateX(-100%);
+		transition: ease-in-out 600ms 250ms;
+		transition-property: opacity, transform;
+	}
+
+	@include stagger-transition(5);
+
+	&.appeared {
+		&>* {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}

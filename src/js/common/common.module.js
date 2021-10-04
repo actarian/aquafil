@@ -1,5 +1,6 @@
 import { Module } from 'rxcomp';
 import { AltDirective } from './alt/alt.directive';
+import { AppearDirective } from './appear/appear.directive';
 import { ClickOutsideDirective } from './click-outside/click-outside.directive';
 import { DatePipe } from './date/date.pipe';
 import { DownloadDirective } from './download/download.directive';
@@ -18,6 +19,7 @@ import { NameDirective } from './name/name.directive';
 import { NumberPipe } from './number/number.pipe';
 import { RelativeDatePipe } from './relative-date/relative-date.pipe';
 import { ScrollStickyDirective } from './scroll/scroll-sticky.directive';
+import { ScrollDirective } from './scroll/scroll.directive';
 import { ShareDirective } from './share/share.directive';
 import { SlugPipe } from './slug/slug.pipe';
 import { SvgIconStructure } from './svg/svg-icon.structure';
@@ -27,6 +29,7 @@ import { TitleDirective } from './title/title.directive';
 
 const factories = [
 	AltDirective,
+	AppearDirective,
 	ClickOutsideDirective,
 	DownloadDirective,
 	// DropDirective,
@@ -41,6 +44,7 @@ const factories = [
 	// ModalComponent,
 	ModalOutletComponent,
 	NameDirective,
+	ScrollDirective,
 	ScrollStickyDirective,
 	ShareDirective,
 	SvgIconStructure,

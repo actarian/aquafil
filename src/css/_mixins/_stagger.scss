@@ -1,0 +1,9 @@
+@mixin stagger-transition($count: 5, $gap: 0.05, $delay: 0.0) {
+	&>* {
+		@for $i from 1 through $count {
+			&:nth-child(#{$i}) {
+				transition-delay: #{$delay + $i * $gap}s;
+			}
+		}
+	}
+}

@@ -34,6 +34,12 @@
 	}
 }
 
+.header__logo {
+	.btn--logo {
+		margin-right: var(--p40);
+	}
+}
+
 .header__main {
 	display: flex;
 	justify-content: space-between;
@@ -51,14 +57,24 @@
 	display: block;
 	line-height: 0;
 
-	svg {
-		width: 200px;
-		height: 32px;
+	@include media-up(lg) {
+		svg {
+			width: 200px;
+			height: 32px;
+		}
+	}
+
+	@include media-down(md) {
+		svg {
+			width: 180px;
+			height: 32px;
+		}
 	}
 }
 
 .nav--main {
 	@extend %nav;
+	align-items: center;
 
 	&>.nav__item {
 
@@ -66,43 +82,16 @@
 		&>span {
 			display: flex;
 			align-items: center;
-			font-size: 18px;
-			line-height: 1.5;
+			@extend .small;
+			margin: 0;
 
 			svg {
 				width: 9px;
 				height: 6px;
-				margin-left: 10px;
+				margin-left: var(--p10);
 				fill: $tertiary;
 			}
-
-			/*
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				left: 0;
-				bottom: -4px;
-				width: 100%;
-				height: 4px;
-				background: $background-negative;
-				transform: scale(0, 1);
-				transform-origin: center;
-				transition: transform ease-in-out $fast;
-			}
-			*/
 		}
-
-		&:hover,
-		&.active {
-
-			&>a,
-			&>span {}
-		}
-	}
-
-	&>.nav__item+.nav__item {
-		margin-left: 40px;
 	}
 
 	.negative &,
@@ -119,41 +108,26 @@
 		}
 	}
 
-	@include media-up(lg) {
-		&>.nav__item {
-
-			&>a,
-			&>span {
-				font-size: 18px;
-			}
-		}
-
+	@include media-up(md) {
 		&>.nav__item+.nav__item {
-			margin-left: 40px;
-		}
-	}
-
-	@include media-between(md, lg) {
-		&>.nav__item {
-
-			&>a,
-			&>span {
-				font-size: 16px;
-			}
-		}
-
-		&>.nav__item+.nav__item {
-			margin-left: 20px;
+			margin-left: var(--p40);
 		}
 	}
 
 	@include media-down(md) {
+		&>.nav__item {
+			max-width: 130px;
+		}
+	}
+
+	@include media-down(sm) {
 		display: none;
 	}
 }
 
 .nav--language {
 	@extend %nav;
+	align-items: center;
 
 	&>.nav__item {
 
@@ -161,14 +135,14 @@
 		&>span {
 			display: flex;
 			align-items: center;
-			font-size: 18px;
-			line-height: 1.5;
+			@extend .small;
+			margin: 0;
 			text-transform: uppercase;
 
 			svg {
 				width: 8px;
 				height: 7px;
-				margin-left: 9px;
+				margin-left: var(--p10);
 			}
 		}
 	}
@@ -187,43 +161,17 @@
 		}
 	}
 
-	@include media-up(lg) {
-		margin-left: 37px;
-		padding-left: 37px;
+	@include media-up(md) {
+		margin-left: var(--p40);
+		padding-left: var(--p40);
 		border-left: 1px solid $border;
 
-		&>.nav__item {
-
-			&>a,
-			&>span {
-				font-size: 18px;
-			}
-		}
-
 		&>.nav__item+.nav__item {
-			margin-left: 40px;
+			margin-left: var(--p40);
 		}
 	}
 
-	@include media-between(md, lg) {
-		margin-left: 20px;
-		padding-left: 20px;
-		border-left: 1px solid $border;
-
-		&>.nav__item {
-
-			&>a,
-			&>span {
-				font-size: 16px;
-			}
-		}
-
-		&>.nav__item+.nav__item {
-			margin-left: 20px;
-		}
-	}
-
-	@include media-down(md) {
+	@include media-down(sm) {
 		display: none;
 	}
 }

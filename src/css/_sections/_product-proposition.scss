@@ -1,16 +1,30 @@
 .product-proposition {
 
 	&__head {
-		padding: 320px 0 300px 0;
-		background: $background-quaternary;
+		padding: var(--cw4) 0 var(--cw4) 0;
 	}
 
 	&__category {
-		@extend .category;
+		@extend .small;
 	}
 
 	&__title {
 		@extend .h1;
+	}
+
+	@include media-up(sm) {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 75%;
+			background: $background-quaternary;
+		}
 	}
 }
 
@@ -24,14 +38,19 @@
 			max-width: 50%;
 
 			&:nth-child(even) {
+				margin-top: -12.5vw;
+				/*
 				&>.card--product {
-					margin-top: -12.5vw;
 				}
+				*/
 			}
 		}
 	}
 
 	@include media-down(xs) {
+		margin-left: -15px;
+		margin-right: -15px;
+
 		&>.listing__item {
 			flex: 0 0 100%;
 			max-width: 100%;
@@ -40,33 +59,18 @@
 }
 
 .card--product {
-	padding: 8.33333vw;
 
 	.card__title {
-		position: relative;
-		font-weight: bold;
-		font-size: 36px;
-		line-height: 1.36;
-		margin-bottom: 60px;
-
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			left: -4.166666vw;
-			bottom: 0.3em;
-		}
+		@extend .h4;
+		margin-bottom: var(--p60);
 	}
 
 	.card__picture {
-		margin-bottom: 60px;
+		margin-bottom: var(--p60);
 	}
 
 	.card__cta {
-		padding-top: 60px;
+		padding-top: var(--p60);
 	}
 
 	.listing__item:nth-child(4n+1)>& {
@@ -122,6 +126,33 @@
 
 		.card__abstract {
 			color: $foreground-negative;
+		}
+	}
+
+	@include media-up(sm) {
+		padding: var(--cw2);
+
+		.card__title {
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: var(--p10);
+				height: var(--p10);
+				border-radius: 50%;
+				left: -4.166666vw;
+				bottom: 0.3em;
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		padding: var(--p100) var(--p40);
+
+		.card__picture {
+			@include aspect-clip(5, 3);
 		}
 	}
 }

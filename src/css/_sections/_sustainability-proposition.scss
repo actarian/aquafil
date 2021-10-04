@@ -1,13 +1,26 @@
 .sustainability-proposition {
-	padding: 240px 0 0 0;
 	background: $background;
 
 	&__category {
-		@extend .category;
+		@extend .small;
 	}
 
 	&__title {
 		@extend .h1;
+	}
+
+	@include media-up(sm) {
+		padding: var(--cw3) 0 0 0;
+	}
+
+	@include media-down(sm) {
+		&__abstract {
+			margin-bottom: var(--p100);
+		}
+	}
+
+	@include media-down(xs) {
+		padding: var(--cw3) 0;
 	}
 }
 
@@ -15,13 +28,13 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	@include media-up(sm) {
+	@include media-up(md) {
 		&>.listing__item {
 			flex: 0 0 50%;
 			max-width: 50%;
 
 			&:first-child {
-				margin-left: 50vw;
+				margin-left: 50%;
 			}
 
 			&:nth-child(even) {
@@ -41,53 +54,38 @@
 }
 
 .card--sustainability {
-	display: flex;
-
-	.card__head,
-	.card__content {
-		flex: 1 0 50%;
-		max-width: 50%;
-	}
+	cursor: pointer;
 
 	.card__picture {
-		@include aspect-clip(1, 1);
-		opacity: 0;
-		transition: opacity ease-in-out $fast;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&>img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	.card__content {
-		padding: 4.16666vw 2.083333vw;
+		display: flex;
+		flex-direction: column;
+		padding: var(--cw) var(--p40) var(--p40) var(--p40);
 	}
 
 	.card__title {
-		font-family: Noto Sans;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 36px;
-		line-height: 49px;
-		margin-bottom: 40px;
-		color: #003A56;
+		@extend .h4;
 	}
 
 	.card__abstract {
-		font-family: Noto Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		line-height: 1.5;
-		color: #003A56;
+		flex: 0 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.card__cta {
-		padding-top: 40px;
-	}
-
-	cursor: pointer;
-
-	&:hover {
-		.card__picture {
-			opacity: 1;
-		}
+		padding-top: var(--p40);
 	}
 
 	.listing__item:nth-child(3n+1)>& {
@@ -137,7 +135,7 @@
 
 	.listing__item:nth-child(4n+2)>&,
 	.listing__item:nth-child(4n+3)>& {
-		.card__head {
+		.card__picture {
 			order: 2;
 		}
 
@@ -146,4 +144,40 @@
 		}
 	}
 
+	@include media-up(sm) {
+		display: flex;
+		height: 25vw;
+
+		.card__picture,
+		.card__content {
+			flex: 1 0 50%;
+			max-width: 50%;
+		}
+
+		.card__picture {
+			opacity: 0;
+			transition: opacity ease-in-out $fast;
+		}
+
+		&:hover {
+			.card__picture {
+				opacity: 1;
+			}
+
+			.btn--more {
+				svg {
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+
+	@include media-between(sm, md) {
+		height: 50vw;
+	}
+
+	@include media-down(xs) {
+		display: block;
+		margin-bottom: var(--p40);
+	}
 }

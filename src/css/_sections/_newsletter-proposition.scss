@@ -1,45 +1,20 @@
 .newsletter-proposition {
-	padding: 80px 0 80px 0;
+	padding: var(--cw) 0;
 	background: $background;
 
 	&__title {
 		@extend .h4;
-		margin-bottom: 13px;
-	}
-
-	&__abstract {
-		font-size: 24px;
-		line-height: 150%;
-		color: #3D5D6C;
+		margin-bottom: 0.36em;
 	}
 
 	&__form {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		min-height: 45px;
 
-		@include media-up(md) {
-			display: flex;
-			justify-content: space-between;
-			align-items: stretch;
-			min-height: 45px;
-
-			.newsletter-proposition__email {
-				margin-right: 20px;
-			}
-		}
-
-		@include media-down(sm) {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			.newsletter-proposition__email {
-				width: 100%;
-				margin-bottom: 20px;
-			}
-
-			.btn--submit {
-				margin-bottom: 20px;
-			}
+		.newsletter-proposition__email {
+			margin-right: 20px;
 		}
 	}
 
@@ -81,6 +56,12 @@
 			left: 20px;
 			margin-top: -9px;
 			fill: #9D9D9C;
+		}
+	}
+
+	@include media-down(sm) {
+		&__abstract {
+			margin-bottom: var(--p60);
 		}
 	}
 }
