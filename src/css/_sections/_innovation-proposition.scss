@@ -8,10 +8,12 @@
 
 	&__category {
 		@extend .small;
+		color: $foreground-primary;
 	}
 
 	&__title {
 		@extend .h1;
+		color: $foreground;
 	}
 }
 

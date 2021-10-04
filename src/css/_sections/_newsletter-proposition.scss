@@ -4,6 +4,7 @@
 
 	&__title {
 		@extend .h4;
+		color: $foreground;
 		margin-bottom: 0.36em;
 	}
 

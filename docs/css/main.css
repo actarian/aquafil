@@ -4546,37 +4546,32 @@ body,
   font-weight: bold;
   font-size: Max(34px, Min(120px, 6.25vw));
   line-height: 1.2;
-  margin-bottom: 0.16666em;
-  color: var(--foreground); }
+  margin-bottom: 0.16666em; }
 
 .h2, .card--main-hero .card__title, .news-proposition__title {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
   line-height: 1.36;
-  margin-bottom: 0.55555em;
-  color: var(--foreground); }
+  margin-bottom: 0.55555em; }
 
 .h3, .report-proposition__title {
   font-weight: bold;
   font-size: Max(28px, Min(60px, 3.125vw));
   line-height: 1.5;
-  margin-bottom: 1em;
-  color: var(--foreground); }
+  margin-bottom: 1em; }
 
 .h4, .card--product .card__title, .card--sustainability .card__title, .newsletter-proposition__title {
   font-weight: bold;
   font-size: Max(16px, Min(36px, 1.875vw));
   line-height: 1.36;
-  margin-bottom: 1.11111em;
-  color: var(--foreground); }
+  margin-bottom: 1.11111em; }
 
 .small, .nav--main > .nav__item > a,
 .nav--main > .nav__item > span, .nav--language > .nav__item > a,
 .nav--language > .nav__item > span, .card--main-hero .card__category, .profile-proposition__category, .product-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation .card__abstract {
   font-size: Max(12px, Min(18px, 0.9375vw));
   line-height: 1.5;
-  margin-bottom: 0.83333em;
-  color: var(--foreground-primary); }
+  margin-bottom: 0.83333em; }
 
 .extrasmall, .nav--footer .nav__item > span,
 .nav--footer .nav__item > a,
@@ -6743,6 +6738,8 @@ test-component code {
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
+  .card--main-hero .card__category {
+    color: var(--foreground-primary); }
   .card--main-hero .card__title {
     color: var(--foreground-negative); }
   .card--main-hero .card__abstract {
@@ -6805,6 +6802,10 @@ test-component code {
     align-items: center; }
   .profile-proposition__content {
     margin: var(--cw4) 0; }
+  .profile-proposition__category {
+    color: var(--foreground-primary); }
+  .profile-proposition__title {
+    color: var(--foreground); }
   .profile-proposition__cta {
     padding-top: var(--p60); }
   @media (min-width: 768px) {
@@ -6831,6 +6832,12 @@ test-component code {
 .product-proposition__head {
   padding: var(--cw4) 0 var(--cw4) 0;
   background: var(--background-quaternary); }
+
+.product-proposition__category {
+  color: var(--foreground-primary); }
+
+.product-proposition__title {
+  color: var(--foreground); }
 
 @media (min-width: 768px) {
   .product-proposition {
@@ -6867,6 +6874,7 @@ test-component code {
         max-width: 100%; } }
 
 .card--product .card__title {
+  color: var(--foreground);
   margin-bottom: var(--p60); }
 
 .card--product .card__picture {
@@ -6946,6 +6954,10 @@ test-component code {
 
 .sustainability-proposition {
   background: var(--background); }
+  .sustainability-proposition__category {
+    color: var(--foreground-primary); }
+  .sustainability-proposition__title {
+    color: var(--foreground); }
   @media (min-width: 768px) {
     .sustainability-proposition {
       padding: var(--cw3) 0 0 0; } }
@@ -6987,6 +6999,8 @@ test-component code {
     display: flex;
     flex-direction: column;
     padding: var(--cw) var(--p40) var(--p40) var(--p40); }
+  .card--sustainability .card__title {
+    color: var(--foreground); }
   .card--sustainability .card__abstract {
     flex: 0 1 auto;
     overflow: hidden;
@@ -7014,12 +7028,6 @@ test-component code {
     color: var(--foreground-negative); }
   .listing__item:nth-child(3n+3) > .card--sustainability .card__abstract {
     color: var(--foreground-negative); }
-  .listing__item:nth-child(4n+2) > .card--sustainability .card__picture,
-  .listing__item:nth-child(4n+3) > .card--sustainability .card__picture {
-    order: 2; }
-  .listing__item:nth-child(4n+2) > .card--sustainability .card__content,
-  .listing__item:nth-child(4n+3) > .card--sustainability .card__content {
-    order: 1; }
   @media (min-width: 768px) {
     .card--sustainability {
       display: flex;
@@ -7035,9 +7043,20 @@ test-component code {
         opacity: 1; }
       .card--sustainability:hover .btn--more svg {
         transform: translateX(10px); } }
-  @media (min-width: 768px) and (max-width: 1439.98px) {
+  @media (min-width: 1024px) {
+    .listing__item:nth-child(4n+2) > .card--sustainability .card__picture,
+    .listing__item:nth-child(4n+3) > .card--sustainability .card__picture {
+      order: 2; }
+    .listing__item:nth-child(4n+2) > .card--sustainability .card__content,
+    .listing__item:nth-child(4n+3) > .card--sustainability .card__content {
+      order: 1; } }
+  @media (max-width: 1023.98px) {
     .card--sustainability {
-      height: 50vw; } }
+      height: 50vw; }
+      .listing__item:nth-child(even) > .card--sustainability .card__picture {
+        order: 2; }
+      .listing__item:nth-child(even) > .card--sustainability .card__content {
+        order: 1; } }
   @media (max-width: 767.98px) {
     .card--sustainability {
       display: block;
@@ -7060,6 +7079,8 @@ test-component code {
       height: 150%;
       -o-object-fit: cover;
          object-fit: cover; }
+  .report-proposition__title {
+    color: var(--foreground); }
   .report-proposition__cta {
     padding-top: var(--p60); }
   @media (max-width: 767.98px) {
@@ -7073,6 +7094,10 @@ test-component code {
   background: var(--background); }
   .innovation-proposition__content {
     padding: 0 0 var(--cw) 0; }
+  .innovation-proposition__category {
+    color: var(--foreground-primary); }
+  .innovation-proposition__title {
+    color: var(--foreground); }
 
 .card--innovation {
   display: block;
@@ -7122,6 +7147,8 @@ test-component code {
 .news-proposition {
   padding: var(--p200) 0;
   background: var(--background-quaternary); }
+  .news-proposition__title {
+    color: var(--foreground); }
 
 .listing--news {
   display: flex;
@@ -7165,6 +7192,7 @@ test-component code {
   padding: var(--cw) 0;
   background: var(--background); }
   .newsletter-proposition__title {
+    color: var(--foreground);
     margin-bottom: 0.36em; }
   .newsletter-proposition__form {
     display: flex;

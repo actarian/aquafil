@@ -25,6 +25,7 @@
 
 	&__title {
 		@extend .h3;
+		color: $foreground;
 	}
 
 	&__cta {

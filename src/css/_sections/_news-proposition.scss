@@ -4,6 +4,7 @@
 
 	&__title {
 		@extend .h2;
+		color: $foreground;
 	}
 }
 

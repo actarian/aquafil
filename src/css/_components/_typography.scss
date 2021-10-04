@@ -40,7 +40,6 @@ body,
 	font-size: Max(34px, Min(120px, 6.25vw));
 	line-height: 1.2;
 	margin-bottom: 0.16666em;
-	color: $foreground;
 }
 
 .h2 {
@@ -48,7 +47,6 @@ body,
 	font-size: Max(30px, Min(72px, 3.75vw));
 	line-height: 1.36;
 	margin-bottom: 0.55555em;
-	color: $foreground;
 }
 
 .h3 {
@@ -56,7 +54,6 @@ body,
 	font-size: Max(28px, Min(60px, 3.125vw));
 	line-height: 1.5;
 	margin-bottom: 1em;
-	color: $foreground;
 }
 
 .h4 {
@@ -64,14 +61,12 @@ body,
 	font-size: Max(16px, Min(36px, 1.875vw));
 	line-height: 1.36;
 	margin-bottom: 1.11111em;
-	color: $foreground;
 }
 
 .small {
 	font-size: Max(12px, Min(18px, 0.9375vw));
 	line-height: 1.5;
 	margin-bottom: 0.83333em;
-	color: $foreground-primary;
 }
 
 .extrasmall {

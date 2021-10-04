@@ -7,10 +7,12 @@
 
 	&__category {
 		@extend .small;
+		color: $foreground-primary;
 	}
 
 	&__title {
 		@extend .h1;
+		color: $foreground;
 	}
 
 	@include media-up(sm) {
@@ -63,6 +65,7 @@
 
 	.card__title {
 		@extend .h4;
+		color: $foreground;
 		margin-bottom: var(--p60);
 	}
 

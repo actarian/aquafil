@@ -107,6 +107,7 @@
 
 	.card__category {
 		@extend .small;
+		color: $foreground-primary;
 	}
 
 	.card__title {

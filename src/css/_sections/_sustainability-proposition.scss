@@ -3,10 +3,12 @@
 
 	&__category {
 		@extend .small;
+		color: $foreground-primary;
 	}
 
 	&__title {
 		@extend .h1;
+		color: $foreground;
 	}
 
 	@include media-up(sm) {
@@ -76,6 +78,7 @@
 
 	.card__title {
 		@extend .h4;
+		color: $foreground;
 	}
 
 	.card__abstract {
@@ -133,17 +136,6 @@
 		}
 	}
 
-	.listing__item:nth-child(4n+2)>&,
-	.listing__item:nth-child(4n+3)>& {
-		.card__picture {
-			order: 2;
-		}
-
-		.card__content {
-			order: 1;
-		}
-	}
-
 	@include media-up(sm) {
 		display: flex;
 		height: 25vw;
@@ -172,8 +164,32 @@
 		}
 	}
 
-	@include media-between(sm, md) {
+	@include media-up(md) {
+
+		.listing__item:nth-child(4n+2)>&,
+		.listing__item:nth-child(4n+3)>& {
+			.card__picture {
+				order: 2;
+			}
+
+			.card__content {
+				order: 1;
+			}
+		}
+	}
+
+	@include media-between(xs, sm) {
 		height: 50vw;
+
+		.listing__item:nth-child(even)>& {
+			.card__picture {
+				order: 2;
+			}
+
+			.card__content {
+				order: 1;
+			}
+		}
 	}
 
 	@include media-down(xs) {
