@@ -236,7 +236,7 @@ a {
 
 %btn-primary {
 	@extend %btn;
-	padding: 1.0416vw 3.02083vw;
+	padding: var(--p20) var(--p60);
 	font-weight: bold;
 	font-size: Max(11px, Min(18px, 0.9375vw));
 	line-height: 1.38;
@@ -425,11 +425,11 @@ a {
 
 %btn-submit {
 	@extend %btn;
-	padding: 20px;
+	@extend .small;
 	font-weight: bold;
-	font-size: 18px;
-	line-height: 1.38;
-	min-width: 12.5vw;
+	padding: var(--p20);
+	min-width: var(--p240);
+	margin: 0;
 
 	&,
 	&:active,

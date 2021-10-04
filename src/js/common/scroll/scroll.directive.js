@@ -19,6 +19,10 @@ export class ScrollDirective extends Directive {
 		const speed = this.scrollSpeed ? parseFloat(this.scrollSpeed) : 1.5;
 		return ScrollService.scroll$.pipe(
 			tap(_ => {
+				if (window.innerWidth < 1024) {
+					gsap.set(target, { clearProps: true });
+					return;
+				}
 				const containerRect = container === window ? { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight } : container.getBoundingClientRect();
 				const wh = containerRect.height;
 				const rect = target.getBoundingClientRect();

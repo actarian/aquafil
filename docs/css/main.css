@@ -4083,92 +4083,101 @@ html.has-scroll-dragging {
 
 body {
   --cw: 4.16667vw;
-  --hw: 2.08333vw;
   --cw1: 4.16667vw;
-  --hw1: 2.08333vw;
   --cw2: 8.33333vw;
-  --hw2: 4.16667vw;
   --cw3: 12.5vw;
-  --hw3: 6.25vw;
   --cw4: 16.66667vw;
-  --hw4: 8.33333vw;
   --cw5: 20.83333vw;
-  --hw5: 10.41667vw;
   --cw6: 25vw;
-  --hw6: 12.5vw;
   --cw7: 29.16667vw;
-  --hw7: 14.58333vw;
   --cw8: 33.33333vw;
-  --hw8: 16.66667vw;
   --cw9: 37.5vw;
-  --hw9: 18.75vw;
   --cw10: 41.66667vw;
-  --hw10: 20.83333vw;
   --cw11: 45.83333vw;
-  --hw11: 22.91667vw;
   --cw12: 50vw;
-  --hw12: 25vw;
   --cw13: 54.16667vw;
-  --hw13: 27.08333vw;
   --cw14: 58.33333vw;
-  --hw14: 29.16667vw;
   --cw15: 62.5vw;
-  --hw15: 31.25vw;
   --cw16: 66.66667vw;
-  --hw16: 33.33333vw;
   --cw17: 70.83333vw;
-  --hw17: 35.41667vw;
   --cw18: 75vw;
-  --hw18: 37.5vw;
   --cw19: 79.16667vw;
-  --hw19: 39.58333vw;
   --cw20: 83.33333vw;
-  --hw20: 41.66667vw;
   --cw21: 87.5vw;
-  --hw21: 43.75vw;
   --cw22: 91.66667vw;
-  --hw22: 45.83333vw;
   --cw23: 95.83333vw;
-  --hw23: 47.91667vw;
   --cw24: 100vw;
-  --hw24: 50vw;
   /*
 		@each $breakpoint in map-keys($breakpoints) {
 			$infix: breakpoint-infix($breakpoint, $breakpoints);
 		}
 		*/ }
 
-body {
-  --p10: 0.52083vw;
-  --p20: 1.04167vw;
-  --p30: 1.5625vw;
-  --p40: 2.08333vw;
-  --p50: 2.60417vw;
-  --p60: 3.125vw;
-  --p70: 3.64583vw;
-  --p80: 4.16667vw;
-  --p90: 4.6875vw;
-  --p100: 5.20833vw;
-  --p110: 5.72917vw;
-  --p120: 6.25vw;
-  --p130: 6.77083vw;
-  --p140: 7.29167vw;
-  --p150: 7.8125vw;
-  --p160: 8.33333vw;
-  --p170: 8.85417vw;
-  --p180: 9.375vw;
-  --p190: 9.89583vw;
-  --p200: 10.41667vw;
-  --p210: 10.9375vw;
-  --p220: 11.45833vw;
-  --p230: 11.97917vw;
-  --p240: 12.5vw;
-  --p250: 13.02083vw;
-  --p260: 13.54167vw;
-  --p270: 14.0625vw;
-  --p280: 14.58333vw;
-  --p290: 15.10417vw;
-  --p300: 15.625vw; }
+@media (min-width: 1024px) {
+  body {
+    --p10: 0.52083vw;
+    --p20: 1.04167vw;
+    --p30: 1.5625vw;
+    --p40: 2.08333vw;
+    --p50: 2.60417vw;
+    --p60: 3.125vw;
+    --p70: 3.64583vw;
+    --p80: 4.16667vw;
+    --p90: 4.6875vw;
+    --p100: 5.20833vw;
+    --p110: 5.72917vw;
+    --p120: 6.25vw;
+    --p130: 6.77083vw;
+    --p140: 7.29167vw;
+    --p150: 7.8125vw;
+    --p160: 8.33333vw;
+    --p170: 8.85417vw;
+    --p180: 9.375vw;
+    --p190: 9.89583vw;
+    --p200: 10.41667vw;
+    --p210: 10.9375vw;
+    --p220: 11.45833vw;
+    --p230: 11.97917vw;
+    --p240: 12.5vw;
+    --p250: 13.02083vw;
+    --p260: 13.54167vw;
+    --p270: 14.0625vw;
+    --p280: 14.58333vw;
+    --p290: 15.10417vw;
+    --p300: 15.625vw; } }
+
+@media (max-width: 1023.98px) {
+  body {
+    --p10: 7px;
+    --p20: 14px;
+    --p30: 21px;
+    --p40: 28px;
+    --p50: 35px;
+    --p60: 42px;
+    --p70: 49px;
+    --p80: 56px;
+    --p90: 63px;
+    --p100: 70px;
+    --p110: 77px;
+    --p120: 84px;
+    --p130: 91px;
+    --p140: 98px;
+    --p150: 105px;
+    --p160: 112px;
+    --p170: 119px;
+    --p180: 126px;
+    --p190: 133px;
+    --p200: 140px;
+    --p210: 147px;
+    --p220: 154px;
+    --p230: 161px;
+    --p240: 168px;
+    --p250: 175px;
+    --p260: 182px;
+    --p270: 189px;
+    --p280: 196px;
+    --p290: 203px;
+    --p300: 210px; } }
 
 @media (min-width: 1024px) and (max-width: 1919.98px) {
   .o-md-1 {
@@ -4566,7 +4575,7 @@ body,
   line-height: 1.36;
   margin-bottom: 1.11111em; }
 
-.small, .nav--main > .nav__item > a,
+.small, .btn--submit, .nav--main > .nav__item > a,
 .nav--main > .nav__item > span, .nav--language > .nav__item > a,
 .nav--language > .nav__item > span, .card--main-hero .card__category, .profile-proposition__category, .product-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation .card__abstract {
   font-size: Max(12px, Min(18px, 0.9375vw));
@@ -5197,7 +5206,7 @@ a {
     transform: scaleX(0); }
 
 .btn--primary {
-  padding: 1.0416vw 3.02083vw;
+  padding: var(--p20) var(--p60);
   font-weight: bold;
   font-size: Max(11px, Min(18px, 0.9375vw));
   line-height: 1.38; }
@@ -5294,11 +5303,10 @@ a {
     pointer-events: none; }
 
 .btn--submit {
-  padding: 20px;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 1.38;
-  min-width: 12.5vw; }
+  padding: var(--p20);
+  min-width: var(--p240);
+  margin: 0; }
   .btn--submit, .btn--submit:active, .btn--submit:focus, .btn--submit:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
@@ -6698,9 +6706,9 @@ test-component code {
 
 .scroll-proposition {
   position: absolute;
-  left: var(--cw);
+  left: var(--p40);
   bottom: 0;
-  padding-bottom: var(--cw2);
+  padding-bottom: var(--p160);
   font-size: 12px;
   color: var(--foreground-negative);
   z-index: 1000; }
@@ -6714,7 +6722,7 @@ test-component code {
     top: 25px;
     left: 0;
     width: 1px;
-    height: 8.33333vw;
+    height: var(--p160);
     background: var(--foreground-negative);
     animation: scroll-indicator 2000ms linear infinite; }
 
@@ -7050,7 +7058,7 @@ test-component code {
     .listing__item:nth-child(4n+2) > .card--sustainability .card__content,
     .listing__item:nth-child(4n+3) > .card--sustainability .card__content {
       order: 1; } }
-  @media (max-width: 1023.98px) {
+  @media (min-width: 768px) and (max-width: 1023.98px) {
     .card--sustainability {
       height: 50vw; }
       .listing__item:nth-child(even) > .card--sustainability .card__picture {

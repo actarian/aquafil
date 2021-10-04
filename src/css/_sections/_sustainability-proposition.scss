@@ -178,7 +178,7 @@
 		}
 	}
 
-	@include media-between(xs, sm) {
+	@include media-between(sm, sm) {
 		height: 50vw;
 
 		.listing__item:nth-child(even)>& {

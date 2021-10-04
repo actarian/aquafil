@@ -24,9 +24,9 @@
 
 @include make-grid-columns();
 
-@include make-grid-vars();
+@include make-column-vars();
 
-@include make-paddings();
+@include make-padding-vars();
 
 @include media-between(md, lg) {
 	@for $i from 1 through 20 {

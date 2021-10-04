@@ -63,7 +63,7 @@
 
 	.scroll-proposition {
 		position: relative;
-		padding-bottom: 150px;
+		padding-bottom: var(--p150);
 		font-size: 12px;
 		letter-spacing: -0.05em;
 		color: #A19C96;
@@ -74,7 +74,7 @@
 			top: 25px;
 			left: 44px;
 			width: 1px;
-			height: 150px;
+			height: var(--p150);
 			background: #a19c96;
 			animation: scroll-indicator 2000ms linear infinite;
 		}

@@ -2,13 +2,13 @@
 <div class="newsletter-proposition" newsletter-proposition action="/aquafil/homepage.html">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-8 offset-sm-3">
+			<div class="col-sm-8 offset-sm-2 col-md-8 offset-md-3">
 				<div class="newsletter-proposition__content">
 					<div class="newsletter-proposition__title">Newsletter</div>
 					<div class="newsletter-proposition__abstract">Get a preview of our latest news</div>
 				</div>
 			</div>
-			<div class="col-sm-8 offset-sm-2">
+			<div class="col-sm-11 offset-sm-1 col-md-9 offset-md-1">
 				<form class="form newsletter-proposition__form" [formGroup]="form" (submit)="onNewsletter($event)" name="form" role="form" novalidate autocomplete="off">
 					<div class="newsletter-proposition__email">
 						<div control-email [control]="controls.email" label="Enter your email"></div>

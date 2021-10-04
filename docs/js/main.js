@@ -1738,6 +1738,13 @@ ScrollStickyDirective.meta = {
     var container = target === node ? window : node;
     var speed = this.scrollSpeed ? parseFloat(this.scrollSpeed) : 1.5;
     return ScrollService.scroll$.pipe(operators.tap(function (_) {
+      if (window.innerWidth < 1024) {
+        gsap.set(target, {
+          clearProps: true
+        });
+        return;
+      }
+
       var containerRect = container === window ? {
         top: 0,
         left: 0,

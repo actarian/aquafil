@@ -54,9 +54,9 @@
 
 .scroll-proposition {
 	position: absolute;
-	left: var(--cw);
+	left: var(--p40);
 	bottom: 0;
-	padding-bottom: var(--cw2);
+	padding-bottom: var(--p160);
 	font-size: 12px;
 	color: $foreground-negative;
 	z-index: 1000;
@@ -73,7 +73,7 @@
 		top: 25px;
 		left: 0;
 		width: 1px;
-		height: 8.33333vw;
+		height: var(--p160);
 		background: $foreground-negative;
 		animation: scroll-indicator 2000ms linear infinite;
 	}
