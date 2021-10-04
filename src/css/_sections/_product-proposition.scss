@@ -2,6 +2,7 @@
 
 	&__head {
 		padding: var(--cw4) 0 var(--cw4) 0;
+		background: $background-quaternary;
 	}
 
 	&__category {
@@ -21,7 +22,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
+			width: 50%;
 			height: 75%;
 			background: $background-quaternary;
 		}
