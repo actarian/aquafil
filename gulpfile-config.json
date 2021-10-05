@@ -77,9 +77,6 @@
     "path": "/aquafil/",
     "host": "localhost",
     "port": 45432,
-    "log": false,
-    "https": {
-      "cert": "certs/server.crt"
-    }
+    "log": false
   }
 }

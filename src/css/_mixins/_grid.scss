@@ -239,6 +239,14 @@
 			}
 		}
 
+		@include media-up(xl) {
+			$p10: 10px;
+
+			@for $i from 1 through 30 {
+				--p#{$i}0: #{$p10 * $i};
+			}
+		}
+
 		@include media-down(sm) {
 			$p10: 7px;
 

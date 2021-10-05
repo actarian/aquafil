@@ -4146,6 +4146,39 @@ body {
     --p290: 15.10417vw;
     --p300: 15.625vw; } }
 
+@media (min-width: 1920px) {
+  body {
+    --p10: 10px;
+    --p20: 20px;
+    --p30: 30px;
+    --p40: 40px;
+    --p50: 50px;
+    --p60: 60px;
+    --p70: 70px;
+    --p80: 80px;
+    --p90: 90px;
+    --p100: 100px;
+    --p110: 110px;
+    --p120: 120px;
+    --p130: 130px;
+    --p140: 140px;
+    --p150: 150px;
+    --p160: 160px;
+    --p170: 170px;
+    --p180: 180px;
+    --p190: 190px;
+    --p200: 200px;
+    --p210: 210px;
+    --p220: 220px;
+    --p230: 230px;
+    --p240: 240px;
+    --p250: 250px;
+    --p260: 260px;
+    --p270: 270px;
+    --p280: 280px;
+    --p290: 290px;
+    --p300: 300px; } }
+
 @media (max-width: 1023.98px) {
   body {
     --p10: 7px;
@@ -4405,8 +4438,10 @@ body {
 .nav--main > li > span,
 .nav--language > li > span,
 .nav--footer > li > span,
-.nav--social > li > span, .nav--footer ul > li > a,
+.nav--social > li > span, .nav--submenu > li > a, .nav--footer ul > li > a,
+.nav--submenu > li > button,
 .nav--footer ul > li > button,
+.nav--submenu > li > span,
 .nav--footer ul > li > span, .nav--dropdown > li > a,
 .nav--dropdown > li > span, .nav--options > li > a,
 .nav--options > li > span {
@@ -4427,24 +4462,27 @@ body {
   .nav--main > li > span:focus,
   .nav--language > li > span:focus,
   .nav--footer > li > span:focus,
-  .nav--social > li > span:focus, .nav--footer ul > li > a:focus,
+  .nav--social > li > span:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus,
+  .nav--submenu > li > button:focus,
   .nav--footer ul > li > button:focus,
+  .nav--submenu > li > span:focus,
   .nav--footer ul > li > span:focus, .nav--dropdown > li > a:focus,
   .nav--dropdown > li > span:focus, .nav--options > li > a:focus,
   .nav--options > li > span:focus {
     outline: 0; }
 
-.nav--main, .nav--language, .nav--footer, .nav--social, .nav--footer ul, .nav--dropdown, .nav--options, .nav--index {
+.nav--main, .nav--language, .nav--footer, .nav--social, .nav--submenu, .nav--footer ul, .nav--dropdown, .nav--options, .nav--index {
   list-style: none;
   padding: 0;
   margin: 0; }
-  .nav--main > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--footer ul > li, .nav--dropdown > li, .nav--options > li, .nav--index > li {
+  .nav--main > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--submenu > li, .nav--footer ul > li, .nav--dropdown > li, .nav--options > li, .nav--index > li {
     display: block; }
-    .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+    .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
     .nav--main > li > button,
     .nav--language > li > button,
     .nav--footer > li > button,
     .nav--social > li > button,
+    .nav--submenu > li > button,
     .nav--footer ul > li > button,
     .nav--dropdown > li > button,
     .nav--options > li > button,
@@ -4453,17 +4491,19 @@ body {
     .nav--language > li > span,
     .nav--footer > li > span,
     .nav--social > li > span,
+    .nav--submenu > li > span,
     .nav--footer ul > li > span,
     .nav--dropdown > li > span,
     .nav--options > li > span,
     .nav--index > li > span {
       transition: ease-in-out 250ms;
       transition-property: background-color, color, border, opacity; }
-      .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
+      .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
       .nav--main > li > button:focus,
       .nav--language > li > button:focus,
       .nav--footer > li > button:focus,
       .nav--social > li > button:focus,
+      .nav--submenu > li > button:focus,
       .nav--footer ul > li > button:focus,
       .nav--dropdown > li > button:focus,
       .nav--options > li > button:focus,
@@ -4472,6 +4512,7 @@ body {
       .nav--language > li > span:focus,
       .nav--footer > li > span:focus,
       .nav--social > li > span:focus,
+      .nav--submenu > li > span:focus,
       .nav--footer ul > li > span:focus,
       .nav--dropdown > li > span:focus,
       .nav--options > li > span:focus,
@@ -4496,7 +4537,7 @@ body {
     position: relative;
     display: block; }
 
-.nav--footer ul {
+.nav--submenu, .nav--footer ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4515,7 +4556,7 @@ body {
 		// margin-bottom: 100px;
 	}
 	*/ }
-  .nav--footer ul > li {
+  .nav--submenu > li, .nav--footer ul > li {
     position: relative;
     display: block; }
 
@@ -4577,7 +4618,8 @@ body,
 
 .small, .btn--submit, .nav--main > .nav__item > a,
 .nav--main > .nav__item > span, .nav--language > .nav__item > a,
-.nav--language > .nav__item > span, .card--main-hero .card__category, .profile-proposition__category, .product-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation .card__abstract {
+.nav--language > .nav__item > span, .nav--submenu > .nav__item > a,
+.nav--submenu > .nav__item > span, .card--main-hero .card__category, .profile-proposition__category, .product-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation .card__abstract {
   font-size: Max(12px, Min(18px, 0.9375vw));
   line-height: 1.5;
   margin-bottom: 0.83333em; }
@@ -5072,11 +5114,12 @@ a {
   color: inherit;
   text-decoration: none; }
 
-.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
 .nav--main > li > button,
 .nav--language > li > button,
 .nav--footer > li > button,
 .nav--social > li > button,
+.nav--submenu > li > button,
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
@@ -5093,51 +5136,56 @@ a {
   font: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+  .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
   .nav--main > li > button,
   .nav--language > li > button,
   .nav--footer > li > button,
   .nav--social > li > button,
+  .nav--submenu > li > button,
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
   .nav--index > li > button, .btn, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--more-md, .btn--submit, .btn--logo, .btn--websolute, .btn--up,
   .btn--down, .section--index .title, .nav--index > .nav__item > a,
-  .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
+  .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--submenu > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
   .nav--main > li > button:active,
   .nav--language > li > button:active,
   .nav--footer > li > button:active,
   .nav--social > li > button:active,
+  .nav--submenu > li > button:active,
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
   .nav--index > li > button:active, .btn:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--more-md:active, .btn--submit:active, .btn--logo:active, .btn--websolute:active, .btn--up:active,
   .btn--down:active, .section--index .title:active, .nav--index > .nav__item > a:active,
-  .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
+  .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
   .nav--main > li > button:focus,
   .nav--language > li > button:focus,
   .nav--footer > li > button:focus,
   .nav--social > li > button:focus,
+  .nav--submenu > li > button:focus,
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
   .nav--index > li > button:focus, .btn:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--more-md:focus, .btn--submit:focus, .btn--logo:focus, .btn--websolute:focus, .btn--up:focus,
   .btn--down:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
-  .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
+  .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--submenu > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
   .nav--main > li > button:hover,
   .nav--language > li > button:hover,
   .nav--footer > li > button:hover,
   .nav--social > li > button:hover,
+  .nav--submenu > li > button:hover,
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
   .nav--index > li > button:hover, .btn:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--more-md:hover, .btn--submit:hover, .btn--logo:hover, .btn--websolute:hover, .btn--up:hover,
   .btn--down:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
-  .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
+  .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--submenu > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
   .nav--main > li > button:visited,
   .nav--language > li > button:visited,
   .nav--footer > li > button:visited,
   .nav--social > li > button:visited,
+  .nav--submenu > li > button:visited,
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
@@ -5147,14 +5195,15 @@ a {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--websolute svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--websolute svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
-.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
 .nav--main > li > button,
 .nav--language > li > button,
 .nav--footer > li > button,
 .nav--social > li > button,
+.nav--submenu > li > button,
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
@@ -5163,15 +5212,16 @@ a {
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--websolute svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--websolute svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
-  .nav--main > li > a[disabled], .nav--language > li > a[disabled], .nav--footer > li > a[disabled], .nav--social > li > a[disabled], .nav--footer ul > li > a[disabled], .nav--dropdown > li > a[disabled], .nav--options > li > a[disabled], .nav--index > li > a[disabled],
+  .nav--main > li > a[disabled], .nav--language > li > a[disabled], .nav--footer > li > a[disabled], .nav--social > li > a[disabled], .nav--submenu > li > a[disabled], .nav--footer ul > li > a[disabled], .nav--dropdown > li > a[disabled], .nav--options > li > a[disabled], .nav--index > li > a[disabled],
   .nav--main > li > button[disabled],
   .nav--language > li > button[disabled],
   .nav--footer > li > button[disabled],
   .nav--social > li > button[disabled],
+  .nav--submenu > li > button[disabled],
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
@@ -6472,7 +6522,8 @@ test-component code {
   z-index: 1000;
   height: 136px; }
   .header .container,
-  .header .container-fluid {
+  .header .container-fluid,
+  .header .row > div {
     position: static; }
   .header:not(.negative) {
     background: var(--background);
@@ -6516,18 +6567,24 @@ test-component code {
       height: 32px; } }
 
 .nav--main {
-  align-items: center; }
-  .nav--main > .nav__item > a,
-  .nav--main > .nav__item > span {
+  align-items: stretch; }
+  .nav--main > .nav__item {
+    position: relative;
     display: flex;
-    align-items: center;
-    margin: 0; }
-    .nav--main > .nav__item > a svg,
-    .nav--main > .nav__item > span svg {
-      width: 9px;
-      height: 6px;
-      margin-left: var(--p10);
-      fill: #9D9D9C; }
+    align-items: center; }
+    .nav--main > .nav__item > a,
+    .nav--main > .nav__item > span {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: var(--p20) 0; }
+      .nav--main > .nav__item > a svg,
+      .nav--main > .nav__item > span svg {
+        flex: 0 0 9px;
+        width: 9px;
+        height: 6px;
+        margin-left: var(--p10);
+        fill: #9D9D9C; }
   .negative .nav--main > .nav__item > a svg,
   .negative .nav--main > .nav__item > span svg,
   .page--homepage .nav--main > .nav__item > a svg,
@@ -6550,6 +6607,7 @@ test-component code {
     display: flex;
     align-items: center;
     margin: 0;
+    padding: var(--p20) 0;
     text-transform: uppercase; }
     .nav--language > .nav__item > a svg,
     .nav--language > .nav__item > span svg {
@@ -6561,6 +6619,8 @@ test-component code {
   .page--homepage .nav--language > .nav__item > a svg,
   .page--homepage .nav--language > .nav__item > span svg {
     fill: currentColor; }
+  .nav--language .nav--submenu {
+    text-transform: uppercase; }
   @media (min-width: 1024px) {
     .nav--language {
       margin-left: var(--p40);
@@ -6571,6 +6631,43 @@ test-component code {
   @media (max-width: 1023.98px) {
     .nav--language {
       display: none; } }
+
+.nav--submenu {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 100%;
+  margin: 0 0 0 -20px;
+  min-width: Max(120px, 100%);
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.35);
+  background: #fff;
+  color: #000; }
+  .nav--submenu > .nav__item > a,
+  .nav--submenu > .nav__item > span {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 0.7em;
+    line-height: 1.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .nav--submenu > .nav__item > a svg,
+    .nav--submenu > .nav__item > span svg {
+      width: 9px;
+      height: 6px;
+      margin-left: var(--p10);
+      fill: #9D9D9C; }
+  .nav--submenu > .nav__item:hover > a,
+  .nav--submenu > .nav__item:hover > span {
+    background: var(--background-quaternary); }
+  .nav__item:hover > .nav--submenu, .nav--submenu.active {
+    display: block; }
+  @media (min-width: 1024px) {
+    .nav--submenu > .nav__item > a,
+    .nav--submenu > .nav__item > span {
+      justify-content: center; } }
 
 @keyframes clip-right {
   0% {
@@ -7167,6 +7264,7 @@ test-component code {
     max-width: 45%; }
 
 .card--news {
+  display: block;
   margin-bottom: var(--p100); }
   .card--news .card__picture {
     position: relative;
@@ -7187,6 +7285,8 @@ test-component code {
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
+    .card--news .card__picture > img {
+      transition: transform ease-in-out 250ms; }
   .card--news .card__title {
     font-weight: bold;
     color: var(--foreground);
@@ -7195,6 +7295,10 @@ test-component code {
     padding-top: var(--p40); }
   .card--news .btn--more {
     color: var(--foreground-primary); }
+  .card--news:hover .card__picture > img {
+    transform: scale(1.1, 1.1); }
+  .card--news:hover .btn--more svg {
+    transform: translateX(10px); }
 
 .newsletter-proposition {
   padding: var(--cw) 0;

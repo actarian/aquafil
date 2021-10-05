@@ -20,11 +20,16 @@
 }
 
 .card--news {
+	display: block;
 	margin-bottom: var(--p100);
 
 	.card__picture {
 		@include aspect-clip(639, 540);
 		margin-bottom: var(--p40);
+
+		&>img {
+			transition: transform ease-in-out $fast;
+		}
 	}
 
 	.card__title {
@@ -43,4 +48,18 @@
 		color: $foreground-primary;
 	}
 
+	&:hover {
+
+		.card__picture {
+			&>img {
+				transform: scale(1.1, 1.1);
+			}
+		}
+
+		.btn--more {
+			svg {
+				transform: translateX(10px);
+			}
+		}
+	}
 }

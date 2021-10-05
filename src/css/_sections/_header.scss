@@ -7,7 +7,8 @@
 	z-index: 1000;
 
 	.container,
-	.container-fluid {
+	.container-fluid,
+	.row>div {
 		position: static;
 	}
 
@@ -74,9 +75,12 @@
 
 .nav--main {
 	@extend %nav;
-	align-items: center;
+	align-items: stretch;
 
 	&>.nav__item {
+		position: relative;
+		display: flex;
+		align-items: center;
 
 		&>a,
 		&>span {
@@ -84,8 +88,10 @@
 			align-items: center;
 			@extend .small;
 			margin: 0;
+			padding: var(--p20) 0;
 
 			svg {
+				flex: 0 0 9px;
 				width: 9px;
 				height: 6px;
 				margin-left: var(--p10);
@@ -137,6 +143,7 @@
 			align-items: center;
 			@extend .small;
 			margin: 0;
+			padding: var(--p20) 0;
 			text-transform: uppercase;
 
 			svg {
@@ -161,6 +168,10 @@
 		}
 	}
 
+	.nav--submenu {
+		text-transform: uppercase;
+	}
+
 	@include media-up(md) {
 		margin-left: var(--p40);
 		padding-left: var(--p40);
@@ -173,6 +184,66 @@
 
 	@include media-down(sm) {
 		display: none;
+	}
+}
+
+.nav--submenu {
+	@extend %nav-vertical;
+	position: absolute;
+	display: none;
+	right: 0;
+	top: 100%;
+	margin: 0 0 0 -20px;
+	min-width: Max(120px, 100%);
+	box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.35);
+	background: #fff;
+	color: #000;
+
+	&>.nav__item {
+
+		&>a,
+		&>span {
+			display: flex;
+			align-items: center;
+			@extend .small;
+			padding: 20px;
+			margin: 0;
+			font-size: 0.7em;
+			line-height: 1.8;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			svg {
+				width: 9px;
+				height: 6px;
+				margin-left: var(--p10);
+				fill: $tertiary;
+			}
+		}
+
+		&:hover {
+
+			&>a,
+			&>span {
+				background: $background-quaternary;
+			}
+		}
+	}
+
+	.nav__item:hover>&,
+	&.active {
+		display: block;
+	}
+
+	@include media-up(md) {
+		&>.nav__item {
+
+			&>a,
+			&>span {
+				justify-content: center;
+			}
+		}
 	}
 }
 
