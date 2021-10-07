@@ -6752,7 +6752,8 @@ test-component code {
       justify-content: center; }
     .nav--submenu > .nav__item:hover > a,
     .nav--submenu > .nav__item:hover > span {
-      background: var(--background-quaternary); }
+      background: var(--background-primary);
+      color: var(--foreground-negative); }
     .nav--submenu > .nav__item.back {
       display: none; }
     .nav__item:hover > .nav--submenu, .nav--submenu.active {

@@ -342,7 +342,8 @@
 
 				&>a,
 				&>span {
-					background: $background-quaternary;
+					background: $background-primary;
+					color: $foreground-negative;
 				}
 			}
 
