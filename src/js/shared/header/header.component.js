@@ -1,8 +1,8 @@
 import { Component, getContext } from 'rxcomp';
 import { takeUntil } from 'rxjs/operators';
 import { ScrollService } from '../../common/scroll/scroll.service';
-
-const USE_MODAL = false;
+import { MenuService } from '../menu/menu.service';
+import { HeaderService } from './header.service';
 
 export class HeaderComponent extends Component {
 
@@ -32,6 +32,22 @@ export class HeaderComponent extends Component {
 	}
 
 	onInit() {
+		const body = document.querySelector('body');
+		this.header = HeaderService.currentHeader;
+		HeaderService.header$().pipe(
+			takeUntil(this.unsubscribe$),
+		).subscribe(header => {
+			this.header = header;
+			this.pushChanges();
+			body.setAttribute('class', header !== -1 ? `${header}-active` : '');
+		});
+		this.menu = MenuService.currentMenu;
+		MenuService.menu$().pipe(
+			takeUntil(this.unsubscribe$),
+		).subscribe(menu => {
+			this.menu = menu;
+			this.pushChanges();
+		});
 		ScrollService.scroll$.pipe(
 			takeUntil(this.unsubscribe$),
 		).subscribe((event) => {
@@ -39,6 +55,19 @@ export class HeaderComponent extends Component {
 			this.scrolled = event.scroll.y > 100;
 			// console.log('HeaderComponent', event.scroll.y, event.direction, event.speed);
 		});
+	}
+
+	onToggle(id) {
+		MenuService.onBack();
+		HeaderService.toggleHeader(id);
+	}
+
+	onMenu(id) {
+		MenuService.setMenu(id);
+	}
+
+	onBack(event) {
+		MenuService.onBack();
 	}
 }
 

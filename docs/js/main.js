@@ -3228,7 +3228,65 @@ ErrorComponent.meta = {
   template:
   /* html */
   "\n\t<div class=\"error\" (click)=\"onDetailToggle($event)\">\n\t\t<div class=\"status\">Error <span [innerHTML]=\"error.status\"></span></div>\n\t\t<div class=\"exception-message\" [innerHTML]=\"error.exceptionMessage\"></div>\n\t\t<button type=\"button\" class=\"btn--detail\"><svg class=\"caret-down\"><use xlink:href=\"#caret-down\"></use></svg></button>\n\t</div>\n\t<div class=\"error-details\" *if=\"showDetail\">\n\t\t<div class=\"message\" [innerHTML]=\"error.message\"></div>\n\t\t<div class=\"exception-type\" [innerHTML]=\"error.exceptionType\"></div>\n\t\t<div class=\"stack-trace\" [innerHTML]=\"error.stackTrace\"></div>\n\t</div>\n\t"
-};var HeaderComponent = /*#__PURE__*/function (_Component) {
+};var MenuService = /*#__PURE__*/function () {
+  function MenuService() {}
+
+  MenuService.setMenu = function setMenu(id) {
+    this.menu$_.next(id);
+  };
+
+  MenuService.toggleMenu = function toggleMenu(id) {
+    this.menu$_.next(this.currentMenu === id ? -1 : id);
+  };
+
+  MenuService.onBack = function onBack() {
+    this.menu$_.next(-1);
+  };
+
+  MenuService.menu$ = function menu$() {
+    return this.menu$_;
+  };
+
+  _createClass(MenuService, null, [{
+    key: "currentMenu",
+    get: function get() {
+      return this.menu$_.getValue();
+    }
+  }]);
+
+  return MenuService;
+}();
+
+_defineProperty(MenuService, "menu$_", new rxjs.BehaviorSubject(-1));var HeaderService = /*#__PURE__*/function () {
+  function HeaderService() {}
+
+  HeaderService.setHeader = function setHeader(id) {
+    this.header$_.next(id);
+  };
+
+  HeaderService.toggleHeader = function toggleHeader(id) {
+    this.header$_.next(this.currentHeader === id ? -1 : id);
+  };
+
+  HeaderService.onBack = function onBack() {
+    this.header$_.next(-1);
+  };
+
+  HeaderService.header$ = function header$() {
+    return this.header$_;
+  };
+
+  _createClass(HeaderService, null, [{
+    key: "currentHeader",
+    get: function get() {
+      return this.header$_.getValue();
+    }
+  }]);
+
+  return HeaderService;
+}();
+
+_defineProperty(HeaderService, "header$_", new rxjs.BehaviorSubject(-1));var HeaderComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(HeaderComponent, _Component);
 
   function HeaderComponent() {
@@ -3252,10 +3310,38 @@ ErrorComponent.meta = {
   _proto.onInit = function onInit() {
     var _this2 = this;
 
+    var body = document.querySelector('body');
+    this.header = HeaderService.currentHeader;
+    HeaderService.header$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (header) {
+      _this2.header = header;
+
+      _this2.pushChanges();
+
+      body.setAttribute('class', header !== -1 ? header + "-active" : '');
+    });
+    this.menu = MenuService.currentMenu;
+    MenuService.menu$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (menu) {
+      _this2.menu = menu;
+
+      _this2.pushChanges();
+    });
     ScrollService.scroll$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
       _this2.direction = event.direction;
       _this2.scrolled = event.scroll.y > 100; // console.log('HeaderComponent', event.scroll.y, event.direction, event.speed);
     });
+  };
+
+  _proto.onToggle = function onToggle(id) {
+    MenuService.onBack();
+    HeaderService.toggleHeader(id);
+  };
+
+  _proto.onMenu = function onMenu(id) {
+    MenuService.setMenu(id);
+  };
+
+  _proto.onBack = function onBack(event) {
+    MenuService.onBack();
   };
 
   _createClass(HeaderComponent, [{
