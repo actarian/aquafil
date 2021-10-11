@@ -6,6 +6,7 @@ import { DatePipe } from './date/date.pipe';
 import { DownloadDirective } from './download/download.directive';
 import { DropdownItemDirective } from './dropdown/dropdown-item.directive';
 import { DropdownDirective } from './dropdown/dropdown.directive';
+import { EllipsisDirective } from './ellipsis/ellipsis.directive';
 import { EnvPipe } from './env/env.pipe';
 import { FilterItemComponent } from './filter/filter-item.component';
 import { FlagPipe } from './flag/flag.pipe';
@@ -36,6 +37,7 @@ const factories = [
 	DropdownDirective,
 	DropdownItemDirective,
 	// DropdownItemDirective,
+	EllipsisDirective,
 	FilterItemComponent,
 	IdDirective,
 	LabelForDirective,

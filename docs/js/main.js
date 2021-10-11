@@ -294,20 +294,10 @@ AltDirective.meta = {
         node = _getContext.node;
 
     node.classList.add('appear');
-  };
-
-  _proto.onChanges = function onChanges() {
-    if (!this.appeared) {
-      this.appeared = true;
-
-      var _getContext2 = rxcomp.getContext(this),
-          node = _getContext2.node;
-
-      IntersectionService.intersection$(node).pipe( // first(),
-      operators.takeUntil(this.unsubscribe$)).subscribe(function (entry) {
-        entry.intersectionRatio > 0.5 ? node.classList.add('appeared') : node.classList.remove('appeared');
-      });
-    }
+    IntersectionService.intersection$(node).pipe( // first(),
+    operators.takeUntil(this.unsubscribe$)).subscribe(function (entry) {
+      entry.intersectionRatio > 0.5 ? node.classList.add('appeared') : node.classList.remove('appeared');
+    });
   };
 
   return AppearDirective;
@@ -1073,6 +1063,48 @@ DropdownDirective.dropdown$ = new rxjs.BehaviorSubject(null);var DropdownItemDir
 DropdownItemDirective.meta = {
   selector: '[dropdown-item], [[dropdown-item]]',
   inputs: ['dropdown-item']
+};var EllipsisDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(EllipsisDirective, _Directive);
+
+  function EllipsisDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = EllipsisDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    this.originalText = node.innerText;
+    this.resize$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
+  };
+
+  _proto.resize$ = function resize$() {
+    var _this = this;
+
+    var _getContext2 = rxcomp.getContext(this),
+        node = _getContext2.node;
+
+    return rxjs.fromEvent(window, 'resize').pipe(operators.startWith(function (_) {
+      return null;
+    }), operators.tap(function (_) {
+      var text = _this.originalText;
+      node.innerText = text;
+
+      while (node.scrollHeight - node.offsetHeight > 0) {
+        var words = text.split(' ');
+        words.pop();
+        text = words.join(' ') + "...";
+        node.innerText = text; // console.log(node.scrollHeight, node.offsetHeight);
+      }
+    }));
+  };
+
+  return EllipsisDirective;
+}(rxcomp.Directive);
+EllipsisDirective.meta = {
+  selector: '[ellipsis]'
 };var EnvPipe = /*#__PURE__*/function (_Pipe) {
   _inheritsLoose(EnvPipe, _Pipe);
 
@@ -2483,7 +2515,7 @@ TitleDirective.meta = {
   inputs: ['title']
 };var factories = [AltDirective, AppearDirective, ClickOutsideDirective, DownloadDirective, // DropDirective,
 DropdownDirective, DropdownItemDirective, // DropdownItemDirective,
-FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
+EllipsisDirective, FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
 // LazyDirective,
 // ModalComponent,
 ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
