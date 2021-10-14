@@ -4,21 +4,21 @@
 			<div class="col-md-6">
 				<div class="title">Dati personali</div>
 				<div class="card--address">
-					<div class="card__content">
-						<div class="card__name" [innerHTML]="user.firstName + ' ' + user.lastName"></div>
-						<div class="card__occupation" [innerHTML]="occupationName"></div>
-						<div class="card__company" [innerHTML]="user.company"></div>
-						<div class="card__address" [innerHTML]="user.address" *if="user.address"></div>
-						<div class="card__address">
-							<span class="card__zipcode" [innerHTML]="user.zipCode" *if="user.zipCode"></span>
-							<span class="card__city" [innerHTML]="user.city"></span>
-							<span class="card__country" [innerHTML]="countryName"></span>
+					<div class="card--address__content">
+						<div class="card--address__name" [innerHTML]="user.firstName + ' ' + user.lastName"></div>
+						<div class="card--address__occupation" [innerHTML]="occupationName"></div>
+						<div class="card--address__company" [innerHTML]="user.company"></div>
+						<div class="card--address__address" [innerHTML]="user.address" *if="user.address"></div>
+						<div class="card--address__address">
+							<span class="card--address__zipcode" [innerHTML]="user.zipCode" *if="user.zipCode"></span>
+							<span class="card--address__city" [innerHTML]="user.city"></span>
+							<span class="card--address__country" [innerHTML]="countryName"></span>
 						</div>
-						<div class="card__phones" *if="user.telephone">
-							<a class="card__phone" [href]="'tel:' + user.telephone" [innerHTML]="user.telephone"></a>
+						<div class="card--address__phones" *if="user.telephone">
+							<a class="card--address__phone" [href]="'tel:' + user.telephone" [innerHTML]="user.telephone"></a>
 						</div>
-						<a class="card__email" [href]="'mailto:' + user.email" [innerHTML]="user.email"></a>
-						<div class="card__newsletter" *if="user.newsletter">
+						<a class="card--address__email" [href]="'mailto:' + user.email" [innerHTML]="user.email"></a>
+						<div class="card--address__newsletter" *if="user.newsletter">
 							<span>Lingua newsletter</span> <span [innerHTML]="newsletterLanguageName"></span>
 						</div>
 					</div>

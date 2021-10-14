@@ -1,6 +1,14 @@
 a {
 	color: inherit;
 	text-decoration: none;
+
+	&:not([class]) {
+		transition: color ease-in-out $fast;
+
+		&:hover {
+			color: $foreground-primary;
+		}
+	}
 }
 
 %btn-reset {
@@ -363,6 +371,80 @@ a {
 
 .btn--download {
 	@extend %btn-download;
+}
+
+%btn-certification {
+	@extend %btn;
+	font-size: Max(11px, Min(18px, 0.9375vw));
+	line-height: 1.38;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	height: var(--p60);
+
+	&>span {
+		display: flex;
+		align-items: center;
+		padding: 0 var(--p20);
+	}
+
+	&>.icon {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+		padding: 0 var(--p10);
+	}
+
+	svg {
+		width: 33px;
+		height: 29px;
+	}
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		background-color: #F8F8F8;
+		color: $foreground;
+	}
+
+	&:hover {
+		background-color: #F8F8F8;
+		color: $foreground;
+	}
+}
+
+.btn--certification {
+	@extend %btn-certification;
+}
+
+%btn-plus {
+	@extend %btn;
+	padding: var(--p20);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+	}
+
+	&:hover {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+	}
+}
+
+.btn--plus {
+	@extend %btn-plus;
 }
 
 %btn-more-md {

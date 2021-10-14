@@ -1,4 +1,4 @@
-.product-proposition {
+.area-proposition {
 
 	&__head {
 		padding: var(--cw4) 0 var(--cw4) 0;
@@ -31,7 +31,7 @@
 	}
 }
 
-.listing--product {
+.listing--area {
 	display: flex;
 	flex-wrap: wrap;
 
@@ -43,7 +43,7 @@
 			&:nth-child(even) {
 				margin-top: -12.5vw;
 				/*
-				&>.card--product {
+				&>.card--area {
 				}
 				*/
 			}
@@ -61,26 +61,26 @@
 	}
 }
 
-.card--product {
+.card--area {
 
-	.card__title {
-		@extend .h4;
+	&__title {
+		@extend .h5;
 		color: $foreground;
 		margin-bottom: var(--p60);
 	}
 
-	.card__picture {
+	&__picture {
 		margin-bottom: var(--p60);
 	}
 
-	.card__cta {
+	&__cta {
 		padding-top: var(--p60);
 	}
 
 	.listing__item:nth-child(4n+1)>& {
 		background: $background-negative;
 
-		.card__title {
+		.card--area__title {
 			color: $foreground-negative;
 
 			&:before {
@@ -88,7 +88,7 @@
 			}
 		}
 
-		.card__abstract {
+		.card--area__abstract {
 			color: $foreground-negative;
 		}
 	}
@@ -96,7 +96,7 @@
 	.listing__item:nth-child(4n+2)>& {
 		background: $background;
 
-		.card__title {
+		.card--area__title {
 			color: $foreground;
 
 			&:before {
@@ -108,7 +108,7 @@
 	.listing__item:nth-child(4n+3)>& {
 		background: $background-quaternary;
 
-		.card__title {
+		.card--area__title {
 			color: $foreground;
 
 			&:before {
@@ -120,7 +120,7 @@
 	.listing__item:nth-child(4n+4)>& {
 		background: $background-tertiary;
 
-		.card__title {
+		.card--area__title {
 			color: $foreground-negative;
 
 			&:before {
@@ -128,7 +128,7 @@
 			}
 		}
 
-		.card__abstract {
+		.card--area__abstract {
 			color: $foreground-negative;
 		}
 	}
@@ -136,7 +136,7 @@
 	@include media-up(sm) {
 		padding: var(--cw2);
 
-		.card__title {
+		&__title {
 			position: relative;
 
 			&:before {
@@ -155,7 +155,7 @@
 	@include media-down(xs) {
 		padding: var(--p100) var(--p40);
 
-		.card__picture {
+		&__picture {
 			@include aspect-clip(5, 3);
 		}
 	}

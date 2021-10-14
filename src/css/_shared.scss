@@ -24,14 +24,23 @@
 
 @import '_sections/header';
 @import '_sections/footer';
+
+// homepage
 @import '_sections/main-hero';
 @import '_sections/profile-proposition';
-@import '_sections/product-proposition';
+@import '_sections/area-proposition';
 @import '_sections/sustainability-proposition';
 @import '_sections/report-proposition';
 @import '_sections/innovation-proposition';
 @import '_sections/news-proposition';
 @import '_sections/newsletter-proposition';
+
+// offices-detail
+@import '_sections/offices-detail/offices-detail-hero';
+@import '_sections/offices-detail/address-detail';
+@import '_sections/offices-detail/certification';
+@import '_sections/offices-detail/product-proposition';
+@import '_sections/offices-detail/toolkit-proposition';
 
 /*
 @import '_pages/breadcrumb';

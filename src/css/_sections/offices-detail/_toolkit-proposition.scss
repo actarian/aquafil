@@ -1,0 +1,42 @@
+.toolkit-proposition {
+	padding: 80px 0;
+
+	&__title {
+		@extend .h4;
+		margin-bottom: var(--p80);
+	}
+}
+
+.card--toolkit {
+	display: flex;
+	align-items: stretch;
+	margin-bottom: var(--p80);
+
+	&__picture,
+	&__content {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	&__content {
+		background: $background-quaternary;
+		padding: var(--p80) var(--p70);
+	}
+
+	&__title {
+		@extend .h5;
+		margin-bottom: var(--p40);
+	}
+
+	&__abstract {
+		@extend .small;
+	}
+
+	&__cta {
+		margin-top: var(--p40);
+	}
+}
+
+[swiper-toolkit] {
+	overflow: visible;
+}

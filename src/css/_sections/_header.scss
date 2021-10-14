@@ -15,10 +15,11 @@
 	height: Min(var(--p130), 136px);
 
 	&:not(.negative) {
+		position: sticky;
+		top: 0;
 		background: $background;
 		color: $foreground;
 		border-bottom: 1px solid $border;
-		position: sticky;
 	}
 
 	&.negative,

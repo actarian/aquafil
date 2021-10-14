@@ -1,0 +1,23 @@
+.address-detail {
+	padding: var(--p80) 0 0 0;
+
+	&__divline {
+		padding-top: var(--p80);
+		border-bottom: 1px solid $border;
+	}
+}
+
+.card--address {
+	margin-bottom: 40px;
+
+	&__title {
+		font-weight: bold;
+		margin-bottom: var(--p30);
+	}
+
+	&__abstract {
+		p {
+			margin: 0;
+		}
+	}
+}

@@ -3,7 +3,7 @@
 	background: $background;
 
 	&__title {
-		@extend .h4;
+		@extend .h5;
 		color: $foreground;
 		margin-bottom: 0.36em;
 	}

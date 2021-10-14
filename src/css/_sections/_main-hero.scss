@@ -85,7 +85,7 @@
 	justify-content: center;
 	min-height: 100vh;
 
-	.card__background {
+	&__background {
 		position: absolute;
 		display: flex;
 		justify-content: center;
@@ -103,23 +103,23 @@
 		}
 	}
 
-	.card__content {}
+	// &__content {}
 
-	.card__category {
+	&__category {
 		@extend .small;
 		color: $foreground-primary;
 	}
 
-	.card__title {
+	&__title {
 		@extend .h2;
 		color: $foreground-negative;
 	}
 
-	.card__abstract {
+	&__abstract {
 		color: $foreground-negative;
 	}
 
-	.card__cta {
+	&__cta {
 		padding-top: var(--p60);
 	}
 }
@@ -154,7 +154,7 @@
 [swiper-main] {
 
 	.card--main-hero {
-		.card__background {
+		&__background {
 			overflow: hidden;
 
 			&>img {
@@ -163,7 +163,7 @@
 			}
 		}
 
-		.card__content {
+		&__content {
 			overflow: hidden;
 
 			&>* {
@@ -179,14 +179,14 @@
 
 	.swiper-slide-active {
 		.card--main-hero {
-			.card__background {
+			&__background {
 
 				&>img {
 					transform: scale(1, 1);
 				}
 			}
 
-			.card__content {
+			&__content {
 				&>* {
 					opacity: 1;
 					transform: translateX(0);

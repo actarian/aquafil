@@ -23,7 +23,7 @@
 	display: block;
 	margin-bottom: var(--p100);
 
-	.card__picture {
+	&__picture {
 		@include aspect-clip(639, 540);
 		margin-bottom: var(--p40);
 
@@ -32,15 +32,15 @@
 		}
 	}
 
-	.card__title {
+	&__title {
 		font-weight: bold;
 		color: $foreground;
 		margin-bottom: var(--p20);
 	}
 
-	.card__abstract {}
+	// &__abstract {}
 
-	.card__cta {
+	&__cta {
 		padding-top: var(--p40);
 	}
 
@@ -50,7 +50,7 @@
 
 	&:hover {
 
-		.card__picture {
+		.card--news__picture {
 			&>img {
 				transform: scale(1.1, 1.1);
 			}

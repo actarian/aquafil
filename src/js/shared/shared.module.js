@@ -1,5 +1,6 @@
 import { Module } from 'rxcomp';
 import { SwiperMainDirective } from '../partials/swiper-main/swiper-main.directive';
+import { SwiperToolkitDirective } from '../partials/swiper-toolkit/swiper-toolkit.directive';
 import { ErrorComponent } from './error/error.component';
 import { HeaderComponent } from './header/header.component';
 import { NewsletterPropositionComponent } from './newsletter-proposition/newsletter-proposition.component';
@@ -19,6 +20,7 @@ const factories = [
 	HeaderComponent,
 	NewsletterPropositionComponent,
 	SwiperMainDirective,
+	SwiperToolkitDirective,
 	SwitchComponent,
 	UserComponent,
 	UserDeleteComponent,

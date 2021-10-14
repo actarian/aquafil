@@ -22,7 +22,7 @@
 	background: $background-negative;
 	color: $foreground-negative;
 
-	.card__picture {
+	&__picture {
 		@include aspect-clip(426, 400);
 
 		&>img {
@@ -30,23 +30,23 @@
 		}
 	}
 
-	.card__content {
+	&__content {
 		position: relative;
 		padding: var(--cw) var(--p40);
 	}
 
-	.card__title {
+	&__title {
 		font-weight: bold;
 		color: $foreground-negative;
 		margin-bottom: var(--p40);
 	}
 
-	.card__abstract {
+	&__abstract {
 		@extend .small;
 		color: #BDCFD8;
 	}
 
-	.card__cta {
+	&__cta {
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -55,7 +55,7 @@
 
 	&:hover {
 
-		.card__picture {
+		.card--innovation__picture {
 			&>img {
 				transform: scale(1.1, 1.1);
 			}

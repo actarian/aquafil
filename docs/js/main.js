@@ -3234,6 +3234,37 @@ ControlsModule.meta = {
 }(SwiperDirective);
 SwiperMainDirective.meta = {
   selector: '[swiper-main]'
+};var SwiperToolkitDirective = /*#__PURE__*/function (_SwiperDirective) {
+  _inheritsLoose(SwiperToolkitDirective, _SwiperDirective);
+
+  function SwiperToolkitDirective() {
+    return _SwiperDirective.apply(this, arguments) || this;
+  }
+
+  var _proto = SwiperToolkitDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    this.options = {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      speed: 600,
+      autoplay: {
+        delay: 5000
+      },
+      keyboardControl: true,
+      mousewheelControl: false,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      }
+    };
+    this.init_(); // console.log('SwiperToolkitDirective.onInit');
+  };
+
+  return SwiperToolkitDirective;
+}(SwiperDirective);
+SwiperToolkitDirective.meta = {
+  selector: '[swiper-toolkit]'
 };var ErrorComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(ErrorComponent, _Component);
 
@@ -5077,7 +5108,7 @@ UserSignupComponent.meta = {
   selector: '[user-signup]',
   outputs: ['signUp', 'viewSignIn'],
   inputs: ['me', 'user']
-};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperMainDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
+};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
 var pipes$2 = [];
 var SharedModule = /*#__PURE__*/function (_Module) {
   _inheritsLoose(SharedModule, _Module);
