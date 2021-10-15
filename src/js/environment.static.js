@@ -19,12 +19,8 @@ export const environmentStatic = {
 	},
 	template: {
 		modal: {
-			careersModal: '/aquafil/partials/modals/careers-modal.html',
 			genericModal: '/aquafil/partials/modals/generic-modal.html',
-			marketsAndLanguagesModal: '/aquafil/partials/modals/markets-and-languages-modal.html',
-			materialsModal: '/aquafil/partials/modals/materials-modal.html',
-			ordersModal: '/aquafil/partials/modals/orders-modal.html',
-			projectsRegistrationModal: '/aquafil/partials/modals/projects-registration-modal.html',
+			sideModal: '/aquafil/partials/modals/side-modal.html',
 			userModal: '/aquafil/partials/modals/user-modal.html',
 		}
 	},

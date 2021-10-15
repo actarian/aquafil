@@ -408,8 +408,8 @@ a {
 	}
 
 	&:hover {
-		background-color: #F8F8F8;
-		color: $foreground;
+		background-color: $background-primary;
+		color: $foreground-negative;
 	}
 }
 

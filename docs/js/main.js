@@ -398,12 +398,8 @@ ClickOutsideDirective.meta = {
   },
   template: {
     modal: {
-      careersModal: '/template/modals/careers-modal.cshtml',
       genericModal: '/template/modals/generic-modal.cshtml',
-      marketsAndLanguagesModal: '/template/modals/markets-and-languages-modal.cshtml',
-      materialsModal: '/template/modals/materials-modal.cshtml',
-      ordersModal: '/template/modals/orders-modal.cshtml',
-      projectsRegistrationModal: '/template/modals/projects-registration-modal.cshtml',
+      sideModal: '/template/modals/side-modal.cshtml',
       userModal: '/template/modals/user-modal.cshtml'
     }
   },
@@ -454,12 +450,8 @@ ClickOutsideDirective.meta = {
   },
   template: {
     modal: {
-      careersModal: '/aquafil/partials/modals/careers-modal.html',
       genericModal: '/aquafil/partials/modals/generic-modal.html',
-      marketsAndLanguagesModal: '/aquafil/partials/modals/markets-and-languages-modal.html',
-      materialsModal: '/aquafil/partials/modals/materials-modal.html',
-      ordersModal: '/aquafil/partials/modals/orders-modal.html',
-      projectsRegistrationModal: '/aquafil/partials/modals/projects-registration-modal.html',
+      sideModal: '/aquafil/partials/modals/side-modal.html',
       userModal: '/aquafil/partials/modals/user-modal.html'
     }
   },
@@ -1491,7 +1483,8 @@ ModalService.busy$ = new rxjs.Subject();var ModalOutletComponent = /*#__PURE__*/
     });
   };
 
-  _proto.reject = function reject(event) {
+  _proto.onClose = function onClose(event) {
+    console.log('ModalOutletComponent.onClose', event);
     ModalService.reject();
   };
 
@@ -1539,7 +1532,7 @@ ModalOutletComponent.meta = {
   selector: '[modal-outlet]',
   template:
   /* html */
-  "\n\t<div class=\"modal-outlet__container\" [class]=\"{ active: modal, busy: busy }\">\n\t\t<div class=\"modal-outlet__background\" (click)=\"reject($event)\"></div>\n\t\t<div class=\"modal-outlet__modal\"></div>\n\t\t<!-- spinner -->\n\t\t<div class=\"spinner spinner--contrasted\" *if=\"busy\"></div>\n\t</div>\n\t"
+  "\n\t<div class=\"modal-outlet__container\" [class]=\"{ active: modal, busy: busy }\">\n\t\t<div class=\"modal-outlet__background\" (click)=\"onClose($event)\"></div>\n\t\t<div class=\"modal-outlet__modal\"></div>\n\t\t<!-- spinner -->\n\t\t<div class=\"spinner spinner--contrasted\" *if=\"busy\"></div>\n\t</div>\n\t"
 };var NameDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(NameDirective, _Directive);
 
@@ -3195,6 +3188,102 @@ ControlsModule.meta = {
   imports: [],
   declarations: [].concat(factories$1, pipes$1),
   exports: [].concat(factories$1, pipes$1)
+};var OpenModallyDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(OpenModallyDirective, _Directive);
+
+  function OpenModallyDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = OpenModallyDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    var selector = node.getAttribute('open-modally');
+    var target = document.querySelector(selector);
+
+    if (target) {
+      target = target.cloneNode(true); // target.parentNode.removeChild(target);
+
+      this.click$(target).pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
+    }
+  };
+
+  _proto.click$ = function click$(target) {
+    var _getContext2 = rxcomp.getContext(this),
+        node = _getContext2.node;
+
+    return rxjs.fromEvent(node, 'click').pipe(operators.tap(function (_) {
+      ModalService.open$({
+        src: environment.template.modal.sideModal,
+        data: {
+          target: target
+        }
+      }).pipe(operators.first()).subscribe(function (event) {
+        console.log('OpenModallyDirective.open$', event);
+      });
+    }));
+  };
+
+  return OpenModallyDirective;
+}(rxcomp.Directive);
+OpenModallyDirective.meta = {
+  selector: '[open-modally]'
+};var SideModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(SideModalComponent, _Component);
+
+  function SideModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = SideModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+
+      if (data.target) {
+        var _getContext2 = rxcomp.getContext(this),
+            node = _getContext2.node;
+
+        node.querySelector('.side-modal__content').appendChild(data.target);
+      }
+
+      console.log('SideModalComponent.onInit', data);
+    }
+    /*
+    this.resize$().pipe(
+    	takeUntil(this.unsubscribe$),
+    ).subscribe();
+    */
+
+  };
+
+  _proto.resize$ = function resize$() {
+    var _getContext3 = rxcomp.getContext(this),
+        node = _getContext3.node;
+
+    var header = document.querySelector('header');
+    return rxjs.fromEvent(window, 'resize').pipe(operators.startWith(function (_) {
+      return null;
+    }), operators.tap(function (_) {
+      node.style.top = header.offsetHeight + "px";
+    }));
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return SideModalComponent;
+}(rxcomp.Component);
+SideModalComponent.meta = {
+  selector: '[side-modal]'
 };var SwiperMainDirective = /*#__PURE__*/function (_SwiperDirective) {
   _inheritsLoose(SwiperMainDirective, _SwiperDirective);
 
@@ -5108,7 +5197,7 @@ UserSignupComponent.meta = {
   selector: '[user-signup]',
   outputs: ['signUp', 'viewSignIn'],
   inputs: ['me', 'user']
-};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
+};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, OpenModallyDirective, SideModalComponent, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
 var pipes$2 = [];
 var SharedModule = /*#__PURE__*/function (_Module) {
   _inheritsLoose(SharedModule, _Module);

@@ -48,7 +48,8 @@ export class ModalOutletComponent extends Component {
 		).subscribe(busy => this.busy = busy);
 	}
 
-	reject(event) {
+	onClose(event) {
+		console.log('ModalOutletComponent.onClose', event);
 		ModalService.reject();
 	}
 
@@ -58,7 +59,7 @@ ModalOutletComponent.meta = {
 	selector: '[modal-outlet]',
 	template: /* html */ `
 	<div class="modal-outlet__container" [class]="{ active: modal, busy: busy }">
-		<div class="modal-outlet__background" (click)="reject($event)"></div>
+		<div class="modal-outlet__background" (click)="onClose($event)"></div>
 		<div class="modal-outlet__modal"></div>
 		<!-- spinner -->
 		<div class="spinner spinner--contrasted" *if="busy"></div>

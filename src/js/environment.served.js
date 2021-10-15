@@ -19,12 +19,8 @@ export const environmentServed = {
 	},
 	template: {
 		modal: {
-			careersModal: '/template/modals/careers-modal.cshtml',
 			genericModal: '/template/modals/generic-modal.cshtml',
-			marketsAndLanguagesModal: '/template/modals/markets-and-languages-modal.cshtml',
-			materialsModal: '/template/modals/materials-modal.cshtml',
-			ordersModal: '/template/modals/orders-modal.cshtml',
-			projectsRegistrationModal: '/template/modals/projects-registration-modal.cshtml',
+			sideModal: '/template/modals/side-modal.cshtml',
 			userModal: '/template/modals/user-modal.cshtml',
 		}
 	},

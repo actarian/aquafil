@@ -1,0 +1,58 @@
+.card--side-modal {
+	display: none;
+	flex-direction: column;
+
+	&__picture {
+		@include aspect-clip(799, 308);
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		padding: var(--p60) var(--p40);
+		overflow-x: hidden;
+		overflow-y: auto;
+		@include scrollbar();
+	}
+
+	&__title {
+		@extend .h4;
+		margin-bottom: var(--p40);
+	}
+
+	&__abstract {
+		@extend .extrasmall;
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.side-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	background: white;
+	box-shadow: -50px 0 50px -10px rgba(0, 0, 0, 0.2);
+
+	&__content {
+		height: 100%;
+	}
+
+	.card--side-modal {
+		display: flex;
+		height: 100%;
+	}
+
+	.btn--close {
+		position: absolute;
+	}
+
+	@include media-up(md) {
+		width: 40.625vw;
+	}
+}

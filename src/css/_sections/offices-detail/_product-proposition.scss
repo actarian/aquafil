@@ -66,9 +66,14 @@
 
 .card--product {
 	position: relative;
+	cursor: pointer;
 
 	&__picture {
 		@include aspect-clip(426, 360);
+
+		&>img {
+			transition: transform ease-in-out $fast;
+		}
 	}
 
 	&__content {
@@ -89,6 +94,28 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
+
+		svg {
+			transition: transform ease-in-out $fast;
+		}
+	}
+
+	&:hover {
+		.card--product__picture {
+			&>img {
+				transform: scale(1.1, 1.1);
+			}
+		}
+
+		.btn--plus {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			&>svg {
+				transform: scale(1.3, 1.3);
+			}
+		}
 	}
 
 	.listing__item:nth-child(4n+1)>& {
