@@ -8000,7 +8000,7 @@ test-component code {
     .card--location__picture > img {
       transition: transform ease-in-out 250ms; }
   .card--location__content {
-    padding: var(--p60) 0; }
+    padding: var(--p40) 0; }
   .card--location__category {
     color: var(--foreground-primary);
     margin-bottom: var(--p10); }
@@ -8017,22 +8017,22 @@ test-component code {
     transform: translateY(-6px); }
   @media (min-width: 1024px) {
     .listing__item:nth-child(4n+1) > .card--location .card--location__picture {
-      box-shadow: var(--n30) var(--n30) 0 0 var(--background-negative); }
+      box-shadow: var(--n30) var(--n30) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+2) > .card--location .card--location__picture {
-      box-shadow: var(--p30) var(--p30) 0 0 var(--background-negative); }
+      box-shadow: var(--p30) var(--p30) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+3) > .card--location .card--location__picture {
-      box-shadow: var(--p30) var(--n30) 0 0 var(--background-negative); }
+      box-shadow: var(--p30) var(--n30) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+4) > .card--location .card--location__picture {
-      box-shadow: var(--n30) var(--p30) 0 0 var(--background-negative); } }
+      box-shadow: var(--n30) var(--p30) 0 0 var(--background-quaternary); } }
   @media (max-width: 1023.98px) {
     .listing__item:nth-child(4n+1) > .card--location .card--location__picture {
-      box-shadow: var(--n10) var(--n10) 0 0 var(--background-negative); }
+      box-shadow: var(--n10) var(--n10) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+2) > .card--location .card--location__picture {
-      box-shadow: var(--p10) var(--p10) 0 0 var(--background-negative); }
+      box-shadow: var(--p10) var(--p10) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+3) > .card--location .card--location__picture {
-      box-shadow: var(--p10) var(--n10) 0 0 var(--background-negative); }
+      box-shadow: var(--p10) var(--n10) 0 0 var(--background-quaternary); }
     .listing__item:nth-child(4n+4) > .card--location .card--location__picture {
-      box-shadow: var(--n10) var(--p10) 0 0 var(--background-negative); } }
+      box-shadow: var(--n10) var(--p10) 0 0 var(--background-quaternary); } }
 
 .location-detail-hero {
   padding: 0 0 80px 0; }
