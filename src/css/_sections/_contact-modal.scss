@@ -19,7 +19,16 @@
 	}
 
 	&__foot {
+		position: relative;
 		justify-content: flex-end;
+		align-items: stretch;
+		background: white;
+		box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+
+		.btn--submit {
+			padding: 0;
+		}
 	}
 
 	&__content {
@@ -27,6 +36,7 @@
 		max-height: calc(100vh - 120px);
 		overflow-x: hidden;
 		overflow-y: auto;
+		padding: var(--p80) 0;
 		@include scrollbar();
 	}
 

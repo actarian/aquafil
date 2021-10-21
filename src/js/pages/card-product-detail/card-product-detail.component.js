@@ -12,7 +12,6 @@ export class CardProductDetailComponent extends Component {
 			console.log('CardProductDetailComponent.open$', event);
 		});
 	}
-
 }
 
 CardProductDetailComponent.meta = {

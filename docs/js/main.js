@@ -1476,8 +1476,11 @@ ModalService.busy$ = new rxjs.Subject();var ModalOutletComponent = /*#__PURE__*/
     var _getContext = rxcomp.getContext(this),
         node = _getContext.node;
 
+    var body = document.querySelector('body');
     this.modalNode = node.querySelector('.modal-outlet__modal');
-    ModalService.modal$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (modal) {
+    ModalService.modal$.pipe(operators.tap(function (modal) {
+      modal ? body.classList.add('modal--active') : body.classList.remove('modal--active');
+    }), operators.takeUntil(this.unsubscribe$)).subscribe(function (modal) {
       return _this.modal = modal;
     });
     ModalService.busy$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (busy) {
@@ -3181,7 +3184,7 @@ TestComponent.meta = {
   outputs: ['test', 'reset'],
   template:
   /* html */
-  "\n\t<div class=\"test-component\" *if=\"!('production' | flag)\">\n\t\t<div class=\"test-component__title\">development mode</div>\n\t\t<code [innerHTML]=\"form.value | json\"></code>\n\t\t<button type=\"button\" class=\"btn--submit\" (click)=\"onTest($event)\"><span>test</span></button>\n\t\t<button type=\"button\" class=\"btn--submit\" (click)=\"onReset($event)\"><span>reset</span></button>\n\t</div>\n\t"
+  "\n\t<div class=\"test-component\" *if=\"!('production' | flag)\">\n\t\t<div class=\"test-component__title\">development mode</div>\n\t\t<code [innerHTML]=\"form.value | json\"></code>\n\t\t<button type=\"button\" class=\"btn--link\" (click)=\"onTest($event)\"><span>test</span></button>\n\t\t<button type=\"button\" class=\"btn--link\" (click)=\"onReset($event)\"><span>reset</span></button>\n\t</div>\n\t"
 };var factories$1 = [ControlCheckboxComponent, ControlCustomSelectComponent, ControlEmailComponent, ControlFileComponent, ControlPasswordComponent, ControlPrivacyComponent, // ControlSelectComponent,
 ControlSearchComponent, ControlTextareaComponent, ControlTextComponent, // DisabledDirective,
 ErrorsComponent, TestComponent // ValueDirective,
@@ -3803,15 +3806,16 @@ ContactModalComponent.meta = {
     var target = document.querySelector(selector);
 
     if (target) {
-      // target = target.cloneNode(true);
-      // target.parentNode.removeChild(target);
+      target = target.cloneNode(true); // target.parentNode.removeChild(target);
+
       this.click$(target).pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
     }
   };
 
   _proto.click$ = function click$(target) {
     var _getContext2 = rxcomp.getContext(this),
-        node = _getContext2.node;
+        node = _getContext2.node,
+        module = _getContext2.module;
 
     return rxjs.fromEvent(node, 'click').pipe(operators.tap(function (_) {
       ModalService.open$({
@@ -3847,9 +3851,13 @@ OpenModallyDirective.meta = {
 
       if (data.target) {
         var _getContext2 = rxcomp.getContext(this),
-            node = _getContext2.node;
+            node = _getContext2.node,
+            module = _getContext2.module;
 
-        node.querySelector('.side-modal__content').appendChild(data.target);
+        var content = node.querySelector('.side-modal__content');
+        content.appendChild(data.target);
+        var instances = this.instances = module.compile(content);
+        console.log('SideModalComponent.onInit', instances);
       }
 
       console.log('SideModalComponent.onInit', data);

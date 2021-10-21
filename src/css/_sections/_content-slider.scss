@@ -106,18 +106,15 @@
 	&__category {
 		@extend .small;
 		color: $foreground-primary;
-		padding-right: var(--p80);
 	}
 
 	&__title {
 		@extend .h5;
 		margin-bottom: var(--p40);
-		padding-right: var(--p80);
 	}
 
 	&__abstract {
 		@extend .text;
-		padding-right: var(--p80);
 
 		ul,
 		ol {
@@ -135,7 +132,6 @@
 	}
 
 	&__cta {
-		padding-right: var(--p80);
 		padding-top: var(--p60);
 	}
 
@@ -151,13 +147,30 @@
 			max-width: calc(50% - var(--p80));
 			margin: 0 var(--p40);
 		}
+
+		&__category {
+			padding-right: var(--p80);
+		}
+
+		&__title {
+			padding-right: var(--p80);
+		}
+
+		&__abstract {
+			padding-right: var(--p80);
+		}
+
+		&__cta {
+			padding-right: var(--p80);
+		}
+
 	}
 
 	@include media-down(sm) {
 
 		&__left,
 		&__right {
-			margin: var(--p40);
+			margin: 0 0 var(--p40) 0;
 		}
 	}
 }

@@ -1,5 +1,5 @@
 import { Component, getContext } from 'rxcomp';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, tap } from 'rxjs/operators';
 import { ModalService } from './modal.service';
 
 export class ModalOutletComponent extends Component {
@@ -39,8 +39,12 @@ export class ModalOutletComponent extends Component {
 	onInit() {
 		this.busy_ = false;
 		const { node } = getContext(this);
+		const body = document.querySelector('body');
 		this.modalNode = node.querySelector('.modal-outlet__modal');
 		ModalService.modal$.pipe(
+			tap(modal => {
+				modal ? body.classList.add('modal--active') : body.classList.remove('modal--active');
+			}),
 			takeUntil(this.unsubscribe$)
 		).subscribe(modal => this.modal = modal);
 		ModalService.busy$.pipe(

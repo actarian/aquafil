@@ -1,27 +1,42 @@
 .horizontal-menu {
 	padding: var(--p30) 0;
 
-	&__content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
 	&__title {
 		@extend .extrasmall;
 		font-weight: $font-bold;
 		color: #4D4D4D;
 		white-space: nowrap;
-		margin-right: var(--p40);
+	}
+
+	@include media-up(sm) {
+		&__content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__title {
+			margin-right: var(--p40);
+		}
+	}
+
+	@include media-down(xs) {
+		&__title {
+			margin-bottom: var(--p40);
+		}
 	}
 }
 
 .nav--horizontal-menu {
 	@extend %nav;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin: var(--n10) 0;
 
 	&>.nav__item {
+		margin: var(--p10);
+
 		&>a {
 			@extend .extrasmall;
 			padding: 9px 24px;
@@ -36,5 +51,9 @@
 				background: $foreground-primary;
 			}
 		}
+	}
+
+	@include media-down(xs) {
+		margin: var(--n10);
 	}
 }

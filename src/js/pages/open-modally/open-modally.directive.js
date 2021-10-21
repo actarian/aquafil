@@ -11,7 +11,7 @@ export class OpenModallyDirective extends Directive {
 		const selector = node.getAttribute('open-modally');
 		let target = document.querySelector(selector);
 		if (target) {
-			// target = target.cloneNode(true);
+			target = target.cloneNode(true);
 			// target.parentNode.removeChild(target);
 			this.click$(target).pipe(
 				takeUntil(this.unsubscribe$),
@@ -20,7 +20,7 @@ export class OpenModallyDirective extends Directive {
 	}
 
 	click$(target) {
-		const { node } = getContext(this);
+		const { node, module } = getContext(this);
 		return fromEvent(node, 'click').pipe(
 			tap(_ => {
 				ModalService.open$({ src: environment.template.modal.sideModal, data: { target } }).pipe(

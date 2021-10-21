@@ -20,8 +20,8 @@ TestComponent.meta = {
 	<div class="test-component" *if="!('production' | flag)">
 		<div class="test-component__title">development mode</div>
 		<code [innerHTML]="form.value | json"></code>
-		<button type="button" class="btn--submit" (click)="onTest($event)"><span>test</span></button>
-		<button type="button" class="btn--submit" (click)="onReset($event)"><span>reset</span></button>
+		<button type="button" class="btn--link" (click)="onTest($event)"><span>test</span></button>
+		<button type="button" class="btn--link" (click)="onReset($event)"><span>reset</span></button>
 	</div>
 	`
 };

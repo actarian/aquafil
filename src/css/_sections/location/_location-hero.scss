@@ -11,6 +11,11 @@
 		height: 100%;
 	}
 
+	&__category {
+		@extend .category;
+		color: $foreground-primary;
+	}
+
 	&__title {
 		@extend .h3;
 		color: $foreground;
