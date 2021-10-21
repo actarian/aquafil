@@ -7978,7 +7978,8 @@ test-component code {
 
 .card--location {
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: var(--p40); }
   .card--location__picture {
     position: relative;
     width: 100%;
@@ -8000,7 +8001,7 @@ test-component code {
     .card--location__picture > img {
       transition: transform ease-in-out 250ms; }
   .card--location__content {
-    padding: var(--p40) 0; }
+    padding: var(--p60) 0; }
   .card--location__category {
     color: var(--foreground-primary);
     margin-bottom: var(--p10); }
@@ -8008,7 +8009,8 @@ test-component code {
     color: var(--foreground);
     margin-bottom: var(--p20); }
   .card--location__cta {
-    margin-top: var(--p60); }
+    margin-top: var(--p60);
+    display: none; }
   .card--location .btn--more-md {
     transition: transform ease-in-out 250ms; }
   .card--location:hover .card--location__picture > img {

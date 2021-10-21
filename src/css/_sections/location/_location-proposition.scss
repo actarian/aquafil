@@ -67,6 +67,7 @@
 .card--location {
 	position: relative;
 	cursor: pointer;
+	margin-bottom: var(--p40);
 
 	&__picture {
 		@include aspect-clip(72, 60);
@@ -77,7 +78,7 @@
 	}
 
 	&__content {
-		padding: var(--p40) 0;
+		padding: var(--p60) 0;
 	}
 
 	&__category {
@@ -100,6 +101,7 @@
 		// display: flex;
 		// justify-content: flex-end;
 		margin-top: var(--p60);
+		display: none;
 	}
 
 	.btn--more-md {
