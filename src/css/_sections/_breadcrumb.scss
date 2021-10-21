@@ -1,0 +1,36 @@
+.breadcrumb {
+	padding: 20px 0 40px 0;
+
+	.col-sm-20 {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.nav--breadcrumb {
+	@extend %nav;
+
+	&>.nav__item {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		font-size: 14px;
+		line-height: 1.35714;
+		color: $foreground-tertiary;
+
+		&:last-child {
+			color: $foreground;
+		}
+	}
+
+	&>.nav__item+.nav__item {
+		&:before {
+			content: '/';
+			padding: 0 0.58em;
+		}
+	}
+
+	@include media-down(xs) {
+		flex-wrap: wrap;
+	}
+}

@@ -26,6 +26,14 @@ export class SwiperDirective extends Component {
 		this.init_();
 	}
 
+	get slideIndex() {
+		return this.swiper ? this.swiper.realIndex + 1 : 0;
+	}
+
+	get slideTotal() {
+		return this.swiper ? this.swiper.slides.length : 0;
+	}
+
 	get enabled() {
 		return !window.matchMedia('print').matches;
 	}

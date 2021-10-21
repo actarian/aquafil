@@ -21,6 +21,7 @@ export const environmentServed = {
 		modal: {
 			genericModal: '/template/modals/generic-modal.cshtml',
 			sideModal: '/template/modals/side-modal.cshtml',
+			contactModal: '/template/modals/contact-modal.cshtml',
 			userModal: '/template/modals/user-modal.cshtml',
 		}
 	},

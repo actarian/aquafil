@@ -1,6 +1,5 @@
 import { Module } from 'rxcomp';
-import { OpenModallyDirective } from '../pages/open-modally/open-modally.directive';
-import { SideModalComponent } from '../pages/side-modal/side-modal.component';
+import { SwiperContentDirective } from '../partials/swiper-content/swiper-content.directive';
 import { SwiperMainDirective } from '../partials/swiper-main/swiper-main.directive';
 import { SwiperToolkitDirective } from '../partials/swiper-toolkit/swiper-toolkit.directive';
 import { ErrorComponent } from './error/error.component';
@@ -21,8 +20,7 @@ const factories = [
 	ErrorComponent,
 	HeaderComponent,
 	NewsletterPropositionComponent,
-	OpenModallyDirective,
-	SideModalComponent,
+	SwiperContentDirective,
 	SwiperMainDirective,
 	SwiperToolkitDirective,
 	SwitchComponent,

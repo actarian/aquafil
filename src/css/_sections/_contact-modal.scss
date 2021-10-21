@@ -1,0 +1,57 @@
+.contact-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	background: white;
+	box-shadow: -50px 0 50px -10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+
+	&__head,
+	&__foot {
+		height: 60px;
+		flex: 0 0 60px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__foot {
+		justify-content: flex-end;
+	}
+
+	&__content {
+		flex: 1 1 calc(100vh - 120px);
+		max-height: calc(100vh - 120px);
+		overflow-x: hidden;
+		overflow-y: auto;
+		@include scrollbar();
+	}
+
+	&__title {
+		@extend .h4;
+		margin: 0;
+	}
+
+	&__abstract {
+		@extend .extrasmall;
+	}
+
+	.btn--close {
+		position: absolute;
+	}
+
+	@include media-up(md) {
+		width: 40.625vw;
+	}
+}
+
+.form {
+	&__controls {}
+
+	&__error {}
+
+	&__cta {}
+}

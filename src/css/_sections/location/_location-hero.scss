@@ -1,0 +1,21 @@
+.location-hero {
+	background: #F8F8F8;
+	padding: 80px 0;
+	margin-top: -80px;
+	z-index: -1;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__title {
+		@extend .h3;
+		color: $foreground;
+		margin-bottom: 0.5em;
+	}
+
+	@include media-down(xs) {}
+}

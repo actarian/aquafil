@@ -19,15 +19,12 @@ $invalid-negative: $foreground-primary;
 	cursor: pointer;
 }
 
-%label {
+.label {
+	@extend .extrasmall;
+	font-weight: $font-semibold;
 	display: block;
 	flex: 0 0 100%;
-	font-family: $font-primary;
-	font-size: 0.6em;
-	font-weight: $font-semibold;
-	line-height: $line;
 	margin-bottom: 4px;
-	color: $pristine;
 	text-transform: uppercase;
 }
 
@@ -44,14 +41,14 @@ $invalid-negative: $foreground-primary;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px 0;
-	border-bottom: 2px solid $background-tertiary;
+	border-bottom: 2px solid $background-quaternary;
 
 	@include media-down(xs) {
 		margin-bottom: 10px;
 	}
 
 	label {
-		@extend %label;
+		@extend .label;
 	}
 
 	&:not(.required) {
@@ -126,6 +123,8 @@ $invalid-negative: $foreground-primary;
 %control--text {
 	@include autofill($size, $weight, $line, $spacing, $family, $foreground, transparent);
 
+	@extend .text;
+
 	&::placeholder {
 		@extend %placeholder;
 	}
@@ -139,12 +138,6 @@ $invalid-negative: $foreground-primary;
 	border: none;
 	outline: none;
 	appearance: none;
-	color: $foreground;
-	font-family: $family;
-	font-size: $size;
-	font-weight: $weight;
-	letter-spacing: $spacing;
-	line-height: $line;
 
 	&.pristine {
 		color: $pristine;
@@ -251,6 +244,7 @@ $invalid-negative: $foreground-primary;
 		margin: 40px 0;
 	}
 
+	/*
 	.btn--submit,
 	button[type="submit"] {
 
@@ -276,6 +270,7 @@ $invalid-negative: $foreground-primary;
 			opacity: 1;
 		}
 	}
+	*/
 }
 
 .group--error {
@@ -306,7 +301,7 @@ fieldset,
 .group--form--textarea {
 	@extend %group--form;
 	padding: 10px;
-	border: 2px solid $background-tertiary;
+	border: 2px solid $background-quaternary;
 
 	.control--text {
 		resize: vertical;
@@ -514,7 +509,6 @@ fieldset,
 		font-size: 14px;
 		line-height: 1.4;
 		text-transform: none;
-		font-weight: $font-semibold;
 	}
 
 	.section--form & {
@@ -889,7 +883,7 @@ errors-component {
 	position: relative;
 
 	.required__badge {
-		@extend %label;
+		@extend .label;
 		// display: block; // hidden
 		display: none;
 		position: absolute;
@@ -963,7 +957,7 @@ test-component {
 		padding: 20px 30px;
 		font-size: 16px;
 		text-align: center;
-		border: 2px solid $foreground;
+		border: 2px solid $background-quaternary;
 		border-radius: 8px;
 	}
 

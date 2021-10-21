@@ -400,6 +400,7 @@ ClickOutsideDirective.meta = {
     modal: {
       genericModal: '/template/modals/generic-modal.cshtml',
       sideModal: '/template/modals/side-modal.cshtml',
+      contactModal: '/template/modals/contact-modal.cshtml',
       userModal: '/template/modals/user-modal.cshtml'
     }
   },
@@ -452,6 +453,7 @@ ClickOutsideDirective.meta = {
     modal: {
       genericModal: '/aquafil/partials/modals/generic-modal.html',
       sideModal: '/aquafil/partials/modals/side-modal.html',
+      contactModal: '/aquafil/partials/modals/contact-modal.html',
       userModal: '/aquafil/partials/modals/user-modal.html'
     }
   },
@@ -2189,6 +2191,16 @@ SvgIconStructure.meta = {
   };
 
   _createClass(SwiperDirective, [{
+    key: "slideIndex",
+    get: function get() {
+      return this.swiper ? this.swiper.realIndex + 1 : 0;
+    }
+  }, {
+    key: "slideTotal",
+    get: function get() {
+      return this.swiper ? this.swiper.slides.length : 0;
+    }
+  }, {
     key: "enabled",
     get: function get() {
       return !window.matchMedia('print').matches;
@@ -3188,6 +3200,592 @@ ControlsModule.meta = {
   imports: [],
   declarations: [].concat(factories$1, pipes$1),
   exports: [].concat(factories$1, pipes$1)
+};var CardProductDetailComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(CardProductDetailComponent, _Component);
+
+  function CardProductDetailComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CardProductDetailComponent.prototype;
+
+  _proto.onRequestInfo = function onRequestInfo() {
+    ModalService.open$({
+      src: environment.template.modal.contactModal,
+      data: {
+        id: this.id
+      }
+    }).pipe(operators.first()).subscribe(function (event) {
+      console.log('CardProductDetailComponent.open$', event);
+    });
+  };
+
+  return CardProductDetailComponent;
+}(rxcomp.Component);
+CardProductDetailComponent.meta = {
+  selector: '[card-product-detail]',
+  inputs: ['id']
+};function push_(event) {
+  var dataLayer = window.dataLayer || [];
+  dataLayer.push(event);
+  console.log('GtmService.dataLayer', event);
+}
+
+var GtmService = /*#__PURE__*/function () {
+  function GtmService() {}
+
+  GtmService.push = function push(event) {
+    return push_(event);
+  };
+
+  return GtmService;
+}();var FormService = /*#__PURE__*/function () {
+  function FormService() {}
+
+  FormService.toOptions = function toOptions(options) {
+    options = options.slice().map(function (x) {
+      return {
+        id: x.value,
+        name: x.label
+      };
+    });
+    return options;
+  };
+
+  FormService.toSelectOptions = function toSelectOptions(options) {
+    options = options.slice().map(function (x) {
+      return {
+        id: x.value,
+        name: x.label
+      };
+    });
+    options.unshift({
+      id: null,
+      name: 'select'
+    });
+    return options;
+  };
+
+  return FormService;
+}();function RequiredIfValidator(fieldName, formGroup, shouldBe) {
+  return new rxcompForm.FormValidator(function (value) {
+    var field = null;
+
+    if (typeof formGroup === 'function') {
+      field = formGroup().get(fieldName);
+    } else if (formGroup) {
+      field = formGroup.get(fieldName);
+    }
+
+    return !value && field && (shouldBe != null ? field.value === shouldBe : field.value != null) ? {
+      required: {
+        value: value,
+        requiredIf: fieldName
+      }
+    } : null;
+  });
+}var HttpService = /*#__PURE__*/function () {
+  function HttpService() {}
+
+  HttpService.http$ = function http$(method, url, data, format, userPass, options) {
+    var _this = this;
+
+    if (userPass === void 0) {
+      userPass = null;
+    }
+
+    if (options === void 0) {
+      options = {};
+    }
+
+    var methods = ['POST', 'PUT', 'PATCH'];
+    var response_ = null; // url = this.getUrl(url, format);
+
+    options = Object.assign({
+      method: method,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }, options, {
+      body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+    });
+
+    if (userPass) {
+      // options.mode = 'no-cors';
+      options.credentials = 'include';
+      userPass = window.btoa(userPass);
+      options.headers['Authorization'] = "Basic " + userPass;
+    }
+
+    options.headers = new Headers(options.headers);
+    return rxjs.from(fetch(url, options).then(function (response) {
+      response_ = response; // console.log(response);
+
+      try {
+        var contentType = response.headers.get('content-type');
+        var typedResponse;
+
+        if (contentType && contentType.indexOf('application/json') !== -1) {
+          typedResponse = response.json();
+        } else {
+          typedResponse = response.text();
+        }
+
+        if (response.ok) {
+          return typedResponse;
+        } else {
+          return typedResponse.then(function (data) {
+            return Promise.reject(data);
+          });
+        }
+      } catch (error) {
+        if (response.ok) {
+          console.warn('HttpService.http$', 'Cannot parse response');
+          return Promise.resolve();
+        } else {
+          return Promise.reject(error);
+        }
+      }
+    })).pipe(operators.catchError(function (error) {
+      return rxjs.throwError(_this.getError(error, response_));
+    }));
+  }
+  /*
+  // !!! todo mapping response.data
+  static http$(method, url, data, format = 'json') {
+  	const methods = ['POST', 'PUT', 'PATCH'];
+  	const body = (data && methods.indexOf(method) !== -1) ? JSON.stringify(data) : undefined;
+  	const queryString = (data && methods.indexOf(method) !== -1) ? Object.keys(data).map(function(key) {
+  		return key + '=' + encodeURI(data[key]);
+  	}).join('&') : undefined;
+  	if (queryString) {
+  		url = `${url}?${queryString}`;
+  	}
+  	let response_ = null;
+  	return from(fetch(url, {
+  		method: method,
+  		headers: {
+  			'Accept': 'application/json',
+  			'Content-Type': 'application/json',
+  		},
+  		body: body,
+  	}).then((response) => {
+  		response_ = new HttpResponse(response);
+  		try {
+  			const contentType = response.headers.get('content-type');
+  			let typedResponse;
+  			if (contentType && format === 'json' && contentType.indexOf('application/json') !== -1) {
+  				typedResponse = response.json();
+  			} else if (format === 'blob') {
+  				typedResponse = response.blob();
+  			} else {
+  				typedResponse = response.text();
+  			}
+  			return typedResponse.then(data => {
+  				response_.data = data;
+  				if (response.ok) {
+  					return Promise.resolve(response_);
+  				} else {
+  					return Promise.reject(response_);
+  				}
+  			});
+  		} catch(error) {
+  			if (response.ok) {
+  				console.warn('HttpService.http$', 'Cannot parse response');
+  				return Promise.resolve(response_);
+  			} else {
+  				return Promise.reject(this.getError(error, response_));
+  			}
+  		}
+  	})).pipe(
+  		catchError(error => {
+  			return throwError(this.getError(error, response_));
+  		}),
+  	);
+  }
+  */
+  ;
+
+  HttpService.get$ = function get$(url, data, format) {
+    var query = this.query(data);
+    return this.http$('GET', "" + url + query, undefined, format);
+  };
+
+  HttpService.delete$ = function delete$(url) {
+    return this.http$('DELETE', url);
+  };
+
+  HttpService.post$ = function post$(url, data) {
+    return this.http$('POST', url, data);
+  };
+
+  HttpService.put$ = function put$(url, data) {
+    return this.http$('PUT', url, data);
+  };
+
+  HttpService.patch$ = function patch$(url, data) {
+    return this.http$('PATCH', url, data);
+  };
+
+  HttpService.query = function query(data) {
+    return ''; // todo
+  };
+
+  HttpService.getError = function getError(object, response) {
+    var error = typeof object === 'object' ? object : {};
+
+    if (!error.status) {
+      error.status = response ? response.status : 0;
+    }
+
+    if (!error.statusCode) {
+      error.statusCode = response ? response.status : 0;
+    }
+
+    if (!error.statusMessage) {
+      error.statusMessage = response ? response.statusText : object;
+    } // console.log('HttpService.getError', error, response);
+
+
+    return error;
+  };
+
+  return HttpService;
+}();var LocationService = /*#__PURE__*/function () {
+  function LocationService() {}
+
+  LocationService.has = function has(key) {
+    var params = new URLSearchParams(window.location.search); // console.log('LocationService.has', params);
+
+    return params.has(key);
+  };
+
+  LocationService.get = function get(key) {
+    var params = new URLSearchParams(window.location.search); // console.log('LocationService.get', params);
+
+    return params.get(key);
+  };
+
+  LocationService.set = function set(keyOrValue, value) {
+    var params = new URLSearchParams(window.location.search);
+
+    if (typeof keyOrValue === 'string') {
+      params.set(keyOrValue, value);
+    } else {
+      params.set(keyOrValue, '');
+    }
+
+    this.pushParams(params); // console.log('LocationService.set', params, keyOrValue, value);
+  };
+
+  LocationService.pushParams = function pushParams(params) {
+    if (window.history && window.history.pushState) {
+      var title = document.title;
+      var url = window.location.href.split('?')[0] + "?" + params.toString();
+      window.history.pushState(params.toString(), title, url);
+    }
+  };
+
+  LocationService.replace = function replace(from, to) {
+    var history = window.history;
+
+    if (history && history.replaceState) {
+      var location = window.location;
+      var title = document.title;
+
+      if (location.pathname === '/') {
+        var url = location.origin + to + location.search;
+        history.replaceState(history.state, title, url);
+      } else if (location.href.indexOf(from) !== -1) {
+        var _url = location.href.replace(from, to);
+
+        history.replaceState(history.state, title, _url);
+      }
+    }
+  };
+
+  LocationService.deserialize = function deserialize(key) {
+    var encoded = this.get('params');
+    return this.decode(key, encoded);
+  };
+
+  LocationService.serialize = function serialize(keyOrValue, value) {
+    var params = this.deserialize();
+    var encoded = this.encode(keyOrValue, value, params);
+    this.set('params', encoded);
+  };
+
+  LocationService.decode = function decode(key, encoded) {
+    var decoded = null;
+
+    if (encoded) {
+      var json = window.atob(encoded);
+      decoded = JSON.parse(json);
+    }
+
+    if (key && decoded) {
+      decoded = decoded[key];
+    }
+
+    return decoded || null;
+  };
+
+  LocationService.encode = function encode(keyOrValue, value, params) {
+    params = params || {};
+    var encoded = null;
+
+    if (typeof keyOrValue === 'string') {
+      params[keyOrValue] = value;
+    } else {
+      params = keyOrValue;
+    }
+
+    var json = JSON.stringify(params);
+    encoded = window.btoa(json);
+    return encoded;
+  };
+
+  return LocationService;
+}();var LanguageService = /*#__PURE__*/function () {
+  function LanguageService() {}
+
+  LanguageService.getDefaultLanguages = function getDefaultLanguages() {
+    return environment.alternates || [];
+  };
+
+  LanguageService.getDefaultLanguage = function getDefaultLanguage() {
+    return environment.defaultLanguage || (this.languages ? this.languages[0].lang : null);
+  };
+
+  LanguageService.setLanguage = function setLanguage(language) {
+    this.selectedLanguage = language.lang;
+  };
+
+  LanguageService.setLanguage$ = function setLanguage$(language) {
+    var _this = this;
+
+    return rxjs.from(fetch(language.href).then(function (response) {
+      return response.text();
+    })).pipe(operators.tap(function (html) {
+      // console.log('html', html);
+      var labelsMatch = /(window\.labels[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
+
+      if (labelsMatch) {
+        // console.log('labels', labelsMatch[0]);
+        new Function(labelsMatch[0]).call(window);
+        LabelPipe.setLabels();
+      }
+
+      var bhereMatch = /(window\.bhere[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
+
+      if (bhereMatch) {
+        // console.log('bhere', bhereMatch[0]);
+        var data = {};
+        new Function(bhereMatch[0].replace('window', 'this')).call(data);
+
+        if (data.bhere) {
+          Utils.merge(environment, data.bhere);
+        }
+      }
+
+      LocationService.replace(_this.activeLanguage.href, language.href); // console.log(window.labels);
+
+      _this.selectedLanguage = language.lang;
+    }));
+  };
+
+  LanguageService.toggleLanguages = function toggleLanguages() {
+    this.showLanguages = !this.showLanguages;
+    this.pushChanges();
+  };
+
+  _createClass(LanguageService, null, [{
+    key: "hasLanguages",
+    get: function get() {
+      return this.languages.length > 1;
+    }
+  }, {
+    key: "activeLanguage",
+    get: function get() {
+      var _this2 = this;
+
+      return this.languages.find(function (language) {
+        return language.lang === _this2.selectedLanguage;
+      });
+    }
+  }]);
+
+  return LanguageService;
+}();
+
+_defineProperty(LanguageService, "languages", LanguageService.getDefaultLanguages());
+
+_defineProperty(LanguageService, "defaultLanguage", LanguageService.getDefaultLanguage());
+
+_defineProperty(LanguageService, "selectedLanguage", LanguageService.defaultLanguage);var ApiService = /*#__PURE__*/function (_HttpService) {
+  _inheritsLoose(ApiService, _HttpService);
+
+  function ApiService() {
+    return _HttpService.apply(this, arguments) || this;
+  }
+
+  ApiService.get$ = function get$(url, data, format) {
+    return _HttpService.get$.call(this, "" + environment.api + url, data, format);
+  };
+
+  ApiService.delete$ = function delete$(url) {
+    return _HttpService.delete$.call(this, "" + environment.api + url);
+  };
+
+  ApiService.post$ = function post$(url, data) {
+    return _HttpService.post$.call(this, "" + environment.api + url, data);
+  };
+
+  ApiService.put$ = function put$(url, data) {
+    return _HttpService.put$.call(this, "" + environment.api + url, data);
+  };
+
+  ApiService.patch$ = function patch$(url, data) {
+    return _HttpService.patch$.call(this, "" + environment.api + url, data);
+  };
+
+  return ApiService;
+}(HttpService);
+
+_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var ContactsService = /*#__PURE__*/function () {
+  function ContactsService() {}
+
+  ContactsService.data$ = function data$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/contacts/data');
+    } else {
+      return ApiService.get$('/contacts/data.json');
+    }
+  };
+
+  ContactsService.submit$ = function submit$(payload) {
+    if (environment.flags.production) {
+      return ApiService.post$('/contacts/submit', payload);
+    } else {
+      return ApiService.get$('/contacts/submit.json');
+    }
+  };
+
+  return ContactsService;
+}();var ContactModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(ContactModalComponent, _Component);
+
+  function ContactModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ContactModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    this.error = null;
+    this.success = false;
+    var form = this.form = new rxcompForm.FormGroup({
+      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
+      telephone: new rxcompForm.FormControl(null),
+      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      message: new rxcompForm.FormControl(null),
+      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      newsletter: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      commercial: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      promotion: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      newsletterLanguage: new rxcompForm.FormControl(null, [RequiredIfValidator('newsletter', form)]),
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+    var controls = this.controls = form.controls;
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      _this.pushChanges();
+    });
+    this.load$().pipe(operators.first()).subscribe();
+  };
+
+  _proto.load$ = function load$() {
+    var _this2 = this;
+
+    return ContactsService.data$().pipe(operators.tap(function (data) {
+      var controls = _this2.controls;
+      controls.country.options = FormService.toSelectOptions(data.country.options);
+
+      _this2.pushChanges();
+    }));
+  };
+
+  _proto.test = function test() {
+    var form = this.form;
+    var controls = this.controls;
+    var country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
+    form.patch({
+      firstName: 'Jhon',
+      lastName: 'Appleseed',
+      email: 'jhonappleseed@gmail.com',
+      telephone: '0721 411112',
+      country: country,
+      city: 'Pesaro',
+      message: 'Hi!',
+      privacy: true,
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+  };
+
+  _proto.reset = function reset() {
+    var form = this.form;
+    form.reset();
+  };
+
+  _proto.onSubmit = function onSubmit(model) {
+    var _this3 = this;
+
+    var form = this.form;
+    console.log('ContactModalComponent.onSubmit', form.value); // console.log('ContactModalComponent.onSubmit', 'form.valid', valid);
+
+    if (form.valid) {
+      // console.log('ContactModalComponent.onSubmit', form.value);
+      form.submitted = true;
+      ContactsService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        _this3.success = true;
+        form.reset();
+        GtmService.push({
+          'event': "Contact",
+          'form_name': "Contatti"
+        });
+
+        if (form.value.newsletter) {
+          GtmService.push({
+            'event': "ContactNewsletter",
+            'form_name': "ContattiNewsletter"
+          });
+        }
+      }, function (error) {
+        console.log('ContactModalComponent.error', error);
+        _this3.error = error;
+
+        _this3.pushChanges();
+      });
+    } else {
+      form.touched = true;
+    }
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return ContactModalComponent;
+}(rxcomp.Component);
+ContactModalComponent.meta = {
+  selector: '[contact-modal]'
 };var OpenModallyDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(OpenModallyDirective, _Directive);
 
@@ -3205,8 +3803,8 @@ ControlsModule.meta = {
     var target = document.querySelector(selector);
 
     if (target) {
-      target = target.cloneNode(true); // target.parentNode.removeChild(target);
-
+      // target = target.cloneNode(true);
+      // target.parentNode.removeChild(target);
       this.click$(target).pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
     }
   };
@@ -3284,6 +3882,38 @@ OpenModallyDirective.meta = {
 }(rxcomp.Component);
 SideModalComponent.meta = {
   selector: '[side-modal]'
+};var SwiperContentDirective = /*#__PURE__*/function (_SwiperDirective) {
+  _inheritsLoose(SwiperContentDirective, _SwiperDirective);
+
+  function SwiperContentDirective() {
+    return _SwiperDirective.apply(this, arguments) || this;
+  }
+
+  var _proto = SwiperContentDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    this.options = {
+      slidesPerView: 1,
+      spaceBetween: 80,
+      speed: 600,
+      keyboardControl: true,
+      mousewheelControl: false,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      navigation: {
+        prevEl: '.btn--prev',
+        nextEl: '.btn--next'
+      }
+    };
+    this.init_(); // console.log('SwiperContentDirective.onInit');
+  };
+
+  return SwiperContentDirective;
+}(SwiperDirective);
+SwiperContentDirective.meta = {
+  selector: '[swiper-content]'
 };var SwiperMainDirective = /*#__PURE__*/function (_SwiperDirective) {
   _inheritsLoose(SwiperMainDirective, _SwiperDirective);
 
@@ -3532,102 +4162,7 @@ _defineProperty(HeaderService, "header$_", new rxjs.BehaviorSubject(-1));var Hea
 }(rxcomp.Component);
 HeaderComponent.meta = {
   selector: '[header]'
-};var LocationService = /*#__PURE__*/function () {
-  function LocationService() {}
-
-  LocationService.has = function has(key) {
-    var params = new URLSearchParams(window.location.search); // console.log('LocationService.has', params);
-
-    return params.has(key);
-  };
-
-  LocationService.get = function get(key) {
-    var params = new URLSearchParams(window.location.search); // console.log('LocationService.get', params);
-
-    return params.get(key);
-  };
-
-  LocationService.set = function set(keyOrValue, value) {
-    var params = new URLSearchParams(window.location.search);
-
-    if (typeof keyOrValue === 'string') {
-      params.set(keyOrValue, value);
-    } else {
-      params.set(keyOrValue, '');
-    }
-
-    this.pushParams(params); // console.log('LocationService.set', params, keyOrValue, value);
-  };
-
-  LocationService.pushParams = function pushParams(params) {
-    if (window.history && window.history.pushState) {
-      var title = document.title;
-      var url = window.location.href.split('?')[0] + "?" + params.toString();
-      window.history.pushState(params.toString(), title, url);
-    }
-  };
-
-  LocationService.replace = function replace(from, to) {
-    var history = window.history;
-
-    if (history && history.replaceState) {
-      var location = window.location;
-      var title = document.title;
-
-      if (location.pathname === '/') {
-        var url = location.origin + to + location.search;
-        history.replaceState(history.state, title, url);
-      } else if (location.href.indexOf(from) !== -1) {
-        var _url = location.href.replace(from, to);
-
-        history.replaceState(history.state, title, _url);
-      }
-    }
-  };
-
-  LocationService.deserialize = function deserialize(key) {
-    var encoded = this.get('params');
-    return this.decode(key, encoded);
-  };
-
-  LocationService.serialize = function serialize(keyOrValue, value) {
-    var params = this.deserialize();
-    var encoded = this.encode(keyOrValue, value, params);
-    this.set('params', encoded);
-  };
-
-  LocationService.decode = function decode(key, encoded) {
-    var decoded = null;
-
-    if (encoded) {
-      var json = window.atob(encoded);
-      decoded = JSON.parse(json);
-    }
-
-    if (key && decoded) {
-      decoded = decoded[key];
-    }
-
-    return decoded || null;
-  };
-
-  LocationService.encode = function encode(keyOrValue, value, params) {
-    params = params || {};
-    var encoded = null;
-
-    if (typeof keyOrValue === 'string') {
-      params[keyOrValue] = value;
-    } else {
-      params = keyOrValue;
-    }
-
-    var json = JSON.stringify(params);
-    encoded = window.btoa(json);
-    return encoded;
-  };
-
-  return LocationService;
-}();var NewsletterPropositionComponent = /*#__PURE__*/function (_Component) {
+};var NewsletterPropositionComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(NewsletterPropositionComponent, _Component);
 
   function NewsletterPropositionComponent() {
@@ -3725,295 +4260,7 @@ NewsletterPropositionComponent.meta = {
 }(rxcomp.Component);
 SwitchComponent.meta = {
   selector: '[switch]'
-};function push_(event) {
-  var dataLayer = window.dataLayer || [];
-  dataLayer.push(event);
-  console.log('GtmService.dataLayer', event);
-}
-
-var GtmService = /*#__PURE__*/function () {
-  function GtmService() {}
-
-  GtmService.push = function push(event) {
-    return push_(event);
-  };
-
-  return GtmService;
-}();var HttpService = /*#__PURE__*/function () {
-  function HttpService() {}
-
-  HttpService.http$ = function http$(method, url, data, format, userPass, options) {
-    var _this = this;
-
-    if (userPass === void 0) {
-      userPass = null;
-    }
-
-    if (options === void 0) {
-      options = {};
-    }
-
-    var methods = ['POST', 'PUT', 'PATCH'];
-    var response_ = null; // url = this.getUrl(url, format);
-
-    options = Object.assign({
-      method: method,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }, options, {
-      body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
-    });
-
-    if (userPass) {
-      // options.mode = 'no-cors';
-      options.credentials = 'include';
-      userPass = window.btoa(userPass);
-      options.headers['Authorization'] = "Basic " + userPass;
-    }
-
-    options.headers = new Headers(options.headers);
-    return rxjs.from(fetch(url, options).then(function (response) {
-      response_ = response; // console.log(response);
-
-      try {
-        var contentType = response.headers.get('content-type');
-        var typedResponse;
-
-        if (contentType && contentType.indexOf('application/json') !== -1) {
-          typedResponse = response.json();
-        } else {
-          typedResponse = response.text();
-        }
-
-        if (response.ok) {
-          return typedResponse;
-        } else {
-          return typedResponse.then(function (data) {
-            return Promise.reject(data);
-          });
-        }
-      } catch (error) {
-        if (response.ok) {
-          console.warn('HttpService.http$', 'Cannot parse response');
-          return Promise.resolve();
-        } else {
-          return Promise.reject(error);
-        }
-      }
-    })).pipe(operators.catchError(function (error) {
-      return rxjs.throwError(_this.getError(error, response_));
-    }));
-  }
-  /*
-  // !!! todo mapping response.data
-  static http$(method, url, data, format = 'json') {
-  	const methods = ['POST', 'PUT', 'PATCH'];
-  	const body = (data && methods.indexOf(method) !== -1) ? JSON.stringify(data) : undefined;
-  	const queryString = (data && methods.indexOf(method) !== -1) ? Object.keys(data).map(function(key) {
-  		return key + '=' + encodeURI(data[key]);
-  	}).join('&') : undefined;
-  	if (queryString) {
-  		url = `${url}?${queryString}`;
-  	}
-  	let response_ = null;
-  	return from(fetch(url, {
-  		method: method,
-  		headers: {
-  			'Accept': 'application/json',
-  			'Content-Type': 'application/json',
-  		},
-  		body: body,
-  	}).then((response) => {
-  		response_ = new HttpResponse(response);
-  		try {
-  			const contentType = response.headers.get('content-type');
-  			let typedResponse;
-  			if (contentType && format === 'json' && contentType.indexOf('application/json') !== -1) {
-  				typedResponse = response.json();
-  			} else if (format === 'blob') {
-  				typedResponse = response.blob();
-  			} else {
-  				typedResponse = response.text();
-  			}
-  			return typedResponse.then(data => {
-  				response_.data = data;
-  				if (response.ok) {
-  					return Promise.resolve(response_);
-  				} else {
-  					return Promise.reject(response_);
-  				}
-  			});
-  		} catch(error) {
-  			if (response.ok) {
-  				console.warn('HttpService.http$', 'Cannot parse response');
-  				return Promise.resolve(response_);
-  			} else {
-  				return Promise.reject(this.getError(error, response_));
-  			}
-  		}
-  	})).pipe(
-  		catchError(error => {
-  			return throwError(this.getError(error, response_));
-  		}),
-  	);
-  }
-  */
-  ;
-
-  HttpService.get$ = function get$(url, data, format) {
-    var query = this.query(data);
-    return this.http$('GET', "" + url + query, undefined, format);
-  };
-
-  HttpService.delete$ = function delete$(url) {
-    return this.http$('DELETE', url);
-  };
-
-  HttpService.post$ = function post$(url, data) {
-    return this.http$('POST', url, data);
-  };
-
-  HttpService.put$ = function put$(url, data) {
-    return this.http$('PUT', url, data);
-  };
-
-  HttpService.patch$ = function patch$(url, data) {
-    return this.http$('PATCH', url, data);
-  };
-
-  HttpService.query = function query(data) {
-    return ''; // todo
-  };
-
-  HttpService.getError = function getError(object, response) {
-    var error = typeof object === 'object' ? object : {};
-
-    if (!error.status) {
-      error.status = response ? response.status : 0;
-    }
-
-    if (!error.statusCode) {
-      error.statusCode = response ? response.status : 0;
-    }
-
-    if (!error.statusMessage) {
-      error.statusMessage = response ? response.statusText : object;
-    } // console.log('HttpService.getError', error, response);
-
-
-    return error;
-  };
-
-  return HttpService;
-}();var LanguageService = /*#__PURE__*/function () {
-  function LanguageService() {}
-
-  LanguageService.getDefaultLanguages = function getDefaultLanguages() {
-    return environment.alternates || [];
-  };
-
-  LanguageService.getDefaultLanguage = function getDefaultLanguage() {
-    return environment.defaultLanguage || (this.languages ? this.languages[0].lang : null);
-  };
-
-  LanguageService.setLanguage = function setLanguage(language) {
-    this.selectedLanguage = language.lang;
-  };
-
-  LanguageService.setLanguage$ = function setLanguage$(language) {
-    var _this = this;
-
-    return rxjs.from(fetch(language.href).then(function (response) {
-      return response.text();
-    })).pipe(operators.tap(function (html) {
-      // console.log('html', html);
-      var labelsMatch = /(window\.labels[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
-
-      if (labelsMatch) {
-        // console.log('labels', labelsMatch[0]);
-        new Function(labelsMatch[0]).call(window);
-        LabelPipe.setLabels();
-      }
-
-      var bhereMatch = /(window\.bhere[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*=[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\n*[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*\{((\{[\s\S]+?\})|[\s\S])+?\})/gm.exec(html);
-
-      if (bhereMatch) {
-        // console.log('bhere', bhereMatch[0]);
-        var data = {};
-        new Function(bhereMatch[0].replace('window', 'this')).call(data);
-
-        if (data.bhere) {
-          Utils.merge(environment, data.bhere);
-        }
-      }
-
-      LocationService.replace(_this.activeLanguage.href, language.href); // console.log(window.labels);
-
-      _this.selectedLanguage = language.lang;
-    }));
-  };
-
-  LanguageService.toggleLanguages = function toggleLanguages() {
-    this.showLanguages = !this.showLanguages;
-    this.pushChanges();
-  };
-
-  _createClass(LanguageService, null, [{
-    key: "hasLanguages",
-    get: function get() {
-      return this.languages.length > 1;
-    }
-  }, {
-    key: "activeLanguage",
-    get: function get() {
-      var _this2 = this;
-
-      return this.languages.find(function (language) {
-        return language.lang === _this2.selectedLanguage;
-      });
-    }
-  }]);
-
-  return LanguageService;
-}();
-
-_defineProperty(LanguageService, "languages", LanguageService.getDefaultLanguages());
-
-_defineProperty(LanguageService, "defaultLanguage", LanguageService.getDefaultLanguage());
-
-_defineProperty(LanguageService, "selectedLanguage", LanguageService.defaultLanguage);var ApiService = /*#__PURE__*/function (_HttpService) {
-  _inheritsLoose(ApiService, _HttpService);
-
-  function ApiService() {
-    return _HttpService.apply(this, arguments) || this;
-  }
-
-  ApiService.get$ = function get$(url, data, format) {
-    return _HttpService.get$.call(this, "" + environment.api + url, data, format);
-  };
-
-  ApiService.delete$ = function delete$(url) {
-    return _HttpService.delete$.call(this, "" + environment.api + url);
-  };
-
-  ApiService.post$ = function post$(url, data) {
-    return _HttpService.post$.call(this, "" + environment.api + url, data);
-  };
-
-  ApiService.put$ = function put$(url, data) {
-    return _HttpService.put$.call(this, "" + environment.api + url, data);
-  };
-
-  ApiService.patch$ = function patch$(url, data) {
-    return _HttpService.patch$.call(this, "" + environment.api + url, data);
-  };
-
-  return ApiService;
-}(HttpService);
-
-_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var SessionStorageService = /*#__PURE__*/function () {
+};var SessionStorageService = /*#__PURE__*/function () {
   function SessionStorageService() {}
 
   SessionStorageService.delete = function _delete(name) {
@@ -4543,52 +4790,7 @@ UserDetailComponent.meta = {
 UserEditPasswordComponent.meta = {
   selector: '[user-edit-password]',
   inputs: ['tokenEncoded']
-};var FormService = /*#__PURE__*/function () {
-  function FormService() {}
-
-  FormService.toOptions = function toOptions(options) {
-    options = options.slice().map(function (x) {
-      return {
-        id: x.value,
-        name: x.label
-      };
-    });
-    return options;
-  };
-
-  FormService.toSelectOptions = function toSelectOptions(options) {
-    options = options.slice().map(function (x) {
-      return {
-        id: x.value,
-        name: x.label
-      };
-    });
-    options.unshift({
-      id: null,
-      name: 'select'
-    });
-    return options;
-  };
-
-  return FormService;
-}();function RequiredIfValidator(fieldName, formGroup, shouldBe) {
-  return new rxcompForm.FormValidator(function (value) {
-    var field = null;
-
-    if (typeof formGroup === 'function') {
-      field = formGroup().get(fieldName);
-    } else if (formGroup) {
-      field = formGroup.get(fieldName);
-    }
-
-    return !value && field && (shouldBe != null ? field.value === shouldBe : field.value != null) ? {
-      required: {
-        value: value,
-        requiredIf: fieldName
-      }
-    } : null;
-  });
-}var UserEditComponent = /*#__PURE__*/function (_Component) {
+};var UserEditComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(UserEditComponent, _Component);
 
   function UserEditComponent() {
@@ -5197,7 +5399,7 @@ UserSignupComponent.meta = {
   selector: '[user-signup]',
   outputs: ['signUp', 'viewSignIn'],
   inputs: ['me', 'user']
-};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, OpenModallyDirective, SideModalComponent, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
+};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperContentDirective, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
 var pipes$2 = [];
 var SharedModule = /*#__PURE__*/function (_Module) {
   _inheritsLoose(SharedModule, _Module);
@@ -5223,6 +5425,6 @@ SharedModule.meta = {
 }(rxcomp.Module);
 AppModule.meta = {
   imports: [rxcomp.CoreModule, rxcompForm.FormModule, CommonModule, ControlsModule, SharedModule],
-  declarations: [],
+  declarations: [ContactModalComponent, CardProductDetailComponent, OpenModallyDirective, SideModalComponent],
   bootstrap: AppComponent
 };rxcomp.Browser.bootstrap(AppModule);})));

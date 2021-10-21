@@ -1,0 +1,20 @@
+.location-detail-hero {
+	padding: 0 0 80px 0;
+
+	&__content {
+		padding: 80px 0 0 0;
+	}
+
+	&__title {
+		@extend .h3;
+		color: $foreground;
+		margin-bottom: 60px;
+	}
+
+	@include media-down(xs) {
+		&__picture {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+}

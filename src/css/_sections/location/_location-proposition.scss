@@ -1,0 +1,145 @@
+.location-proposition {
+	padding: 80px 0;
+
+	&__title {
+		@extend .h4;
+		margin-bottom: var(--p70);
+	}
+}
+
+.listing--location {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media-up(md) {
+		align-items: stretch;
+		margin-left: -40px;
+		margin-right: -40px;
+
+		&>.listing__item {
+			flex: 0 0 calc(33.3333% - 80px);
+			max-width: calc(33.3333% - 80px);
+			margin: 0 40px 30px 40px;
+		}
+
+		.card--location {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			&__content {
+				flex-grow: 1;
+			}
+		}
+	}
+
+	@include media-between(sm, sm) {
+		align-items: stretch;
+		margin-left: -30px;
+		margin-right: -30px;
+
+		&>.listing__item {
+			flex: 0 0 calc(50% - 60px);
+			max-width: calc(50% - 60px);
+			margin: 0 30px 30px 30px;
+		}
+
+		.card--location {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			&__content {
+				flex-grow: 1;
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		&>.listing__item {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 0 0 30px 0;
+		}
+	}
+}
+
+.card--location {
+	position: relative;
+	cursor: pointer;
+
+	&__picture {
+		@include aspect-clip(72, 60);
+
+		&>img {
+			transition: transform ease-in-out $fast;
+		}
+	}
+
+	&__content {
+		padding: var(--p60) 0;
+	}
+
+	&__category {
+		@extend .extrasmall;
+		color: $foreground-primary;
+		margin-bottom: var(--p10);
+	}
+
+	&__title {
+		@extend .h6;
+		color: $foreground;
+		margin-bottom: var(--p20);
+	}
+
+	&__abstract {
+		@extend .extrasmall;
+	}
+
+	&__cta {
+		// display: flex;
+		// justify-content: flex-end;
+		margin-top: var(--p60);
+	}
+
+	.btn--more-md {
+		transition: transform ease-in-out $fast;
+	}
+
+	&:hover {
+		.card--location__picture {
+			&>img {
+				transform: scale(1.1, 1.1);
+			}
+		}
+
+		.btn--more-md {
+			transform: translateY(-6px);
+		}
+	}
+
+
+	.listing__item:nth-child(4n+1)>& {
+		.card--location__picture {
+			box-shadow: var(--n30) var(--n30) 0 0 $background-negative;
+		}
+	}
+
+	.listing__item:nth-child(4n+2)>& {
+		.card--location__picture {
+			box-shadow: var(--p30) var(--p30) 0 0 $background-negative;
+		}
+	}
+
+	.listing__item:nth-child(4n+3)>& {
+		.card--location__picture {
+			box-shadow: var(--p30) var(--n30) 0 0 $background-negative;
+		}
+	}
+
+	.listing__item:nth-child(4n+4)>& {
+		.card--location__picture {
+			box-shadow: var(--n30) var(--p30) 0 0 $background-negative;
+		}
+	}
+}

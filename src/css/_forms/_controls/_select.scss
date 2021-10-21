@@ -16,6 +16,7 @@
 		height: 24px;
 		pointer-events: none;
 		margin-right: -7px;
+		fill: $foreground-primary;
 	}
 
 	@include media-down(xs) {

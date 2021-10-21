@@ -24,6 +24,9 @@
 
 @import '_sections/header';
 @import '_sections/footer';
+@import '_sections/breadcrumb';
+@import '_sections/horizontal-menu';
+@import '_sections/content-slider';
 
 // homepage
 @import '_sections/main-hero';
@@ -35,15 +38,20 @@
 @import '_sections/news-proposition';
 @import '_sections/newsletter-proposition';
 
-// offices-detail
-@import '_sections/offices-detail/offices-detail-hero';
-@import '_sections/offices-detail/address-detail';
-@import '_sections/offices-detail/certification';
-@import '_sections/offices-detail/product-proposition';
-@import '_sections/offices-detail/toolkit-proposition';
+// location
+@import '_sections/location/location-hero';
+@import '_sections/location/location-proposition';
 
-// side-modal
+// location-detail
+@import '_sections/location-detail/location-detail-hero';
+@import '_sections/location-detail/address-detail';
+@import '_sections/location-detail/certification';
+@import '_sections/location-detail/product-proposition';
+@import '_sections/location-detail/toolkit-proposition';
+
+// modals
 @import '_sections/side-modal';
+@import '_sections/contact-modal';
 
 /*
 @import '_pages/breadcrumb';
