@@ -26,6 +26,7 @@
 @import '_sections/footer';
 @import '_sections/breadcrumb';
 @import '_sections/horizontal-menu';
+@import '_sections/sticky-menu';
 @import '_sections/content-slider';
 
 // homepage
@@ -48,6 +49,11 @@
 @import '_sections/location-detail/certification';
 @import '_sections/location-detail/product-proposition';
 @import '_sections/location-detail/toolkit-proposition';
+
+// pillars
+@import '_sections/pillars/pillars-hero';
+@import '_sections/pillars/title-hero';
+@import '_sections/pillars/research-proposition';
 
 // modals
 @import '_sections/side-modal';

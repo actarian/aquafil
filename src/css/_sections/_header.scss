@@ -34,6 +34,22 @@
 			border-bottom: 1px solid transparent;
 		}
 	}
+
+	@include media-up(md) {
+		height: 110px;
+	}
+
+	@include media-up(lg) {
+		height: 130px;
+	}
+
+	@include media-down(sm) {
+		height: 90px;
+	}
+
+	@include media-down(xs) {
+		height: 90px;
+	}
 }
 
 .header__logo {

@@ -1,8 +1,15 @@
 .content-slider {
 	padding: var(--p80) 0;
 
+	/*
 	.swiper-container {
-		// overflow: visible;
+		overflow: visible;
+	}
+	*/
+
+	&__divline {
+		display: none;
+		border-top: 1px solid $border;
 	}
 
 	&__index {
@@ -20,7 +27,7 @@
 
 	&__nav {
 		display: flex;
-		margin-top: var(--p60);
+		margin-top: var(--p20);
 	}
 
 	&__title {
@@ -35,6 +42,60 @@
 	&--negative {
 		background: $background-negative;
 		color: $foreground-negative;
+
+		.btn--prev,
+		.btn--next {
+			.circle {
+				stroke: $foreground-negative;
+			}
+		}
+
+		.content-slider__divline {
+			border-top: 1px solid rgba(255, 255, 255, 0.4);
+		}
+	}
+
+	&:not(.content-slider--negative) {
+		.btn--more {
+			color: $foreground-primary;
+		}
+	}
+}
+
+.content-slider--negative {
+
+	.card--content {
+		color: #BDCFD8;
+
+		&__index {
+			color: #BDCFD8;
+		}
+
+		&__title,
+		&__cta {
+			color: $foreground-negative;
+		}
+
+		&__abstract {
+
+			ul,
+			ol {
+				&>li {
+					&::marker {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.title-text+.content-slider {
+	padding: 0 0 var(--p80) 0;
+
+	.content-slider__divline {
+		display: block;
+		margin-bottom: var(--p80);
 	}
 }
 
@@ -54,7 +115,7 @@
 		position: absolute;
 		width: 48px;
 		height: 48px;
-		stroke: $foreground-negative;
+		stroke: $foreground;
 	}
 
 	.caret {
@@ -135,69 +196,35 @@
 		padding-top: var(--p60);
 	}
 
-	@include media-up(md) {
+	&__picture {
 		display: flex;
-		width: calc(100% + var(--p80));
-		margin-left: var(--n40);
-		margin-right: var(--n40);
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include media-up(sm) {
+		display: flex;
+		width: calc(100% + var(--p160));
+		margin-left: var(--n80);
+		margin-right: var(--n80);
 
 		&__left,
 		&__right {
-			flex: 0 0 calc(50% - var(--p80));
-			max-width: calc(50% - var(--p80));
-			margin: 0 var(--p40);
+			flex: 0 0 calc(50% - var(--p160));
+			max-width: calc(50% - var(--p160));
+			margin: 0 var(--p80);
 		}
-
-		&__category {
-			padding-right: var(--p80);
-		}
-
-		&__title {
-			padding-right: var(--p80);
-		}
-
-		&__abstract {
-			padding-right: var(--p80);
-		}
-
-		&__cta {
-			padding-right: var(--p80);
-		}
-
 	}
 
-	@include media-down(sm) {
+	@include media-down(xs) {
 
 		&__left,
 		&__right {
 			margin: 0 0 var(--p40) 0;
 		}
-	}
-}
 
-.content-slider--negative {
-	.card--content {
-		color: #BDCFD8;
-
-		&__index {
-			color: #BDCFD8;
-		}
-
-		&__title,
-		&__cta {
-			color: $foreground-negative;
-		}
-
-		&__abstract {
-
-			ul,
-			ol {
-				&>li {
-					&::marker {
-						color: white;
-					}
-				}
-			}
+		&__picture {
+			margin: var(--p80) 0;
 		}
 	}
 }

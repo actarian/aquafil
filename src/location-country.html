@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-sm-20 offset-sm-2">
 					<ul class="nav--breadcrumb">
-						<li class="nav__item"><a href="/aquafil/">Home</a></li>
+						<li class="nav__item"><a href="/aquafil/">Homepage</a></li>
 						<li class="nav__item"><span>Who we are</span></li>
 						<li class="nav__item"><a href="/aquafil/location.html">Locations</a></li>
 						<li class="nav__item"><span>Usa</span></li>
@@ -19,118 +19,9 @@
 	</div>
 
 	<!-- @@include ./templates/location-country/location-hero.html -->
-
-	<div class="horizontal-menu">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-20 offset-sm-2">
-					<div class="horizontal-menu__content">
-						<div class="horizontal-menu__title">
-							Change country
-						</div>
-						<ul class="nav--horizontal-menu">
-							<li class="nav__item"><a href="/aquafil/location.html"><span class="name">All</span> <span class="count">(18)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">Italy</span> <span class="count">(3)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html" class="active"><span class="name">Usa</span> <span class="count">(7)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">UK</span> <span class="count">(1)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">Slovenia</span> <span class="count">(4)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">Croatia</span> <span class="count">(1)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">China</span> <span class="count">(1)</span></a></li>
-							<li class="nav__item"><a href="/aquafil/location-country.html"><span class="name">Thailand</span> <span class="count">(1)</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="content-slider content-slider--negative">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-20 offset-sm-2">
-					<!-- swiper -->
-					<div class="swiper-container" swiper-content>
-						<div class="content-slider__index"><span class="page" [innerHTML]="slideIndex"></span> of <span [innerHTML]="slideTotal"></span></div>
-						<div class="swiper-wrapper">
-							<!-- slide -->
-							<div class="swiper-slide">
-								<div class="card--content">
-									<div class="card--content__left">
-										<div class="card--content__title">Focus on people</div>
-										<div class="card--content__abstract">
-											<p>Responsible conduct means considering the entire process that leads to the development of the Group's products, from upstream to downstream, while preserving the environment and valuing the people who are, directly or indirectly, part of the value chain.</p>
-										</div>
-										<div class="card--content__cta">
-											<a href="#" class="btn--more"><span>Learn more</span> <svg><use xlink:href="#arrow-next"></use></svg></a>
-										</div>
-									</div>
-									<div class="card--content__right">
-										<div class="card--content__abstract">
-											<p>On its path to sustainability, AquafilCRO has recognized the international standard SA8000: 2014 as a tool to strengthen its commitment to the protection of workers and human rights.</p>
-											<p>In this direction, a project has been launched to gradually extend the certificate to various Group companies. The Group promotes the application of the standard and its principles on a daily basis not only in its own organization, but also within stakeholders in the supply chain.</p>
-										</div>
-										<!--
-										<div class="card--content__picture">
-											<img src="/aquafil/img/homepage/hero-01.jpg" />
-										</div>
-										-->
-									</div>
-								</div>
-							</div>
-							<!-- slide -->
-							<div class="swiper-slide">
-								<div class="card--content">
-									<div class="card--content__left">
-										<div class="card--content__title">SA8000 standard</div>
-										<div class="card--content__abstract">
-											<p>SA8000 is a voluntary international standard on social responsibility created with the aim of improving working conditions in all types of organizations, regardless of size, sector and geographical location.</p>
-											<p>The standard is based on 9 basic requirements that must be met and monitored. They take into account workers' rights, workplace conditions and the presence of an effective management system.</p>
-										</div>
-									</div>
-									<div class="card--content__right">
-										<div class="card--content__abstract">
-											<p>Nine requests are:</p>
-											<ol>
-												<li>Child labor</li>
-												<li>Forced or compulsory labor</li>
-												<li>Health and safety</li>
-												<li>Freedom of association and the right to collective bargaining</li>
-												<li>Discrimination</li>
-												<li>Disciplinary practices</li>
-												<li>Working hours</li>
-												<li>Fees</li>
-												<li>Management system</li>
-											</ol>
-										</div>
-										<!--
-										<div class="card--content__picture">
-											<img src="/aquafil/img/homepage/hero-01.jpg" />
-										</div>
-										-->
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-slider__nav">
-							<!-- prev button -->
-							<button type="button" class="btn--prev">
-								<svg class="circle"><use xlink:href="#circle-dotted"></use></svg>
-								<svg class="caret"><use xlink:href="#caret-left"></use></svg>
-							</button>
-							<!-- next button -->
-							<button type="button" class="btn--next">
-								<svg class="circle"><use xlink:href="#circle-dotted"></use></svg>
-								<svg class="caret"><use xlink:href="#caret-right"></use></svg>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	<!-- @@include ./templates/location-country/horizontal-menu.html -->
+	<!-- @@include ./templates/location-country/content-slider.html -->
 	<!-- @@include ./templates/location-country/certification.html -->
-
 	<!-- @@include ./templates/location-country/location-proposition.html -->
 	<!-- @@include ./templates/homepage/news-proposition.html -->
 	<!-- @@include ./templates/homepage/newsletter-proposition.html -->

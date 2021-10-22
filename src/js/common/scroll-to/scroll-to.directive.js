@@ -18,19 +18,20 @@ export class ScrollToDirective extends Directive {
 		const { module, node, parentInstance } = getContext(this);
 		return fromEvent(node, 'click').pipe(
 			tap(event => {
+				event.preventDefault();
 				const result = module.resolve(this.outputFunction, parentInstance, event);
 				if (typeof result === 'string') {
 					const target = document.querySelector(result);
 					if (target) {
 						const from = this.currentTop();
-						const to = from + target.getBoundingClientRect().top - 50;
+						const to = from + target.getBoundingClientRect().top - 150;
 						const o = { tween: 0 };
 						const html = document.querySelector('html');
 						gsap.set(html, {
 							'scroll-behavior': 'auto'
 						});
 						gsap.to(o, {
-							duration: Math.abs((to - from)) / 2000,
+							duration: Math.abs((to - from)) / 5000,
 							tween: 1,
 							ease: Quad.easeOut,
 							overwrite: 'all',
@@ -60,7 +61,6 @@ export class ScrollToDirective extends Directive {
 		if (document.body.scrollTop) return document.body.scrollTop;
 		return 0;
 	}
-
 }
 
 ScrollToDirective.meta = {

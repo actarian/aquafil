@@ -1,5 +1,9 @@
-.horizontal-menu {
-	padding: var(--p30) 0;
+.sticky-menu {
+	position: sticky;
+	height: 60px;
+	z-index: 2;
+	background: white;
+	border-bottom: 1px solid $border;
 
 	&__title {
 		@extend .extrasmall;
@@ -8,11 +12,28 @@
 		white-space: nowrap;
 	}
 
+	@include media-up(md) {
+		top: 110px;
+	}
+
+	@include media-up(lg) {
+		top: 130px;
+	}
+
+	@include media-down(sm) {
+		top: 90px;
+	}
+
+	@include media-down(xs) {
+		top: 90px;
+	}
+
 	@include media-up(sm) {
 		&__content {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			padding: 22px 0;
 		}
 
 		&__title {
@@ -21,36 +42,34 @@
 	}
 
 	@include media-down(xs) {
+		display: none;
+
 		&__title {
 			margin-bottom: var(--p40);
 		}
 	}
 }
 
-.nav--horizontal-menu {
+.nav--scroll-menu {
 	@extend %nav;
 	width: 100%;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	margin: var(--n10) 0;
+	margin: var(--n20);
 	line-height: 1;
 
 	&>.nav__item {
-		margin: var(--p10);
+		margin: var(--p20);
 
 		&>a {
 			@extend .extrasmall;
 			display: block;
-			padding: 9px 24px;
-			border-radius: 20px;
 			white-space: nowrap;
-			background: $background-quaternary;
 			color: $foreground-secondary;
 
 			&:hover,
 			&.active {
-				color: $foreground-negative;
-				background: $foreground-primary;
+				color: $foreground-primary;
 			}
 		}
 	}

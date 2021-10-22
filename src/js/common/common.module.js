@@ -19,6 +19,8 @@ import { ModalOutletComponent } from './modal/modal-outlet.component';
 import { NameDirective } from './name/name.directive';
 import { NumberPipe } from './number/number.pipe';
 import { RelativeDatePipe } from './relative-date/relative-date.pipe';
+import { ScrollMenuDirective } from './scroll-menu/scroll-menu.directive';
+import { ScrollToDirective } from './scroll-to/scroll-to.directive';
 import { ScrollStickyDirective } from './scroll/scroll-sticky.directive';
 import { ScrollDirective } from './scroll/scroll.directive';
 import { ShareDirective } from './share/share.directive';
@@ -48,6 +50,8 @@ const factories = [
 	NameDirective,
 	ScrollDirective,
 	ScrollStickyDirective,
+	ScrollToDirective,
+	ScrollMenuDirective,
 	ShareDirective,
 	SvgIconStructure,
 	SwiperDirective,

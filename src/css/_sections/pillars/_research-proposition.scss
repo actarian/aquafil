@@ -1,0 +1,146 @@
+.research-proposition {
+	background: #F8F8F8;
+
+	&__category {
+		@extend .small;
+		color: $foreground-primary;
+	}
+
+	&__title {
+		@extend .h1;
+		color: $foreground;
+		margin-bottom: var(--p80);
+	}
+
+	&__abstract {
+		margin-bottom: var(--p100);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+
+		&:nth-child(4n+1) {
+			.card--research {
+				background: $background-negative;
+
+				.card--research__title {
+					color: $foreground-negative;
+				}
+
+				.card--research__abstract {
+					color: $foreground-negative;
+				}
+			}
+		}
+
+		&:nth-child(4n+2) {
+			.card--research {
+				background: $background;
+
+				.card--research__title {
+					color: $foreground;
+				}
+
+				.card--research__abstract {
+					color: $foreground;
+				}
+			}
+		}
+
+		&:nth-child(4n+3) {
+			.card--research {
+				background: $background-tertiary;
+
+				.card--research__title {
+					color: $foreground-negative;
+				}
+
+				.card--research__abstract {
+					color: $foreground-negative;
+				}
+			}
+		}
+
+		&:nth-child(4n+4) {
+			.card--research {
+				background: $background-quaternary;
+
+				.card--research__title {
+					color: $foreground;
+				}
+
+				.card--research__abstract {
+					color: $foreground;
+				}
+			}
+		}
+	}
+
+	@include media-up(sm) {
+		padding: var(--p200) 0;
+	}
+
+	@include media-down(xs) {
+		padding: var(--p80) 0;
+	}
+}
+
+.card--research {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: $background-negative;
+	color: $foreground-negative;
+
+	&__picture {
+		@include aspect-clip(426, 400);
+
+		&>img {
+			transition: transform ease-in-out $fast;
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		position: relative;
+		padding: var(--cw) var(--p40);
+	}
+
+	&__title {
+		font-weight: bold;
+		color: $foreground-negative;
+		margin-bottom: var(--p40);
+	}
+
+	&__abstract {
+		@extend .small;
+		color: #BDCFD8;
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	cursor: pointer;
+
+	&:hover {
+		.card--research__picture {
+			&>img {
+				transform: scale(1.1, 1.1);
+			}
+		}
+
+		.btn--more-md {
+			svg {
+				transform: translateX(5px);
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		margin-bottom: var(--p40);
+	}
+}

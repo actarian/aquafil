@@ -4,7 +4,45 @@
  * License: MIT
  */
 
-(function(g,f){typeof exports==='object'&&typeof module!=='undefined'?f(require('rxcomp'),require('rxcomp-form'),require('rxjs/operators'),require('rxjs')):typeof define==='function'&&define.amd?define(['rxcomp','rxcomp-form','rxjs/operators','rxjs'],f):(g=typeof globalThis!=='undefined'?globalThis:g||self,f(g.rxcomp,g.rxcomp.form,g.rxjs.operators,g.rxjs));}(this,(function(rxcomp, rxcompForm, operators, rxjs){'use strict';function _defineProperties(target, props) {
+(function(g,f){typeof exports==='object'&&typeof module!=='undefined'?f(require('rxcomp'),require('rxcomp-form'),require('rxjs/operators'),require('rxjs')):typeof define==='function'&&define.amd?define(['rxcomp','rxcomp-form','rxjs/operators','rxjs'],f):(g=typeof globalThis!=='undefined'?globalThis:g||self,f(g.rxcomp,g.rxcomp.form,g.rxjs.operators,g.rxjs));}(this,(function(rxcomp, rxcompForm, operators, rxjs){'use strict';function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
     var descriptor = props[i];
     descriptor.enumerable = descriptor.enumerable || false;
@@ -1651,6 +1689,153 @@ var RelativeDatePipe = /*#__PURE__*/function (_Pipe) {
 }(rxcomp.Pipe);
 RelativeDatePipe.meta = {
   name: 'relativeDate'
+};var ScrollMenuDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(ScrollMenuDirective, _Directive);
+
+  function ScrollMenuDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = ScrollMenuDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    var anchors = this.anchors = Array.prototype.slice.call(node.querySelectorAll('[href]')).filter(function (x) {
+      return x.hasAttribute('href');
+    }).map(function (x) {
+      var href = x.getAttribute('href');
+      var target = document.querySelector(href);
+      return {
+        a: x,
+        href: href,
+        target: target
+      };
+    }); // console.log(anchors);
+
+    rxjs.fromEvent(window, 'scroll').pipe(operators.startWith(1), operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      var tops = anchors.map(function (x, i) {
+        var rect = x.target.getBoundingClientRect();
+        return {
+          top: rect.top,
+          index: i
+        };
+      });
+      tops.sort(function (a, b) {
+        return a.top - b.top;
+      });
+      var nearest = tops.reduce(function (p, c, i) {
+        var distance = Math.abs(c.top);
+        return distance < p.distance ? _objectSpread2(_objectSpread2({}, c), {}, {
+          distance: distance
+        }) : p;
+      }, Object.assign({}, tops[0], {
+        distance: Number.POSITIVE_INFINITY
+      }));
+      _this.index = nearest.index;
+    });
+  };
+
+  _createClass(ScrollMenuDirective, [{
+    key: "index",
+    set: function set(index) {
+      if (this.index_ !== index) {
+        this.index_ = index;
+        var anchors = this.anchors;
+        anchors.forEach(function (x, i) {
+          index === i ? x.a.classList.add('active') : x.a.classList.remove('active');
+        });
+      }
+    }
+  }]);
+
+  return ScrollMenuDirective;
+}(rxcomp.Directive);
+ScrollMenuDirective.meta = {
+  selector: "[scroll-menu]"
+};var ScrollToDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(ScrollToDirective, _Directive);
+
+  function ScrollToDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = ScrollToDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    this.initialFocus = false;
+
+    var _getContext = rxcomp.getContext(this),
+        module = _getContext.module,
+        node = _getContext.node;
+
+    var expression = this.expression = node.getAttribute("(scrollTo)");
+    this.outputFunction = module.makeFunction(expression, ['$event']);
+    this.scrollTo$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function () {});
+  };
+
+  _proto.scrollTo$ = function scrollTo$() {
+    var _this = this;
+
+    var _getContext2 = rxcomp.getContext(this),
+        module = _getContext2.module,
+        node = _getContext2.node,
+        parentInstance = _getContext2.parentInstance;
+
+    return rxjs.fromEvent(node, 'click').pipe(operators.tap(function (event) {
+      event.preventDefault();
+      var result = module.resolve(_this.outputFunction, parentInstance, event);
+
+      if (typeof result === 'string') {
+        var target = document.querySelector(result);
+
+        if (target) {
+          var from = _this.currentTop();
+
+          var to = from + target.getBoundingClientRect().top - 150;
+          var o = {
+            tween: 0
+          };
+          var html = document.querySelector('html');
+          gsap.set(html, {
+            'scroll-behavior': 'auto'
+          });
+          gsap.to(o, {
+            duration: Math.abs(to - from) / 5000,
+            tween: 1,
+            ease: Quad.easeOut,
+            overwrite: 'all',
+            onUpdate: function onUpdate() {
+              window.scrollTo(0, from + (to - from) * o.tween);
+            },
+            onComplete: function onComplete() {
+              gsap.set(html, {
+                'scroll-behavior': 'smooth'
+              });
+            }
+          });
+        }
+      }
+    }), operators.shareReplay(1));
+  };
+
+  _proto.currentTop = function currentTop() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset; // Internet Explorer 6 - standards mode
+
+    if (document.documentElement && document.documentElement.scrollTop) return document.documentElement.scrollTop; // Internet Explorer 6, 7 and 8
+
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+  };
+
+  return ScrollToDirective;
+}(rxcomp.Directive);
+ScrollToDirective.meta = {
+  selector: "[(scrollTo)]"
 };var ScrollStickyDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(ScrollStickyDirective, _Directive);
 
@@ -2526,7 +2711,7 @@ DropdownDirective, DropdownItemDirective, // DropdownItemDirective,
 EllipsisDirective, FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
 // LazyDirective,
 // ModalComponent,
-ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
+ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ScrollToDirective, ScrollMenuDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
 // VirtualStructure
 ];
 var pipes = [DatePipe, EnvPipe, FlagPipe, HighlightPipe, HtmlPipe, LabelPipe, NumberPipe, RelativeDatePipe, SlugPipe];

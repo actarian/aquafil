@@ -1,5 +1,6 @@
 .breadcrumb {
 	padding: 20px 0 40px 0;
+	color: $foreground-negative;
 
 	.col-sm-20 {
 		display: flex;
@@ -9,6 +10,7 @@
 
 .nav--breadcrumb {
 	@extend %nav;
+	color: $foreground-tertiary;
 
 	&>.nav__item {
 		display: flex;
@@ -16,10 +18,11 @@
 		white-space: nowrap;
 		font-size: 14px;
 		line-height: 1.35714;
-		color: $foreground-tertiary;
 
 		&:last-child {
-			color: $foreground;
+			&>* {
+				color: $foreground-primary;
+			}
 		}
 	}
 
