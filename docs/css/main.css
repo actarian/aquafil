@@ -4964,7 +4964,8 @@ body,
 
 .extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--footer .nav__item > span,
 .nav--footer .nav__item > a,
-.nav--footer .nav__item > button, .horizontal-menu__title, .nav--horizontal-menu > .nav__item > a, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--side-modal__abstract, .contact-modal__abstract {
+.nav--footer .nav__item > button, .horizontal-menu__title, .nav--horizontal-menu > .nav__item > a,
+.nav--horizontal-menu > .nav__item > span, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--side-modal__abstract, .contact-modal__abstract {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.375; }
 
@@ -7297,31 +7298,40 @@ test-component code {
     .horizontal-menu__content {
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      margin: var(--n10) var(--n10);
+      width: calc(100% + var(--p20)); }
     .horizontal-menu__title {
-      margin-right: var(--p40); } }
+      margin: 0 var(--p10);
+      min-width: 13%; } }
   @media (max-width: 767.98px) {
     .horizontal-menu__title {
       margin-bottom: var(--p40); } }
 
 .nav--horizontal-menu {
-  width: 100%;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: var(--n10) 0;
+  width: 100%;
   line-height: 1; }
   .nav--horizontal-menu > .nav__item {
     margin: var(--p10); }
-    .nav--horizontal-menu > .nav__item > a {
+    .nav--horizontal-menu > .nav__item > a,
+    .nav--horizontal-menu > .nav__item > span {
       display: block;
       padding: 9px 24px;
       border-radius: 20px;
       white-space: nowrap;
       background: var(--background-quaternary);
       color: var(--foreground-secondary); }
-      .nav--horizontal-menu > .nav__item > a:hover, .nav--horizontal-menu > .nav__item > a.active {
+      .nav--horizontal-menu > .nav__item > a:hover, .nav--horizontal-menu > .nav__item > a.active,
+      .nav--horizontal-menu > .nav__item > span:hover,
+      .nav--horizontal-menu > .nav__item > span.active {
         color: var(--foreground-negative);
         background: var(--foreground-primary); }
+  @media (min-width: 768px) {
+    .nav--horizontal-menu {
+      margin-left: var(--p10); } }
   @media (max-width: 767.98px) {
     .nav--horizontal-menu {
       margin: var(--n10); } }
@@ -7409,32 +7419,25 @@ test-component code {
     color: #4D4D4D;
     white-space: nowrap;
     margin-right: var(--p40); }
-  .content-slider--negative {
+  .content-slider.negative {
     background: var(--background-negative);
     color: var(--foreground-negative); }
-    .content-slider--negative .btn--prev .circle,
-    .content-slider--negative .btn--next .circle {
+    .content-slider.negative .btn--prev .circle,
+    .content-slider.negative .btn--next .circle {
       stroke: var(--foreground-negative); }
-    .content-slider--negative .content-slider__divline {
+    .content-slider.negative .content-slider__divline {
       border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .content-slider:not(.content-slider--negative) .btn--more {
+    .content-slider.negative .card--content {
+      color: #BDCFD8; }
+      .content-slider.negative .card--content__index {
+        color: #BDCFD8; }
+      .content-slider.negative .card--content__title, .content-slider.negative .card--content__cta {
+        color: var(--foreground-negative); }
+      .content-slider.negative .card--content__abstract ul > li::marker,
+      .content-slider.negative .card--content__abstract ol > li::marker {
+        color: white; }
+  .content-slider:not(.negative) .btn--more {
     color: var(--foreground-primary); }
-
-.content-slider--negative .card--content {
-  color: #BDCFD8; }
-  .content-slider--negative .card--content__index {
-    color: #BDCFD8; }
-  .content-slider--negative .card--content__title, .content-slider--negative .card--content__cta {
-    color: var(--foreground-negative); }
-  .content-slider--negative .card--content__abstract ul > li::marker,
-  .content-slider--negative .card--content__abstract ol > li::marker {
-    color: white; }
-
-.title-text + .content-slider {
-  padding: 0 0 var(--p80) 0; }
-  .title-text + .content-slider .content-slider__divline {
-    display: block;
-    margin-bottom: var(--p80); }
 
 .btn--prev,
 .btn--next {
@@ -7499,7 +7502,6 @@ test-component code {
     margin-bottom: 5px; }
     .card--content__abstract ul > li::marker,
     .card--content__abstract ol > li::marker {
-      color: white;
       font-size: 0.7em; }
 
 .card--content__cta {
@@ -8289,12 +8291,43 @@ test-component code {
     margin: 0; }
 
 .certification {
-  padding: var(--p80) 0 0 0; }
+  padding: var(--p80) 0; }
   .certification__title {
     margin-bottom: var(--p40); }
   .certification__divline {
     padding-top: var(--p80);
     border-bottom: 1px solid var(--border); }
+
+.borders {
+  position: relative; }
+  .borders:before, .borders:after {
+    content: '';
+    display: none;
+    position: absolute;
+    height: 1px; }
+  .borders:before {
+    top: 0;
+    border-top: 1px solid var(--border); }
+  .borders:after {
+    bottom: 0;
+    border-bottom: 1px solid var(--border); }
+  @media (min-width: 1024px) {
+    .borders:before, .borders:after {
+      left: 12.5%;
+      width: 75%; } }
+  @media (max-width: 1023.98px) {
+    .borders:before, .borders:after {
+      left: 8.33333%;
+      width: 83.33333%; } }
+  @media (max-width: 767.98px) {
+    .borders:before, .borders:after {
+      left: 0;
+      width: 100%; } }
+  .borders.negative:before, .borders.negative:after {
+    border-color: rgba(255, 255, 255, 0.2); }
+
+.borders + .borders:before {
+  display: block; }
 
 .listing--downloads {
   display: flex;
@@ -8610,10 +8643,10 @@ test-component code {
   color: var(--foreground);
   margin-bottom: var(--p120); }
 
-.title-text--negative {
+.title-text.negative {
   background: var(--background-negative);
   color: #BDCFD8; }
-  .title-text--negative .title-text__title {
+  .title-text.negative .title-text__title {
     color: var(--foreground-negative); }
 
 @media (min-width: 768px) {

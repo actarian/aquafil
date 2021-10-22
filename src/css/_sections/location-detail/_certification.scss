@@ -1,5 +1,5 @@
 .certification {
-	padding: var(--p80) 0 0 0;
+	padding: var(--p80) 0;
 
 	&__title {
 		@extend .h4;
@@ -9,6 +9,69 @@
 	&__divline {
 		padding-top: var(--p80);
 		border-bottom: 1px solid $border;
+	}
+}
+
+.borders {
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		display: none;
+		position: absolute;
+		height: 1px;
+	}
+
+	&:before {
+		top: 0;
+		border-top: 1px solid $border;
+	}
+
+	&:after {
+		bottom: 0;
+		border-bottom: 1px solid $border;
+	}
+
+	@include media-up(md) {
+
+		&:before,
+		&:after {
+			left: 100% / 24 * 3;
+			width: 100% / 24 * 18;
+		}
+	}
+
+	@include media-down(sm) {
+
+		&:before,
+		&:after {
+			left: 100% / 24 * 2;
+			width: 100% / 24 * 20;
+		}
+	}
+
+	@include media-down(xs) {
+
+		&:before,
+		&:after {
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&.negative {
+
+		&:before,
+		&:after {
+			border-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+
+.borders+.borders {
+	&:before {
+		display: block;
 	}
 }
 

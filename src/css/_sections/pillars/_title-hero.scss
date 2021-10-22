@@ -177,7 +177,7 @@
 		@extend .text;
 	}
 
-	&--negative {
+	&.negative {
 		background: $background-negative;
 		color: #BDCFD8;
 

@@ -39,7 +39,7 @@
 		margin-right: var(--p40);
 	}
 
-	&--negative {
+	&.negative {
 		background: $background-negative;
 		color: $foreground-negative;
 
@@ -53,49 +53,37 @@
 		.content-slider__divline {
 			border-top: 1px solid rgba(255, 255, 255, 0.4);
 		}
-	}
 
-	&:not(.content-slider--negative) {
-		.btn--more {
-			color: $foreground-primary;
-		}
-	}
-}
-
-.content-slider--negative {
-
-	.card--content {
-		color: #BDCFD8;
-
-		&__index {
+		.card--content {
 			color: #BDCFD8;
-		}
 
-		&__title,
-		&__cta {
-			color: $foreground-negative;
-		}
+			&__index {
+				color: #BDCFD8;
+			}
 
-		&__abstract {
+			&__title,
+			&__cta {
+				color: $foreground-negative;
+			}
 
-			ul,
-			ol {
-				&>li {
-					&::marker {
-						color: white;
+			&__abstract {
+
+				ul,
+				ol {
+					&>li {
+						&::marker {
+							color: white;
+						}
 					}
 				}
 			}
 		}
 	}
-}
 
-.title-text+.content-slider {
-	padding: 0 0 var(--p80) 0;
-
-	.content-slider__divline {
-		display: block;
-		margin-bottom: var(--p80);
+	&:not(.negative) {
+		.btn--more {
+			color: $foreground-primary;
+		}
 	}
 }
 
@@ -185,7 +173,6 @@
 				margin-bottom: 5px;
 
 				&::marker {
-					color: white;
 					font-size: 0.7em;
 				}
 			}
