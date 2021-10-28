@@ -4904,34 +4904,78 @@ body,
 .control--custom-select,
 .newsletter-proposition__email [control-email] .control--text,
 .card--content__abstract,
-.title-text__abstract {
+.title-text__abstract,
+.title-text__description {
   font-size: Max(15px, Min(24px, 1.25vw)); }
 
-.h1, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .title-hero__title, .title-text__title, .title-hero-02__title, .research-proposition__title {
+/*
+.h1 {
+	font-weight: bold;
+	font-size: Max(34px, Min(120px, 6.25vw));
+	line-height: 1.2;
+	margin-bottom: 0.16666em;
+}
+
+.h2 {
+	font-weight: bold;
+	font-size: Max(30px, Min(72px, 3.75vw));
+	line-height: 1.36;
+	margin-bottom: 0.55555em;
+}
+
+.h3 {
+	font-weight: bold;
+	font-size: Max(28px, Min(60px, 3.125vw));
+	line-height: 1.5;
+	margin-bottom: 1em;
+}
+
+.h4 {
+	font-weight: bold;
+	font-size: Max(18px, Min(40px, 2.0833vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
+
+.h5 {
+	font-weight: bold;
+	font-size: Max(16px, Min(36px, 1.875vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
+
+.h6 {
+	font-weight: bold;
+	font-size: Max(15px, Min(24px, 1.25vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
+*/
+.h1, .primary-hero__title, .numbers__title {
   font-weight: bold;
-  font-size: Max(34px, Min(120px, 6.25vw));
+  font-size: Max(34px, Min(90px, 4.6875vw));
   line-height: 1.2;
   margin-bottom: 0.16666em; }
 
-.h2, .card--main-hero__title, .news-proposition__title {
+.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text-primary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .product-hero__title {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
-  line-height: 1.36;
-  margin-bottom: 0.55555em; }
-
-.h3, .report-proposition__title, .location-hero__title, .location-detail-hero__title, .pillars-hero__title {
-  font-weight: bold;
-  font-size: Max(28px, Min(60px, 3.125vw));
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: 1em; }
 
-.h4, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .card--side-modal__title, .contact-modal__title {
+.h3, .report-proposition__title, .card--side-modal__title {
+  font-weight: bold;
+  font-size: Max(28px, Min(60px, 3.125vw));
+  line-height: 1.2;
+  margin-bottom: 1em; }
+
+.h4, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .contact-modal__title {
   font-weight: bold;
   font-size: Max(18px, Min(40px, 2.0833vw));
   line-height: 1.36;
   margin-bottom: 1.11111em; }
 
-.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .advantages__title {
+.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .advantages__title, .numbers__abstract {
   font-weight: bold;
   font-size: Max(16px, Min(36px, 1.875vw));
   line-height: 1.36;
@@ -4950,7 +4994,8 @@ body,
 .control--custom-select,
 .newsletter-proposition__email [control-email] .control--text,
 .card--content__abstract,
-.title-text__abstract {
+.title-text__abstract,
+.title-text__description {
   font-size: Max(15px, Min(24px, 1.25vw));
   line-height: 1.5; }
 
@@ -4968,6 +5013,9 @@ body,
 .nav--horizontal-menu > .nav__item > span, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--side-modal__abstract, .contact-modal__abstract {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.375; }
+
+p {
+  margin: 0 0 0.75em 0; }
 
 .dropdown-item:not(.dropped) {
   display: none; }
@@ -5003,7 +5051,7 @@ body,
       background-color: transparent; }
   .dropdown.dropped {
     display: block; }
-  .dropdown > .category, .dropdown > .location-hero__category, .dropdown > .pillars-hero__category {
+  .dropdown > .category, .dropdown > .location-hero__category, .dropdown > .primary-hero__category, .dropdown > .product-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5011,7 +5059,7 @@ body,
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .dropdown--with-icons > .category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .pillars-hero__category {
+  .dropdown--with-icons > .category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .primary-hero__category, .dropdown--with-icons > .product-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .dropdown {
@@ -5180,7 +5228,7 @@ body,
     animation-delay: 800ms;
     animation-duration: 350ms; }
 
-.category + .nav--dropdown, .location-hero__category + .nav--dropdown, .pillars-hero__category + .nav--dropdown {
+.category + .nav--dropdown, .location-hero__category + .nav--dropdown, .primary-hero__category + .nav--dropdown, .product-hero__category + .nav--dropdown {
   padding-top: 0; }
 
 @keyframes nav-dropdown {
@@ -5268,7 +5316,7 @@ body,
     border-radius: 0px; }
     .options::-webkit-scrollbar-track:hover {
       background-color: transparent; }
-  .options > .category, .options > .location-hero__category, .options > .pillars-hero__category {
+  .options > .category, .options > .location-hero__category, .options > .primary-hero__category, .options > .product-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5276,7 +5324,7 @@ body,
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .options--with-icons > .category, .options--with-icons > .location-hero__category, .options--with-icons > .pillars-hero__category {
+  .options--with-icons > .category, .options--with-icons > .location-hero__category, .options--with-icons > .primary-hero__category, .options--with-icons > .product-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .options {
@@ -5469,7 +5517,7 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
@@ -5495,7 +5543,7 @@ a {
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
-  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
   .btn--next, .btn--up,
   .btn--down, .section--index .title, .nav--index > .nav__item > a,
   .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--breadcrumb > li > a:active, .nav--horizontal-menu > li > a:active, .nav--scroll-menu > li > a:active, .nav--submenu > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
@@ -5510,7 +5558,7 @@ a {
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
-  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--websolute:active, .btn--prev:active,
+  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--websolute:active, .btn--prev:active,
   .btn--next:active, .btn--up:active,
   .btn--down:active, .section--index .title:active, .nav--index > .nav__item > a:active,
   .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
@@ -5525,7 +5573,7 @@ a {
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
-  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--websolute:focus, .btn--prev:focus,
+  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--websolute:focus, .btn--prev:focus,
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
   .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--breadcrumb > li > a:hover, .nav--horizontal-menu > li > a:hover, .nav--scroll-menu > li > a:hover, .nav--submenu > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
@@ -5540,7 +5588,7 @@ a {
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
-  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--websolute:hover, .btn--prev:hover,
+  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--websolute:hover, .btn--prev:hover,
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
   .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--breadcrumb > li > a:visited, .nav--horizontal-menu > li > a:visited, .nav--scroll-menu > li > a:visited, .nav--submenu > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
@@ -5555,14 +5603,14 @@ a {
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
-  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--websolute:visited, .btn--prev:visited,
+  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--websolute:visited, .btn--prev:visited,
   .btn--next:visited, .btn--up:visited,
   .btn--down:visited, .section--index .title:visited, .nav--index > .nav__item > a:visited,
   .nav--index > .nav__item > span:visited {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
 .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
@@ -5577,13 +5625,13 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
@@ -5599,7 +5647,7 @@ a {
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
-  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--websolute[disabled], .btn--prev[disabled],
+  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--websolute[disabled], .btn--prev[disabled],
   .btn--next[disabled], .btn--up[disabled],
   .btn--down[disabled], .section--index .title[disabled], .nav--index > .nav__item > a[disabled],
   .nav--index > .nav__item > span[disabled] {
@@ -5764,6 +5812,32 @@ a {
     transition: none; }
   .disabled.btn--more-md, .disabled.btn--more-md:active, .disabled.btn--more-md:focus, .disabled.btn--more-md:hover, .disabled.btn--more-md:visited {
     background-color: var(--foreground-primary);
+    color: var(--foreground-negative);
+    pointer-events: none; }
+
+.btn--category {
+  display: inline-flex;
+  align-items: center;
+  font-size: Max(20px, Min(36px, 1.875vw));
+  line-height: 1.2;
+  padding: var(--p10) 0;
+  font-weight: bold;
+  line-height: 1.38888; }
+  .btn--category svg {
+    width: 21px;
+    height: 15px;
+    margin-left: var(--p20);
+    transition: transform ease-in-out 250ms; }
+  .btn--category, .btn--category:active, .btn--category:focus, .btn--category:visited {
+    color: var(--foreground-negative); }
+  .btn--category:hover {
+    color: var(--foreground-negative); }
+    .btn--category:hover svg {
+      transform: translateX(5px); }
+  .btn--category:active:hover {
+    color: var(--foreground-negative);
+    transition: none; }
+  .disabled.btn--category, .disabled.btn--category:active, .disabled.btn--category:focus, .disabled.btn--category:hover, .disabled.btn--category:visited {
     color: var(--foreground-negative);
     pointer-events: none; }
 
@@ -7646,6 +7720,10 @@ test-component code {
   .card--main-hero__category {
     color: var(--foreground-primary); }
   .card--main-hero__title {
+    /*
+		@extend .h1;
+		margin-bottom: 0.5em;
+		*/
     color: var(--foreground-negative); }
   .card--main-hero__abstract {
     color: var(--foreground-negative); }
@@ -7706,7 +7784,7 @@ test-component code {
     display: flex;
     align-items: center; }
   .profile-proposition__content {
-    margin: var(--cw4) 0; }
+    margin: var(--p160) 0; }
   .profile-proposition__category {
     color: var(--foreground-primary); }
   .profile-proposition__title {
@@ -7735,7 +7813,7 @@ test-component code {
         max-width: 100vw; } }
 
 .area-proposition__head {
-  padding: var(--cw4) 0 var(--cw4) 0;
+  padding: var(--p120) 0 var(--cw4) 0;
   background: var(--background-quaternary); }
 
 .area-proposition__category {
@@ -7863,15 +7941,17 @@ test-component code {
     color: var(--foreground-primary); }
   .sustainability-proposition__title {
     color: var(--foreground); }
+  .sustainability-proposition__abstract {
+    margin-bottom: var(--p40); }
   @media (min-width: 768px) {
     .sustainability-proposition {
-      padding: var(--cw3) 0 0 0; } }
+      padding: var(--p120) 0 0 0; } }
   @media (max-width: 1023.98px) {
     .sustainability-proposition__abstract {
       margin-bottom: var(--p100); } }
   @media (max-width: 767.98px) {
     .sustainability-proposition {
-      padding: var(--cw3) 0; } }
+      padding: var(--p80) 0; } }
 
 .listing--sustainability {
   display: flex;
@@ -7972,7 +8052,7 @@ test-component code {
   .report-proposition .row {
     align-items: stretch; }
   .report-proposition__content {
-    padding: var(--cw2) 0; }
+    padding: var(--p120) 0; }
   .report-proposition__picture {
     height: 100%;
     display: flex;
@@ -7995,7 +8075,7 @@ test-component code {
       width: auto; } }
 
 .innovation-proposition {
-  padding: var(--p200) 0;
+  padding: var(--p120) 0;
   background: var(--background); }
   .innovation-proposition__content {
     padding: 0 0 var(--cw) 0; }
@@ -8050,7 +8130,7 @@ test-component code {
       margin-bottom: var(--p40); } }
 
 .news-proposition {
-  padding: var(--p200) 0;
+  padding: var(--p120) 0 var(--p60) 0;
   background: var(--background-quaternary); }
   .news-proposition__title {
     color: var(--foreground); }
@@ -8065,7 +8145,7 @@ test-component code {
 
 .card--news {
   display: block;
-  margin-bottom: var(--p100); }
+  margin-bottom: var(--p80); }
   .card--news__picture {
     position: relative;
     width: 100%;
@@ -8492,36 +8572,37 @@ test-component code {
 [swiper-toolkit] {
   overflow: visible; }
 
-.pillars-hero {
+.primary-hero {
   position: relative;
   margin-top: -80px;
   z-index: -1; }
-  .pillars-hero__content {
+  .primary-hero__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%; }
-  .pillars-hero__category {
-    color: var(--foreground-primary); }
-  .pillars-hero__title {
+  .primary-hero__category {
+    color: var(--foreground-primary);
+    display: none; }
+  .primary-hero__title {
     color: var(--foreground);
-    margin-bottom: 0.5em; }
+    margin-bottom: var(--p60); }
   @media (min-width: 768px) {
-    .pillars-hero {
-      padding: var(--p200) 0; }
-      .pillars-hero:before {
+    .primary-hero {
+      padding: var(--p120) 0; }
+      .primary-hero:before {
         content: '';
         display: block;
         position: absolute;
-        top: 0;
-        left: 45.83333%;
-        width: 54.16667%;
-        height: 100%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: var(--cw4);
         background: var(--background-negative); } }
   @media (max-width: 767.98px) {
-    .pillars-hero {
-      padding: var(--p100) 0; }
-      .pillars-hero:before {
+    .primary-hero {
+      padding: var(--p80) 0; }
+      .primary-hero:before {
         content: '';
         display: block;
         position: absolute;
@@ -8529,7 +8610,7 @@ test-component code {
         width: 100%;
         height: 50%;
         background: var(--background-negative); }
-      .pillars-hero__picture {
+      .primary-hero__picture {
         margin-bottom: var(--p60); } }
 
 .title-hero {
@@ -8538,9 +8619,9 @@ test-component code {
     color: var(--foreground); }
   @media (min-width: 768px) {
     .title-hero {
-      padding: var(--p240) 0 var(--p140); }
+      padding: var(--p120) 0; }
       .title-hero__title {
-        margin-bottom: var(--p140); }
+        margin-bottom: var(--p80); }
       .title-hero:before {
         content: '';
         display: block;
@@ -8593,6 +8674,31 @@ test-component code {
       .media-text__picture {
         margin-bottom: var(--p80); } }
 
+.media-text-primary {
+  position: relative; }
+  .media-text-primary__title {
+    color: var(--foreground-negative); }
+  .media-text-primary__abstract {
+    color: var(--foreground-negative); }
+  @media (min-width: 768px) {
+    .media-text-primary:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 12.5%;
+      width: 87.5%;
+      bottom: 0;
+      background: var(--background-negative); } }
+  @media (min-width: 1024px) {
+    .media-text-primary__content {
+      padding: var(--p120) 0; } }
+  @media (max-width: 1023.98px) {
+    .media-text-primary {
+      padding: var(--p80) 0; }
+      .media-text-primary__picture {
+        margin-bottom: var(--p80); } }
+
 .quote {
   position: relative;
   background: #EBEBEB; }
@@ -8626,7 +8732,7 @@ test-component code {
     height: 100%; }
   @media (min-width: 768px) {
     .quote {
-      padding: var(--p220) 0 var(--p240); }
+      padding: var(--p120) 0; }
       .quote__inset {
         margin-left: var(--n400); }
       .quote__content {
@@ -8640,8 +8746,7 @@ test-component code {
         padding: var(--p40); } }
 
 .title-text__title {
-  color: var(--foreground);
-  margin-bottom: var(--p120); }
+  color: var(--foreground); }
 
 .title-text.negative {
   background: var(--background-negative);
@@ -8651,12 +8756,14 @@ test-component code {
 
 @media (min-width: 768px) {
   .title-text {
-    padding: var(--p220) 0 var(--p130) 0; } }
+    padding: var(--p120) 0; }
+    .title-text__title, .title-text__abstract {
+      margin-bottom: var(--p80); } }
 
 @media (max-width: 767.98px) {
   .title-text {
     padding: var(--p80) 0; }
-    .title-text__title {
+    .title-text__title, .title-text__abstract {
       margin-bottom: var(--p60); } }
 
 .image-full__picture img {
@@ -8688,7 +8795,7 @@ test-component code {
     color: var(--foreground); }
   @media (min-width: 768px) {
     .title-hero-02 {
-      padding: var(--p220) 0 var(--p80); }
+      padding: var(--p120) 0; }
       .title-hero-02__title {
         margin-bottom: var(--p80); } }
   @media (max-width: 767.98px) {
@@ -8716,12 +8823,39 @@ test-component code {
 
 @media (min-width: 768px) {
   .advantages {
-    padding: var(--p80) 0 var(--p240) 0; } }
+    padding: var(--p80) 0 var(--p120) 0; } }
 
 @media (max-width: 767.98px) {
   .advantages {
     padding: var(--p80) 0; }
     .advantages__content {
+      margin-bottom: var(--p40); } }
+
+.numbers__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.numbers__title {
+  margin-bottom: 0;
+  color: var(--foreground); }
+
+.numbers__abstract {
+  flex: 1 1 auto;
+  max-width: 320px; }
+
+.numbers .btn--more {
+  color: var(--foreground-primary); }
+
+@media (min-width: 768px) {
+  .numbers {
+    padding: var(--p80) 0 var(--p120) 0; } }
+
+@media (max-width: 767.98px) {
+  .numbers {
+    padding: var(--p80) 0; }
+    .numbers__content {
       margin-bottom: var(--p40); } }
 
 .research-proposition {
@@ -8763,7 +8897,7 @@ test-component code {
         color: var(--foreground); }
   @media (min-width: 768px) {
     .research-proposition {
-      padding: var(--p200) 0; } }
+      padding: var(--p120) 0; } }
   @media (max-width: 767.98px) {
     .research-proposition {
       padding: var(--p80) 0; } }
@@ -8815,6 +8949,46 @@ test-component code {
   @media (max-width: 767.98px) {
     .card--research {
       margin-bottom: var(--p40); } }
+
+.product-hero {
+  position: relative;
+  margin-top: -80px;
+  z-index: -1; }
+  .product-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .product-hero__category {
+    color: var(--foreground-primary); }
+  .product-hero__title {
+    color: var(--foreground);
+    margin-bottom: 0.5em; }
+  @media (min-width: 768px) {
+    .product-hero {
+      padding: var(--p120) 0; }
+      .product-hero:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 45.83333%;
+        width: 54.16667%;
+        height: 100%;
+        background: var(--background-negative); } }
+  @media (max-width: 767.98px) {
+    .product-hero {
+      padding: var(--p80) 0; }
+      .product-hero:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50%;
+        background: var(--background-negative); }
+      .product-hero__picture {
+        margin-bottom: var(--p60); } }
 
 .card--side-modal {
   display: none;

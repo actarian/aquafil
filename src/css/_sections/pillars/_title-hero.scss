@@ -2,17 +2,17 @@
 	position: relative;
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 
 	&__abstract {}
 
 	@include media-up(sm) {
-		padding: var(--p240) 0 var(--p140);
+		padding: var(--p120) 0;
 
 		&__title {
-			margin-bottom: var(--p140);
+			margin-bottom: var(--p80);
 		}
 
 		&:before {
@@ -28,7 +28,6 @@
 	}
 
 	@include media-up(md) {
-
 		&:before {
 			content: '';
 			display: block;
@@ -93,6 +92,46 @@
 	}
 }
 
+.media-text-primary {
+	position: relative;
+
+	&__title {
+		@extend .h2;
+		color: $foreground-negative;
+	}
+
+	&__abstract {
+		color: $foreground-negative;
+	}
+
+	@include media-up(sm) {
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 100% / 24 * 3;
+			width: 100% / 24 * 21;
+			bottom: 0;
+			background: $background-negative;
+		}
+	}
+
+	@include media-up(md) {
+		&__content {
+			padding: var(--p120) 0;
+		}
+	}
+
+	@include media-down(sm) {
+		padding: var(--p80) 0;
+
+		&__picture {
+			margin-bottom: var(--p80);
+		}
+	}
+}
+
 .quote {
 	position: relative;
 	background: #EBEBEB;
@@ -140,7 +179,7 @@
 	}
 
 	@include media-up(sm) {
-		padding: var(--p220) 0 var(--p240);
+		padding: var(--p120) 0;
 
 		&__inset {
 			margin-left: var(--n400);
@@ -168,12 +207,12 @@
 .title-text {
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
-		margin-bottom: var(--p120);
 	}
 
-	&__abstract {
+	&__abstract,
+	&__description {
 		@extend .text;
 	}
 
@@ -187,13 +226,19 @@
 	}
 
 	@include media-up(sm) {
-		padding: var(--p220) 0 var(--p130) 0;
+		padding: var(--p120) 0;
+
+		&__title,
+		&__abstract {
+			margin-bottom: var(--p80);
+		}
 	}
 
 	@include media-down(xs) {
 		padding: var(--p80) 0;
 
-		&__title {
+		&__title,
+		&__abstract {
 			margin-bottom: var(--p60);
 		}
 	}
@@ -217,14 +262,14 @@
 	position: relative;
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 
 	&__abstract {}
 
 	@include media-up(sm) {
-		padding: var(--p220) 0 var(--p80);
+		padding: var(--p120) 0;
 
 		&__title {
 			margin-bottom: var(--p80);
@@ -266,7 +311,45 @@
 	}
 
 	@include media-up(sm) {
-		padding: var(--p80) 0 var(--p240) 0;
+		padding: var(--p80) 0 var(--p120) 0;
+	}
+
+	@include media-down(xs) {
+		padding: var(--p80) 0;
+
+		&__content {
+			margin-bottom: var(--p40);
+		}
+	}
+}
+
+.numbers {
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+		@extend .h1;
+		margin-bottom: 0;
+		color: $foreground;
+	}
+
+	&__abstract {
+		flex: 1 1 auto;
+		@extend .h5;
+		max-width: 320px;
+	}
+
+	.btn--more {
+		color: $foreground-primary;
+	}
+
+	@include media-up(sm) {
+		padding: var(--p80) 0 var(--p120) 0;
 	}
 
 	@include media-down(xs) {

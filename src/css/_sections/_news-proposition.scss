@@ -1,5 +1,5 @@
 .news-proposition {
-	padding: var(--p200) 0;
+	padding: var(--p120) 0 var(--p60) 0;
 	background: $background-quaternary;
 
 	&__title {
@@ -21,7 +21,7 @@
 
 .card--news {
 	display: block;
-	margin-bottom: var(--p100);
+	margin-bottom: var(--p80);
 
 	&__picture {
 		@include aspect-clip(639, 540);

@@ -7,12 +7,16 @@
 	}
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 
+	&__abstract {
+		margin-bottom: var(--p40);
+	}
+
 	@include media-up(sm) {
-		padding: var(--cw3) 0 0 0;
+		padding: var(--p120) 0 0 0;
 	}
 
 	@include media-down(sm) {
@@ -22,7 +26,7 @@
 	}
 
 	@include media-down(xs) {
-		padding: var(--cw3) 0;
+		padding: var(--p80) 0;
 	}
 }
 

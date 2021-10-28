@@ -505,6 +505,60 @@ a {
 	@extend %btn-more-md;
 }
 
+%btn-category {
+	@extend %btn;
+	display: inline-flex;
+	align-items: center;
+	font-size: Max(20px, Min(36px, 1.875vw));
+	line-height: 1.2;
+	padding: var(--p10) 0;
+	font-weight: bold;
+	line-height: 1.38888;
+
+	svg {
+		width: 21px;
+		height: 15px;
+		margin-left: var(--p20);
+		transition: transform ease-in-out $fast;
+	}
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		color: $foreground-negative;
+	}
+
+	&:hover {
+		color: $foreground-negative;
+
+		svg {
+			transform: translateX(5px);
+		}
+	}
+
+	&:active:hover {
+		color: $foreground-negative;
+		transition: none;
+	}
+
+	&.disabled {
+
+		&,
+		&:active,
+		&:focus,
+		&:hover,
+		&:visited {
+			color: $foreground-negative;
+			pointer-events: none;
+		}
+	}
+}
+
+.btn--category {
+	@extend %btn-category;
+}
+
 %btn-submit {
 	@extend %btn;
 	@extend .small;

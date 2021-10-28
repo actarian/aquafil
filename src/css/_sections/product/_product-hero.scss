@@ -1,4 +1,4 @@
-.pillars-hero {
+.product-hero {
 	position: relative;
 	margin-top: -80px;
 	z-index: -1;
@@ -16,13 +16,13 @@
 	}
 
 	&__title {
-		@extend .h3;
+		@extend .h2;
 		color: $foreground;
 		margin-bottom: 0.5em;
 	}
 
 	@include media-up(sm) {
-		padding: var(--p200) 0;
+		padding: var(--p120) 0;
 
 		&:before {
 			content: '';
@@ -37,7 +37,7 @@
 	}
 
 	@include media-down(xs) {
-		padding: var(--p100) 0;
+		padding: var(--p80) 0;
 
 		&:before {
 			content: '';

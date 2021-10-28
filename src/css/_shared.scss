@@ -51,9 +51,12 @@
 @import '_sections/location-detail/toolkit-proposition';
 
 // pillars
-@import '_sections/pillars/pillars-hero';
+@import '_sections/primary-hero';
 @import '_sections/pillars/title-hero';
 @import '_sections/pillars/research-proposition';
+
+// product
+@import '_sections/product/product-hero';
 
 // modals
 @import '_sections/side-modal';

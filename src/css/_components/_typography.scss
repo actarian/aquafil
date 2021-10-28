@@ -35,6 +35,7 @@ body,
 	font-size: Max(15px, Min(24px, 1.25vw));
 }
 
+/*
 .h1 {
 	font-weight: bold;
 	font-size: Max(34px, Min(120px, 6.25vw));
@@ -76,6 +77,49 @@ body,
 	line-height: 1.36;
 	margin-bottom: 1.11111em;
 }
+*/
+
+.h1 {
+	font-weight: bold;
+	font-size: Max(34px, Min(90px, 4.6875vw));
+	line-height: 1.2;
+	margin-bottom: 0.16666em;
+}
+
+.h2 {
+	font-weight: bold;
+	font-size: Max(30px, Min(72px, 3.75vw));
+	line-height: 1.2;
+	margin-bottom: 1em;
+}
+
+.h3 {
+	font-weight: bold;
+	font-size: Max(28px, Min(60px, 3.125vw));
+	line-height: 1.2;
+	margin-bottom: 1em;
+}
+
+.h4 {
+	font-weight: bold;
+	font-size: Max(18px, Min(40px, 2.0833vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
+
+.h5 {
+	font-weight: bold;
+	font-size: Max(16px, Min(36px, 1.875vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
+
+.h6 {
+	font-weight: bold;
+	font-size: Max(15px, Min(24px, 1.25vw));
+	line-height: 1.36;
+	margin-bottom: 1.11111em;
+}
 
 .text {
 	font-size: Max(15px, Min(24px, 1.25vw));
@@ -91,4 +135,8 @@ body,
 .extrasmall {
 	font-size: Max(11px, Min(16px, 0.83333vw));
 	line-height: 1.375;
+}
+
+p {
+	margin: 0 0 0.75em 0;
 }

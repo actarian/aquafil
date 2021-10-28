@@ -112,6 +112,10 @@
 
 	&__title {
 		@extend .h2;
+		/*
+		@extend .h1;
+		margin-bottom: 0.5em;
+		*/
 		color: $foreground-negative;
 	}
 

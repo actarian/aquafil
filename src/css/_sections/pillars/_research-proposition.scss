@@ -7,7 +7,7 @@
 	}
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 		margin-bottom: var(--p80);
 	}
@@ -79,7 +79,7 @@
 	}
 
 	@include media-up(sm) {
-		padding: var(--p200) 0;
+		padding: var(--p120) 0;
 	}
 
 	@include media-down(xs) {

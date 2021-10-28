@@ -1,7 +1,7 @@
 .area-proposition {
 
 	&__head {
-		padding: var(--cw4) 0 var(--cw4) 0;
+		padding: var(--p120) 0 var(--cw4) 0;
 		background: $background-quaternary;
 	}
 
@@ -11,7 +11,7 @@
 	}
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 

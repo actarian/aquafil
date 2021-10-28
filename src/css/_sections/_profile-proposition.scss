@@ -7,7 +7,7 @@
 	}
 
 	&__content {
-		margin: var(--cw4) 0;
+		margin: var(--p160) 0;
 	}
 
 	&__category {
@@ -16,7 +16,7 @@
 	}
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 

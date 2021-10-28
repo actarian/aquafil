@@ -1,5 +1,5 @@
 .innovation-proposition {
-	padding: var(--p200) 0;
+	padding: var(--p120) 0;
 	background: $background;
 
 	&__content {
@@ -12,7 +12,7 @@
 	}
 
 	&__title {
-		@extend .h1;
+		@extend .h2;
 		color: $foreground;
 	}
 }
