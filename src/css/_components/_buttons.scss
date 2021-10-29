@@ -403,7 +403,7 @@ a {
 	&:active,
 	&:focus,
 	&:visited {
-		background-color: #F8F8F8;
+		background-color: $background-quaternary;
 		color: $foreground;
 	}
 
@@ -526,11 +526,11 @@ a {
 	&:active,
 	&:focus,
 	&:visited {
-		color: $foreground-negative;
+		color: $foreground;
 	}
 
 	&:hover {
-		color: $foreground-negative;
+		color: $foreground;
 
 		svg {
 			transform: translateX(5px);
@@ -538,7 +538,7 @@ a {
 	}
 
 	&:active:hover {
-		color: $foreground-negative;
+		color: $foreground;
 		transition: none;
 	}
 
@@ -549,8 +549,37 @@ a {
 		&:focus,
 		&:hover,
 		&:visited {
-			color: $foreground-negative;
+			color: $foreground;
 			pointer-events: none;
+		}
+	}
+
+	.negative & {
+
+		&,
+		&:active,
+		&:focus,
+		&:visited {
+			color: $foreground-negative;
+		}
+
+		&:hover {
+			color: $foreground-negative;
+		}
+
+		&:active:hover {
+			color: $foreground-negative;
+		}
+
+		&.disabled {
+
+			&,
+			&:active,
+			&:focus,
+			&:hover,
+			&:visited {
+				color: $foreground-negative;
+			}
 		}
 	}
 }

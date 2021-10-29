@@ -1,4 +1,4 @@
-.product-hero {
+.secondary-hero {
 	position: relative;
 	margin-top: -80px;
 	z-index: -1;
@@ -13,6 +13,7 @@
 	&__category {
 		@extend .category;
 		color: $foreground-primary;
+		display: none;
 	}
 
 	&__title {

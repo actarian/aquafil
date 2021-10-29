@@ -6,8 +6,6 @@
 		color: $foreground;
 	}
 
-	&__abstract {}
-
 	@include media-up(sm) {
 		padding: var(--p120) 0;
 
@@ -51,6 +49,10 @@
 
 .media-text {
 	position: relative;
+
+	&__title {
+		@extend .h2;
+	}
 
 	@include media-up(sm) {
 		&:before {
@@ -118,6 +120,112 @@
 	}
 
 	@include media-up(md) {
+		&__content {
+			padding: var(--p120) 0;
+		}
+	}
+
+	@include media-down(sm) {
+		padding: var(--p80) 0;
+
+		&__picture {
+			margin-bottom: var(--p80);
+		}
+	}
+}
+
+.media-text-secondary {
+	position: relative;
+
+	&__title {
+		@extend .h2;
+	}
+
+	@include media-up(sm) {
+
+		&__offset {
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: $background-quaternary;
+				transform: translateX(var(--n80));
+			}
+		}
+
+		&__picture {
+			// border: 1px solid $background-negative;
+			box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
+
+			&>img {
+				position: relative;
+				width: 100%;
+			}
+		}
+	}
+
+	@include media-up(md) {
+		padding: var(--p120) 0;
+
+		&__content {
+			padding: var(--p120) 0;
+		}
+	}
+
+	@include media-down(sm) {
+		padding: var(--p80) 0;
+
+		&__picture {
+			margin-bottom: var(--p80);
+		}
+	}
+}
+
+.text-media-secondary {
+	position: relative;
+
+	&__title {
+		@extend .h2;
+	}
+
+	@include media-up(sm) {
+
+		&__offset {
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: $background-quaternary;
+				transform: translateX(var(--p80));
+			}
+		}
+
+		&__picture {
+			// border: 1px solid $background-negative;
+			box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
+
+			&>img {
+				position: relative;
+				width: 100%;
+			}
+		}
+	}
+
+	@include media-up(md) {
+		padding: var(--p120) 0;
+
 		&__content {
 			padding: var(--p120) 0;
 		}
@@ -214,6 +322,7 @@
 	&__abstract,
 	&__description {
 		@extend .text;
+		max-width: 600px;
 	}
 
 	&.negative {
@@ -225,11 +334,22 @@
 		}
 	}
 
+	&:not(.negative) {
+		.btn--more {
+			color: $foreground-primary;
+		}
+	}
+
+	&.secondary {
+		background: $background-quaternary;
+	}
+
 	@include media-up(sm) {
 		padding: var(--p120) 0;
 
 		&__title,
-		&__abstract {
+		&__abstract,
+		&__cta {
 			margin-bottom: var(--p80);
 		}
 	}
@@ -238,7 +358,8 @@
 		padding: var(--p80) 0;
 
 		&__title,
-		&__abstract {
+		&__abstract,
+		&__cta {
 			margin-bottom: var(--p60);
 		}
 	}
@@ -266,8 +387,6 @@
 		color: $foreground;
 	}
 
-	&__abstract {}
-
 	@include media-up(sm) {
 		padding: var(--p120) 0;
 
@@ -285,15 +404,28 @@
 	}
 }
 
-.advantages {
-
-	&__content {
+.columns {
+	&__column {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 	}
 
+	@include media-up(sm) {
+		padding: var(--p80) 0 var(--p120) 0;
+	}
+
+	@include media-down(xs) {
+		padding: var(--p80) 0;
+
+		&__column {
+			margin-bottom: var(--p40);
+		}
+	}
+}
+
+.card--icon {
 	&__icon {
 		width: 90px;
 		margin-bottom: var(--p40);
@@ -310,28 +442,13 @@
 		max-width: 320px;
 	}
 
-	@include media-up(sm) {
-		padding: var(--p80) 0 var(--p120) 0;
-	}
-
-	@include media-down(xs) {
-		padding: var(--p80) 0;
-
-		&__content {
-			margin-bottom: var(--p40);
-		}
+	&__description {
+		@extend .extrasmall;
+		max-width: 320px;
 	}
 }
 
-.numbers {
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
+.card--numbers {
 	&__title {
 		@extend .h1;
 		margin-bottom: 0;
@@ -344,19 +461,9 @@
 		max-width: 320px;
 	}
 
-	.btn--more {
-		color: $foreground-primary;
-	}
-
-	@include media-up(sm) {
-		padding: var(--p80) 0 var(--p120) 0;
-	}
-
-	@include media-down(xs) {
-		padding: var(--p80) 0;
-
-		&__content {
-			margin-bottom: var(--p40);
+	&__cta {
+		.btn--more {
+			color: $foreground-primary;
 		}
 	}
 }

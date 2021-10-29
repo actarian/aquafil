@@ -1,0 +1,57 @@
+<div class="content-slider borders secondary">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
+				<!-- swiper -->
+				<div class="swiper-container" swiper-content>
+					<div class="content-slider__index"><span class="page" [innerHTML]="slideIndex"></span> of <span [innerHTML]="slideTotal"></span></div>
+					<div class="swiper-wrapper">
+						<!-- slide -->
+						<div class="swiper-slide">
+							<div class="card--content">
+								<div class="card--content__left">
+									<div class="card--content__title">Total emissions</div>
+									<div class="card--content__abstract">
+										<p>As with energy, the Group’s total emissions are reported in relation to the margin (expressed as EBITDA) in order to show the trend over the years.</p>
+									</div>
+								</div>
+								<div class="card--content__right">
+									<div class="card--content__picture">
+										<img src="/aquafil/img/environment/09-01.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- slide -->
+						<div class="swiper-slide">
+							<div class="card--content">
+								<div class="card--content__left">
+									<div class="card--content__picture">
+										<img src="/aquafil/img/environment/09-02.jpg" />
+									</div>
+								</div>
+								<div class="card--content__right">
+									<div class="card--content__abstract">
+										<p>The conversion factors used come from the GaBi Software Version 10 Database Pack 40, released by Sphera.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-slider__nav">
+						<!-- prev button -->
+						<button type="button" class="btn--prev">
+							<svg class="circle"><use xlink:href="#circle-dotted"></use></svg>
+							<svg class="caret"><use xlink:href="#caret-left"></use></svg>
+						</button>
+						<!-- next button -->
+						<button type="button" class="btn--next">
+							<svg class="circle"><use xlink:href="#circle-dotted"></use></svg>
+							<svg class="caret"><use xlink:href="#caret-right"></use></svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
