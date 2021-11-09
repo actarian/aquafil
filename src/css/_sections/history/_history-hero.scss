@@ -1,0 +1,30 @@
+.history-hero {
+	margin-top: -80px;
+	z-index: -1;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__category {
+		@extend .category;
+		color: $foreground-primary;
+	}
+
+	&__title {
+		@extend .h2;
+		color: $foreground;
+		margin-bottom: 0.5em;
+	}
+
+	@include media-up(md) {
+		padding: 120px 0;
+	}
+
+	@include media-down(sm) {
+		padding: 80px 0;
+	}
+}

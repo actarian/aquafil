@@ -29,6 +29,7 @@ import { SvgIconStructure } from './svg/svg-icon.structure';
 import { SwiperDirective } from './swiper/swiper.directive';
 import { ThronComponent } from './thron/thron.component';
 import { TitleDirective } from './title/title.directive';
+import { ToggleDirective } from './toggle/toggle.directive';
 
 const factories = [
 	AltDirective,
@@ -57,6 +58,7 @@ const factories = [
 	SwiperDirective,
 	ThronComponent,
 	TitleDirective,
+	ToggleDirective,
 	// UploadItemComponent,
 	// VirtualStructure
 ];

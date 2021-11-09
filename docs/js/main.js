@@ -2706,12 +2706,44 @@ ThronComponent.meta = {
 TitleDirective.meta = {
   selector: '[[title]]',
   inputs: ['title']
+};var ToggleDirective = /*#__PURE__*/function (_Directive) {
+  _inheritsLoose(ToggleDirective, _Directive);
+
+  function ToggleDirective() {
+    return _Directive.apply(this, arguments) || this;
+  }
+
+  var _proto = ToggleDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    rxjs.fromEvent(node, 'click').pipe(operators.tap(function (_) {
+      var items = Array.prototype.slice.call(document.querySelectorAll(_this.toggle));
+      items.forEach(function (item) {
+        if (item === node) {
+          item.classList.contains('active') ? item.classList.remove('active') : item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }), operators.takeUntil(this.unsubscribe$)).subscribe();
+  };
+
+  return ToggleDirective;
+}(rxcomp.Directive);
+ToggleDirective.meta = {
+  selector: '[toggle]',
+  inputs: ['toggle']
 };var factories = [AltDirective, AppearDirective, ClickOutsideDirective, DownloadDirective, // DropDirective,
 DropdownDirective, DropdownItemDirective, // DropdownItemDirective,
 EllipsisDirective, FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
 // LazyDirective,
 // ModalComponent,
-ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ScrollToDirective, ScrollMenuDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective // UploadItemComponent,
+ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ScrollToDirective, ScrollMenuDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective, ToggleDirective // UploadItemComponent,
 // VirtualStructure
 ];
 var pipes = [DatePipe, EnvPipe, FlagPipe, HighlightPipe, HtmlPipe, LabelPipe, NumberPipe, RelativeDatePipe, SlugPipe];
