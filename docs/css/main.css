@@ -4946,7 +4946,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.16666em; }
 
-.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .card--history-detail__year {
+.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
   line-height: 1.2;
@@ -4964,7 +4964,7 @@ h6 {
   line-height: 1.36;
   margin-bottom: 1.11111em; }
 
-.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title {
+.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title, .card--history-detail__title {
   font-weight: bold;
   font-size: Max(16px, Min(36px, 1.875vw));
   line-height: 1.36;
@@ -4983,7 +4983,7 @@ h6 {
 .small, .btn--submit, .nav--main > .nav__item > a,
 .nav--main > .nav__item > span, .nav--language > .nav__item > a,
 .nav--language > .nav__item > span, .nav--submenu > .nav__item > a,
-.nav--submenu > .nav__item > span, .card--content__category, .card--main-hero__category, .profile-proposition__category, .area-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation__abstract, .card--product__abstract, .card--toolkit__abstract, .quote__abstract, .card--icon__abstract, .research-proposition__category, .card--research__abstract, .card--history-detail__abstract {
+.nav--submenu > .nav__item > span, .card--content__category, .card--main-hero__category, .profile-proposition__category, .area-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation__abstract, .card--product__abstract, .card--toolkit__abstract, .quote__abstract, .card--icon__abstract, .research-proposition__category, .card--research__abstract, .card--history-detail__year, .card--history-detail__abstract {
   font-size: Max(12px, Min(18px, 0.9375vw));
   line-height: 1.5;
   margin-bottom: 0.83333em; }
@@ -4991,7 +4991,7 @@ h6 {
 .extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--footer .nav__item > span,
 .nav--footer .nav__item > a,
 .nav--footer .nav__item > button, .horizontal-menu__title, .nav--horizontal-menu > .nav__item > a,
-.nav--horizontal-menu > .nav__item > span, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--icon__description, .card--history__category, .card--side-modal__abstract, .contact-modal__abstract {
+.nav--horizontal-menu > .nav__item > span, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--icon__description, .card--history__category, .card--history-detail__category, .card--side-modal__abstract, .contact-modal__abstract {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.5; }
 
@@ -9126,9 +9126,7 @@ test-component code {
           flex-grow: 1; } }
   @media (min-width: 768px) and (max-width: 1023.98px) {
     .listing--history {
-      align-items: stretch;
-      margin-left: -30px;
-      margin-right: -30px; }
+      align-items: flex-start; }
       .listing--history > .listing__item.single, .listing--history > .listing__item.double {
         flex: 0 0 50%;
         max-width: 50%; }
@@ -9231,27 +9229,74 @@ test-component code {
     bottom: 0; }
   .card--history .btn--plus svg {
     transition: transform ease-in-out 250ms; }
-  .card--history.active {
-    margin-bottom: var(--p300); }
   .card--history:hover .card--history__picture > img {
     transform: scale(1.1, 1.1); }
   .card--history:hover .btn--plus > svg {
     transform: scale(1.3, 1.3); }
   .card--history:hover .card--history__title, .card--history.active .card--history__title {
     opacity: 1; }
+  @media (min-width: 1024px) {
+    .card--history.active {
+      margin-bottom: var(--p300); } }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .card--history.active {
+      margin-bottom: var(--p400); } }
 
 .card--history-detail {
+  display: flex;
   display: none;
   position: absolute;
-  left: 0;
-  padding: var(--p40);
-  margin-top: var(--n300);
-  transition: transform ease-in-out 250ms; }
-  .card--history-detail__year {
-    margin-bottom: var(--p20); }
+  left: 0; }
+  .card--history-detail__title {
+    margin-bottom: 0; }
+  .card--history-detail__cta {
+    margin-top: var(--p40); }
+  .card--history-detail__category {
+    display: inline-block;
+    background: #00395688;
+    padding: var(--p10) var(--p20);
+    border-radius: var(--p30);
+    border: 1px solid #FFFFFF;
+    color: var(--foreground-negative); }
+  .card--history-detail:not(.sustainability) .card--history-detail__cta {
+    display: none; }
+  @media (min-width: 1024px) {
+    .card--history-detail {
+      margin-top: var(--n300); }
+      .card--history-detail__col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: var(--p40) var(--p20); }
+        .card--history-detail__col:last-child {
+          padding-left: 0; } }
+  @media (max-width: 1023.98px) {
+    .card--history-detail {
+      flex-direction: column; }
+      .card--history-detail__col {
+        padding: var(--p20) var(--p20);
+        flex: 0 0 100%;
+        max-width: 100%; }
+        .card--history-detail__col:first-child {
+          padding-top: var(--p40);
+          padding-bottom: 0; }
+        .card--history-detail__col:last-child {
+          padding-top: 0;
+          padding-bottom: var(--p40); } }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .card--history-detail {
+      margin-top: var(--n400); } }
+  @media (max-width: 767.98px) {
+    .card--history-detail__cta {
+      margin: var(--p20) 0; } }
 
-.card--history.active + .card--history-detail {
-  display: block; }
+@media (min-width: 768px) {
+  .card--history.active + .card--history-detail {
+    display: flex; } }
+
+@media (max-width: 767.98px) {
+  .card--history.active + .card--history-detail {
+    display: block;
+    position: relative; } }
 
 .card--side-modal {
   display: none;

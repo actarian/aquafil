@@ -46,9 +46,7 @@
 	}
 
 	@include media-between(sm, sm) {
-		align-items: stretch;
-		margin-left: -30px;
-		margin-right: -30px;
+		align-items: flex-start;
 
 		&>.listing__item {
 
@@ -162,10 +160,6 @@
 		}
 	}
 
-	&.active {
-		margin-bottom: var(--p300);
-	}
-
 	&:hover {
 		.card--history__picture {
 			&>img {
@@ -186,28 +180,115 @@
 			opacity: 1;
 		}
 	}
+
+	@include media-up(md) {
+		&.active {
+			margin-bottom: var(--p300);
+		}
+	}
+
+	@include media-only(sm) {
+		&.active {
+			margin-bottom: var(--p400);
+		}
+	}
+
+	@include media-only(xs) {}
 }
 
 .card--history-detail {
+	display: flex;
 	display: none;
 	position: absolute;
 	left: 0;
-	padding: var(--p40);
-	margin-top: var(--n300);
-	// transform: translateY(var(--p300));
-	transition: transform ease-in-out $fast;
+
+	&__title {
+		@extend .h5;
+		margin-bottom: 0;
+	}
 
 	&__year {
-		@extend .h2;
-		margin-bottom: var(--p20);
+		@extend .small;
+	}
+
+	&__cta {
+		margin-top: var(--p40);
+	}
+
+	&__category {
+		@extend .extrasmall;
+		display: inline-block;
+		background: #00395688;
+		padding: var(--p10) var(--p20);
+		border-radius: var(--p30);
+		border: 1px solid #FFFFFF;
+		color: $foreground-negative;
 	}
 
 	&__abstract {
 		@extend .small;
 	}
+
+	&:not(.sustainability) {
+		.card--history-detail__cta {
+			display: none;
+		}
+	}
+
+	@include media-up(md) {
+		margin-top: var(--n300);
+
+		&__col {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: var(--p40) var(--p20);
+
+			&:last-child {
+				padding-left: 0;
+			}
+		}
+	}
+
+	@include media-down(sm) {
+		flex-direction: column;
+
+		&__col {
+			padding: var(--p20) var(--p20);
+			flex: 0 0 100%;
+			max-width: 100%;
+
+			&:first-child {
+				padding-top: var(--p40);
+				padding-bottom: 0;
+			}
+
+			&:last-child {
+				padding-top: 0;
+				padding-bottom: var(--p40);
+			}
+		}
+	}
+
+	@include media-only(sm) {
+		margin-top: var(--n400);
+	}
+
+	@include media-only(xs) {
+
+		&__cta {
+			margin: var(--p20) 0;
+		}
+	}
 }
 
 .card--history.active+.card--history-detail {
-	display: block;
-	// transform: translateY(var(--n300));
+	@include media-up(sm) {
+		display: flex;
+		// transform: translateY(var(--n300));
+	}
+
+	@include media-down(xs) {
+		display: block;
+		position: relative;
+	}
 }

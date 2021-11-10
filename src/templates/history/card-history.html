@@ -1,6 +1,6 @@
 <div class="card--history <!--@@var=category-->" toggle=".card--history">
 	<div class="card--history__picture">
-		<img src="<!--@@var=img-->" />
+		<img loading="lazy" src="<!--@@var=img-->" />
 	</div>
 	<div class="card--history__content">
 		<div class="card--history__year">
@@ -15,11 +15,21 @@
 		<button type="button" class="btn--plus"><svg><use xlink:href="#plus"></use></svg></button>
 	</div>
 </div>
-<div class="card--history-detail">
-	<div class="card--history-detail__year">
-		<!--@@var=year-->
+<div class="card--history-detail <!--@@var=category-->">
+	<div class="card--history-detail__col">
+		<div class="card--history-detail__title">
+			<!--@@var=title-->
+		</div>
+		<div class="card--history-detail__year">
+			<!--@@var=year-->
+		</div>
+		<div class="card--history-detail__cta">
+			<div class="card--history-detail__category">Sustainability</div>
+		</div>
 	</div>
-	<div class="card--history-detail__abstract">
-		<!--@@var=abstract-->
+	<div class="card--history-detail__col">
+		<div class="card--history-detail__abstract">
+			<!--@@var=abstract-->
+		</div>
 	</div>
 </div>
