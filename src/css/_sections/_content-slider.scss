@@ -236,6 +236,20 @@
 	}
 }
 
+[gallery] {
+	cursor: pointer;
+
+	&>img {
+		transition: transform ease-in-out $fast;
+	}
+
+	&:hover {
+		&>img {
+			transform: scale3d(1.05, 1.05, 1);
+		}
+	}
+}
+
 [swiper-content] {
 
 	.card--content {

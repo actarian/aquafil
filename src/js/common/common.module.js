@@ -10,6 +10,8 @@ import { EllipsisDirective } from './ellipsis/ellipsis.directive';
 import { EnvPipe } from './env/env.pipe';
 import { FilterItemComponent } from './filter/filter-item.component';
 import { FlagPipe } from './flag/flag.pipe';
+import { GalleryModalComponent } from './gallery/gallery-modal.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { HighlightPipe } from './highlight/highlight.pipe';
 import { HtmlPipe } from './html/html.pipe';
 import { IdDirective } from './id/id.directive';
@@ -42,6 +44,8 @@ const factories = [
 	// DropdownItemDirective,
 	EllipsisDirective,
 	FilterItemComponent,
+	GalleryComponent,
+	GalleryModalComponent,
 	IdDirective,
 	LabelForDirective,
 	// LanguageComponent,

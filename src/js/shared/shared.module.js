@@ -1,5 +1,6 @@
 import { Module } from 'rxcomp';
 import { SwiperContentDirective } from '../partials/swiper-content/swiper-content.directive';
+import { SwiperGalleryDirective } from '../partials/swiper-gallery/swiper-gallery.directive';
 import { SwiperMainDirective } from '../partials/swiper-main/swiper-main.directive';
 import { SwiperToolkitDirective } from '../partials/swiper-toolkit/swiper-toolkit.directive';
 import { ErrorComponent } from './error/error.component';
@@ -21,6 +22,7 @@ const factories = [
 	HeaderComponent,
 	NewsletterPropositionComponent,
 	SwiperContentDirective,
+	SwiperGalleryDirective,
 	SwiperMainDirective,
 	SwiperToolkitDirective,
 	SwitchComponent,

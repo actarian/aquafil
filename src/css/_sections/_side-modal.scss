@@ -50,6 +50,8 @@
 
 	.btn--close {
 		position: absolute;
+		color: $foreground-negative;
+		mix-blend-mode: difference;
 	}
 
 	@include media-up(md) {

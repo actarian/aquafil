@@ -439,6 +439,7 @@ ClickOutsideDirective.meta = {
       genericModal: '/template/modals/generic-modal.cshtml',
       sideModal: '/template/modals/side-modal.cshtml',
       contactModal: '/template/modals/contact-modal.cshtml',
+      galleryModal: '/template/modals/gallery-modal.cshtml',
       userModal: '/template/modals/user-modal.cshtml'
     }
   },
@@ -492,6 +493,7 @@ ClickOutsideDirective.meta = {
       genericModal: '/aquafil/partials/modals/generic-modal.html',
       sideModal: '/aquafil/partials/modals/side-modal.html',
       contactModal: '/aquafil/partials/modals/contact-modal.html',
+      galleryModal: '/aquafil/partials/modals/gallery-modal.html',
       userModal: '/aquafil/partials/modals/user-modal.html'
     }
   },
@@ -1233,7 +1235,383 @@ FilterItemComponent.meta = {
 }(rxcomp.Pipe);
 FlagPipe.meta = {
   name: 'flag'
-};var HighlightPipe = /*#__PURE__*/function (_Pipe) {
+};var ModalEvent = function ModalEvent(data) {
+  this.data = data;
+}; // export class ModalLoadEvent extends ModalEvent { }
+// export class ModalLoadedEvent extends ModalEvent { }
+
+var ModalResolveEvent = /*#__PURE__*/function (_ModalEvent) {
+  _inheritsLoose(ModalResolveEvent, _ModalEvent);
+
+  function ModalResolveEvent() {
+    return _ModalEvent.apply(this, arguments) || this;
+  }
+
+  return ModalResolveEvent;
+}(ModalEvent);
+var ModalRejectEvent = /*#__PURE__*/function (_ModalEvent2) {
+  _inheritsLoose(ModalRejectEvent, _ModalEvent2);
+
+  function ModalRejectEvent() {
+    return _ModalEvent2.apply(this, arguments) || this;
+  }
+
+  return ModalRejectEvent;
+}(ModalEvent);
+var ModalService = /*#__PURE__*/function () {
+  function ModalService() {}
+
+  ModalService.open$ = function open$(modal) {
+    var _this = this;
+
+    this.busy$.next(true);
+    return this.getTemplate$(modal.src).pipe( // startWith(new ModalLoadEvent(Object.assign({}, modal.data, { $src: modal.src }))),
+    operators.map(function (template) {
+      return {
+        node: _this.getNode(template),
+        data: modal.data,
+        modal: modal
+      };
+    }), operators.tap(function (node) {
+      _this.modal$.next(node);
+
+      _this.hasModal = true;
+
+      _this.busy$.next(false); // this.events$.next(new ModalLoadedEvent(Object.assign({}, modal.data, { $src: modal.src })));
+
+    }), operators.switchMap(function (node) {
+      return _this.events$;
+    }), operators.tap(function (_) {
+      return _this.hasModal = false;
+    }));
+  };
+
+  ModalService.load$ = function load$(modal) {};
+
+  ModalService.getTemplate$ = function getTemplate$(url) {
+    return rxjs.from(fetch(url).then(function (response) {
+      return response.text();
+    }));
+  };
+
+  ModalService.getNode = function getNode(template) {
+    var div = document.createElement('div');
+    div.innerHTML = template;
+    var node = div.firstElementChild;
+    return node;
+  };
+
+  ModalService.reject = function reject(data) {
+    this.modal$.next(null);
+    this.events$.next(new ModalRejectEvent(data));
+  };
+
+  ModalService.resolve = function resolve(data) {
+    this.modal$.next(null);
+    this.events$.next(new ModalResolveEvent(data));
+  };
+
+  return ModalService;
+}();
+
+_defineProperty(ModalService, "hasModal", false);
+
+ModalService.modal$ = new rxjs.Subject();
+ModalService.events$ = new rxjs.Subject();
+ModalService.busy$ = new rxjs.Subject();var ModalOutletComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(ModalOutletComponent, _Component);
+
+  function ModalOutletComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalOutletComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    this.busy_ = false;
+
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    var body = document.querySelector('body');
+    this.modalNode = node.querySelector('.modal-outlet__modal');
+    ModalService.modal$.pipe(operators.tap(function (modal) {
+      modal ? body.classList.add('modal--active') : body.classList.remove('modal--active');
+    }), operators.takeUntil(this.unsubscribe$)).subscribe(function (modal) {
+      return _this.modal = modal;
+    });
+    ModalService.busy$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (busy) {
+      return _this.busy = busy;
+    });
+  };
+
+  _proto.onClose = function onClose(event) {
+    console.log('ModalOutletComponent.onClose', event);
+    ModalService.reject();
+  };
+
+  _createClass(ModalOutletComponent, [{
+    key: "modal",
+    get: function get() {
+      return this.modal_;
+    },
+    set: function set(modal) {
+      // console.log('ModalOutletComponent set modal', modal, this);
+      var _getContext2 = rxcomp.getContext(this),
+          module = _getContext2.module;
+
+      if (this.modal_ && this.modal_.node) {
+        module.remove(this.modal_.node, this);
+        this.modalNode.removeChild(this.modal_.node);
+      }
+
+      if (modal && modal.node) {
+        this.modal_ = modal;
+        this.modalNode.appendChild(modal.node);
+        var instances = module.compile(modal.node);
+      }
+
+      this.modal_ = modal;
+      this.pushChanges();
+    }
+  }, {
+    key: "busy",
+    get: function get() {
+      return this.busy_;
+    },
+    set: function set(busy) {
+      // console.log('ModalOutletComponent set busy', busy, this);
+      if (this.busy_ !== busy) {
+        this.busy_ = busy;
+        this.pushChanges();
+      }
+    }
+  }]);
+
+  return ModalOutletComponent;
+}(rxcomp.Component);
+ModalOutletComponent.meta = {
+  selector: '[modal-outlet]',
+  template:
+  /* html */
+  "\n\t<div class=\"modal-outlet__container\" [class]=\"{ active: modal, busy: busy }\">\n\t\t<div class=\"modal-outlet__background\" (click)=\"onClose($event)\"></div>\n\t\t<div class=\"modal-outlet__modal\"></div>\n\t\t<!-- spinner -->\n\t\t<div class=\"spinner spinner--contrasted\" *if=\"busy\"></div>\n\t</div>\n\t"
+};var GalleryModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(GalleryModalComponent, _Component);
+
+  function GalleryModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = GalleryModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+      var items = this.items = data.items;
+      var initialSlide = this.initialSlide = data.initialSlide;
+      console.log(items, initialSlide);
+      /*
+      if (data.target) {
+      	const { node, module } = getContext(this);
+      	const content = node.querySelector('.side-modal__content');
+      	content.appendChild(data.target);
+      	const instances = this.instances = module.compile(content);
+      	console.log('GalleryModalComponent.onInit', instances);
+      }
+      */
+
+      console.log('GalleryModalComponent.onInit', data);
+    }
+    /*
+    this.resize$().pipe(
+    	takeUntil(this.unsubscribe$),
+    ).subscribe();
+    */
+
+  };
+
+  _proto.resize$ = function resize$() {
+    var _getContext2 = rxcomp.getContext(this),
+        node = _getContext2.node;
+
+    var header = document.querySelector('header');
+    return rxjs.fromEvent(window, 'resize').pipe(operators.startWith(true), operators.tap(function (_) {
+      node.style.top = header.offsetHeight + "px";
+    }));
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return GalleryModalComponent;
+}(rxcomp.Component);
+GalleryModalComponent.meta = {
+  selector: '[gallery-modal]'
+};var GalleryComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(GalleryComponent, _Component);
+
+  function GalleryComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = GalleryComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    // console.log(this.node.firstElementChild.outerHTML);
+    var _getContext = rxcomp.getContext(this),
+        node = _getContext.node;
+
+    node.dataset.originalInnerHTML = node.innerHTML;
+    this.click$().pipe(operators.takeUntil(this.unsubscribe$)).subscribe();
+  };
+
+  _proto.click$ = function click$() {
+    var _this = this;
+
+    var _getContext2 = rxcomp.getContext(this),
+        node = _getContext2.node;
+
+    return rxjs.fromEvent(node, 'click').pipe(operators.map(function (_) {
+      var currentSrc = node.getAttribute('gallery');
+      var galleryItems = Array.prototype.slice.call(document.querySelectorAll('[gallery]')).filter(function (x) {
+        return !x.parentNode.classList.contains('swiper-slide-duplicate');
+      }).map(function (x) {
+        var src = x.getAttribute('gallery'); // console.log('src', src);
+
+        var originalInnerHTML = x.dataset.originalInnerHTML || x.innerHTML; // console.log('originalInnerHTML', originalInnerHTML)
+        // const outerHTML = x.firstElementChild.outerHTML;
+
+        var div = document.createElement('div');
+        div.innerHTML = originalInnerHTML;
+        var cloneNode = div.firstElementChild; // const cloneNode = Component.create(originalInnerHTML); //x.firstElementChild.cloneNode(true);
+        // const iframes = Array.prototype.slice.call(cloneNode.querySelectorAll('iframe'));
+        // iframes.forEach(x => x.parentNode.removeChild(x));
+        // console.log(originalInnerHTML);
+
+        var srcNode = _this.setSrcNode(cloneNode, src);
+
+        return {
+          src: src,
+          node: cloneNode,
+          active: src === currentSrc
+        };
+      });
+      return galleryItems;
+    }), operators.tap(function (items) {
+      _this.addGallery(items);
+    }));
+  };
+
+  _proto.listeners$ = function listeners$() {
+    var close = this.close$();
+    return rxjs.merge(close, this.prev$(), this.next$(), this.events$()).pipe(operators.takeUntil(close));
+  };
+
+  _proto.addGallery = function addGallery(items) {
+    console.log('clicked', items);
+    var initialSlide = items.reduce(function (p, c, i) {
+      return c.active ? i : p;
+    }, 0);
+    ModalService.open$({
+      src: environment.template.modal.galleryModal,
+      data: {
+        items: items,
+        initialSlide: initialSlide
+      }
+    }).pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (event) {
+      console.log('GalleryComponent.addGallery', event);
+    });
+  };
+
+  _proto.close$ = function close$() {
+    var _this2 = this;
+
+    var modalNode = this.modalNode;
+    var button = modalNode.querySelector('.btn--close');
+    var body = document.querySelector('body');
+    return rxjs.fromEvent(button, 'click').pipe(operators.tap(function (_) {
+      // !!!
+      rxcomp.Component.unregister(modalNode); // this.instances.forEach(x => x.destroy());
+
+      body.removeChild(modalNode); // CursorService.clear();
+      // this.instances = null;
+
+      _this2.modalNode = null;
+    }));
+  };
+
+  _proto.prev$ = function prev$() {
+    var _this3 = this;
+
+    var modalNode = this.modalNode;
+    var button = modalNode.querySelector('.btn--prev');
+    return rxjs.fromEvent(button, 'click').pipe(operators.tap(function (_) {
+      var swiperInstance = _this3.swiperInstance;
+
+      if (swiperInstance != null) {
+        swiperInstance.slidePrev();
+      }
+    }));
+  };
+
+  _proto.next$ = function next$() {
+    var _this4 = this;
+
+    var modalNode = this.modalNode;
+    var button = modalNode.querySelector('.btn--next');
+    return rxjs.fromEvent(button, 'click').pipe(operators.tap(function (_) {
+      var swiperInstance = _this4.swiperInstance;
+
+      if (swiperInstance != null) {
+        swiperInstance.slideNext();
+      }
+    }));
+  };
+
+  _proto.events$ = function events$() {
+    var indexNode = this.modalNode.querySelector('.modal-gallery__index');
+    var swiperInstance = this.swiperInstance;
+
+    if (swiperInstance != null) {
+      return swiperInstance.events$.pipe(operators.tap(function (index) {
+        // console.log('index', index, swiperInstance);
+        indexNode.innerHTML = index + 1 + " / " + swiperInstance.total;
+      }));
+    } else {
+      return rxjs.EMPTY;
+    }
+  };
+
+  _proto.getSrcNode = function getSrcNode(node) {
+    if (node.getAttribute('src') != null) {
+      return node;
+    } else {
+      return node.querySelector('[src]');
+    }
+  };
+
+  _proto.setSrcNode = function setSrcNode(node, src) {
+    var srcNode = this.getSrcNode(node);
+
+    if (srcNode && srcNode.tagName.toLowerCase() === 'img') {
+      srcNode.setAttribute('src', src);
+    }
+
+    return srcNode;
+  };
+
+  return GalleryComponent;
+}(rxcomp.Component);
+
+_defineProperty(GalleryComponent, "meta", {
+  selector: '[gallery]'
+});var HighlightPipe = /*#__PURE__*/function (_Pipe) {
   _inheritsLoose(HighlightPipe, _Pipe);
 
   function HighlightPipe() {
@@ -1414,168 +1792,6 @@ LabelForDirective.meta = {
 LabelPipe.setLabels();
 LabelPipe.meta = {
   name: 'label'
-};var ModalEvent = function ModalEvent(data) {
-  this.data = data;
-}; // export class ModalLoadEvent extends ModalEvent { }
-// export class ModalLoadedEvent extends ModalEvent { }
-
-var ModalResolveEvent = /*#__PURE__*/function (_ModalEvent) {
-  _inheritsLoose(ModalResolveEvent, _ModalEvent);
-
-  function ModalResolveEvent() {
-    return _ModalEvent.apply(this, arguments) || this;
-  }
-
-  return ModalResolveEvent;
-}(ModalEvent);
-var ModalRejectEvent = /*#__PURE__*/function (_ModalEvent2) {
-  _inheritsLoose(ModalRejectEvent, _ModalEvent2);
-
-  function ModalRejectEvent() {
-    return _ModalEvent2.apply(this, arguments) || this;
-  }
-
-  return ModalRejectEvent;
-}(ModalEvent);
-var ModalService = /*#__PURE__*/function () {
-  function ModalService() {}
-
-  ModalService.open$ = function open$(modal) {
-    var _this = this;
-
-    this.busy$.next(true);
-    return this.getTemplate$(modal.src).pipe( // startWith(new ModalLoadEvent(Object.assign({}, modal.data, { $src: modal.src }))),
-    operators.map(function (template) {
-      return {
-        node: _this.getNode(template),
-        data: modal.data,
-        modal: modal
-      };
-    }), operators.tap(function (node) {
-      _this.modal$.next(node);
-
-      _this.hasModal = true;
-
-      _this.busy$.next(false); // this.events$.next(new ModalLoadedEvent(Object.assign({}, modal.data, { $src: modal.src })));
-
-    }), operators.switchMap(function (node) {
-      return _this.events$;
-    }), operators.tap(function (_) {
-      return _this.hasModal = false;
-    }));
-  };
-
-  ModalService.load$ = function load$(modal) {};
-
-  ModalService.getTemplate$ = function getTemplate$(url) {
-    return rxjs.from(fetch(url).then(function (response) {
-      return response.text();
-    }));
-  };
-
-  ModalService.getNode = function getNode(template) {
-    var div = document.createElement('div');
-    div.innerHTML = template;
-    var node = div.firstElementChild;
-    return node;
-  };
-
-  ModalService.reject = function reject(data) {
-    this.modal$.next(null);
-    this.events$.next(new ModalRejectEvent(data));
-  };
-
-  ModalService.resolve = function resolve(data) {
-    this.modal$.next(null);
-    this.events$.next(new ModalResolveEvent(data));
-  };
-
-  return ModalService;
-}();
-
-_defineProperty(ModalService, "hasModal", false);
-
-ModalService.modal$ = new rxjs.Subject();
-ModalService.events$ = new rxjs.Subject();
-ModalService.busy$ = new rxjs.Subject();var ModalOutletComponent = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(ModalOutletComponent, _Component);
-
-  function ModalOutletComponent() {
-    return _Component.apply(this, arguments) || this;
-  }
-
-  var _proto = ModalOutletComponent.prototype;
-
-  _proto.onInit = function onInit() {
-    var _this = this;
-
-    this.busy_ = false;
-
-    var _getContext = rxcomp.getContext(this),
-        node = _getContext.node;
-
-    var body = document.querySelector('body');
-    this.modalNode = node.querySelector('.modal-outlet__modal');
-    ModalService.modal$.pipe(operators.tap(function (modal) {
-      modal ? body.classList.add('modal--active') : body.classList.remove('modal--active');
-    }), operators.takeUntil(this.unsubscribe$)).subscribe(function (modal) {
-      return _this.modal = modal;
-    });
-    ModalService.busy$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (busy) {
-      return _this.busy = busy;
-    });
-  };
-
-  _proto.onClose = function onClose(event) {
-    console.log('ModalOutletComponent.onClose', event);
-    ModalService.reject();
-  };
-
-  _createClass(ModalOutletComponent, [{
-    key: "modal",
-    get: function get() {
-      return this.modal_;
-    },
-    set: function set(modal) {
-      // console.log('ModalOutletComponent set modal', modal, this);
-      var _getContext2 = rxcomp.getContext(this),
-          module = _getContext2.module;
-
-      if (this.modal_ && this.modal_.node) {
-        module.remove(this.modal_.node, this);
-        this.modalNode.removeChild(this.modal_.node);
-      }
-
-      if (modal && modal.node) {
-        this.modal_ = modal;
-        this.modalNode.appendChild(modal.node);
-        var instances = module.compile(modal.node);
-      }
-
-      this.modal_ = modal;
-      this.pushChanges();
-    }
-  }, {
-    key: "busy",
-    get: function get() {
-      return this.busy_;
-    },
-    set: function set(busy) {
-      // console.log('ModalOutletComponent set busy', busy, this);
-      if (this.busy_ !== busy) {
-        this.busy_ = busy;
-        this.pushChanges();
-      }
-    }
-  }]);
-
-  return ModalOutletComponent;
-}(rxcomp.Component);
-ModalOutletComponent.meta = {
-  selector: '[modal-outlet]',
-  template:
-  /* html */
-  "\n\t<div class=\"modal-outlet__container\" [class]=\"{ active: modal, busy: busy }\">\n\t\t<div class=\"modal-outlet__background\" (click)=\"onClose($event)\"></div>\n\t\t<div class=\"modal-outlet__modal\"></div>\n\t\t<!-- spinner -->\n\t\t<div class=\"spinner spinner--contrasted\" *if=\"busy\"></div>\n\t</div>\n\t"
 };var NameDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(NameDirective, _Directive);
 
@@ -2740,7 +2956,7 @@ ToggleDirective.meta = {
   inputs: ['toggle']
 };var factories = [AltDirective, AppearDirective, ClickOutsideDirective, DownloadDirective, // DropDirective,
 DropdownDirective, DropdownItemDirective, // DropdownItemDirective,
-EllipsisDirective, FilterItemComponent, IdDirective, LabelForDirective, // LanguageComponent,
+EllipsisDirective, FilterItemComponent, GalleryComponent, GalleryModalComponent, IdDirective, LabelForDirective, // LanguageComponent,
 // LazyDirective,
 // ModalComponent,
 ModalOutletComponent, NameDirective, ScrollDirective, ScrollStickyDirective, ScrollToDirective, ScrollMenuDirective, ShareDirective, SvgIconStructure, SwiperDirective, ThronComponent, TitleDirective, ToggleDirective // UploadItemComponent,
@@ -4139,6 +4355,46 @@ SideModalComponent.meta = {
 }(SwiperDirective);
 SwiperContentDirective.meta = {
   selector: '[swiper-content]'
+};var SwiperGalleryDirective = /*#__PURE__*/function (_SwiperDirective) {
+  _inheritsLoose(SwiperGalleryDirective, _SwiperDirective);
+
+  function SwiperGalleryDirective() {
+    return _SwiperDirective.apply(this, arguments) || this;
+  }
+
+  var _proto = SwiperGalleryDirective.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    console.log(this.initialSlide);
+    this.options = {
+      initialSlide: this.initialSlide,
+      slidesPerView: 1,
+      spaceBetween: 80,
+      speed: 600,
+      keyboardControl: true,
+      mousewheelControl: false,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      navigation: {
+        prevEl: '.btn--gallery-prev',
+        nextEl: '.btn--gallery-next'
+      }
+    };
+    this.init_();
+    setTimeout(function () {
+      _this.swiper.slideTo(_this.initialSlide, 0);
+    }, 100); // console.log('SwiperContentDirective.onInit');
+  };
+
+  return SwiperGalleryDirective;
+}(SwiperDirective);
+SwiperGalleryDirective.meta = {
+  selector: '[swiper-gallery]',
+  inputs: ['items', 'initialSlide']
 };var SwiperMainDirective = /*#__PURE__*/function (_SwiperDirective) {
   _inheritsLoose(SwiperMainDirective, _SwiperDirective);
 
@@ -5624,7 +5880,7 @@ UserSignupComponent.meta = {
   selector: '[user-signup]',
   outputs: ['signUp', 'viewSignIn'],
   inputs: ['me', 'user']
-};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperContentDirective, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
+};var factories$2 = [ErrorComponent, HeaderComponent, NewsletterPropositionComponent, SwiperContentDirective, SwiperGalleryDirective, SwiperMainDirective, SwiperToolkitDirective, SwitchComponent, UserComponent, UserDeleteComponent, UserEditComponent, UserEditPasswordComponent, UserForgotComponent, UserModalComponent, UserDetailComponent, UserSigninComponent, UserSignupComponent];
 var pipes$2 = [];
 var SharedModule = /*#__PURE__*/function (_Module) {
   _inheritsLoose(SharedModule, _Module);
