@@ -4946,7 +4946,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.16666em; }
 
-.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year {
+.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .news-hero__title, .case-studies-hero__title {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
   line-height: 1.2;
@@ -4958,7 +4958,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1em; }
 
-.h4, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .history-proposition__title, .contact-modal__title {
+.h4, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .history-listing__title, .news-listing__title, .case-studies-listing__title, .contact-modal__title {
   font-weight: bold;
   font-size: Max(18px, Min(40px, 2.0833vw));
   line-height: 1.36;
@@ -4980,20 +4980,24 @@ h6 {
   font-size: Max(15px, Min(21px, 1.09375vw));
   line-height: 1.5; }
 
-.small, .btn--submit, .nav--main > .nav__item > a,
-.nav--main > .nav__item > span, .nav--language > .nav__item > a,
-.nav--language > .nav__item > span, .nav--submenu > .nav__item > a,
-.nav--submenu > .nav__item > span, .card--content__category, .card--main-hero__category, .profile-proposition__category, .area-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation__abstract, .card--product__abstract, .card--toolkit__abstract, .quote__abstract, .card--icon__abstract, .research-proposition__category, .card--research__abstract, .card--history-detail__year, .card--history-detail__abstract {
+.small, .btn--submit, .card--content__category, .card--main-hero__category, .profile-proposition__category, .area-proposition__category, .sustainability-proposition__category, .innovation-proposition__category, .card--innovation__abstract, .card--product__abstract, .card--toolkit__abstract, .quote__abstract, .card--icon__abstract, .research-proposition__category, .card--research__abstract, .card--history-detail__year, .card--history-detail__abstract {
   font-size: Max(12px, Min(18px, 0.9375vw));
   line-height: 1.5;
   margin-bottom: 0.83333em; }
 
-.extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--footer .nav__item > span,
+.extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--main > .nav__item > a,
+.nav--main > .nav__item > span, .nav--language > .nav__item > a,
+.nav--language > .nav__item > span, .nav--submenu > .nav__item > a,
+.nav--submenu > .nav__item > span, .nav--footer .nav__item > span,
 .nav--footer .nav__item > a,
 .nav--footer .nav__item > button, .horizontal-menu__title, .nav--horizontal-menu > .nav__item > a,
 .nav--horizontal-menu > .nav__item > span, .sticky-menu__title, .nav--scroll-menu > .nav__item > a, .card--location__category, .card--location__abstract, .card--icon__description, .card--history__category, .card--history-detail__category, .card--side-modal__abstract, .contact-modal__abstract {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.5; }
+
+.smallest, .btn--investor {
+  font-size: Max(10px, Min(14px, 0.72916vw));
+  line-height: 1.2; }
 
 p {
   margin: 0 0 0.75em 0; }
@@ -5032,7 +5036,7 @@ p {
       background-color: transparent; }
   .dropdown.dropped {
     display: block; }
-  .dropdown > .category, .dropdown > .location-hero__category, .dropdown > .primary-hero__category, .dropdown > .secondary-hero__category, .dropdown > .history-hero__category {
+  .dropdown > .category, .dropdown > .location-hero__category, .dropdown > .primary-hero__category, .dropdown > .secondary-hero__category, .dropdown > .history-hero__category, .dropdown > .news-hero__category, .dropdown > .case-studies-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5040,7 +5044,7 @@ p {
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .dropdown--with-icons > .category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .primary-hero__category, .dropdown--with-icons > .secondary-hero__category, .dropdown--with-icons > .history-hero__category {
+  .dropdown--with-icons > .category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .primary-hero__category, .dropdown--with-icons > .secondary-hero__category, .dropdown--with-icons > .history-hero__category, .dropdown--with-icons > .news-hero__category, .dropdown--with-icons > .case-studies-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .dropdown {
@@ -5209,7 +5213,7 @@ p {
     animation-delay: 800ms;
     animation-duration: 350ms; }
 
-.category + .nav--dropdown, .location-hero__category + .nav--dropdown, .primary-hero__category + .nav--dropdown, .secondary-hero__category + .nav--dropdown, .history-hero__category + .nav--dropdown {
+.category + .nav--dropdown, .location-hero__category + .nav--dropdown, .primary-hero__category + .nav--dropdown, .secondary-hero__category + .nav--dropdown, .history-hero__category + .nav--dropdown, .news-hero__category + .nav--dropdown, .case-studies-hero__category + .nav--dropdown {
   padding-top: 0; }
 
 @keyframes nav-dropdown {
@@ -5297,7 +5301,7 @@ p {
     border-radius: 0px; }
     .options::-webkit-scrollbar-track:hover {
       background-color: transparent; }
-  .options > .category, .options > .location-hero__category, .options > .primary-hero__category, .options > .secondary-hero__category, .options > .history-hero__category {
+  .options > .category, .options > .location-hero__category, .options > .primary-hero__category, .options > .secondary-hero__category, .options > .history-hero__category, .options > .news-hero__category, .options > .case-studies-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5305,7 +5309,7 @@ p {
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .options--with-icons > .category, .options--with-icons > .location-hero__category, .options--with-icons > .primary-hero__category, .options--with-icons > .secondary-hero__category, .options--with-icons > .history-hero__category {
+  .options--with-icons > .category, .options--with-icons > .location-hero__category, .options--with-icons > .primary-hero__category, .options--with-icons > .secondary-hero__category, .options--with-icons > .history-hero__category, .options--with-icons > .news-hero__category, .options--with-icons > .case-studies-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .options {
@@ -5498,7 +5502,7 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
@@ -5524,7 +5528,7 @@ a {
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
-  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
   .btn--next, .btn--up,
   .btn--down, .section--index .title, .nav--index > .nav__item > a,
   .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--breadcrumb > li > a:active, .nav--horizontal-menu > li > a:active, .nav--scroll-menu > li > a:active, .nav--submenu > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
@@ -5539,7 +5543,7 @@ a {
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
-  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--websolute:active, .btn--prev:active,
+  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .btn--websolute:active, .btn--prev:active,
   .btn--next:active, .btn--up:active,
   .btn--down:active, .section--index .title:active, .nav--index > .nav__item > a:active,
   .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
@@ -5554,7 +5558,7 @@ a {
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
-  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--websolute:focus, .btn--prev:focus,
+  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .btn--websolute:focus, .btn--prev:focus,
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
   .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--breadcrumb > li > a:hover, .nav--horizontal-menu > li > a:hover, .nav--scroll-menu > li > a:hover, .nav--submenu > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
@@ -5569,7 +5573,7 @@ a {
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
-  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--websolute:hover, .btn--prev:hover,
+  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .btn--websolute:hover, .btn--prev:hover,
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
   .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--breadcrumb > li > a:visited, .nav--horizontal-menu > li > a:visited, .nav--scroll-menu > li > a:visited, .nav--submenu > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
@@ -5584,14 +5588,14 @@ a {
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
-  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--websolute:visited, .btn--prev:visited,
+  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .btn--websolute:visited, .btn--prev:visited,
   .btn--next:visited, .btn--up:visited,
   .btn--down:visited, .section--index .title:visited, .nav--index > .nav__item > a:visited,
   .nav--index > .nav__item > span:visited {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
 .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
@@ -5606,13 +5610,13 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
@@ -5628,7 +5632,7 @@ a {
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
-  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--websolute[disabled], .btn--prev[disabled],
+  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .btn--websolute[disabled], .btn--prev[disabled],
   .btn--next[disabled], .btn--up[disabled],
   .btn--down[disabled], .section--index .title[disabled], .nav--index > .nav__item > a[disabled],
   .nav--index > .nav__item > span[disabled] {
@@ -7170,6 +7174,18 @@ test-component code {
         .nav--language > .nav__item > span .down {
           display: none; } }
 
+.btn--investor {
+  padding: var(--p10) var(--p20);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold; }
+  .btn--investor, .btn--investor:active, .btn--investor:focus, .btn--investor:visited {
+    background-color: var(--foreground-primary);
+    color: var(--foreground-negative); }
+  @media (min-width: 1024px) {
+    .btn--investor {
+      margin-left: var(--p40); } }
+
 .nav--submenu > .nav__item > a,
 .nav--submenu > .nav__item > span {
   display: flex;
@@ -8131,11 +8147,11 @@ test-component code {
   .news-proposition__title {
     color: var(--foreground); }
 
-.listing--news {
+.listing--news-proposition {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .listing--news > .listing__item {
+  .listing--news-proposition > .listing__item {
     flex: 0 0 45%;
     max-width: 45%; }
 
@@ -8167,8 +8183,10 @@ test-component code {
     font-weight: bold;
     color: var(--foreground);
     margin-bottom: var(--p20); }
+  .card--news__abstract {
+    margin-bottom: var(--p20); }
   .card--news__cta {
-    padding-top: var(--p40); }
+    padding-top: var(--p20); }
   .card--news .btn--more {
     color: var(--foreground-primary); }
   .card--news:hover .card--news__picture > img {
@@ -9065,9 +9083,9 @@ test-component code {
     .history-hero {
       padding: 80px 0; } }
 
-.history-proposition {
+.history-listing {
   padding: 80px 0; }
-  .history-proposition__title {
+  .history-listing__title {
     margin-bottom: var(--p70); }
 
 .listing--history {
@@ -9297,6 +9315,126 @@ test-component code {
   .card--history.active + .card--history-detail {
     display: block;
     position: relative; } }
+
+.news-hero {
+  margin-top: -80px;
+  z-index: -1;
+  background: var(--background-quaternary); }
+  .news-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .news-hero__category {
+    color: var(--foreground-primary); }
+  .news-hero__title {
+    color: var(--foreground);
+    margin-bottom: 0.5em; }
+  @media (min-width: 1024px) {
+    .news-hero {
+      padding: 120px 0; } }
+  @media (max-width: 1023.98px) {
+    .news-hero {
+      padding: 80px 0; } }
+
+.news-listing {
+  padding: 80px 0; }
+  .news-listing__title {
+    margin-bottom: var(--p70); }
+
+.listing--news {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (min-width: 1024px) {
+    .listing--news {
+      align-items: stretch;
+      margin-left: -25px;
+      margin-left: -25px;
+      width: calc(100% + 50px); }
+      .listing--news > .listing__item {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 25px; } }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .listing--news {
+      align-items: stretch;
+      margin-left: -25px;
+      margin-left: -25px;
+      width: calc(100% + 50px); }
+      .listing--news > .listing__item {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 25px; } }
+  @media (max-width: 767.98px) {
+    .listing--news {
+      align-items: stretch;
+      margin-left: -10px;
+      margin-left: -10px;
+      width: calc(100% + 20px); }
+      .listing--news > .listing__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px; } }
+
+.case-studies-hero {
+  margin-top: -80px;
+  z-index: -1;
+  background: var(--background-quaternary); }
+  .case-studies-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .case-studies-hero__category {
+    color: var(--foreground-primary); }
+  .case-studies-hero__title {
+    color: var(--foreground);
+    margin-bottom: 0.5em; }
+  @media (min-width: 1024px) {
+    .case-studies-hero {
+      padding: 120px 0; } }
+  @media (max-width: 1023.98px) {
+    .case-studies-hero {
+      padding: 80px 0; } }
+
+.case-studies-listing {
+  padding: 80px 0; }
+  .case-studies-listing__title {
+    margin-bottom: var(--p70); }
+
+.listing--case-studies {
+  display: flex;
+  flex-wrap: wrap; }
+  .listing--case-studies > .listing__item {
+    margin-bottom: 110px; }
+  @media (min-width: 1024px) {
+    .listing--case-studies {
+      align-items: stretch;
+      margin-left: -40px;
+      margin-left: -40px;
+      width: calc(100% + 80px); }
+      .listing--case-studies > .listing__item {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 40px; }
+        .listing--case-studies > .listing__item > .card--product {
+          height: 100%; } }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .listing--case-studies {
+      align-items: stretch;
+      margin-left: -40px;
+      margin-left: -40px;
+      width: calc(100% + 80px); }
+      .listing--case-studies > .listing__item {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 40px; } }
+  @media (max-width: 767.98px) {
+    .listing--case-studies {
+      align-items: stretch; }
+      .listing--case-studies > .listing__item {
+        flex: 0 0 100%;
+        max-width: 100%; } }
 
 .card--side-modal {
   display: none;

@@ -1,0 +1,32 @@
+<div class="card--product" open-modally="#detail-<!--@@var=id-->">
+	<div class="card--product__picture">
+		<img loading="lazy" src="<!--@@var=img-->">
+	</div>
+	<div class="card--product__content">
+		<div class="card--product__title">
+			<!--@@var=title-->
+		</div>
+		<div class="card--product__abstract">
+			<!--@@var=abstract-->
+		</div>
+		<div class="card--product__cta">
+			<button type="button" class="btn--plus">
+				<svg><use xlink:href="#plus"></use></svg>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- in page detail -->
+<div class="card--side-modal" card-product-detail id="detail-<!--@@var=id-->">
+	<div class="card--side-modal__picture">
+		<img loading="lazy" src="<!--@@var=img-->">
+	</div>
+	<div class="card--side-modal__content">
+		<div class="card--side-modal__title">
+			<!--@@var=title-->
+		</div>
+		<div class="card--side-modal__abstract">
+			<!--@@var=abstract-->
+		</div>
+	</div>
+</div>

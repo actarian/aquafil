@@ -33,7 +33,7 @@
 		}
 	}
 
-	@include media-between(sm, sm) {
+	@include media-only(sm) {
 		align-items: stretch;
 		margin-left: -30px;
 		margin-right: -30px;

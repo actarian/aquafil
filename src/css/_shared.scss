@@ -60,7 +60,15 @@
 
 // history
 @import '_sections/history/history-hero';
-@import '_sections/history/history-proposition';
+@import '_sections/history/history-listing';
+
+// news
+@import '_sections/news/news-hero';
+@import '_sections/news/news-listing';
+
+// case-studies
+@import '_sections/case-studies/case-studies-hero';
+@import '_sections/case-studies/case-studies-listing';
 
 // modals
 @import '_sections/side-modal';

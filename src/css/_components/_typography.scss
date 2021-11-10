@@ -134,6 +134,11 @@ h6 {
 	// line-height: 1.375;
 }
 
+.smallest {
+	font-size: Max(10px, Min(14px, 0.72916vw));
+	line-height: 1.2;
+}
+
 body {
 	@extend .text;
 }

@@ -1,0 +1,56 @@
+.case-studies-listing {
+	padding: 80px 0;
+
+	&__title {
+		@extend .h4;
+		margin-bottom: var(--p70);
+	}
+}
+
+.listing--case-studies {
+	display: flex;
+	flex-wrap: wrap;
+
+	&>.listing__item {
+		margin-bottom: 110px;
+	}
+
+	@include media-up(md) {
+		align-items: stretch;
+		margin-left: -40px;
+		margin-left: -40px;
+		width: calc(100% + 80px);
+
+		&>.listing__item {
+			flex: 0 0 33.3333%;
+			max-width: 33.3333%;
+			padding: 0 40px;
+
+			&>.card--product {
+				height: 100%;
+			}
+		}
+	}
+
+	@include media-only(sm) {
+		align-items: stretch;
+		margin-left: -40px;
+		margin-left: -40px;
+		width: calc(100% + 80px);
+
+		&>.listing__item {
+			flex: 0 0 33.3333%;
+			max-width: 33.3333%;
+			padding: 0 40px;
+		}
+	}
+
+	@include media-down(xs) {
+		align-items: stretch;
+
+		&>.listing__item {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}

@@ -8,7 +8,7 @@
 	}
 }
 
-.listing--news {
+.listing--news-proposition {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -38,10 +38,12 @@
 		margin-bottom: var(--p20);
 	}
 
-	// &__abstract {}
+	&__abstract {
+		margin-bottom: var(--p20);
+	}
 
 	&__cta {
-		padding-top: var(--p40);
+		padding-top: var(--p20);
 	}
 
 	.btn--more {

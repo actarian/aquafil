@@ -182,7 +182,7 @@
 		}
 	}
 
-	@include media-between(sm, sm) {
+	@include media-only(sm) {
 		height: 50vw;
 
 		.listing__item:nth-child(even)>& {

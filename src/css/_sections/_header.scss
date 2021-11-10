@@ -157,7 +157,7 @@
 		&>span {
 			display: flex;
 			align-items: center;
-			@extend .small;
+			@extend .extrasmall;
 			margin: 0;
 			padding: var(--p20) 0;
 
@@ -236,7 +236,7 @@
 		&>span {
 			display: flex;
 			align-items: center;
-			@extend .small;
+			@extend .extrasmall;
 			margin: 0;
 			padding: var(--p20) 0;
 			text-transform: uppercase;
@@ -317,6 +317,27 @@
 	}
 }
 
+.btn--investor {
+	@extend %btn;
+	@extend .smallest;
+	padding: var(--p10) var(--p20);
+	white-space: nowrap;
+	font-size: 14px;
+	font-weight: bold;
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		background-color: $foreground-primary;
+		color: $foreground-negative;
+	}
+
+	@include media-up(md) {
+		margin-left: var(--p40);
+	}
+}
+
 .nav--submenu {
 	@extend %nav-vertical;
 
@@ -326,7 +347,7 @@
 		&>span {
 			display: flex;
 			align-items: center;
-			@extend .small;
+			@extend .extrasmall;
 			padding: 20px;
 			margin: 0;
 			font-size: 0.7em;

@@ -90,7 +90,7 @@
 		}
 	}
 
-	@include media-between(sm, sm) {
+	@include media-only(sm) {
 		margin-left: -15px;
 		margin-right: -15px;
 
