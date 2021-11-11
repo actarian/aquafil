@@ -240,17 +240,20 @@
 	cursor: pointer;
 
 	&>img {
-		transition: transform ease-in-out $fast;
+		transition: ease-in-out $fast;
+		transition-property: transform, box-shadow;
 	}
 
 	&:hover {
 		&>img {
-			transform: scale3d(1.05, 1.05, 1);
+			transform: scale3d(1.02, 1.02, 1);
+			box-shadow: 0 20px 30px -5px rgba(0, 58, 86, 0.1);
 		}
 	}
 }
 
 [swiper-content] {
+	overflow: visible;
 
 	.card--content {
 		&__background {

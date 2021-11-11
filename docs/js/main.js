@@ -4335,7 +4335,7 @@ SideModalComponent.meta = {
   _proto.onInit = function onInit() {
     this.options = {
       slidesPerView: 1,
-      spaceBetween: 80,
+      spaceBetween: 300,
       speed: 600,
       keyboardControl: true,
       mousewheelControl: false,
