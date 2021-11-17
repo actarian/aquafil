@@ -4715,8 +4715,9 @@ body {
   to {
     transform: translateY(-10px); } }
 
-.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a,
+.nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a,
 .nav--main > li > button,
+.nav--service > li > button,
 .nav--language > li > button,
 .nav--footer > li > button,
 .nav--social > li > button,
@@ -4724,6 +4725,7 @@ body {
 .nav--horizontal-menu > li > button,
 .nav--scroll-menu > li > button,
 .nav--main > li > span,
+.nav--service > li > span,
 .nav--language > li > span,
 .nav--footer > li > span,
 .nav--social > li > span,
@@ -4745,8 +4747,9 @@ body {
   z-index: 1;
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus,
+  .nav--main > li > a:focus, .nav--service > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus,
   .nav--main > li > button:focus,
+  .nav--service > li > button:focus,
   .nav--language > li > button:focus,
   .nav--footer > li > button:focus,
   .nav--social > li > button:focus,
@@ -4754,6 +4757,7 @@ body {
   .nav--horizontal-menu > li > button:focus,
   .nav--scroll-menu > li > button:focus,
   .nav--main > li > span:focus,
+  .nav--service > li > span:focus,
   .nav--language > li > span:focus,
   .nav--footer > li > span:focus,
   .nav--social > li > span:focus,
@@ -4768,14 +4772,15 @@ body {
   .nav--options > li > span:focus {
     outline: 0; }
 
-.nav--main, .nav--language, .nav--footer, .nav--social, .nav--breadcrumb, .nav--horizontal-menu, .nav--scroll-menu, .nav--submenu, .nav--footer ul, .nav--dropdown, .nav--options, .nav--index {
+.nav--main, .nav--service, .nav--language, .nav--footer, .nav--social, .nav--breadcrumb, .nav--horizontal-menu, .nav--scroll-menu, .nav--submenu, .nav--footer ul, .nav--dropdown, .nav--options, .nav--index {
   list-style: none;
   padding: 0;
   margin: 0; }
-  .nav--main > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--breadcrumb > li, .nav--horizontal-menu > li, .nav--scroll-menu > li, .nav--submenu > li, .nav--footer ul > li, .nav--dropdown > li, .nav--options > li, .nav--index > li {
+  .nav--main > li, .nav--service > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--breadcrumb > li, .nav--horizontal-menu > li, .nav--scroll-menu > li, .nav--submenu > li, .nav--footer ul > li, .nav--dropdown > li, .nav--options > li, .nav--index > li {
     display: block; }
-    .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+    .nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
     .nav--main > li > button,
+    .nav--service > li > button,
     .nav--language > li > button,
     .nav--footer > li > button,
     .nav--social > li > button,
@@ -4788,6 +4793,7 @@ body {
     .nav--options > li > button,
     .nav--index > li > button,
     .nav--main > li > span,
+    .nav--service > li > span,
     .nav--language > li > span,
     .nav--footer > li > span,
     .nav--social > li > span,
@@ -4801,8 +4807,9 @@ body {
     .nav--index > li > span {
       transition: ease-in-out 250ms;
       transition-property: background-color, color, border, opacity; }
-      .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
+      .nav--main > li > a:focus, .nav--service > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
       .nav--main > li > button:focus,
+      .nav--service > li > button:focus,
       .nav--language > li > button:focus,
       .nav--footer > li > button:focus,
       .nav--social > li > button:focus,
@@ -4815,6 +4822,7 @@ body {
       .nav--options > li > button:focus,
       .nav--index > li > button:focus,
       .nav--main > li > span:focus,
+      .nav--service > li > span:focus,
       .nav--language > li > span:focus,
       .nav--footer > li > span:focus,
       .nav--social > li > span:focus,
@@ -4828,7 +4836,7 @@ body {
       .nav--index > li > span:focus {
         outline: 0; }
 
-.nav--main, .nav--language, .nav--footer, .nav--social, .nav--breadcrumb, .nav--horizontal-menu, .nav--scroll-menu {
+.nav--main, .nav--service, .nav--language, .nav--footer, .nav--social, .nav--breadcrumb, .nav--horizontal-menu, .nav--scroll-menu {
   display: flex;
   justify-content: flex-start;
   /*
@@ -4842,7 +4850,7 @@ body {
 		// margin-bottom: 100px;
 	}
 	*/ }
-  .nav--main > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--breadcrumb > li, .nav--horizontal-menu > li, .nav--scroll-menu > li {
+  .nav--main > li, .nav--service > li, .nav--language > li, .nav--footer > li, .nav--social > li, .nav--breadcrumb > li, .nav--horizontal-menu > li, .nav--scroll-menu > li {
     position: relative;
     display: block; }
 
@@ -4985,8 +4993,7 @@ h6 {
   line-height: 1.5;
   margin-bottom: 0.83333em; }
 
-.extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--main > .nav__item > a,
-.nav--main > .nav__item > span, .nav--language > .nav__item > a,
+.extrasmall, .label, .group--form label, .group--form--textarea label, .group--form--checkbox label, .group--form--privacy label, .group--form--file label, .group--form--select label, .required .required__badge, .nav--language > .nav__item > a,
 .nav--language > .nav__item > span, .nav--submenu > .nav__item > a,
 .nav--submenu > .nav__item > span, .nav--footer .nav__item > span,
 .nav--footer .nav__item > a,
@@ -4995,7 +5002,8 @@ h6 {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.5; }
 
-.smallest, .btn--investor {
+.smallest, .nav--service > .nav__item > a,
+.nav--service > .nav__item > span, .btn--investor {
   font-size: Max(10px, Min(14px, 0.72916vw));
   line-height: 1.2; }
 
@@ -5490,8 +5498,9 @@ a {
     a:not([class]):hover {
       color: var(--foreground-primary); }
 
-.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+.nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
 .nav--main > li > button,
+.nav--service > li > button,
 .nav--language > li > button,
 .nav--footer > li > button,
 .nav--social > li > button,
@@ -5517,8 +5526,9 @@ a {
   font: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  .nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+  .nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
   .nav--main > li > button,
+  .nav--service > li > button,
   .nav--language > li > button,
   .nav--footer > li > button,
   .nav--social > li > button,
@@ -5533,8 +5543,9 @@ a {
   .btn--next, .btn--up,
   .btn--down, .btn--gallery-prev,
   .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
-  .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--breadcrumb > li > a:active, .nav--horizontal-menu > li > a:active, .nav--scroll-menu > li > a:active, .nav--submenu > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
+  .nav--index > .nav__item > span, .nav--main > li > a:active, .nav--service > li > a:active, .nav--language > li > a:active, .nav--footer > li > a:active, .nav--social > li > a:active, .nav--breadcrumb > li > a:active, .nav--horizontal-menu > li > a:active, .nav--scroll-menu > li > a:active, .nav--submenu > li > a:active, .nav--footer ul > li > a:active, .nav--dropdown > li > a:active, .nav--options > li > a:active, .nav--index > li > a:active,
   .nav--main > li > button:active,
+  .nav--service > li > button:active,
   .nav--language > li > button:active,
   .nav--footer > li > button:active,
   .nav--social > li > button:active,
@@ -5549,8 +5560,9 @@ a {
   .btn--next:active, .btn--up:active,
   .btn--down:active, .btn--gallery-prev:active,
   .btn--gallery-next:active, .section--index .title:active, .nav--index > .nav__item > a:active,
-  .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
+  .nav--index > .nav__item > span:active, .nav--main > li > a:focus, .nav--service > li > a:focus, .nav--language > li > a:focus, .nav--footer > li > a:focus, .nav--social > li > a:focus, .nav--breadcrumb > li > a:focus, .nav--horizontal-menu > li > a:focus, .nav--scroll-menu > li > a:focus, .nav--submenu > li > a:focus, .nav--footer ul > li > a:focus, .nav--dropdown > li > a:focus, .nav--options > li > a:focus, .nav--index > li > a:focus,
   .nav--main > li > button:focus,
+  .nav--service > li > button:focus,
   .nav--language > li > button:focus,
   .nav--footer > li > button:focus,
   .nav--social > li > button:focus,
@@ -5565,8 +5577,9 @@ a {
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .btn--gallery-prev:focus,
   .btn--gallery-next:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
-  .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--breadcrumb > li > a:hover, .nav--horizontal-menu > li > a:hover, .nav--scroll-menu > li > a:hover, .nav--submenu > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
+  .nav--index > .nav__item > span:focus, .nav--main > li > a:hover, .nav--service > li > a:hover, .nav--language > li > a:hover, .nav--footer > li > a:hover, .nav--social > li > a:hover, .nav--breadcrumb > li > a:hover, .nav--horizontal-menu > li > a:hover, .nav--scroll-menu > li > a:hover, .nav--submenu > li > a:hover, .nav--footer ul > li > a:hover, .nav--dropdown > li > a:hover, .nav--options > li > a:hover, .nav--index > li > a:hover,
   .nav--main > li > button:hover,
+  .nav--service > li > button:hover,
   .nav--language > li > button:hover,
   .nav--footer > li > button:hover,
   .nav--social > li > button:hover,
@@ -5581,8 +5594,9 @@ a {
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .btn--gallery-prev:hover,
   .btn--gallery-next:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
-  .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--breadcrumb > li > a:visited, .nav--horizontal-menu > li > a:visited, .nav--scroll-menu > li > a:visited, .nav--submenu > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
+  .nav--index > .nav__item > span:hover, .nav--main > li > a:visited, .nav--service > li > a:visited, .nav--language > li > a:visited, .nav--footer > li > a:visited, .nav--social > li > a:visited, .nav--breadcrumb > li > a:visited, .nav--horizontal-menu > li > a:visited, .nav--scroll-menu > li > a:visited, .nav--submenu > li > a:visited, .nav--footer ul > li > a:visited, .nav--dropdown > li > a:visited, .nav--options > li > a:visited, .nav--index > li > a:visited,
   .nav--main > li > button:visited,
+  .nav--service > li > button:visited,
   .nav--language > li > button:visited,
   .nav--footer > li > button:visited,
   .nav--social > li > button:visited,
@@ -5601,11 +5615,12 @@ a {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
-.nav--main > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
+.nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
 .nav--main > li > button,
+.nav--service > li > button,
 .nav--language > li > button,
 .nav--footer > li > button,
 .nav--social > li > button,
@@ -5623,12 +5638,13 @@ a {
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
-  .nav--main > li > a[disabled], .nav--language > li > a[disabled], .nav--footer > li > a[disabled], .nav--social > li > a[disabled], .nav--breadcrumb > li > a[disabled], .nav--horizontal-menu > li > a[disabled], .nav--scroll-menu > li > a[disabled], .nav--submenu > li > a[disabled], .nav--footer ul > li > a[disabled], .nav--dropdown > li > a[disabled], .nav--options > li > a[disabled], .nav--index > li > a[disabled],
+  .nav--main > li > a[disabled], .nav--service > li > a[disabled], .nav--language > li > a[disabled], .nav--footer > li > a[disabled], .nav--social > li > a[disabled], .nav--breadcrumb > li > a[disabled], .nav--horizontal-menu > li > a[disabled], .nav--scroll-menu > li > a[disabled], .nav--submenu > li > a[disabled], .nav--footer ul > li > a[disabled], .nav--dropdown > li > a[disabled], .nav--options > li > a[disabled], .nav--index > li > a[disabled],
   .nav--main > li > button[disabled],
+  .nav--service > li > button[disabled],
   .nav--language > li > button[disabled],
   .nav--footer > li > button[disabled],
   .nav--social > li > button[disabled],
@@ -7020,7 +7036,24 @@ test-component code {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 0 0 75%; }
+    flex: 0 0 75%;
+    flex-wrap: wrap; }
+    .header__menu .nav--main {
+      flex: 1 0 75%;
+      order: 3; }
+    .header__menu .btn--investor {
+      flex: 0 1 25%;
+      order: 4;
+      max-width: 185px; }
+    .header__menu .nav--service {
+      flex: 1 1 90%;
+      order: 1;
+      margin-top: -20px; }
+    .header__menu .nav--language {
+      flex: 1 1 10%;
+      order: 2;
+      max-width: 65px;
+      margin-top: -20px; }
     .header__menu .btn--menu {
       display: none; } }
 
@@ -7030,8 +7063,8 @@ test-component code {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - Min(var(--p130), 136px));
-    margin-top: Min(var(--p130), 136px);
+    height: calc(100% - 90px);
+    margin-top: 90px;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: -1;
@@ -7090,8 +7123,9 @@ test-component code {
 .nav--main > .nav__item > span {
   display: flex;
   align-items: center;
+  font-size: Max(12px, Min(18px, 1vw));
   margin: 0;
-  padding: var(--p20) 0; }
+  padding: var(--p10) 0; }
   .nav--main > .nav__item > a svg,
   .nav--main > .nav__item > span svg {
     flex: 0 0 0.5em;
@@ -7108,10 +7142,11 @@ test-component code {
 
 @media (min-width: 1024px) {
   .nav--main {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: stretch;
     width: 100%;
-    max-width: 57.3vw; }
+    max-width: 57.3vw;
+    padding-right: var(--p40); }
     .nav--main > .nav__item {
       position: relative; }
       .nav--main > .nav__item > a svg,
@@ -7119,76 +7154,107 @@ test-component code {
         margin-left: var(--p10); }
       .nav--main > .nav__item > a .next,
       .nav--main > .nav__item > span .next {
-        display: none; } }
+        display: none; }
+    .nav--main > .nav__item + .nav__item {
+      margin-left: var(--p20); } }
 
 @media (max-width: 1023.98px) {
   .nav--main {
     flex-direction: column;
-    padding-top: 1em; }
+    padding-top: var(--p80); }
     .nav--main > .nav__item {
       position: static; }
       .nav--main > .nav__item > a,
       .nav--main > .nav__item > span {
         font-size: 30px;
         padding: var(--p20) var(--cw2); }
+        .nav--main > .nav__item > a svg,
+        .nav--main > .nav__item > span svg {
+          fill: currentColor; }
         .nav--main > .nav__item > a .down,
         .nav--main > .nav__item > span .down {
           display: none; } }
 
-.nav--language > .nav__item > a,
-.nav--language > .nav__item > span {
+.nav--service > .nav__item > a,
+.nav--service > .nav__item > span {
   display: flex;
   align-items: center;
-  margin: 0;
-  padding: var(--p20) 0;
-  text-transform: uppercase; }
-  .nav--language > .nav__item > a svg,
-  .nav--language > .nav__item > span svg {
-    width: 8px;
-    height: 7px;
-    flex: 0 0 0.4444em;
-    width: 0.4444em;
-    height: 0.3888em;
-    margin-left: 0.4em;
-    fill: #9D9D9C; }
-
-.negative .nav--language > .nav__item > a svg,
-.negative .nav--language > .nav__item > span svg,
-.page--homepage .nav--language > .nav__item > a svg,
-.page--homepage .nav--language > .nav__item > span svg {
-  fill: currentColor; }
-
-.nav--language .nav--submenu {
   text-transform: uppercase; }
 
 @media (min-width: 1024px) {
-  .nav--language {
+  .nav--service {
+    justify-content: flex-end;
     align-items: center;
-    margin-left: var(--p40);
-    padding-left: var(--p40);
-    border-left: 1px solid var(--border); }
-    .nav--language > .nav__item > a svg,
-    .nav--language > .nav__item > span svg {
-      margin-left: var(--p10); }
-    .nav--language > .nav__item > a .next,
-    .nav--language > .nav__item > span .next {
-      display: none; }
-    .nav--language > .nav__item + .nav__item {
-      margin-left: var(--p40); } }
+    padding-right: var(--p10);
+    margin: 0 0 var(--p10) 0; }
+    .nav--service > .nav__item > a,
+    .nav--service > .nav__item > span {
+      margin: 0 var(--p10); } }
 
 @media (max-width: 1023.98px) {
-  .nav--language {
-    flex-direction: column;
-    padding-top: 1em; }
-    .nav--language > .nav__item {
+  .nav--service {
+    flex-direction: column; }
+    .nav--service > .nav__item {
       position: static; }
-      .nav--language > .nav__item > a,
-      .nav--language > .nav__item > span {
+      .nav--service > .nav__item > a,
+      .nav--service > .nav__item > span {
         font-size: 30px;
-        padding: var(--p20) var(--cw2); }
-        .nav--language > .nav__item > a .down,
-        .nav--language > .nav__item > span .down {
-          display: none; } }
+        padding: var(--p20) var(--cw2);
+        text-transform: none; } }
+
+.nav--language {
+  margin: 0 0 var(--p10) 0; }
+  .nav--language > .nav__item > a,
+  .nav--language > .nav__item > span {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-transform: uppercase; }
+    .nav--language > .nav__item > a svg,
+    .nav--language > .nav__item > span svg {
+      width: 8px;
+      height: 7px;
+      flex: 0 0 0.4444em;
+      width: 0.4444em;
+      height: 0.3888em;
+      margin-left: 0.4em;
+      fill: #9D9D9C; }
+  .negative .nav--language > .nav__item > a svg,
+  .negative .nav--language > .nav__item > span svg,
+  .page--homepage .nav--language > .nav__item > a svg,
+  .page--homepage .nav--language > .nav__item > span svg {
+    fill: currentColor; }
+  .nav--language .nav--submenu {
+    text-transform: uppercase; }
+  @media (min-width: 1024px) {
+    .nav--language {
+      align-items: center;
+      padding-left: var(--p20);
+      border-left: 1px solid var(--border); }
+      .nav--language > .nav__item > a svg,
+      .nav--language > .nav__item > span svg {
+        margin-left: var(--p10); }
+      .nav--language > .nav__item > a .next,
+      .nav--language > .nav__item > span .next {
+        display: none; }
+      .nav--language > .nav__item + .nav__item {
+        margin-left: var(--p40); } }
+  @media (max-width: 1023.98px) {
+    .nav--language {
+      flex-direction: column;
+      padding-top: 1em; }
+      .nav--language > .nav__item {
+        position: static; }
+        .nav--language > .nav__item > a,
+        .nav--language > .nav__item > span {
+          font-size: 30px;
+          padding: var(--p20) var(--cw2); }
+          .nav--language > .nav__item > a svg,
+          .nav--language > .nav__item > span svg {
+            fill: currentColor; }
+          .nav--language > .nav__item > a .down,
+          .nav--language > .nav__item > span .down {
+            display: none; } }
 
 .btn--investor {
   padding: var(--p10) var(--p20);
@@ -7198,9 +7264,12 @@ test-component code {
   .btn--investor, .btn--investor:active, .btn--investor:focus, .btn--investor:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
-  @media (min-width: 1024px) {
+  @media (max-width: 1023.98px) {
     .btn--investor {
-      margin-left: var(--p40); } }
+      font-size: 24px;
+      margin: var(--p50) var(--cw2);
+      border: 1px solid white;
+      padding: 10px 30px; } }
 
 .nav--submenu > .nav__item > a,
 .nav--submenu > .nav__item > span {
@@ -7245,7 +7314,7 @@ test-component code {
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 1em;
+    padding-top: var(--p80);
     background: var(--background-primary);
     z-index: 100; }
     .nav--submenu:not(.active) {
