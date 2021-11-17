@@ -79,19 +79,18 @@
 		}
 
 		.btn--investor {
-			flex: 0 1 25%;
+			flex: 0 1 auto;
 			order: 4;
-			max-width: 185px;
 		}
 
 		.nav--service {
-			flex: 1 1 90%;
+			flex: 1 1 calc(100% - 100px);
 			order: 1;
 			margin-top: -20px;
 		}
 
 		.nav--language {
-			flex: 1 1 10%;
+			flex: 0 1 auto;
 			order: 2;
 			max-width: 65px;
 			margin-top: -20px;
@@ -215,7 +214,7 @@
 		align-items: stretch;
 		width: 100%;
 		max-width: 57.3vw;
-		padding-right: var(--p40);
+		padding-right: var(--p30);
 
 		&>.nav__item {
 			position: relative;
@@ -233,7 +232,7 @@
 		}
 
 		&>.nav__item+.nav__item {
-			margin-left: var(--p20);
+			margin-left: var(--p30);
 		}
 	}
 
@@ -279,7 +278,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		padding-right: var(--p10);
-		margin: 0 0 var(--p10) 0;
+		margin: 0 0 10px 0;
 
 		&>.nav__item {
 
@@ -308,7 +307,7 @@
 
 .nav--language {
 	@extend %nav;
-	margin: 0 0 var(--p10) 0;
+	margin: 0 0 10px 0;
 
 	&>.nav__item {
 
@@ -401,7 +400,6 @@
 
 .btn--investor {
 	@extend %btn;
-	@extend .smallest;
 	padding: var(--p10) var(--p20);
 	white-space: nowrap;
 	font-size: 14px;
@@ -413,6 +411,10 @@
 	&:visited {
 		background-color: $foreground-primary;
 		color: $foreground-negative;
+	}
+
+	@include media-up(md) {
+		font-size: Max(12px, Min(16px, 1vw));
 	}
 
 	@include media-down(sm) {

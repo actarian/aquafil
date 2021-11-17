@@ -5003,7 +5003,7 @@ h6 {
   line-height: 1.5; }
 
 .smallest, .nav--service > .nav__item > a,
-.nav--service > .nav__item > span, .btn--investor {
+.nav--service > .nav__item > span {
   font-size: Max(10px, Min(14px, 0.72916vw));
   line-height: 1.2; }
 
@@ -7042,15 +7042,14 @@ test-component code {
       flex: 1 0 75%;
       order: 3; }
     .header__menu .btn--investor {
-      flex: 0 1 25%;
-      order: 4;
-      max-width: 185px; }
+      flex: 0 1 auto;
+      order: 4; }
     .header__menu .nav--service {
-      flex: 1 1 90%;
+      flex: 1 1 calc(100% - 100px);
       order: 1;
       margin-top: -20px; }
     .header__menu .nav--language {
-      flex: 1 1 10%;
+      flex: 0 1 auto;
       order: 2;
       max-width: 65px;
       margin-top: -20px; }
@@ -7146,7 +7145,7 @@ test-component code {
     align-items: stretch;
     width: 100%;
     max-width: 57.3vw;
-    padding-right: var(--p40); }
+    padding-right: var(--p30); }
     .nav--main > .nav__item {
       position: relative; }
       .nav--main > .nav__item > a svg,
@@ -7156,7 +7155,7 @@ test-component code {
       .nav--main > .nav__item > span .next {
         display: none; }
     .nav--main > .nav__item + .nav__item {
-      margin-left: var(--p20); } }
+      margin-left: var(--p30); } }
 
 @media (max-width: 1023.98px) {
   .nav--main {
@@ -7186,7 +7185,7 @@ test-component code {
     justify-content: flex-end;
     align-items: center;
     padding-right: var(--p10);
-    margin: 0 0 var(--p10) 0; }
+    margin: 0 0 10px 0; }
     .nav--service > .nav__item > a,
     .nav--service > .nav__item > span {
       margin: 0 var(--p10); } }
@@ -7203,7 +7202,7 @@ test-component code {
         text-transform: none; } }
 
 .nav--language {
-  margin: 0 0 var(--p10) 0; }
+  margin: 0 0 10px 0; }
   .nav--language > .nav__item > a,
   .nav--language > .nav__item > span {
     display: flex;
@@ -7264,6 +7263,9 @@ test-component code {
   .btn--investor, .btn--investor:active, .btn--investor:focus, .btn--investor:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
+  @media (min-width: 1024px) {
+    .btn--investor {
+      font-size: Max(12px, Min(16px, 1vw)); } }
   @media (max-width: 1023.98px) {
     .btn--investor {
       font-size: 24px;
