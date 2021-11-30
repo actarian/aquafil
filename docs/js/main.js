@@ -1062,22 +1062,18 @@ DropdownDirective.dropdown$ = new rxjs.BehaviorSubject(null);var DropdownItemDir
   onDestroy() {
   	this.removeListeners();
   }
-  
-  onEnter(event) {
+  	onEnter(event) {
   	LocomotiveScrollService.stop();
   }
-  
-  onLeave(event) {
+  	onLeave(event) {
   	LocomotiveScrollService.start();
   }
-  
-  addListeners() {
+  	addListeners() {
   	const { node } = getContext(this);
   	node.addEventListener('mouseenter', this.onEnter);
   	node.addEventListener('mouseleave', this.onLeave);
   }
-  
-  removeListeners() {
+  	removeListeners() {
   	const { node } = getContext(this);
   	node.removeEventListener('mouseenter', this.onEnter);
   	node.removeEventListener('mouseleave', this.onLeave);

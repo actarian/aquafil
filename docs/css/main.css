@@ -4954,17 +4954,17 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.16666em; }
 
-.h2, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .news-hero__title, .case-studies-hero__title {
+.h2, .generic-hero__title, .news-hero__title, .certifications-hero__title, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .case-studies-hero__title {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
   line-height: 1.2;
-  margin-bottom: 1em; }
+  margin-bottom: 0.4em; }
 
 .h3, .report-proposition__title, .card--side-modal__title, .card--gallery-modal__title {
   font-weight: bold;
   font-size: Max(28px, Min(60px, 3.125vw));
   line-height: 1.2;
-  margin-bottom: 1em; }
+  margin-bottom: 0.4em; }
 
 .h4, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .history-listing__title, .news-listing__title, .case-studies-listing__title, .contact-modal__title {
   font-weight: bold;
@@ -5044,7 +5044,7 @@ p {
       background-color: transparent; }
   .dropdown.dropped {
     display: block; }
-  .dropdown > .category, .dropdown > .location-hero__category, .dropdown > .primary-hero__category, .dropdown > .secondary-hero__category, .dropdown > .history-hero__category, .dropdown > .news-hero__category, .dropdown > .case-studies-hero__category {
+  .dropdown > .category, .dropdown > .generic-hero__category, .dropdown > .news-hero__category, .dropdown > .certifications-hero__category, .dropdown > .location-hero__category, .dropdown > .primary-hero__category, .dropdown > .secondary-hero__category, .dropdown > .history-hero__category, .dropdown > .case-studies-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5052,7 +5052,7 @@ p {
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .dropdown--with-icons > .category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .primary-hero__category, .dropdown--with-icons > .secondary-hero__category, .dropdown--with-icons > .history-hero__category, .dropdown--with-icons > .news-hero__category, .dropdown--with-icons > .case-studies-hero__category {
+  .dropdown--with-icons > .category, .dropdown--with-icons > .generic-hero__category, .dropdown--with-icons > .news-hero__category, .dropdown--with-icons > .certifications-hero__category, .dropdown--with-icons > .location-hero__category, .dropdown--with-icons > .primary-hero__category, .dropdown--with-icons > .secondary-hero__category, .dropdown--with-icons > .history-hero__category, .dropdown--with-icons > .case-studies-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .dropdown {
@@ -5221,7 +5221,7 @@ p {
     animation-delay: 800ms;
     animation-duration: 350ms; }
 
-.category + .nav--dropdown, .location-hero__category + .nav--dropdown, .primary-hero__category + .nav--dropdown, .secondary-hero__category + .nav--dropdown, .history-hero__category + .nav--dropdown, .news-hero__category + .nav--dropdown, .case-studies-hero__category + .nav--dropdown {
+.category + .nav--dropdown, .generic-hero__category + .nav--dropdown, .news-hero__category + .nav--dropdown, .certifications-hero__category + .nav--dropdown, .location-hero__category + .nav--dropdown, .primary-hero__category + .nav--dropdown, .secondary-hero__category + .nav--dropdown, .history-hero__category + .nav--dropdown, .case-studies-hero__category + .nav--dropdown {
   padding-top: 0; }
 
 @keyframes nav-dropdown {
@@ -5309,7 +5309,7 @@ p {
     border-radius: 0px; }
     .options::-webkit-scrollbar-track:hover {
       background-color: transparent; }
-  .options > .category, .options > .location-hero__category, .options > .primary-hero__category, .options > .secondary-hero__category, .options > .history-hero__category, .options > .news-hero__category, .options > .case-studies-hero__category {
+  .options > .category, .options > .generic-hero__category, .options > .news-hero__category, .options > .certifications-hero__category, .options > .location-hero__category, .options > .primary-hero__category, .options > .secondary-hero__category, .options > .history-hero__category, .options > .case-studies-hero__category {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5317,7 +5317,7 @@ p {
     font-size: 14px;
     color: var(--foreground-secondary);
     z-index: 2; }
-  .options--with-icons > .category, .options--with-icons > .location-hero__category, .options--with-icons > .primary-hero__category, .options--with-icons > .secondary-hero__category, .options--with-icons > .history-hero__category, .options--with-icons > .news-hero__category, .options--with-icons > .case-studies-hero__category {
+  .options--with-icons > .category, .options--with-icons > .generic-hero__category, .options--with-icons > .news-hero__category, .options--with-icons > .certifications-hero__category, .options--with-icons > .location-hero__category, .options--with-icons > .primary-hero__category, .options--with-icons > .secondary-hero__category, .options--with-icons > .history-hero__category, .options--with-icons > .case-studies-hero__category {
     padding: 0 40px 0 60px; }
   @media (max-width: 1023.98px) {
     .options {
@@ -7741,6 +7741,27 @@ test-component code {
     opacity: 1;
     transform: translateX(0); }
 
+.generic-hero, .news-hero, .certifications-hero {
+  margin-top: -80px;
+  z-index: -1;
+  background: var(--background-quaternary); }
+  .generic-hero__content, .news-hero__content, .certifications-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .generic-hero__category, .news-hero__category, .certifications-hero__category {
+    color: var(--foreground-primary); }
+  .generic-hero__title, .news-hero__title, .certifications-hero__title {
+    color: var(--foreground);
+    margin-bottom: 0.5em; }
+  @media (min-width: 1024px) {
+    .generic-hero, .news-hero, .certifications-hero {
+      padding: 120px 0; } }
+  @media (max-width: 1023.98px) {
+    .generic-hero, .news-hero, .certifications-hero {
+      padding: 80px 0; } }
+
 .main-hero {
   position: relative;
   min-height: 100vh;
@@ -9409,27 +9430,6 @@ test-component code {
     display: block;
     position: relative; } }
 
-.news-hero {
-  margin-top: -80px;
-  z-index: -1;
-  background: var(--background-quaternary); }
-  .news-hero__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%; }
-  .news-hero__category {
-    color: var(--foreground-primary); }
-  .news-hero__title {
-    color: var(--foreground);
-    margin-bottom: 0.5em; }
-  @media (min-width: 1024px) {
-    .news-hero {
-      padding: 120px 0; } }
-  @media (max-width: 1023.98px) {
-    .news-hero {
-      padding: 80px 0; } }
-
 .news-listing {
   padding: 80px 0; }
   .news-listing__title {
@@ -9866,3 +9866,13 @@ test-component code {
     gap: 40px 30px; }
     .nav--index > .nav__item {
       margin-bottom: 15px; } }
+
+.section-generic {
+  padding-top: 80px; }
+  .section-generic:last-child {
+    padding-bottom: 80px; }
+  @media (min-width: 1024px) {
+    .section-generic {
+      padding-top: 120px; }
+      .section-generic:last-child {
+        padding-bottom: 120px; } }

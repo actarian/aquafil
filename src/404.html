@@ -3,54 +3,30 @@
 
 <main class="main">
 
-	<div class="section--breadcrumb">
-		<div class="container">
-			<ul class="nav--breadcrumb">
-				<li class="nav__item"><a href="/aquafil/">Homepage</a></li>
-				<li class="nav__item"><span>404</span></li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- HERO PRODUCTS DETAIL -->
-	<div class="section--hero-products-detail">
-		<div class="card--hero-products-detail">
-			<div class="card__picture">
-				<img loading="lazy" src="/aquafil/img/error-404.jpg" />
-			</div>
-			<div class="card__content">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5">
-							<div class="card__title">Error 404 <em>Page not found</em></div>
-							<div class="card__cta">
-								<a href="/aquafil/" class="btn--more">Torna alla home</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--
-	<div class="section--intro-sm">
-		<div class="container">
+	<div class="breadcrumb">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-9 offset-md-3 absolute" scroll scrollSpeed="1.5">
-					<div class="background expand--right">
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="title">404</div>
-					<div class="description">
-						<p>Giorgetti è presente attraverso una rete di punti vendita e distributori autorizzati. Consigliamo pertanto ai consumatori di rivolgersi per l’acquisto unicamente a questi punti vendita che saranno in grado di garantire l’originalità e la qualità dei prodotti oltre che un eccellente servizio di progettazione, vendita e post-vendita.</p>
-					</div>
+				<div class="col-sm-20 offset-sm-2">
+					<ul class="nav--breadcrumb">
+						<li class="nav__item"><a href="/aquafil/">Homepage</a></li>
+						<li class="nav__item"><span>Certification</span></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	-->
+
+    <!-- @@include ./templates/shared/generic-hero.html { "heroTitle": "404", "heroContent": "Error 404 <em>Page not found</em>" } -->
+
+    <div class="section-generic">
+        <div class="container">
+            <p>
+                Il link che stavi cercando non è stato trovato.
+                <br>
+                <a href="/aquafil/" class="btn--more">Torna alla home</a>
+            </p>
+        </div>
+    </div>
 
 </main>
 <!-- @@close-->

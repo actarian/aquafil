@@ -29,6 +29,9 @@
 @import '_sections/sticky-menu';
 @import '_sections/content-slider';
 
+// generic
+@import '_sections/generic-hero';
+
 // homepage
 @import '_sections/main-hero';
 @import '_sections/profile-proposition';
@@ -70,6 +73,9 @@
 @import '_sections/case-studies/case-studies-hero';
 @import '_sections/case-studies/case-studies-listing';
 
+// certifications
+@import '_sections/certifications/certifications-hero';
+
 // modals
 @import '_sections/side-modal';
 @import '_sections/contact-modal';
@@ -85,3 +91,21 @@
 */
 
 @import '_pages/index';
+
+
+.section-generic
+{
+    padding-top:80px;
+    &:last-child
+    {
+        padding-bottom:80px;
+    }
+    @include media-up(md)
+    {
+        padding-top:120px;
+        &:last-child
+        {
+            padding-bottom:120px;
+        }    
+    }
+}
