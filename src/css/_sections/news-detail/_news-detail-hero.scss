@@ -1,0 +1,19 @@
+.news-detail-hero {
+	@extend .generic-hero;
+
+	&__content {
+		@extend .generic-hero__content;
+	}
+
+	&__category {
+		@extend .generic-hero__category;
+	}
+
+	&__title {
+		@extend .generic-hero__title;
+	}
+
+	&__title-small {
+		@extend .generic-hero__title-small;
+	}
+}

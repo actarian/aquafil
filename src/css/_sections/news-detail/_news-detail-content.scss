@@ -1,0 +1,123 @@
+.news-detail-content
+{
+    p
+    {
+        margin:0 0 1.75em;
+    }
+    &__row
+    {
+        margin-bottom:80px;
+        @include media-up(lg)
+        {
+            margin-bottom: 120px;
+        }
+    }
+    &__thumbnail
+    {
+        min-height: 260px;
+        background-size: cover;
+        background-position: center center;
+        @include media-up(sm)
+        {
+            min-height: 300px;
+        }
+        @include media-up(lg)
+        {
+            min-height: 500px;
+        }
+    }
+    &__text
+    {
+        font-size: 18px;
+    }
+    &__text-larger
+    {
+        font-size: 24px;
+    }
+    &__image-box
+    {
+        width:100%;
+        text-align: center;
+        img
+        {
+            width:auto;
+            margin:0 auto;
+            max-width:100%;
+        }
+    }
+    &__quote
+    {
+        font-weight: $font-bold;
+        font-size: 24px;
+        margin-top:20px;
+        margin-bottom:40px;
+        @include media-up(md)
+        {
+            font-size: 32px;
+            margin-top:30px;
+            margin-bottom:50px;
+        }
+        @include media-up(lg)
+        {
+            font-size: 38px;
+            margin-top:40px;
+            margin-bottom:80px;
+        }        
+    }
+    .content-slider
+    {
+        padding-top:0;
+        .card--content
+        {
+            text-align: center;
+        }
+        img
+        {
+            margin:auto;
+            max-width: 100%;
+        }
+        &__controls
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn--prev,
+            .btn--next
+            {
+                margin-left:40px;
+                margin-right:0;
+            }
+        }
+        &__index
+        {
+            margin-bottom: 0;
+        }
+        &__nav
+        {
+            margin-top:0;
+        }
+    }
+
+    .share
+    {
+        &__text
+        {
+
+        }
+        &__icons
+        {
+            
+        }
+        &__link
+        {
+            margin-right: 20px;
+            display: inline-block;
+            svg
+            {
+                width:22px;
+                height:22px;
+                fill:$text;
+            }
+        }
+    }
+}

@@ -17,6 +17,7 @@
 @import '_components/swiper';
 @import '_components/thron';
 @import '_components/stagger';
+@import '_components/video-embed';
 // @import '_components/appear';
 @import '_components/animation-enter';
 
@@ -68,6 +69,10 @@
 // news
 @import '_sections/news/news-hero';
 @import '_sections/news/news-listing';
+
+// news detail
+@import '_sections/news-detail/news-detail-hero';
+@import '_sections/news-detail/news-detail-content';
 
 // case-studies
 @import '_sections/case-studies/case-studies-hero';

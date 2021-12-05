@@ -21,6 +21,12 @@
 		margin-bottom: 0.5em;
 	}
 
+	&__title-small {
+		@extend .h4;
+		color: $foreground;
+		margin-bottom: 0.5em;
+	}
+
 	@include media-up(md) {
 		padding: 120px 0;
 	}
