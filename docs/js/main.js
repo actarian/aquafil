@@ -484,9 +484,9 @@ ClickOutsideDirective.meta = {
   api: '/aquafil/api',
   assets: '/aquafil/',
   slug: {
-    configureProduct: "/aquafil/products-configure.html",
-    cart: "/aquafil/cart.html",
-    reservedArea: "/aquafil/reserved-area.html"
+    configureProduct: "products-configure.html",
+    cart: "cart.html",
+    reservedArea: "reserved-area.html"
   },
   template: {
     modal: {
@@ -4879,7 +4879,7 @@ var UserService = /*#__PURE__*/function () {
       UserService.busyMe = true;
       return rxjs.of(1).pipe(operators.switchMap(function (_) {
         if (environment.flags.production) {
-          return ApiService.get$("/aquafil/user/me");
+          return ApiService.get$("user/me");
         } else {
           var sessionUser = SessionStorageService.get('user');
 
@@ -4905,7 +4905,7 @@ var UserService = /*#__PURE__*/function () {
   UserService.signin$ = function signin$(payload) {
     var _this2 = this;
 
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signin", payload) : ApiService.get$("/user/signin.json")).pipe(operators.map(function (response) {
+    return (environment.flags.production ? ApiService.post$("user/signin", payload) : ApiService.get$("/user/signin.json")).pipe(operators.map(function (response) {
       return _this2.mapUser(response);
     }), operators.tap(function (user) {
       return _this2.setUser(user);
@@ -4915,7 +4915,7 @@ var UserService = /*#__PURE__*/function () {
   UserService.signout$ = function signout$() {
     var _this3 = this;
 
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signout") : ApiService.get$("/user/signout.json")).pipe(operators.tap(function (_) {
+    return (environment.flags.production ? ApiService.post$("user/signout") : ApiService.get$("/user/signout.json")).pipe(operators.tap(function (_) {
       return _this3.setUser(null);
     }));
   };
@@ -4924,7 +4924,7 @@ var UserService = /*#__PURE__*/function () {
     var _this4 = this;
 
     // console.log('UserService.signup$', payload);
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/signup", payload) : ApiService.get$("/user/signup.json")).pipe(operators.map(function (response) {
+    return (environment.flags.production ? ApiService.post$("user/signup", payload) : ApiService.get$("/user/signup.json")).pipe(operators.map(function (response) {
       response.user = _this4.mapUser(response.user);
       return response;
     }), operators.tap(function (response) {
@@ -4937,7 +4937,7 @@ var UserService = /*#__PURE__*/function () {
     var _this5 = this;
 
     // console.log('UserService.edit$', payload);
-    return (environment.flags.production ? ApiService.post$("/aquafil/user/edit", payload) : ApiService.get$("/user/edit.json")).pipe(operators.map(function (response) {
+    return (environment.flags.production ? ApiService.post$("user/edit", payload) : ApiService.get$("/user/edit.json")).pipe(operators.map(function (response) {
       response.user = _this5.mapUser(response.user);
       return response;
     }), operators.tap(function (response) {
@@ -4948,17 +4948,17 @@ var UserService = /*#__PURE__*/function () {
 
   UserService.editPassword$ = function editPassword$(payload) {
     // console.log('UserService.editPassword$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/edit-password", payload) : ApiService.get$("/user/edit-password.json");
+    return environment.flags.production ? ApiService.post$("user/edit-password", payload) : ApiService.get$("/user/edit-password.json");
   };
 
   UserService.accessData$ = function accessData$(payload) {
     // console.log('UserService.accessData$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/access-data", payload) : ApiService.get$("/user/access-data.json");
+    return environment.flags.production ? ApiService.post$("user/access-data", payload) : ApiService.get$("/user/access-data.json");
   };
 
   UserService.delete$ = function delete$(payload) {
     // console.log('UserService.delete$', payload);
-    return environment.flags.production ? ApiService.post$("/aquafil/user/delete", payload) : ApiService.get$("/user/delete.json");
+    return environment.flags.production ? ApiService.post$("user/delete", payload) : ApiService.get$("/user/delete.json");
   };
 
   UserService.gdpr$ = function gdpr$() {
