@@ -20,6 +20,7 @@
 @import '_components/video-embed';
 // @import '_components/appear';
 @import '_components/animation-enter';
+@import '_components/responsive-iframe';
 
 @import '_forms/forms';
 
@@ -80,6 +81,10 @@
 
 // certifications
 @import '_sections/certifications/certifications-hero';
+
+// investors
+@import '_sections/investors/_investors';
+@import '_sections/investors/_investors-menu';
 
 // modals
 @import '_sections/side-modal';

@@ -1,0 +1,22 @@
+<!-- header -->
+<header class="header" header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-20 offset-sm-2">
+				<div class="header__main">
+					<div class="header__logo">
+						<a href="/aquafil/" class="btn--logo"><svg><use xlink:href="#aquafil"></use></svg></a>
+					</div>
+					<div class="header__menu" [class]="{ active: header == 'menu' }">
+						<a href="#" type="button" class="btn--back">Back to website</a>
+                        <!-- @@include ../shared/navigation-top.html -->
+					</div>
+					<button type="button" class="btn--menu" [class]="{ active: header == 'menu' }" (click)="onToggle('menu')">
+						<svg class="menu"><use xlink:href="#menu"></use></svg>
+						<svg class="close"><use xlink:href="#close"></use></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

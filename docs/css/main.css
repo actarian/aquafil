@@ -4960,7 +4960,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.4em; }
 
-.h3, .report-proposition__title, .card--side-modal__title, .card--gallery-modal__title {
+.h3, .report-proposition__title, .page--investors__page-title, .card--side-modal__title, .card--gallery-modal__title {
   font-weight: bold;
   font-size: Max(28px, Min(60px, 3.125vw));
   line-height: 1.2;
@@ -4972,7 +4972,7 @@ h6 {
   line-height: 1.36;
   margin-bottom: 1.11111em; }
 
-.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title, .card--history-detail__title {
+.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title, .card--history-detail__title, .page--investors__section-title, .page--investor__menu-title {
   font-weight: bold;
   font-size: Max(16px, Min(36px, 1.875vw));
   line-height: 1.36;
@@ -5009,6 +5009,12 @@ h6 {
 
 p {
   margin: 0 0 0.75em 0; }
+
+.foreground {
+  color: var(--foreground); }
+
+.primary {
+  color: #00ACED; }
 
 .dropdown-item:not(.dropped) {
   display: none; }
@@ -5511,7 +5517,7 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5539,7 +5545,7 @@ a {
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
-  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
+  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
   .btn--next, .btn--up,
   .btn--down, .btn--gallery-prev,
   .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5556,7 +5562,7 @@ a {
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
-  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .btn--websolute:active, .btn--prev:active,
+  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .page--investors .header .btn--back:active, .btn--websolute:active, .btn--prev:active,
   .btn--next:active, .btn--up:active,
   .btn--down:active, .btn--gallery-prev:active,
   .btn--gallery-next:active, .section--index .title:active, .nav--index > .nav__item > a:active,
@@ -5573,7 +5579,7 @@ a {
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
-  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .btn--websolute:focus, .btn--prev:focus,
+  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--websolute:focus, .btn--prev:focus,
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .btn--gallery-prev:focus,
   .btn--gallery-next:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
@@ -5590,7 +5596,7 @@ a {
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
-  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .btn--websolute:hover, .btn--prev:hover,
+  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .page--investors .header .btn--back:hover, .btn--websolute:hover, .btn--prev:hover,
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .btn--gallery-prev:hover,
   .btn--gallery-next:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
@@ -5607,7 +5613,7 @@ a {
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
-  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .btn--websolute:visited, .btn--prev:visited,
+  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .page--investors .header .btn--back:visited, .btn--websolute:visited, .btn--prev:visited,
   .btn--next:visited, .btn--up:visited,
   .btn--down:visited, .btn--gallery-prev:visited,
   .btn--gallery-next:visited, .section--index .title:visited, .nav--index > .nav__item > a:visited,
@@ -5615,7 +5621,7 @@ a {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
 .nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
@@ -5631,14 +5637,14 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
@@ -5655,7 +5661,7 @@ a {
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
-  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .btn--websolute[disabled], .btn--prev[disabled],
+  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .page--investors .header .btn--back[disabled], .btn--websolute[disabled], .btn--prev[disabled],
   .btn--next[disabled], .btn--up[disabled],
   .btn--down[disabled], .btn--gallery-prev[disabled],
   .btn--gallery-next[disabled], .section--index .title[disabled], .nav--index > .nav__item > a[disabled],
@@ -5754,28 +5760,28 @@ a {
     .btn--download {
       min-width: 75vw; } }
 
-.btn--certification {
+.btn--certification, .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .header .btn--back, .page--investors .header .page--investors__downloads-item .btn--back {
   font-size: Max(11px, Min(18px, 0.9375vw));
   line-height: 1.38;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   height: var(--p60); }
-  .btn--certification > span {
+  .btn--certification > span, .page--investors__downloads-item .btn--investor > span, .page--investors__downloads-item .page--investors .header .btn--back > span, .page--investors .header .page--investors__downloads-item .btn--back > span {
     display: flex;
     align-items: center;
     padding: 0 var(--p20); }
-  .btn--certification > .icon {
+  .btn--certification > .icon, .page--investors__downloads-item .btn--investor > .icon, .page--investors__downloads-item .page--investors .header .btn--back > .icon, .page--investors .header .page--investors__downloads-item .btn--back > .icon {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative);
     padding: 0 var(--p10); }
-  .btn--certification svg {
+  .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .page--investors__downloads-item .page--investors .header .btn--back svg, .page--investors .header .page--investors__downloads-item .btn--back svg {
     width: 33px;
     height: 29px; }
-  .btn--certification, .btn--certification:active, .btn--certification:focus, .btn--certification:visited {
+  .btn--certification, .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .header .btn--back, .page--investors .header .page--investors__downloads-item .btn--back, .btn--certification:active, .page--investors__downloads-item .btn--investor:active, .page--investors__downloads-item .page--investors .header .btn--back:active, .page--investors .header .page--investors__downloads-item .btn--back:active, .btn--certification:focus, .page--investors__downloads-item .btn--investor:focus, .page--investors__downloads-item .page--investors .header .btn--back:focus, .page--investors .header .page--investors__downloads-item .btn--back:focus, .btn--certification:visited, .page--investors__downloads-item .btn--investor:visited, .page--investors__downloads-item .page--investors .header .btn--back:visited, .page--investors .header .page--investors__downloads-item .btn--back:visited {
     background-color: var(--background-quaternary);
     color: var(--foreground); }
-  .btn--certification:hover {
+  .btn--certification:hover, .page--investors__downloads-item .btn--investor:hover, .page--investors__downloads-item .page--investors .header .btn--back:hover, .page--investors .header .page--investors__downloads-item .btn--back:hover {
     background-color: var(--background-primary);
     color: var(--foreground-negative); }
 
@@ -6279,6 +6285,28 @@ body.modal--active {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+
+.responsive-iframe__container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    .responsive-iframe__container {
+      margin-bottom: 80px; } }
+
+.responsive-iframe__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0; }
 
 ::-webkit-file-upload-button {
   cursor: pointer; }
@@ -7060,7 +7088,7 @@ test-component code {
     .header__menu .nav--main {
       flex: 1 0 75%;
       order: 3; }
-    .header__menu .btn--investor {
+    .header__menu .btn--investor, .header__menu .page--investors .header .btn--back, .page--investors .header .header__menu .btn--back {
       flex: 0 1 auto;
       order: 4; }
     .header__menu .nav--service {
@@ -7274,19 +7302,19 @@ test-component code {
           .nav--language > .nav__item > span .down {
             display: none; } }
 
-.btn--investor {
+.btn--investor, .page--investors .header .btn--back {
   padding: var(--p10) var(--p20);
   white-space: nowrap;
   font-size: 14px;
   font-weight: bold; }
-  .btn--investor, .btn--investor:active, .btn--investor:focus, .btn--investor:visited {
+  .btn--investor, .page--investors .header .btn--back, .btn--investor:active, .page--investors .header .btn--back:active, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--investor:visited, .page--investors .header .btn--back:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
   @media (min-width: 1024px) {
-    .btn--investor {
+    .btn--investor, .page--investors .header .btn--back {
       font-size: Max(12px, Min(16px, 1vw)); } }
   @media (max-width: 1023.98px) {
-    .btn--investor {
+    .btn--investor, .page--investors .header .btn--back {
       font-size: 24px;
       margin: var(--p50) var(--cw2);
       border: 1px solid white;
@@ -7548,7 +7576,7 @@ test-component code {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 0; }
+      padding: 18px 0; }
     .sticky-menu__title {
       margin-right: var(--p40); } }
   @media (max-width: 767.98px) {
@@ -9628,6 +9656,305 @@ test-component code {
       .listing--case-studies > .listing__item {
         flex: 0 0 100%;
         max-width: 100%; } }
+
+.page--investors .header .btn--back {
+  background: transparent;
+  border: 1px solid var(--foreground);
+  color: var(--foreground) !important; }
+  .page--investors .header .btn--back:hover {
+    background: var(--foreground);
+    color: var(--foreground-negative) !important; }
+
+.page--investors .main {
+  color: #3D5D6C;
+  font-size: 14px; }
+  .page--investors .main section {
+    padding-bottom: 20px; }
+    .page--investors .main section:last-child {
+      padding-bottom: 80px; }
+  @media (min-width: 1024px) {
+    .page--investors .main {
+      font-size: 16px; }
+      .page--investors .main section {
+        padding-bottom: 40px; }
+        .page--investors .main section:last-child {
+          padding-bottom: 160px; } }
+
+.page--investors .sticky-menu .nav__item {
+  margin: 20px 10px; }
+  .page--investors .sticky-menu .nav__item a {
+    font-size: 14px; }
+
+.page--investors img {
+  margin-bottom: 40px; }
+
+.page--investors__content {
+  padding-top: 20px; }
+
+.page--investors__page-title {
+  color: var(--foreground);
+  margin-top: 40px; }
+  @media (min-width: 1024px) {
+    .page--investors__page-title {
+      margin-top: 80px; } }
+
+.page--investors__section-title {
+  color: var(--foreground);
+  margin-top: 30px;
+  margin-bottom: 20px; }
+  @media (min-width: 1024px) {
+    .page--investors__section-title {
+      margin-top: 60px;
+      margin-bottom: 40px; } }
+
+.page--investors__text-intro {
+  font-size: 16px;
+  margin-bottom: 30px; }
+  @media (min-width: 1024px) {
+    .page--investors__text-intro {
+      font-size: 18px;
+      margin-bottom: 40px; } }
+
+.page--investors .btn--certification, .page--investors .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .btn--investor, .page--investors__downloads-item .page--investors .header .btn--back, .page--investors .header .page--investors__downloads-item .btn--back {
+  color: #3D5D6C; }
+  .page--investors .btn--certification:hover, .page--investors .page--investors__downloads-item .btn--investor:hover, .page--investors__downloads-item .page--investors .btn--investor:hover, .page--investors__downloads-item .page--investors .header .btn--back:hover, .page--investors .header .page--investors__downloads-item .btn--back:hover {
+    color: var(--foreground-negative); }
+
+.page--investors__downloads {
+  display: flex;
+  flex-wrap: wrap; }
+
+.page--investors__downloads-item {
+  flex: 100%;
+  width: 100%;
+  margin-bottom: 30px; }
+  .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .header .btn--back, .page--investors .header .page--investors__downloads-item .btn--back {
+    margin: 0; }
+    .page--investors__downloads-item .btn--investor .icon, .page--investors__downloads-item .page--investors .header .btn--back .icon, .page--investors .header .page--investors__downloads-item .btn--back .icon {
+      padding: 0 var(--p10); }
+  @media (min-width: 1024px) {
+    .page--investors__downloads-item {
+      max-width: 50%;
+      margin-bottom: 40px; }
+      .page--investors__downloads-item:nth-child(n) {
+        padding-right: 20px; }
+      .page--investors__downloads-item:nth-child(2n) {
+        padding-left: 20px;
+        padding-right: 0; } }
+  @media (min-width: 1440px) {
+    .page--investors__downloads-item {
+      margin-bottom: 60px; }
+      .page--investors__downloads-item:nth-child(n) {
+        padding-right: 40px; }
+      .page--investors__downloads-item:nth-child(2n) {
+        padding-left: 40px;
+        padding-right: 0; } }
+
+.page--investors .btn--calendar {
+  min-height: var(--p60);
+  background-color: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px; }
+  .page--investors .btn--calendar .left {
+    min-height: var(--p60);
+    flex: 100%;
+    color: var(--foreground-negative);
+    background: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    padding: 0 40px; }
+    @media (min-width: 1024px) {
+      .page--investors .btn--calendar .left {
+        flex: initial;
+        font-size: 28px;
+        font-weight: var(--font-semibold); } }
+  .page--investors .btn--calendar .right {
+    background-color: #F1F1F1;
+    flex: 100%;
+    padding: 20px; }
+    @media (min-width: 1024px) {
+      .page--investors .btn--calendar .right {
+        flex: 1; } }
+  @media (min-width: 1024px) {
+    .page--investors .btn--calendar {
+      margin-bottom: 40px; } }
+
+.page--investors__accordion {
+  margin-top: 30px; }
+  @media (min-width: 1024px) {
+    .page--investors__accordion {
+      margin-top: 80px; } }
+
+.page--investors__accordion-title {
+  background: var(--foreground);
+  color: var(--foreground-negative);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 28px;
+  margin-top: 20px; }
+  @media (min-width: 1024px) {
+    .page--investors__accordion-title {
+      margin-top: 30px; } }
+
+.page--investors__accordion-text {
+  flex: 1;
+  padding: 0 20px; }
+
+.page--investors__accordion-icon {
+  height: 68px;
+  width: 68px;
+  position: relative;
+  background: #00ACED; }
+  .page--investors__accordion-icon:after, .page--investors__accordion-icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--foreground-negative); }
+  .page--investors__accordion-icon:after {
+    transform: translateY(-50%) translateX(-50%) rotate(90deg); }
+
+.page--investors__accordion-content {
+  display: none;
+  padding-top: 40px; }
+
+.page--investors__accordion-item {
+  margin-bottom: 0; }
+  .page--investors__accordion-item.open .page--investors__accordion-content {
+    display: block; }
+
+.page--investors .listing-board {
+  display: flex;
+  flex-wrap: wrap; }
+  .page--investors .listing-board__card {
+    font-size: 16px; }
+    @media (min-width: 768px) {
+      .page--investors .listing-board__card {
+        width: 50%;
+        padding-right: 40px;
+        margin-bottom: 40px; } }
+    @media (min-width: 1024px) {
+      .page--investors .listing-board__card {
+        width: 33.33%;
+        font-size: 18px;
+        padding-right: 80px;
+        margin-bottom: 80px; } }
+  .page--investors .listing-board__image {
+    position: relative; }
+    .page--investors .listing-board__image img {
+      width: 100%;
+      margin: 0; }
+  .page--investors .listing-board__name {
+    font-weight: var(--font-semibold);
+    margin-top: 15px;
+    margin-bottom: 0px; }
+  .page--investors .listing-board__role {
+    margin-top: 8px;
+    margin-bottom: 0px; }
+  .page--investors .listing-board__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.page--investors .gray-card {
+  background: #F1F1F1;
+  padding: 20px;
+  margin-top: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .page--investors .gray-card {
+      width: 30%;
+      margin-right: 3.33%; } }
+  @media (min-width: 1440px) {
+    .page--investors .gray-card {
+      width: calc(33.33%-80px);
+      margin-right: 80px; } }
+  .page--investors .gray-card__name {
+    font-weight: var(--font-semibold); }
+
+.page--investors .page--investors__content .btn--certification, .page--investors .page--investors__content .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .page--investors__content .btn--investor, .page--investors__downloads-item .page--investors .page--investors__content .header .btn--back, .page--investors__downloads-item .page--investors .header .page--investors__content .btn--back, .page--investors .page--investors__content .header .page--investors__downloads-item .btn--back, .page--investors .header .page--investors__downloads-item .page--investors__content .btn--back {
+  max-width: 600px; }
+
+.page--investor__menu-toggle {
+  position: absolute;
+  top: 10px;
+  left: calc(100% + 10px);
+  z-index: 1;
+  right: 27px;
+  background: var(--foreground-negative);
+  border: 1px solid red;
+  width: 34px;
+  height: 34px;
+  background: var(--foreground-negative);
+  border: 1px solid #00ACED;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out; }
+  .page--investor__menu-toggle svg {
+    transition: all 0.5s ease-in-out;
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: #00ACED;
+    transform: rotate(90deg); }
+
+.page--investor__menu {
+  transition: all 0.5s ease-in-out;
+  height: calc(100vh - 90px);
+  transform: translateX(-100%); }
+  @media (max-width: 767.98px) {
+    .page--investor__menu {
+      position: fixed;
+      top: 90px;
+      z-index: 1;
+      background: var(--foreground-negative); } }
+  .page--investor__menu-title {
+    color: var(--foreground);
+    margin-top: 40px; }
+    @media (min-width: 1024px) {
+      .page--investor__menu-title {
+        font-size: 24px; } }
+  .page--investor__menu-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  .page--investor__menu-link {
+    color: #9D9D9C; }
+    .page--investor__menu-link.active {
+      color: var(--foreground); }
+
+@media (min-width: 1024px) {
+  .page--investor__menu-toggle {
+    display: none; }
+  .page--investor__menu {
+    height: auto;
+    position: relative;
+    transform: none;
+    padding-top: 90px;
+    padding-right: 40px; } }
+
+.investor-menu-open .page--investor__menu-toggle {
+  left: auto;
+  right: 10px; }
+  .investor-menu-open .page--investor__menu-toggle svg {
+    transform: rotate(-90deg); }
+
+.investor-menu-open .page--investor__menu {
+  transform: none; }
 
 .card--side-modal {
   display: none;

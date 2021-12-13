@@ -5904,4 +5904,9 @@ AppModule.meta = {
   imports: [rxcomp.CoreModule, rxcompForm.FormModule, CommonModule, ControlsModule, SharedModule],
   declarations: [ContactModalComponent, CardProductDetailComponent, OpenModallyDirective, SideModalComponent],
   bootstrap: AppComponent
-};rxcomp.Browser.bootstrap(AppModule);})));
+};rxcomp.Browser.bootstrap(AppModule);
+[].forEach.call(document.getElementsByClassName('page--investors__accordion-title'), function (classnameElement) {
+  classnameElement.addEventListener('click', function () {
+    this.parentElement.classList.toggle('open');
+  });
+});})));

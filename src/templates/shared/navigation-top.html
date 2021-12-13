@@ -1,0 +1,21 @@
+<ul class="nav--service">
+    <li class="nav__item">
+        <a href="#"><span>Contatti</span></a>
+    </li>
+    <li class="nav__item">
+        <a href="#"><span>Careers</span></a>
+    </li>
+</ul>
+<ul class="nav--language">
+    <li class="nav__item">
+        <span (click)="onMenu(5)"><span>En</span>
+            <svg class="down"><use xlink:href="#arrow-down"></use></svg>
+            <svg class="next"><use xlink:href="#arrow-next"></use></svg>
+        </span>
+        <ul class="nav--submenu" [class]="{ active: menu == 5 }">
+            <li class="nav__item"><a href="#"><span>It</span></a></li>
+            <li class="nav__item"><a href="#"><span>De</span></a></li>
+            <li class="nav__item back"><span (click)="onBack()"><svg><use xlink:href="#back"></use></svg> <span>Back</span></span></li>
+        </ul>
+    </li>
+</ul>
