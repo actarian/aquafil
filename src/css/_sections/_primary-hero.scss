@@ -22,6 +22,10 @@
 		margin-bottom: var(--p60);
 	}
 
+    &__picture {
+        display:inline-block;
+    }
+
 	@include media-up(sm) {
 		padding: var(--p120) 0;
 

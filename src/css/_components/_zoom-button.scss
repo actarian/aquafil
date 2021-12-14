@@ -1,0 +1,24 @@
+.zoom-button
+{
+    @extend .btn--plus;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.page--location
+{
+    // slider in pagina mission
+    .card--content__picture .zoom-button
+    {
+        top:0;
+        right:0;
+    }
+
+    // quote in pagina pillars
+    .quote__picture .zoom-button
+    {
+        top:80px;
+        right:20px;
+    }
+}

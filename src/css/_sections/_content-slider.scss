@@ -239,7 +239,8 @@
 [gallery] {
 	cursor: pointer;
 
-	&>img {
+	&>img,
+    &>.zoom-button {
 		transition: ease-in-out $fast;
 		transition-property: transform, box-shadow;
 	}
@@ -249,6 +250,10 @@
 			transform: scale3d(1.02, 1.02, 1);
 			box-shadow: 0 20px 30px -5px rgba(0, 58, 86, 0.1);
 		}
+        &>.zoom-button
+        {
+			transform: translateX(10px) translateY(-10px);
+        }
 	}
 }
 

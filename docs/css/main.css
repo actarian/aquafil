@@ -5523,7 +5523,7 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5551,7 +5551,7 @@ a {
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
-  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
   .btn--next, .btn--up,
   .btn--down, .btn--gallery-prev,
   .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5568,7 +5568,7 @@ a {
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
-  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .page--investors .header .btn--back:active, .btn--websolute:active, .btn--prev:active,
+  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .zoom-button:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .page--investors .header .btn--back:active, .btn--websolute:active, .btn--prev:active,
   .btn--next:active, .btn--up:active,
   .btn--down:active, .btn--gallery-prev:active,
   .btn--gallery-next:active, .section--index .title:active, .nav--index > .nav__item > a:active,
@@ -5585,7 +5585,7 @@ a {
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
-  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--websolute:focus, .btn--prev:focus,
+  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .zoom-button:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--websolute:focus, .btn--prev:focus,
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .btn--gallery-prev:focus,
   .btn--gallery-next:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
@@ -5602,7 +5602,7 @@ a {
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
-  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .page--investors .header .btn--back:hover, .btn--websolute:hover, .btn--prev:hover,
+  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .zoom-button:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .page--investors .header .btn--back:hover, .btn--websolute:hover, .btn--prev:hover,
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .btn--gallery-prev:hover,
   .btn--gallery-next:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
@@ -5619,7 +5619,7 @@ a {
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
-  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .page--investors .header .btn--back:visited, .btn--websolute:visited, .btn--prev:visited,
+  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .zoom-button:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .page--investors .header .btn--back:visited, .btn--websolute:visited, .btn--prev:visited,
   .btn--next:visited, .btn--up:visited,
   .btn--down:visited, .btn--gallery-prev:visited,
   .btn--gallery-next:visited, .section--index .title:visited, .nav--index > .nav__item > a:visited,
@@ -5627,7 +5627,7 @@ a {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
 .nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
@@ -5643,14 +5643,14 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
@@ -5667,7 +5667,7 @@ a {
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
-  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .page--investors .header .btn--back[disabled], .btn--websolute[disabled], .btn--prev[disabled],
+  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .zoom-button[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .page--investors .header .btn--back[disabled], .btn--websolute[disabled], .btn--prev[disabled],
   .btn--next[disabled], .btn--up[disabled],
   .btn--down[disabled], .btn--gallery-prev[disabled],
   .btn--gallery-next[disabled], .section--index .title[disabled], .nav--index > .nav__item > a[disabled],
@@ -5791,18 +5791,18 @@ a {
     background-color: var(--background-primary);
     color: var(--foreground-negative); }
 
-.btn--plus {
+.btn--plus, .zoom-button {
   padding: var(--p20);
   display: inline-flex;
   justify-content: center;
   align-items: center; }
-  .btn--plus svg {
+  .btn--plus svg, .zoom-button svg {
     width: 28px;
     height: 28px; }
-  .btn--plus, .btn--plus:active, .btn--plus:focus, .btn--plus:visited {
+  .btn--plus, .zoom-button, .btn--plus:active, .zoom-button:active, .btn--plus:focus, .zoom-button:focus, .btn--plus:visited, .zoom-button:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
-  .btn--plus:hover {
+  .btn--plus:hover, .zoom-button:hover {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
 
@@ -6313,6 +6313,19 @@ body.modal--active {
   height: 100%;
   border: 0;
   margin: 0; }
+
+.zoom-button {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
+.page--location .card--content__picture .zoom-button {
+  top: 0;
+  right: 0; }
+
+.page--location .quote__picture .zoom-button {
+  top: 80px;
+  right: 20px; }
 
 ::-webkit-file-upload-button {
   cursor: pointer; }
@@ -7800,12 +7813,15 @@ test-component code {
 
 [gallery] {
   cursor: pointer; }
-  [gallery] > img {
+  [gallery] > img,
+  [gallery] > .zoom-button {
     transition: ease-in-out 250ms;
     transition-property: transform, box-shadow; }
   [gallery]:hover > img {
     transform: scale3d(1.02, 1.02, 1);
     box-shadow: 0 20px 30px -5px rgba(0, 58, 86, 0.1); }
+  [gallery]:hover > .zoom-button {
+    transform: translateX(10px) translateY(-10px); }
 
 [swiper-content] {
   overflow: visible; }
@@ -8733,19 +8749,19 @@ test-component code {
   .card--product__title {
     color: var(--foreground);
     margin-bottom: var(--p40); }
-  .card--product .btn--plus {
+  .card--product .btn--plus, .card--product .zoom-button {
     position: absolute;
     right: 0;
     bottom: 0; }
-    .card--product .btn--plus svg {
+    .card--product .btn--plus svg, .card--product .zoom-button svg {
       transition: transform ease-in-out 250ms; }
   .card--product:hover .card--product__picture > img {
     transform: scale(1.1, 1.1); }
-  .card--product:hover .btn--plus {
+  .card--product:hover .btn--plus, .card--product:hover .zoom-button {
     position: absolute;
     right: 0;
     bottom: 0; }
-    .card--product:hover .btn--plus > svg {
+    .card--product:hover .btn--plus > svg, .card--product:hover .zoom-button > svg {
       transform: scale(1.3, 1.3); }
   .listing__item:nth-child(4n+1) > .card--product {
     background: var(--background-negative); }
@@ -8813,6 +8829,8 @@ test-component code {
   .primary-hero__title {
     color: var(--foreground);
     margin-bottom: var(--p60); }
+  .primary-hero__picture {
+    display: inline-block; }
   @media (min-width: 768px) {
     .primary-hero {
       padding: var(--p120) 0; }
@@ -9456,11 +9474,11 @@ test-component code {
     align-items: center;
     width: 100%;
     bottom: 0; }
-  .card--history .btn--plus svg {
+  .card--history .btn--plus svg, .card--history .zoom-button svg {
     transition: transform ease-in-out 250ms; }
   .card--history:hover .card--history__picture > img {
     transform: scale(1.1, 1.1); }
-  .card--history:hover .btn--plus > svg {
+  .card--history:hover .btn--plus > svg, .card--history:hover .zoom-button > svg {
     transform: scale(1.3, 1.3); }
   .card--history:hover .card--history__title, .card--history.active .card--history__title {
     opacity: 1; }
