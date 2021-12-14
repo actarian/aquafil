@@ -1,0 +1,29 @@
+.page--report
+{
+    .title-text {
+        /*
+        &__title,
+        &__abstract,
+        &__description {
+        }
+        &.negative {
+        }
+        &:not(.negative) {
+        }
+        &.secondary {
+        }
+        */
+
+        @include media-up(sm) {
+            &__cta {
+                margin-top: var(--p40);
+            }
+        }
+    
+        @include media-down(xs) {
+            &__cta {
+                margin-top: var(--p20);
+            }
+        }
+    }
+}

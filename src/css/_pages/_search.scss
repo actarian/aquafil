@@ -1,0 +1,43 @@
+.search
+{
+    &__item
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:40px;
+        @include media-up(md)
+        {
+            margin-bottom:80px;
+        }
+    }
+    &__thumb
+    {
+        width:25%;
+        @include media-up(md)
+        {
+            //width:auto;
+        }
+        max-width: 200px;
+        img
+        {
+            margin-right:20px;
+            margin-bottom:20px;
+        }
+    }
+    &__content
+    {
+        flex:1;
+    }
+    &__title
+    {
+        @extend .h6;
+        margin-bottom: 20px;
+    }
+    &__abstract
+    {
+        @extend .small;
+        margin-top:0;
+        margin-bottom: 20px;
+    }
+
+}

@@ -1,0 +1,14 @@
+.report
+{
+	padding: 0 0 var(--p80) 0;
+
+	&__title {
+		@extend .h4;
+		margin-bottom: var(--p40);
+	}
+
+	&__divline {
+		padding-top: var(--p80);
+		border-bottom: 1px solid $border;
+    }
+}

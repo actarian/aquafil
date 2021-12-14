@@ -87,6 +87,9 @@
 @import '_sections/investors/_investors';
 @import '_sections/investors/_investors-menu';
 
+// report sustainability
+@import '_sections/_report';
+
 // modals
 @import '_sections/side-modal';
 @import '_sections/contact-modal';
@@ -102,6 +105,8 @@
 */
 
 @import '_pages/index';
+@import '_pages/report-sustainability';
+@import '_pages/_search';
 
 
 .section-generic
