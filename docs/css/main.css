@@ -5002,7 +5002,13 @@ h6 {
   font-size: Max(11px, Min(16px, 0.83333vw));
   line-height: 1.5; }
 
-.smallest, .nav--service > .nav__item > a,
+.nav--service .search input:-ms-input-placeholder {
+  font-size: Max(10px, Min(14px, 0.72916vw));
+  line-height: 1.2; }
+
+.smallest, .nav--service .search input,
+.nav--service .search input::placeholder,
+.nav--service .search input:focus, .nav--service > .nav__item > a,
 .nav--service > .nav__item > span {
   font-size: Max(10px, Min(14px, 0.72916vw));
   line-height: 1.2; }
@@ -7221,11 +7227,50 @@ test-component code {
         .nav--main > .nav__item > span .down {
           display: none; } }
 
+.nav--service .search {
+  display: flex; }
+  .nav--service .search svg {
+    width: 12px;
+    height: auto; }
+  .nav--service .search input:-ms-input-placeholder {
+    background-color: transparent;
+    color: var(--foreground);
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    outline: none;
+    box-shadow: 0;
+    font-size: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    width: 60px;
+    float: right;
+    text-align: right;
+    outline-color: #003a56; }
+  .nav--service .search input,
+  .nav--service .search input::placeholder,
+  .nav--service .search input:focus {
+    background-color: transparent;
+    color: var(--foreground);
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    outline: none;
+    box-shadow: 0;
+    font-size: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    width: 60px;
+    float: right;
+    text-align: right;
+    outline-color: #003a56; }
+
 .nav--service > .nav__item > a,
 .nav--service > .nav__item > span {
   display: flex;
-  align-items: center;
-  text-transform: uppercase; }
+  align-items: center; }
 
 @media (min-width: 1024px) {
   .nav--service {
@@ -7308,8 +7353,9 @@ test-component code {
   font-size: 14px;
   font-weight: bold; }
   .btn--investor, .page--investors .header .btn--back, .btn--investor:active, .page--investors .header .btn--back:active, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--investor:visited, .page--investors .header .btn--back:visited {
-    background-color: var(--foreground-primary);
-    color: var(--foreground-negative); }
+    background-color: transparent;
+    color: #3D5D6C;
+    border: 1px solid #3D5D6C; }
   @media (min-width: 1024px) {
     .btn--investor, .page--investors .header .btn--back {
       font-size: Max(12px, Min(16px, 1vw)); } }
@@ -7319,6 +7365,9 @@ test-component code {
       margin: var(--p50) var(--cw2);
       border: 1px solid white;
       padding: 10px 30px; } }
+  .btn--investor:hover, .page--investors .header .btn--back:hover {
+    color: var(--foreground-negative);
+    background-color: #3D5D6C; }
 
 .nav--submenu > .nav__item > a,
 .nav--submenu > .nav__item > span {
@@ -8566,11 +8615,9 @@ test-component code {
     position: absolute;
     height: 1px; }
   .borders:before {
-    top: 0;
-    border-top: 1px solid var(--border); }
+    top: 0; }
   .borders:after {
-    bottom: 0;
-    border-bottom: 1px solid var(--border); }
+    bottom: 0; }
   @media (min-width: 1024px) {
     .borders:before, .borders:after {
       left: 12.5%;
@@ -9936,6 +9983,9 @@ test-component code {
     color: #9D9D9C; }
     .page--investor__menu-link.active {
       color: var(--foreground); }
+    @media (min-width: 1024px) {
+      .page--investor__menu-link {
+        margin-bottom: 10px; } }
 
 @media (min-width: 1024px) {
   .page--investor__menu-toggle {
@@ -10003,6 +10053,8 @@ test-component code {
         background-color: transparent; }
   .card--side-modal__title {
     margin-bottom: var(--p40); }
+  .card--side-modal__text {
+    margin-bottom: var(--p40); }
   .card--side-modal__cta {
     display: flex;
     justify-content: space-between; }
@@ -10059,7 +10111,7 @@ test-component code {
     max-height: calc(100vh - 120px);
     overflow-x: hidden;
     overflow-y: auto;
-    padding: var(--p80) 0; }
+    padding: var(--p40) var(--p40); }
     .contact-modal__content::-webkit-scrollbar {
       width: 8px;
       height: 8px;
