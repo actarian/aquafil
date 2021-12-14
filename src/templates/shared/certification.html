@@ -1,8 +1,8 @@
-<div class="certification borders">
+<!--<div class="certification borders">-->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
-				<div class="certification__title"><!--@@var=certificationTitle--></div>
+				<!--<div class="certification__title"></div>-->
 				<div class="listing--downloads">
 					<div class="listing__item">
 						<a href="#" download="Iso-9001-2015-AquafilUSA.pdf" class="btn--certification">
@@ -56,4 +56,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+<!--</div>-->

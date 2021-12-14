@@ -33,10 +33,10 @@
 
 	&__content {
 		flex: 1 1 calc(100vh - 120px);
-		max-height: calc(100vh - 120px);
+		max-height: 100vh;//calc(100vh - 120px);
 		overflow-x: hidden;
 		overflow-y: auto;
-		padding: var(--p80) 0;
+		padding: var(--p40) var(--p40);
 		@include scrollbar();
 	}
 
@@ -44,6 +44,11 @@
 		@extend .h4;
 		margin: 0;
 	}
+
+    &__text-top
+    {
+        margin-bottom:40px;
+    }
 
 	&__abstract {
 		@extend .extrasmall;
@@ -56,6 +61,102 @@
 	@include media-up(md) {
 		width: 40.625vw;
 	}
+
+    .group--form
+    {
+        border:0;
+    }
+
+    .group--form,
+    .group--form--file,
+    .group--form--select
+    {
+        border:1px solid $border;
+        color:$border;
+        padding:0 30px;
+        height:70px;
+        font-size: 16px;
+        margin-bottom:20px;
+        input,
+        select,
+        *::placeholder
+        {
+            color:$foreground;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        *::placeholder
+        {
+            color:$border;
+        }
+    }
+
+    .test-component
+    {
+        border:1px solid $border;
+        color:$border;
+        padding:0 30px;
+        border-radius: 0;
+        margin:0 0 20px 0;
+        text-align:left;
+        input,
+        select,
+        *::placeholder
+        {
+            color:$foreground;
+            font-size: 16px;
+            font-family: inherit;
+        }    
+        *::placeholder
+        {
+            color:$border;
+        }   
+    }
+
+    .control--custom-select,
+    .control--text
+    {
+        font-size:inherit;
+        color:inherit;
+        color:$foreground;
+        display: flex;
+        align-items: center;
+    }
+
+    .group--form--file
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right:0;
+        .upload
+        {
+            height:70px;
+            width:64px;
+            margin-right:-1px;
+            margin-top:-1px;
+        }
+    }
+
+    .group--form--checkbox
+    {
+        label
+        {
+            color:$foreground;
+            font-weight: 400;
+        }
+        .icon
+        {
+            color:$border;
+        }
+        .icon--checkbox-checked
+        {
+            color:$foreground;
+        }
+        font-weight: inherit;
+        border:0;
+        margin-bottom:20px;
+    }
 }
 
 .form {

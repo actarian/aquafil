@@ -10108,7 +10108,7 @@ test-component code {
       padding: 0; }
   .contact-modal__content {
     flex: 1 1 calc(100vh - 120px);
-    max-height: calc(100vh - 120px);
+    max-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     padding: var(--p40) var(--p40); }
@@ -10133,11 +10133,95 @@ test-component code {
         background-color: transparent; }
   .contact-modal__title {
     margin: 0; }
+  .contact-modal__text-top {
+    margin-bottom: 40px; }
   .contact-modal .btn--close {
     position: absolute; }
   @media (min-width: 1024px) {
     .contact-modal {
       width: 40.625vw; } }
+  .contact-modal .group--form {
+    border: 0; }
+  .contact-modal .group--form,
+  .contact-modal .group--form--file,
+  .contact-modal .group--form--select {
+    border: 1px solid var(--border);
+    color: var(--border);
+    padding: 0 30px;
+    height: 70px;
+    font-size: 16px;
+    margin-bottom: 20px; }
+    .contact-modal .group--form *:-ms-input-placeholder, .contact-modal .group--form--file *:-ms-input-placeholder, .contact-modal .group--form--select *:-ms-input-placeholder {
+      color: var(--foreground);
+      font-size: 16px;
+      font-family: inherit; }
+    .contact-modal .group--form input,
+    .contact-modal .group--form select,
+    .contact-modal .group--form *::placeholder,
+    .contact-modal .group--form--file input,
+    .contact-modal .group--form--file select,
+    .contact-modal .group--form--file *::placeholder,
+    .contact-modal .group--form--select input,
+    .contact-modal .group--form--select select,
+    .contact-modal .group--form--select *::placeholder {
+      color: var(--foreground);
+      font-size: 16px;
+      font-family: inherit; }
+    .contact-modal .group--form *:-ms-input-placeholder, .contact-modal .group--form--file *:-ms-input-placeholder, .contact-modal .group--form--select *:-ms-input-placeholder {
+      color: var(--border); }
+    .contact-modal .group--form *::placeholder,
+    .contact-modal .group--form--file *::placeholder,
+    .contact-modal .group--form--select *::placeholder {
+      color: var(--border); }
+  .contact-modal .test-component {
+    border: 1px solid var(--border);
+    color: var(--border);
+    padding: 0 30px;
+    border-radius: 0;
+    margin: 0 0 20px 0;
+    text-align: left; }
+    .contact-modal .test-component *:-ms-input-placeholder {
+      color: var(--foreground);
+      font-size: 16px;
+      font-family: inherit; }
+    .contact-modal .test-component input,
+    .contact-modal .test-component select,
+    .contact-modal .test-component *::placeholder {
+      color: var(--foreground);
+      font-size: 16px;
+      font-family: inherit; }
+    .contact-modal .test-component *:-ms-input-placeholder {
+      color: var(--border); }
+    .contact-modal .test-component *::placeholder {
+      color: var(--border); }
+  .contact-modal .control--custom-select,
+  .contact-modal .control--text {
+    font-size: inherit;
+    color: inherit;
+    color: var(--foreground);
+    display: flex;
+    align-items: center; }
+  .contact-modal .group--form--file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0; }
+    .contact-modal .group--form--file .upload {
+      height: 70px;
+      width: 64px;
+      margin-right: -1px;
+      margin-top: -1px; }
+  .contact-modal .group--form--checkbox {
+    font-weight: inherit;
+    border: 0;
+    margin-bottom: 20px; }
+    .contact-modal .group--form--checkbox label {
+      color: var(--foreground);
+      font-weight: 400; }
+    .contact-modal .group--form--checkbox .icon {
+      color: var(--border); }
+    .contact-modal .group--form--checkbox .icon--checkbox-checked {
+      color: var(--foreground); }
 
 .card--gallery-modal {
   display: none;

@@ -67,6 +67,10 @@
         {
             color:$foreground;
         }
+        @include media-up(md)
+        {
+            margin-bottom:10px;
+        }
     }
 }
 

@@ -43,7 +43,7 @@ ControlFileComponent.meta = {
 	inputs: ['control', 'label'],
 	template: /* html */ `
 		<div class="group--form--file" [class]="{ required: control.validators.length }">
-			<label for="file"><span [innerHTML]="label"></span> <span class="required__sign">*</span></label>
+			<!--<label for="file"><span [innerHTML]="label"></span> <span class="required__sign">*</span></label>-->
 			<span class="control--text" [innerHTML]="file?.name || labels.select_file"></span>
 			<svg class="upload"><use xlink:href="#upload"></use></svg>
 			<span class="required__badge" [innerHTML]="'required' | label"></span>

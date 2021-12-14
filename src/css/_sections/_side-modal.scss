@@ -23,6 +23,10 @@
 		@extend .extrasmall;
 	}
 
+	&__text {
+		margin-bottom: var(--p40);
+	}
+
 	&__cta {
 		display: flex;
 		justify-content: space-between;

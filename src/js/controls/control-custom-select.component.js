@@ -125,7 +125,7 @@ ControlCustomSelectComponent.meta = {
 	inputs: ['control', 'label', 'multiple', 'select'],
 	template: /* html */ `
 		<div class="group--form--select" [class]="{ required: control.validators.length, multiple: isMultiple }" [dropdown]="dropdownId" (dropped)="onDropped($event)">
-			<label><span [innerHTML]="label"></span> <span class="required__sign">*</span></label>
+			<!--<label><span [innerHTML]="label"></span> <span class="required__sign">*</span></label>-->
 			<span class="control--custom-select" [innerHTML]="getLabel() | label"></span>
 			<svg class="caret-down"><use xlink:href="#caret-down"></use></svg>
 			<span class="required__badge" [innerHTML]="'required' | label"></span>

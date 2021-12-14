@@ -3378,7 +3378,7 @@ ControlFileComponent.meta = {
   inputs: ['control', 'label'],
   template:
   /* html */
-  "\n\t\t<div class=\"group--form--file\" [class]=\"{ required: control.validators.length }\">\n\t\t\t<label for=\"file\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>\n\t\t\t<span class=\"control--text\" [innerHTML]=\"file?.name || labels.select_file\"></span>\n\t\t\t<svg class=\"upload\"><use xlink:href=\"#upload\"></use></svg>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t\t<input name=\"file\" type=\"file\" accept=\".pdf,.doc,.docx,*.txt\" class=\"control--file\" (change)=\"onInputDidChange($event)\" />\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
+  "\n\t\t<div class=\"group--form--file\" [class]=\"{ required: control.validators.length }\">\n\t\t\t<!--<label for=\"file\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>-->\n\t\t\t<span class=\"control--text\" [innerHTML]=\"file?.name || labels.select_file\"></span>\n\t\t\t<svg class=\"upload\"><use xlink:href=\"#upload\"></use></svg>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t\t<input name=\"file\" type=\"file\" accept=\".pdf,.doc,.docx,*.txt\" class=\"control--file\" (change)=\"onInputDidChange($event)\" />\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
 };var ControlPasswordComponent = /*#__PURE__*/function (_ControlComponent) {
   _inheritsLoose(ControlPasswordComponent, _ControlComponent);
 
@@ -4131,6 +4131,9 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
       newsletter: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       commercial: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       promotion: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       newsletterLanguage: new rxcompForm.FormControl(null, [RequiredIfValidator('newsletter', form)]),
       checkRequest: window.antiforgery,
       checkField: ''

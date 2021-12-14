@@ -263,6 +263,37 @@
 .nav--service {
 	@extend %nav;
 
+    .search
+    {
+        display: flex;
+        svg
+        {
+            width:12px;
+            height:auto;
+        }
+        input,
+        input::placeholder,
+        input:focus
+        {
+            @extend .smallest;
+            background-color: transparent;
+            color: $foreground;        
+            border:0;
+            padding:0;
+            font-family: inherit; 
+            outline:none;
+            box-shadow: 0;
+            font-size: inherit;
+            letter-spacing: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+            width:60px;
+            float:right;
+            text-align: right;
+            outline-color:  rgb(0, 58, 86);
+        }
+    }
+
 	&>.nav__item {
 
 		&>a,
@@ -270,7 +301,6 @@
 			display: flex;
 			align-items: center;
 			@extend .smallest;
-			text-transform: uppercase;
 		}
 	}
 
@@ -409,8 +439,9 @@
 	&:active,
 	&:focus,
 	&:visited {
-		background-color: $foreground-primary;
-		color: $foreground-negative;
+		background-color: transparent;
+		color: $text;
+        border:1px solid $text;
 	}
 
 	@include media-up(md) {
@@ -423,6 +454,12 @@
 		border: 1px solid white;
 		padding: 10px 30px;
 	}
+
+    &:hover
+    {
+        color:$foreground-negative;
+        background-color: $text;
+    }
 }
 
 .nav--submenu {
