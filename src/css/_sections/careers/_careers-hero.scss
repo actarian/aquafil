@@ -1,0 +1,24 @@
+.careers-hero
+{
+    @extend .generic-hero;
+
+    .row
+    {
+        align-items: flex-start;
+    }
+
+    &__content
+    {
+        @extend .generic-hero__content !optional;
+    }
+
+    &__title
+    {
+        @extend .generic-hero__title !optional;
+    }
+
+    &__abstract
+    {
+        @extend .generic-hero__abstract !optional;
+    }
+}

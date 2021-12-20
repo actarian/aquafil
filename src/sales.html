@@ -1,0 +1,24 @@
+<!-- @@master = ./templates/layout.html { "baseHref": "/aquafil/", "pageClass": "page--sales" } -->
+<!-- @@block = main-->
+
+<main class="main">
+
+	<div class="breadcrumb">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-20 offset-sm-2">
+					<ul class="nav--breadcrumb">
+						<li class="nav__item"><a href="/aquafil/">Homepage</a></li>
+						<li class="nav__item"><span>Sales</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- @@include ./templates/shared/generic-hero.html { "heroTitle": "Sales Contacts", "heroContent": "Our agent team is here to offer you the best support and let you know all the informations you need." }-->
+    <!-- @@include ./templates/sales/sales-list.html -->
+    <!-- @@include ./templates/homepage/newsletter-proposition.html -->
+
+</main>
+<!-- @@close-->

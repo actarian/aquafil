@@ -1,0 +1,110 @@
+<div class="contacts-form">
+    <div class="contacts-form__wrapper">
+        <div><!--*if="!success">-->
+            <form class="form" [formGroup]="form" (submit)="onSubmit($event)" name="form" role="form" novalidate autocomplete="off">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-22 offset-sm-1">
+                            <div class="contacts-form__title">
+                                Contacts
+                            </div>                            
+                            <div class="contacts-form__text-top">
+                                For further information, please contact us filling the form below:
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-22 offset-sm-1">
+                            <input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.firstName" label="Name"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.company" label="Company"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.address" label="Address"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.city" label="City"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.zip" label="ZIP code"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-custom-select [control]="controls.country" label="Country"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-text [control]="controls.email" label="Email"></div>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1">
+                            <div control-file [control]="controls.file" label="cv"></div>
+                        </div><!--
+                        <div class="col-sm-22">
+                            <div control-textarea [control]="controls.message" label="Message"></div>
+                        </div>
+                        <div class="col-sm-22">
+                            <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
+                        </div>-->
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-sm-21 offset-sm-1">
+                            <div class="form__controls">
+                                <!-- 
+                                <input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+                                <div control-text [control]="controls.firstName" label="Nome"></div>
+                                <div control-text [control]="controls.lastName" label="Cognome"></div>
+                                <div control-text [control]="controls.email" label="Email"></div>
+                                <div control-text [control]="controls.telephone" label="Telefono"></div>
+                                <div control-custom-select [control]="controls.country" label="Paese"></div>
+                                <div control-text [control]="controls.city" label="Città"></div>
+                                <div control-textarea [control]="controls.message" label="Messaggio"></div>
+                                <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
+                                <div class="full" control-privacy [control]="controls.newsletter" label="Al trattamento dei miei dati personali per attività di marketing diretto tramite iscrizione a newsletter."></div>
+                                <div control-custom-select [control]="controls.newsletterLanguage" label="Lingua della newsletter" *if="controls.newsletter.value"></div>
+                                <div class="full" control-privacy [control]="controls.commercial" label="Al trattamento dei miei dati personali per attività di profilazione, al fine di proporle comunicazioni commerciali più vicine ai miei interessi."></div>
+                                <div class="full" control-privacy [control]="controls.promotion" label="Alla cessione dei miei dati personali per attività promozionali di terzi. I soggetti terzi a cui i dati saranno ceduti sono unicamente Società del gruppo."></div>
+                                -->
+                            </div>
+                            <test-component [form]="form" (test)="test($event)" (reset)="reset($event)"></test-component>
+                            <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
+                            <div class="form__error" *if="error">
+                                <span class="status-code" [innerHTML]="error.statusCode"></span>
+                                <span class="status-message" [innerHTML]="error.statusMessage"></span>
+                                <span class="friendly-message" [innerHTML]="error.friendlyMessage"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-22 offset-sm-1">
+                            <button type="submit" class="btn--submit" data-title="Invia" *if="!form.submitted">
+                                <span>Apply</span>
+                            </button>
+                            <button type="submit" class="btn--submit" data-title="Inviato!" *if="form.submitted">
+                                <span>Inviato!</span>
+                            </button>        
+                        </div>
+                    </div>    
+                </div>
+            </form>
+        </div>
+        
+        <div class="container-fluid"><!--*if="success">-->
+            <div class="row">
+                <div class="col-sm-22 offset-sm-1">
+                    <div class="contacts-form__title">Richiesta Inviata</div>
+                    <div class="contacts-form__content">
+                        <div class="contacts-form__abstract">Grazie per averci contattato. La tua richiesta è stata inviata correttamente.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

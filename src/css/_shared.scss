@@ -90,6 +90,18 @@
 // report sustainability
 @import '_sections/_report';
 
+// contacts
+@import '_sections/contacts/_contacts-hero';
+@import '_sections/contacts/_contacts-info';
+@import '_sections/contacts/_contacts-form';
+
+// careers
+@import '_sections/careers/_careers-hero';
+@import '_sections/careers/_careers-list';
+
+// sales
+@import '_sections/sales/_sales-list';
+
 // modals
 @import '_sections/side-modal';
 @import '_sections/contact-modal';

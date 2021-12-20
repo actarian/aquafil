@@ -1,0 +1,109 @@
+<div class="sales-list">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
+                <div class="sales-list__text-top">
+                    Select a product area and find your agent
+                </div>
+                <div class="sales-list__items">
+
+                    <div class="listing__item" appear>
+						<div class="card--product" open-modally="#detail-1">
+							<div class="card--product__picture">
+								<img loading="lazy" src="/aquafil/img/sales/sales-1.jpg" />
+							</div>
+							<div class="card--product__content">
+								<div class="card--product__title">Nylon Textile Filament</div>
+								<div class="card--product__cta">
+									<button type="button" class="btn--plus"><svg><use xlink:href="#plus"></use></svg></button>
+								</div>
+							</div>
+						</div>
+						<!-- in page detail - 1 -->
+						<div class="card--side-modal" card-product-detail id="detail-1">
+							<div class="card--side-modal__content">
+								<div class="card--side-modal__text-top">Choose the country of your interest</div>
+
+                                <div control-custom-select [control]="controls.country" label="Country"></div>
+
+                                <div class="card--side-modal__agent-name">
+                                    Eddie Berglund
+                                </div>
+                                <div class="card--side-modal__abstract">
+                                    Mr. Eddie Berglund<br>
+                                    Tel. +46 320 55955 <br>
+                                    Mobile: +46 7034 55955
+                                </div>
+                                <button type="button" class="btn--more-md" (click)="onRequestInfo()"><span>Request informations</span> <svg><use xlink:href="#pencil"></use></svg></button>
+							</div>
+						</div>
+					</div>
+                    <div class="listing__item" appear>
+						<div class="card--product" open-modally="#detail-2">
+							<div class="card--product__picture">
+								<img loading="lazy" src="/aquafil/img/sales/sales-2.jpg" />
+							</div>
+							<div class="card--product__content">
+								<div class="card--product__title">Bulk Continuos Filament</div>
+								<div class="card--product__cta">
+									<button type="button" class="btn--plus"><svg><use xlink:href="#plus"></use></svg></button>
+								</div>
+							</div>
+						</div>
+						<!-- in page detail - 1 -->
+						<div class="card--side-modal" card-product-detail id="detail-2">
+							<div class="card--side-modal__content">
+								<div class="card--side-modal__text-top">Choose the country of your interest</div>
+
+                                <div control-custom-select [control]="controls.country" label="Country"></div>
+
+                                <div class="card--side-modal__agent-name">
+                                    Eddie Berglund
+                                </div>
+                                <div class="card--side-modal__abstract">
+                                    Mr. Eddie Berglund<br>
+                                    Tel. +46 320 55955 <br>
+                                    Mobile: +46 7034 55955
+                                </div>
+                                <button type="button" class="btn--more-md" (click)="onRequestInfo()"><span>Request informations</span> <svg><use xlink:href="#pencil"></use></svg></button>
+							</div>
+						</div>
+					</div>
+                    <div class="listing__item" appear>
+						<div class="card--product" open-modally="#detail-3">
+							<div class="card--product__picture">
+								<img loading="lazy" src="/aquafil/img/sales/sales-3.jpg" />
+							</div>
+							<div class="card--product__content">
+								<div class="card--product__title">Polymer</div>
+								<div class="card--product__cta">
+									<button type="button" class="btn--plus"><svg><use xlink:href="#plus"></use></svg></button>
+								</div>
+							</div>
+						</div>
+						<!-- in page detail - 1 -->
+						<div class="card--side-modal" card-product-detail id="detail-3">
+							<div class="card--side-modal__content">
+								<div class="card--side-modal__text-top">Choose the country of your interest</div>
+
+                                <div control-custom-select [control]="controls.country" label="Country"></div>
+
+                                <div class="card--side-modal__agent-name">
+                                    Eddie Berglund
+                                </div>
+                                <div class="card--side-modal__abstract">
+                                    Mr. Eddie Berglund<br>
+                                    Tel. +46 320 55955 <br>
+                                    Mobile: +46 7034 55955
+                                </div>
+                                <button type="button" class="btn--more-md" (click)="onRequestInfo()"><span>Request informations</span> <svg><use xlink:href="#pencil"></use></svg></button>
+							</div>
+						</div>
+					</div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

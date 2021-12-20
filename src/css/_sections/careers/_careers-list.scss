@@ -1,0 +1,76 @@
+.careers-list
+{
+    padding:40px 0;
+    border-bottom:1px solid rgba(#9D9D9C,0.5);
+
+    @include media-up(md)
+    {
+        padding:60px 0;
+    }
+
+    @include media-up(lg)
+    {
+        padding:100px 0;
+    }
+
+    &__text-top
+    {
+        @include media-up(md)
+        {
+            font-size: 36px;
+        }
+    }
+
+    &__items
+    {
+        margin-top:20px;
+        @include media-up(lg)
+        {
+            margin-top: 60px;
+        }
+    }
+
+    &__item
+    {
+        color:$foreground;
+        display: flex;
+        align-items: center;
+        width:100%;
+        border-bottom:1px solid $foreground;
+        padding:10px 0;
+        cursor:pointer;
+        @include media-up(md)
+        {
+            padding:20px 0;
+        }
+    }
+
+    &__item-name
+    {
+        @extend .h6;
+        margin:0;
+        flex:1;
+    }
+
+    &__item-links
+    {
+        @extend .h6;
+        margin:0;
+        font-size: 14px;
+        svg
+        {
+            width:20px;
+            height:14px;
+            fill:$foreground;
+            margin-left:10px;
+        }
+        @include media-up(md)
+        {
+            font-size: 18px;
+            svg
+            {
+                margin-left:40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.contacts-form
+{
+    background:#F8F8F8;
+    padding:40px 0;
+
+    @include media-up(md)
+    {
+        padding:80px 0;
+    }
+
+    @include media-up(lg)
+    {
+        padding:140px 0;
+    }
+
+    &__wrapper
+    {
+        max-width: 960px;
+        margin:auto;    
+    }
+
+    &__title
+    {
+        @extend .h5;
+        margin-top:0;
+        color:$foreground;
+    }
+
+    &__text-top
+    {
+        margin-bottom:20px;
+        @include media-up(md)
+        {
+            margin-bottom:30px;
+        }
+    }
+}
