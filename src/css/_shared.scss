@@ -102,6 +102,9 @@
 // sales
 @import '_sections/sales/_sales-list';
 
+// product
+@import '_sections/product/_sales-country';
+
 // modals
 @import '_sections/side-modal';
 @import '_sections/contact-modal';
@@ -119,6 +122,7 @@
 @import '_pages/index';
 @import '_pages/report-sustainability';
 @import '_pages/_search';
+@import '_pages/_product';
 
 
 .section-generic

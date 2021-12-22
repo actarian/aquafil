@@ -1,0 +1,301 @@
+.page--product
+{
+
+    .breadcrumb
+    {
+        @include media-up(md)
+        {
+            //padding-top:20px;
+        }
+    }
+
+    .secondary-hero
+    {
+        &__title
+        {
+            font-size: Max(30px,Min(54px,3.75vw));
+            margin-bottom:30px;
+            @include media-up(md)
+            {
+                margin-bottom:46px;
+            }
+        }
+        &__abstract
+        {
+            font-size: Max(16px,Min(18px,1.09375vw));
+            @include media-up(md)
+            {
+            }
+        }
+    }
+
+    .media-text-secondary,
+    .text-media-secondary
+    {
+        &+.media-text-secondary,
+        &+.text-media-secondary
+        {
+            padding-top:0;
+        }
+    
+        &__content
+        {
+            color:$foreground;
+        }
+
+        &__title
+        {
+            font-size: Max(30px,Min(56px,3.75vw));
+            margin-bottom:30px;
+            @include media-up(md)
+            {
+                margin-bottom:40px;
+            }
+        }
+
+        &__abstract
+        {
+            font-size:Max(15px,Min(18px,1.09375vw));
+        }
+
+        &__cta
+        {
+            margin-top:40px;
+            @include media-up(md)
+            {
+                margin-top:60px;
+            }
+        }
+    }
+
+    .content-slider
+    {
+        &.borders
+        {
+            &.negative
+            {
+                &:before
+                {
+                    background-color:$foreground-negative;
+                    opacity:0.3;
+                }
+            }
+        }
+    }
+
+    .horizontal-menu
+    {
+        padding-top:var(--p50);
+        padding-bottom:var(--p50);
+        border-top: 1px solid #F1F1F1;
+        border-bottom: 1px solid #F1F1F1;
+    }
+
+    //.title-text
+    #applications
+    {
+        margin-bottom:0;
+        padding-bottom:0;
+    }
+
+    .product-proposition,
+    #applications.title-text
+    {
+        //margin-top:0;
+        //padding-top:0;
+        color:$foreground;
+        &__title-small
+        {
+            @extend .h4;
+            margin-top:40px;
+            @include media-up(md)
+            {
+                margin-top:80px;
+            }
+        }
+
+        &__abstract
+        {
+            font-size:16px;
+            margin-bottom:40px;
+            .btn--right
+            {
+                margin-top:20px;
+            }
+            @include media-up(md)
+            {
+                font-size:18px;
+                margin-bottom:80px;
+            }
+        }
+        .listing__item
+        {
+            @include media-up(md)
+            {
+                margin-bottom:80px;
+            }
+        }
+    }
+
+    .product-proposition
+    {
+        margin-top:0;
+        padding-top:0;
+    }
+
+    .global-capabilities
+    {
+        background:#F8F8F8;
+        padding:40px 0;
+        @include media-up(md)
+        {
+            padding:80px 0;
+        }
+        @include media-up(lg)
+        {
+            padding:120px 0;
+        }
+        &__content
+        {
+
+        }
+        &__title
+        {
+            @extend .h2;
+            color:$foreground;
+        }
+        &__image
+        {
+            margin-top:20px;
+            @include media-up(md)
+            {
+                padding:40px 0;
+            }    
+        }
+        &__contacts
+        {
+            margin-top:40px;
+            @include media-up(md)
+            {
+                margin-top:80px;
+            }
+            &-item
+            {
+                display: flex;
+            }
+            &-icon
+            {
+                padding-top:4px;
+                svg
+                {
+                    width:20px;
+                    height:30px;
+                }
+            }
+            &-block
+            {
+                flex:1;
+                padding-left: 20px;
+            }
+            &-title
+            {
+                margin-top:0;
+                color:$foreground;
+                font-weight: $font-semibold;
+                font-size: 20px;
+                @include media-up(md)
+                {
+                    font-size: 24px;
+                }
+            }
+            &-text
+            {
+                margin-top:20px;
+                font-weight: 400;
+                font-size: 16px;
+                @include media-up(md)
+                {
+                    font-size: 18px;
+                }
+            }
+            &>div:nth-child(1) svg
+            {
+                fill:$foreground;
+            }
+            &>div:nth-child(2) svg
+            {
+                fill:$primary;
+            }
+            &>div:nth-child(3) svg
+            {
+                fill:#9d9d9d;
+            }
+        }
+    }
+
+    .research-proposition
+    {
+        @extend .innovation-proposition;
+
+        &__abstract
+        {
+            .btn--right
+            {
+                margin-top:20px;
+                @include media-up(md)
+                {
+                    margin-top:40px;
+                }
+                @include media-up(lg)
+                {
+                    margin-top:80px;
+                }
+            }
+        }
+        .card--innovation
+        {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            &__content
+            {
+                flex:1;
+            }
+        }
+
+        .row>div:nth-child(3n+1) .card--innovation
+        {
+            background:$foreground;
+            color:$foreground-negative;
+        }
+        .row>div:nth-child(3n+2) .card--innovation
+        {
+            background:$foreground-negative;
+            &__title,
+            &__abstract
+            {
+                color:$foreground;
+            }
+        }
+        .row>div:nth-child(3n+3) .card--innovation
+        {
+            background:$secondary;
+            color:$foreground-negative;
+        }
+    }
+
+    &-bfc
+    {
+        @extend .page--product;
+    }
+
+    &-ntf
+    {
+        @extend .page--product;
+    }
+
+    &-polymers
+    {
+        @extend .page--product;
+    }
+}

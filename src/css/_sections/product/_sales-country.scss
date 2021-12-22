@@ -1,0 +1,67 @@
+.sales-country
+{
+    background:$foreground;
+    color:$foreground-negative;
+    padding:40px 0;
+
+    @include media-up(md)
+    {
+        padding:80px 0;
+    }
+
+    @include media-up(lg)
+    {
+        padding:140px 0;
+    }
+
+    &__image
+    {
+        position:relative;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+        justify-content: center;
+        height:100%;
+    }
+
+    &__block
+    {
+        margin:20px 0;
+        @include media-up(md)
+        {
+            margin:40px 0;
+        }    
+        @include media-up(lg)
+        {
+            margin:60px 0;
+        }    
+    }
+
+    &__title
+    {
+        @extend .h5;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        svg
+        {
+            fill:$foreground-negative;
+            width:30px;
+            height:18px;
+            margin-left:10px;
+        }
+    }
+
+    &__text
+    {
+        font-size: 16px;
+        @include media-up(md)
+        {
+            font-size: 18px;
+        }
+    }
+}

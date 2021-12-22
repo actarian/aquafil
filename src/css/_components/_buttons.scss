@@ -373,6 +373,14 @@ a {
 	@extend %btn-download;
 }
 
+.btn--right {
+	@extend %btn-download;
+    @include media-up(md)
+    {
+        min-width: 20vw;
+    }
+}
+
 %btn-certification {
 	@extend %btn;
 	font-size: Max(11px, Min(18px, 0.9375vw));

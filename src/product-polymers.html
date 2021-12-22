@@ -1,0 +1,64 @@
+<!-- @@master = ./templates/layout.html { "baseHref": "/aquafil/", "pageClass": "page--product-polymers" } -->
+<!-- @@block = main-->
+
+<main class="main">
+
+	<div class="breadcrumb">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-20 offset-sm-2">
+					<ul class="nav--breadcrumb">
+						<li class="nav__item"><a href="/aquafil/">Homepage</a></li>
+						<li class="nav__item"><span>What we do</span></li>
+						<li class="nav__item"><span>Polymers</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- @@include ./templates/product/secondary-hero.html { "title": "Polymers", "abstract": "At AQUAFIL Group we are committed to Polyamide 6 Polymer production.", "image": "/aquafil/img/product/hero-polymer.jpg" } -->
+    <!-- @@include ./templates/product/media-text-secondary.html { "title":"Product areas", "abstract":"<p>This fantastic material has unique characteristics, which include:<br><ul><li>High mechanical strength, stiffness and hardness</li><li>Good fatigue resistance</li><li>High mechanical damping ability</li><li>Good sliding properties</li><li>Excellent wear resistance</li><li>Good electrical insulating properties</li><li>Good machinability</ul></p>", "image":"/aquafil/img/product/media-3.jpg" } -->
+
+    <div class="title-text" id="applications">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
+                    <div class="title-text__content" appear>
+                        <div class="title-text__title">Applications</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-20 offset-sm-2 col-md-8 offset-md-3">
+                    <div class="title-text__content" appear>
+                        <div class="title-text__abstract">
+                            <p>
+                                Aside from base grades in various viscosities we do also have specially designed polymers and of course our ECONYL® regenerated nylon 6.                             
+                            </p>
+                            <p>
+                                The versatility of Nylon 6 makes it ideal for injection molding, extrusion and CNC  production of a myriad of things, including accessories in the fashion sectors (e.g. glasses frames) and furniture in the design sector (e.g. chairs).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-20 offset-sm-2 col-md-8 offset-md-2">
+                    <div class="title-text__content" appear>
+                        <div class="title-text__abstract">
+                            <p>Discover some applications, browse our case studies.</p>
+                            <a href="#" class="btn--right"><span>Case studies</span> <svg><use xlink:href="#arrow-next-md"></use></svg></a>    
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- @@include ./templates/product/horizontal-menu-polymers.html -->
+    </div>
+
+    <!-- @@include ./templates/product/product-proposition-polymers.html -->
+    <!-- @@include ./templates/product/research-proposition.html { "title": "Research initiative", "abstract": "Research allows us to always look ahead, to innovate, to continuously improve and to develop products that are increasingly efficient and sustainable. This is the reason why research is one of the basic pillars of the Group.", "cta": "Tutti i case studies" } -->
+    <!-- @@include ./templates/product/sales-country.html -->
+	<!-- @@include ./templates/homepage/newsletter-proposition.html -->
+
+</main>
+<!-- @@close-->

@@ -4954,7 +4954,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.16666em; }
 
-.h2, .generic-hero__title, .news-hero__title, .news-detail-hero__title, .certifications-hero__title, .careers-hero__title, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .case-studies-hero__title, .contacts-hero__title {
+.h2, .generic-hero__title, .news-hero__title, .news-detail-hero__title, .certifications-hero__title, .careers-hero__title, .card--main-hero__title, .profile-proposition__title, .area-proposition__title, .sustainability-proposition__title, .innovation-proposition__title, .news-proposition__title, .location-hero__title, .location-detail-hero__title, .title-hero__title, .media-text__title, .media-text-primary__title, .media-text-secondary__title, .text-media-secondary__title, .title-text__title, .title-hero-02__title, .research-proposition__title, .secondary-hero__title, .history-hero__title, .card--history__year, .case-studies-hero__title, .contacts-hero__title, .page--product .global-capabilities__title, .page--product-bfc .global-capabilities__title, .page--product-ntf .global-capabilities__title, .page--product-polymers .global-capabilities__title {
   font-weight: bold;
   font-size: Max(30px, Min(72px, 3.75vw));
   line-height: 1.2;
@@ -4966,13 +4966,17 @@ h6 {
   line-height: 1.2;
   margin-bottom: 0.4em; }
 
-.h4, .generic-hero__title-small, .news-detail-hero__title-small, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .history-listing__title, .news-listing__title, .case-studies-listing__title, .report__title, .contact-modal__title {
+.h4, .generic-hero__title-small, .news-detail-hero__title-small, .location-proposition__title, .certification__title, .product-proposition__title, .toolkit-proposition__title, .quote__title, .history-listing__title, .news-listing__title, .case-studies-listing__title, .report__title, .contact-modal__title, .page--product .product-proposition__title-small, .page--product-bfc .product-proposition__title-small, .page--product-ntf .product-proposition__title-small, .page--product-polymers .product-proposition__title-small,
+.page--product #applications.title-text__title-small,
+.page--product-bfc #applications.title-text__title-small,
+.page--product-ntf #applications.title-text__title-small,
+.page--product-polymers #applications.title-text__title-small {
   font-weight: bold;
   font-size: Max(18px, Min(40px, 2.0833vw));
   line-height: 1.36;
   margin-bottom: 1.11111em; }
 
-.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title, .card--history-detail__title, .page--investors__section-title, .page--investor__menu-title, .contacts-hero__paragraph-title, .contacts-info__title, .contacts-form__title {
+.h5, .card--content__title, .card--area__title, .card--sustainability__title, .newsletter-proposition__title, .card--toolkit__title, .card--icon__title, .card--numbers__abstract, .card--history__title, .card--history-detail__title, .page--investors__section-title, .page--investor__menu-title, .contacts-hero__paragraph-title, .contacts-info__title, .contacts-form__title, .sales-country__title {
   font-weight: bold;
   font-size: Max(16px, Min(36px, 1.875vw));
   line-height: 1.36;
@@ -5523,7 +5527,7 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--right, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5551,7 +5555,7 @@ a {
   .nav--footer ul > li > button,
   .nav--dropdown > li > button,
   .nav--options > li > button,
-  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+  .nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--right, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
   .btn--next, .btn--up,
   .btn--down, .btn--gallery-prev,
   .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
@@ -5568,7 +5572,7 @@ a {
   .nav--footer ul > li > button:active,
   .nav--dropdown > li > button:active,
   .nav--options > li > button:active,
-  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--certification:active, .btn--plus:active, .zoom-button:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .page--investors .header .btn--back:active, .btn--websolute:active, .btn--prev:active,
+  .nav--index > li > button:active, .btn:active, .modal-outlet .btn--close:active, .btn--link:active, .group--form--checkbox label > span > a:active, .group--form--privacy label > span > a:active, .btn--primary:active, .btn--more:active, .btn--download:active, .btn--right:active, .btn--certification:active, .btn--plus:active, .zoom-button:active, .btn--more-md:active, .btn--category:active, .btn--submit:active, .btn--logo:active, .btn--menu:active, .btn--investor:active, .page--investors .header .btn--back:active, .btn--websolute:active, .btn--prev:active,
   .btn--next:active, .btn--up:active,
   .btn--down:active, .btn--gallery-prev:active,
   .btn--gallery-next:active, .section--index .title:active, .nav--index > .nav__item > a:active,
@@ -5585,7 +5589,7 @@ a {
   .nav--footer ul > li > button:focus,
   .nav--dropdown > li > button:focus,
   .nav--options > li > button:focus,
-  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--certification:focus, .btn--plus:focus, .zoom-button:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--websolute:focus, .btn--prev:focus,
+  .nav--index > li > button:focus, .btn:focus, .modal-outlet .btn--close:focus, .btn--link:focus, .group--form--checkbox label > span > a:focus, .group--form--privacy label > span > a:focus, .btn--primary:focus, .btn--more:focus, .btn--download:focus, .btn--right:focus, .btn--certification:focus, .btn--plus:focus, .zoom-button:focus, .btn--more-md:focus, .btn--category:focus, .btn--submit:focus, .btn--logo:focus, .btn--menu:focus, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--websolute:focus, .btn--prev:focus,
   .btn--next:focus, .btn--up:focus,
   .btn--down:focus, .btn--gallery-prev:focus,
   .btn--gallery-next:focus, .section--index .title:focus, .nav--index > .nav__item > a:focus,
@@ -5602,7 +5606,7 @@ a {
   .nav--footer ul > li > button:hover,
   .nav--dropdown > li > button:hover,
   .nav--options > li > button:hover,
-  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--certification:hover, .btn--plus:hover, .zoom-button:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .page--investors .header .btn--back:hover, .btn--websolute:hover, .btn--prev:hover,
+  .nav--index > li > button:hover, .btn:hover, .modal-outlet .btn--close:hover, .btn--link:hover, .group--form--checkbox label > span > a:hover, .group--form--privacy label > span > a:hover, .btn--primary:hover, .btn--more:hover, .btn--download:hover, .btn--right:hover, .btn--certification:hover, .btn--plus:hover, .zoom-button:hover, .btn--more-md:hover, .btn--category:hover, .btn--submit:hover, .btn--logo:hover, .btn--menu:hover, .btn--investor:hover, .page--investors .header .btn--back:hover, .btn--websolute:hover, .btn--prev:hover,
   .btn--next:hover, .btn--up:hover,
   .btn--down:hover, .btn--gallery-prev:hover,
   .btn--gallery-next:hover, .section--index .title:hover, .nav--index > .nav__item > a:hover,
@@ -5619,7 +5623,7 @@ a {
   .nav--footer ul > li > button:visited,
   .nav--dropdown > li > button:visited,
   .nav--options > li > button:visited,
-  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--certification:visited, .btn--plus:visited, .zoom-button:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .page--investors .header .btn--back:visited, .btn--websolute:visited, .btn--prev:visited,
+  .nav--index > li > button:visited, .btn:visited, .modal-outlet .btn--close:visited, .btn--link:visited, .group--form--checkbox label > span > a:visited, .group--form--privacy label > span > a:visited, .btn--primary:visited, .btn--more:visited, .btn--download:visited, .btn--right:visited, .btn--certification:visited, .btn--plus:visited, .zoom-button:visited, .btn--more-md:visited, .btn--category:visited, .btn--submit:visited, .btn--logo:visited, .btn--menu:visited, .btn--investor:visited, .page--investors .header .btn--back:visited, .btn--websolute:visited, .btn--prev:visited,
   .btn--next:visited, .btn--up:visited,
   .btn--down:visited, .btn--gallery-prev:visited,
   .btn--gallery-next:visited, .section--index .title:visited, .nav--index > .nav__item > a:visited,
@@ -5627,7 +5631,7 @@ a {
     color: inherit;
     text-decoration: none;
     outline: none; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--right svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor; }
 
 .nav--main > li > a, .nav--service > li > a, .nav--language > li > a, .nav--footer > li > a, .nav--social > li > a, .nav--breadcrumb > li > a, .nav--horizontal-menu > li > a, .nav--scroll-menu > li > a, .nav--submenu > li > a, .nav--footer ul > li > a, .nav--dropdown > li > a, .nav--options > li > a, .nav--index > li > a,
@@ -5643,14 +5647,14 @@ a {
 .nav--footer ul > li > button,
 .nav--dropdown > li > button,
 .nav--options > li > button,
-.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
+.nav--index > li > button, .btn, .modal-outlet .btn--close, .btn--link, .group--form--checkbox label > span > a, .group--form--privacy label > span > a, .btn--primary, .btn--more, .btn--download, .btn--right, .btn--certification, .page--investors__downloads-item .btn--investor, .btn--plus, .zoom-button, .btn--more-md, .btn--category, .btn--submit, .btn--logo, .btn--menu, .btn--investor, .page--investors .header .btn--back, .btn--websolute, .btn--prev,
 .btn--next, .btn--up,
 .btn--down, .btn--gallery-prev,
 .btn--gallery-next, .section--index .title, .nav--index > .nav__item > a,
 .nav--index > .nav__item > span {
   transition: ease-in-out 250ms;
   transition-property: background-color, color, border, opacity; }
-  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
+  .nav--main > li > a svg, .nav--service > li > a svg, .nav--language > li > a svg, .nav--footer > li > a svg, .nav--social > li > a svg, .nav--breadcrumb > li > a svg, .nav--horizontal-menu > li > a svg, .nav--scroll-menu > li > a svg, .nav--submenu > li > a svg, .nav--footer ul > li > a svg, .nav--dropdown > li > a svg, .nav--options > li > a svg, .nav--index > li > a svg, .nav--main > li > button svg, .nav--service > li > button svg, .nav--language > li > button svg, .nav--footer > li > button svg, .nav--social > li > button svg, .nav--breadcrumb > li > button svg, .nav--horizontal-menu > li > button svg, .nav--scroll-menu > li > button svg, .nav--submenu > li > button svg, .nav--footer ul > li > button svg, .nav--dropdown > li > button svg, .nav--options > li > button svg, .nav--index > li > button svg, .btn svg, .modal-outlet .btn--close svg, .btn--link svg, .group--form--checkbox label > span > a svg, .group--form--privacy label > span > a svg, .btn--primary svg, .btn--more svg, .btn--download svg, .btn--right svg, .btn--certification svg, .page--investors__downloads-item .btn--investor svg, .btn--plus svg, .zoom-button svg, .btn--more-md svg, .btn--category svg, .btn--submit svg, .btn--logo svg, .btn--menu svg, .btn--investor svg, .page--investors .header .btn--back svg, .btn--websolute svg, .btn--prev svg, .btn--next svg, .btn--up svg, .btn--down svg, .btn--gallery-prev svg, .btn--gallery-next svg, .section--index .title svg, .nav--index > .nav__item > a svg, .nav--index > .nav__item > span svg {
     fill: currentColor;
     transition: ease-in-out 250ms;
     transition-property: fill, opacity; }
@@ -5667,7 +5671,7 @@ a {
   .nav--footer ul > li > button[disabled],
   .nav--dropdown > li > button[disabled],
   .nav--options > li > button[disabled],
-  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--certification[disabled], .btn--plus[disabled], .zoom-button[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .page--investors .header .btn--back[disabled], .btn--websolute[disabled], .btn--prev[disabled],
+  .nav--index > li > button[disabled], .btn[disabled], .modal-outlet .btn--close[disabled], .btn--link[disabled], .group--form--checkbox label > span > a[disabled], .group--form--privacy label > span > a[disabled], .btn--primary[disabled], .btn--more[disabled], .btn--download[disabled], .btn--right[disabled], .btn--certification[disabled], .btn--plus[disabled], .zoom-button[disabled], .btn--more-md[disabled], .btn--category[disabled], .btn--submit[disabled], .btn--logo[disabled], .btn--menu[disabled], .btn--investor[disabled], .page--investors .header .btn--back[disabled], .btn--websolute[disabled], .btn--prev[disabled],
   .btn--next[disabled], .btn--up[disabled],
   .btn--down[disabled], .btn--gallery-prev[disabled],
   .btn--gallery-next[disabled], .section--index .title[disabled], .nav--index > .nav__item > a[disabled],
@@ -5733,7 +5737,7 @@ a {
   .btn--more:hover svg {
     transform: translateX(10px); }
 
-.btn--download {
+.btn--download, .btn--right {
   padding: var(--p20);
   font-weight: bold;
   font-size: Max(11px, Min(18px, 0.9375vw));
@@ -5741,30 +5745,34 @@ a {
   display: inline-flex;
   justify-content: space-between;
   align-items: center; }
-  .btn--download svg {
+  .btn--download svg, .btn--right svg {
     width: 33px;
     height: 29px;
     margin-left: var(--p20); }
-  .btn--download, .btn--download:active, .btn--download:focus, .btn--download:visited {
+  .btn--download, .btn--right, .btn--download:active, .btn--right:active, .btn--download:focus, .btn--right:focus, .btn--download:visited, .btn--right:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
-  .btn--download:hover {
+  .btn--download:hover, .btn--right:hover {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative); }
-  .btn--download:active:hover {
+  .btn--download:active:hover, .btn--right:active:hover {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative);
     transition: none; }
-  .disabled.btn--download, .disabled.btn--download:active, .disabled.btn--download:focus, .disabled.btn--download:hover, .disabled.btn--download:visited {
+  .disabled.btn--download, .disabled.btn--right, .disabled.btn--download:active, .disabled.btn--right:active, .disabled.btn--download:focus, .disabled.btn--right:focus, .disabled.btn--download:hover, .disabled.btn--right:hover, .disabled.btn--download:visited, .disabled.btn--right:visited {
     background-color: var(--foreground-primary);
     color: var(--foreground-negative);
     pointer-events: none; }
   @media (min-width: 1024px) {
-    .btn--download {
+    .btn--download, .btn--right {
       min-width: 25vw; } }
   @media (max-width: 767.98px) {
-    .btn--download {
+    .btn--download, .btn--right {
       min-width: 75vw; } }
+
+@media (min-width: 1024px) {
+  .btn--right {
+    min-width: 20vw; } }
 
 .btn--certification, .page--investors__downloads-item .btn--investor, .page--investors__downloads-item .page--investors .header .btn--back, .page--investors .header .page--investors__downloads-item .btn--back {
   font-size: Max(11px, Min(18px, 0.9375vw));
@@ -8420,7 +8428,7 @@ test-component .test-component {
       margin-right: -15px;
       width: auto; } }
 
-.innovation-proposition {
+.innovation-proposition, .page--product .research-proposition, .page--product-bfc .research-proposition, .page--product-ntf .research-proposition, .page--product-polymers .research-proposition {
   padding: var(--p120) 0;
   background: var(--background); }
   .innovation-proposition__content {
@@ -9856,6 +9864,10 @@ test-component .test-component {
   .page--investors .sticky-menu .nav__item a {
     font-size: 14px; }
 
+@media (min-width: 1024px) {
+  .page--investors .sticky-menu {
+    top: 160px; } }
+
 .page--investors img {
   margin-bottom: 40px; }
 
@@ -10086,9 +10098,11 @@ test-component .test-component {
 .page--investor__menu {
   transition: all 0.5s ease-in-out;
   height: calc(100vh - 90px);
-  transform: translateX(-100%); }
+  transform: translateX(-100%);
+  padding-bottom: 80px; }
   @media (max-width: 767.98px) {
     .page--investor__menu {
+      padding-bottom: 0px;
       position: fixed;
       top: 90px;
       z-index: 1;
@@ -10307,6 +10321,47 @@ test-component .test-component {
 
 .page--sales .card--side-modal__abstract {
   margin-bottom: 40px; }
+
+.sales-country {
+  background: var(--foreground);
+  color: var(--foreground-negative);
+  padding: 40px 0; }
+  @media (min-width: 1024px) {
+    .sales-country {
+      padding: 80px 0; } }
+  @media (min-width: 1440px) {
+    .sales-country {
+      padding: 140px 0; } }
+  .sales-country__image {
+    position: relative; }
+  .sales-country__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+  .sales-country__block {
+    margin: 20px 0; }
+    @media (min-width: 1024px) {
+      .sales-country__block {
+        margin: 40px 0; } }
+    @media (min-width: 1440px) {
+      .sales-country__block {
+        margin: 60px 0; } }
+  .sales-country__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; }
+    .sales-country__title svg {
+      fill: var(--foreground-negative);
+      width: 30px;
+      height: 18px;
+      margin-left: 10px; }
+  .sales-country__text {
+    font-size: 16px; }
+    @media (min-width: 1024px) {
+      .sales-country__text {
+        font-size: 18px; } }
 
 .card--side-modal {
   display: none;
@@ -10792,6 +10847,222 @@ test-component .test-component {
 .search__abstract {
   margin-top: 0;
   margin-bottom: 20px; }
+
+.page--product .secondary-hero__title, .page--product-bfc .secondary-hero__title, .page--product-ntf .secondary-hero__title, .page--product-polymers .secondary-hero__title {
+  font-size: Max(30px, Min(54px, 3.75vw));
+  margin-bottom: 30px; }
+  @media (min-width: 1024px) {
+    .page--product .secondary-hero__title, .page--product-bfc .secondary-hero__title, .page--product-ntf .secondary-hero__title, .page--product-polymers .secondary-hero__title {
+      margin-bottom: 46px; } }
+
+.page--product .secondary-hero__abstract, .page--product-bfc .secondary-hero__abstract, .page--product-ntf .secondary-hero__abstract, .page--product-polymers .secondary-hero__abstract {
+  font-size: Max(16px, Min(18px, 1.09375vw)); }
+
+.page--product .media-text-secondary + .media-text-secondary, .page--product-bfc .media-text-secondary + .media-text-secondary, .page--product-ntf .media-text-secondary + .media-text-secondary, .page--product-polymers .media-text-secondary + .media-text-secondary,
+.page--product .media-text-secondary + .text-media-secondary,
+.page--product-bfc .media-text-secondary + .text-media-secondary,
+.page--product-ntf .media-text-secondary + .text-media-secondary,
+.page--product-polymers .media-text-secondary + .text-media-secondary,
+.page--product .text-media-secondary + .media-text-secondary,
+.page--product-bfc .text-media-secondary + .media-text-secondary,
+.page--product-ntf .text-media-secondary + .media-text-secondary,
+.page--product-polymers .text-media-secondary + .media-text-secondary,
+.page--product .text-media-secondary + .text-media-secondary,
+.page--product-bfc .text-media-secondary + .text-media-secondary,
+.page--product-ntf .text-media-secondary + .text-media-secondary,
+.page--product-polymers .text-media-secondary + .text-media-secondary {
+  padding-top: 0; }
+
+.page--product .media-text-secondary__content, .page--product-bfc .media-text-secondary__content, .page--product-ntf .media-text-secondary__content, .page--product-polymers .media-text-secondary__content,
+.page--product .text-media-secondary__content,
+.page--product-bfc .text-media-secondary__content,
+.page--product-ntf .text-media-secondary__content,
+.page--product-polymers .text-media-secondary__content {
+  color: var(--foreground); }
+
+.page--product .media-text-secondary__title, .page--product-bfc .media-text-secondary__title, .page--product-ntf .media-text-secondary__title, .page--product-polymers .media-text-secondary__title,
+.page--product .text-media-secondary__title,
+.page--product-bfc .text-media-secondary__title,
+.page--product-ntf .text-media-secondary__title,
+.page--product-polymers .text-media-secondary__title {
+  font-size: Max(30px, Min(56px, 3.75vw));
+  margin-bottom: 30px; }
+  @media (min-width: 1024px) {
+    .page--product .media-text-secondary__title, .page--product-bfc .media-text-secondary__title, .page--product-ntf .media-text-secondary__title, .page--product-polymers .media-text-secondary__title,
+    .page--product .text-media-secondary__title,
+    .page--product-bfc .text-media-secondary__title,
+    .page--product-ntf .text-media-secondary__title,
+    .page--product-polymers .text-media-secondary__title {
+      margin-bottom: 40px; } }
+
+.page--product .media-text-secondary__abstract, .page--product-bfc .media-text-secondary__abstract, .page--product-ntf .media-text-secondary__abstract, .page--product-polymers .media-text-secondary__abstract,
+.page--product .text-media-secondary__abstract,
+.page--product-bfc .text-media-secondary__abstract,
+.page--product-ntf .text-media-secondary__abstract,
+.page--product-polymers .text-media-secondary__abstract {
+  font-size: Max(15px, Min(18px, 1.09375vw)); }
+
+.page--product .media-text-secondary__cta, .page--product-bfc .media-text-secondary__cta, .page--product-ntf .media-text-secondary__cta, .page--product-polymers .media-text-secondary__cta,
+.page--product .text-media-secondary__cta,
+.page--product-bfc .text-media-secondary__cta,
+.page--product-ntf .text-media-secondary__cta,
+.page--product-polymers .text-media-secondary__cta {
+  margin-top: 40px; }
+  @media (min-width: 1024px) {
+    .page--product .media-text-secondary__cta, .page--product-bfc .media-text-secondary__cta, .page--product-ntf .media-text-secondary__cta, .page--product-polymers .media-text-secondary__cta,
+    .page--product .text-media-secondary__cta,
+    .page--product-bfc .text-media-secondary__cta,
+    .page--product-ntf .text-media-secondary__cta,
+    .page--product-polymers .text-media-secondary__cta {
+      margin-top: 60px; } }
+
+.page--product .content-slider.borders.negative:before, .page--product-bfc .content-slider.borders.negative:before, .page--product-ntf .content-slider.borders.negative:before, .page--product-polymers .content-slider.borders.negative:before {
+  background-color: var(--foreground-negative);
+  opacity: 0.3; }
+
+.page--product .horizontal-menu, .page--product-bfc .horizontal-menu, .page--product-ntf .horizontal-menu, .page--product-polymers .horizontal-menu {
+  padding-top: var(--p50);
+  padding-bottom: var(--p50);
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1; }
+
+.page--product #applications, .page--product-bfc #applications, .page--product-ntf #applications, .page--product-polymers #applications {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.page--product .product-proposition, .page--product-bfc .product-proposition, .page--product-ntf .product-proposition, .page--product-polymers .product-proposition,
+.page--product #applications.title-text,
+.page--product-bfc #applications.title-text,
+.page--product-ntf #applications.title-text,
+.page--product-polymers #applications.title-text {
+  color: var(--foreground); }
+  .page--product .product-proposition__title-small, .page--product-bfc .product-proposition__title-small, .page--product-ntf .product-proposition__title-small, .page--product-polymers .product-proposition__title-small,
+  .page--product #applications.title-text__title-small,
+  .page--product-bfc #applications.title-text__title-small,
+  .page--product-ntf #applications.title-text__title-small,
+  .page--product-polymers #applications.title-text__title-small {
+    margin-top: 40px; }
+    @media (min-width: 1024px) {
+      .page--product .product-proposition__title-small, .page--product-bfc .product-proposition__title-small, .page--product-ntf .product-proposition__title-small, .page--product-polymers .product-proposition__title-small,
+      .page--product #applications.title-text__title-small,
+      .page--product-bfc #applications.title-text__title-small,
+      .page--product-ntf #applications.title-text__title-small,
+      .page--product-polymers #applications.title-text__title-small {
+        margin-top: 80px; } }
+  .page--product .product-proposition__abstract, .page--product-bfc .product-proposition__abstract, .page--product-ntf .product-proposition__abstract, .page--product-polymers .product-proposition__abstract,
+  .page--product #applications.title-text__abstract,
+  .page--product-bfc #applications.title-text__abstract,
+  .page--product-ntf #applications.title-text__abstract,
+  .page--product-polymers #applications.title-text__abstract {
+    font-size: 16px;
+    margin-bottom: 40px; }
+    .page--product .product-proposition__abstract .btn--right, .page--product-bfc .product-proposition__abstract .btn--right, .page--product-ntf .product-proposition__abstract .btn--right, .page--product-polymers .product-proposition__abstract .btn--right,
+    .page--product #applications.title-text__abstract .btn--right,
+    .page--product-bfc #applications.title-text__abstract .btn--right,
+    .page--product-ntf #applications.title-text__abstract .btn--right,
+    .page--product-polymers #applications.title-text__abstract .btn--right {
+      margin-top: 20px; }
+    @media (min-width: 1024px) {
+      .page--product .product-proposition__abstract, .page--product-bfc .product-proposition__abstract, .page--product-ntf .product-proposition__abstract, .page--product-polymers .product-proposition__abstract,
+      .page--product #applications.title-text__abstract,
+      .page--product-bfc #applications.title-text__abstract,
+      .page--product-ntf #applications.title-text__abstract,
+      .page--product-polymers #applications.title-text__abstract {
+        font-size: 18px;
+        margin-bottom: 80px; } }
+  @media (min-width: 1024px) {
+    .page--product .product-proposition .listing__item, .page--product-bfc .product-proposition .listing__item, .page--product-ntf .product-proposition .listing__item, .page--product-polymers .product-proposition .listing__item,
+    .page--product #applications.title-text .listing__item,
+    .page--product-bfc #applications.title-text .listing__item,
+    .page--product-ntf #applications.title-text .listing__item,
+    .page--product-polymers #applications.title-text .listing__item {
+      margin-bottom: 80px; } }
+
+.page--product .product-proposition, .page--product-bfc .product-proposition, .page--product-ntf .product-proposition, .page--product-polymers .product-proposition {
+  margin-top: 0;
+  padding-top: 0; }
+
+.page--product .global-capabilities, .page--product-bfc .global-capabilities, .page--product-ntf .global-capabilities, .page--product-polymers .global-capabilities {
+  background: #F8F8F8;
+  padding: 40px 0; }
+  @media (min-width: 1024px) {
+    .page--product .global-capabilities, .page--product-bfc .global-capabilities, .page--product-ntf .global-capabilities, .page--product-polymers .global-capabilities {
+      padding: 80px 0; } }
+  @media (min-width: 1440px) {
+    .page--product .global-capabilities, .page--product-bfc .global-capabilities, .page--product-ntf .global-capabilities, .page--product-polymers .global-capabilities {
+      padding: 120px 0; } }
+  .page--product .global-capabilities__title, .page--product-bfc .global-capabilities__title, .page--product-ntf .global-capabilities__title, .page--product-polymers .global-capabilities__title {
+    color: var(--foreground); }
+  .page--product .global-capabilities__image, .page--product-bfc .global-capabilities__image, .page--product-ntf .global-capabilities__image, .page--product-polymers .global-capabilities__image {
+    margin-top: 20px; }
+    @media (min-width: 1024px) {
+      .page--product .global-capabilities__image, .page--product-bfc .global-capabilities__image, .page--product-ntf .global-capabilities__image, .page--product-polymers .global-capabilities__image {
+        padding: 40px 0; } }
+  .page--product .global-capabilities__contacts, .page--product-bfc .global-capabilities__contacts, .page--product-ntf .global-capabilities__contacts, .page--product-polymers .global-capabilities__contacts {
+    margin-top: 40px; }
+    @media (min-width: 1024px) {
+      .page--product .global-capabilities__contacts, .page--product-bfc .global-capabilities__contacts, .page--product-ntf .global-capabilities__contacts, .page--product-polymers .global-capabilities__contacts {
+        margin-top: 80px; } }
+    .page--product .global-capabilities__contacts-item, .page--product-bfc .global-capabilities__contacts-item, .page--product-ntf .global-capabilities__contacts-item, .page--product-polymers .global-capabilities__contacts-item {
+      display: flex; }
+    .page--product .global-capabilities__contacts-icon, .page--product-bfc .global-capabilities__contacts-icon, .page--product-ntf .global-capabilities__contacts-icon, .page--product-polymers .global-capabilities__contacts-icon {
+      padding-top: 4px; }
+      .page--product .global-capabilities__contacts-icon svg, .page--product-bfc .global-capabilities__contacts-icon svg, .page--product-ntf .global-capabilities__contacts-icon svg, .page--product-polymers .global-capabilities__contacts-icon svg {
+        width: 20px;
+        height: 30px; }
+    .page--product .global-capabilities__contacts-block, .page--product-bfc .global-capabilities__contacts-block, .page--product-ntf .global-capabilities__contacts-block, .page--product-polymers .global-capabilities__contacts-block {
+      flex: 1;
+      padding-left: 20px; }
+    .page--product .global-capabilities__contacts-title, .page--product-bfc .global-capabilities__contacts-title, .page--product-ntf .global-capabilities__contacts-title, .page--product-polymers .global-capabilities__contacts-title {
+      margin-top: 0;
+      color: var(--foreground);
+      font-weight: var(--font-semibold);
+      font-size: 20px; }
+      @media (min-width: 1024px) {
+        .page--product .global-capabilities__contacts-title, .page--product-bfc .global-capabilities__contacts-title, .page--product-ntf .global-capabilities__contacts-title, .page--product-polymers .global-capabilities__contacts-title {
+          font-size: 24px; } }
+    .page--product .global-capabilities__contacts-text, .page--product-bfc .global-capabilities__contacts-text, .page--product-ntf .global-capabilities__contacts-text, .page--product-polymers .global-capabilities__contacts-text {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 16px; }
+      @media (min-width: 1024px) {
+        .page--product .global-capabilities__contacts-text, .page--product-bfc .global-capabilities__contacts-text, .page--product-ntf .global-capabilities__contacts-text, .page--product-polymers .global-capabilities__contacts-text {
+          font-size: 18px; } }
+    .page--product .global-capabilities__contacts > div:nth-child(1) svg, .page--product-bfc .global-capabilities__contacts > div:nth-child(1) svg, .page--product-ntf .global-capabilities__contacts > div:nth-child(1) svg, .page--product-polymers .global-capabilities__contacts > div:nth-child(1) svg {
+      fill: var(--foreground); }
+    .page--product .global-capabilities__contacts > div:nth-child(2) svg, .page--product-bfc .global-capabilities__contacts > div:nth-child(2) svg, .page--product-ntf .global-capabilities__contacts > div:nth-child(2) svg, .page--product-polymers .global-capabilities__contacts > div:nth-child(2) svg {
+      fill: #00ACED; }
+    .page--product .global-capabilities__contacts > div:nth-child(3) svg, .page--product-bfc .global-capabilities__contacts > div:nth-child(3) svg, .page--product-ntf .global-capabilities__contacts > div:nth-child(3) svg, .page--product-polymers .global-capabilities__contacts > div:nth-child(3) svg {
+      fill: #9d9d9d; }
+
+.page--product .research-proposition__abstract .btn--right, .page--product-bfc .research-proposition__abstract .btn--right, .page--product-ntf .research-proposition__abstract .btn--right, .page--product-polymers .research-proposition__abstract .btn--right {
+  margin-top: 20px; }
+  @media (min-width: 1024px) {
+    .page--product .research-proposition__abstract .btn--right, .page--product-bfc .research-proposition__abstract .btn--right, .page--product-ntf .research-proposition__abstract .btn--right, .page--product-polymers .research-proposition__abstract .btn--right {
+      margin-top: 40px; } }
+  @media (min-width: 1440px) {
+    .page--product .research-proposition__abstract .btn--right, .page--product-bfc .research-proposition__abstract .btn--right, .page--product-ntf .research-proposition__abstract .btn--right, .page--product-polymers .research-proposition__abstract .btn--right {
+      margin-top: 80px; } }
+
+.page--product .research-proposition .card--innovation, .page--product-bfc .research-proposition .card--innovation, .page--product-ntf .research-proposition .card--innovation, .page--product-polymers .research-proposition .card--innovation {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .page--product .research-proposition .card--innovation__content, .page--product-bfc .research-proposition .card--innovation__content, .page--product-ntf .research-proposition .card--innovation__content, .page--product-polymers .research-proposition .card--innovation__content {
+    flex: 1; }
+
+.page--product .research-proposition .row > div:nth-child(3n+1) .card--innovation, .page--product-bfc .research-proposition .row > div:nth-child(3n+1) .card--innovation, .page--product-ntf .research-proposition .row > div:nth-child(3n+1) .card--innovation, .page--product-polymers .research-proposition .row > div:nth-child(3n+1) .card--innovation {
+  background: var(--foreground);
+  color: var(--foreground-negative); }
+
+.page--product .research-proposition .row > div:nth-child(3n+2) .card--innovation, .page--product-bfc .research-proposition .row > div:nth-child(3n+2) .card--innovation, .page--product-ntf .research-proposition .row > div:nth-child(3n+2) .card--innovation, .page--product-polymers .research-proposition .row > div:nth-child(3n+2) .card--innovation {
+  background: var(--foreground-negative); }
+  .page--product .research-proposition .row > div:nth-child(3n+2) .card--innovation__title, .page--product-bfc .research-proposition .row > div:nth-child(3n+2) .card--innovation__title, .page--product-ntf .research-proposition .row > div:nth-child(3n+2) .card--innovation__title, .page--product-polymers .research-proposition .row > div:nth-child(3n+2) .card--innovation__title, .page--product .research-proposition .row > div:nth-child(3n+2) .card--innovation__abstract, .page--product-bfc .research-proposition .row > div:nth-child(3n+2) .card--innovation__abstract, .page--product-ntf .research-proposition .row > div:nth-child(3n+2) .card--innovation__abstract, .page--product-polymers .research-proposition .row > div:nth-child(3n+2) .card--innovation__abstract {
+    color: var(--foreground); }
+
+.page--product .research-proposition .row > div:nth-child(3n+3) .card--innovation, .page--product-bfc .research-proposition .row > div:nth-child(3n+3) .card--innovation, .page--product-ntf .research-proposition .row > div:nth-child(3n+3) .card--innovation, .page--product-polymers .research-proposition .row > div:nth-child(3n+3) .card--innovation {
+  background: #4D4D4D;
+  color: var(--foreground-negative); }
 
 .section-generic {
   padding-top: 80px; }
