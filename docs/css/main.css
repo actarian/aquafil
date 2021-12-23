@@ -7737,7 +7737,7 @@ test-component .test-component {
       top: 110px; } }
   @media (min-width: 1440px) {
     .sticky-menu {
-      top: 130px; } }
+      top: 160px; } }
   @media (max-width: 1023.98px) {
     .sticky-menu {
       top: 90px; } }
@@ -9863,10 +9863,6 @@ test-component .test-component {
   margin: 20px 10px; }
   .page--investors .sticky-menu .nav__item a {
     font-size: 14px; }
-
-@media (min-width: 1024px) {
-  .page--investors .sticky-menu {
-    top: 160px; } }
 
 .page--investors img {
   margin-bottom: 40px; }
