@@ -1,13 +1,12 @@
-
-    <div class="careers-list__item" open-modally="#detail-1">
-        <div class="careers-list__item-name">
-            <!--@@var=name-->
-        </div>
-        <div class="careers-list__item-links">
-            Apply <svg><use xlink:href="#arrow-next-md"></use></svg>
-        </div>
-        <!-- in page detail - 1 -->
-        <div class="card--side-modal" card-product-detail id="detail-<!--@@var=id-->">
-            <!-- @@include ./../modals/careers-modal.html -->
-        </div>
-    </div>                    
+<div class="careers-list__item" open-modally="#detail-<!--@@var=id-->">
+	<div class="careers-list__item-name">
+		<!--@@var=name-->
+	</div>
+	<div class="careers-list__item-links">
+		Apply <svg><use xlink:href="#arrow-next-md"></use></svg>
+	</div>
+	<!-- in page detail - 1 -->
+	<div class="card--side-modal" card-product-detail id="detail-<!--@@var=id-->">
+		<!-- @@include ./../modals/careers-modal.html { "countryId": "114" }-->
+	</div>
+</div>

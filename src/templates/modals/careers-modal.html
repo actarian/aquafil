@@ -1,6 +1,6 @@
-<div class="contact-modal" contact-modal>
+<div class="contact-modal" contact-modal [countryId]="<!--@@var=countryId-->">
 	<div *if="!success">
-        <!--
+		<!--
 		<div class="contact-modal__head">
 			<div class="container-fluid">
 				<div class="row">
@@ -15,55 +15,57 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-22 offset-sm-1">
-                            <p class="contact-modal__text-top">
-                                For further information, please contact us filling the form below:
-                            </p>                            
-                        </div>
-                    </div>
+							<p class="contact-modal__text-top">
+								For further information, please contact us filling the form below:
+							</p>
+						</div>
+					</div>
 
 					<div class="row">
 						<div class="col-sm-22 offset-sm-1">
-                            <input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
-                        </div>
-                    </div>
+							<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+						</div>
+					</div>
 
-                    <div class="row">
+					<div class="row">
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.firstName" label="Name"></div>
-                        </div>
+							<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+							<div control-text [control]="controls.firstName" label="Name"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.company" label="Company"></div>
-                        </div>
+							<div control-text [control]="controls.company" label="Company"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.address" label="Address"></div>
-                        </div>
+							<div control-text [control]="controls.address" label="Address"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.city" label="City"></div>
-                        </div>
+							<div control-text [control]="controls.city" label="City"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.zip" label="ZIP code"></div>
-                        </div>
+							<div control-text [control]="controls.zip" label="ZIP code"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-custom-select [control]="controls.country" label="Country"></div>
-                        </div>
+							<div control-custom-select [control]="controls.country" label="Country"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-text [control]="controls.email" label="Email"></div>
-                        </div>
+							<div control-text [control]="controls.email" label="Email"></div>
+						</div>
 						<div class="col-sm-10 offset-sm-1">
-                            <div control-file [control]="controls.file" label="cv"></div>
-                        </div><!--
+							<div control-file [control]="controls.file" label="cv"></div>
+						</div>
+						<!--
 						<div class="col-sm-22">
                             <div control-textarea [control]="controls.message" label="Message"></div>
                         </div>
 						<div class="col-sm-22">
                             <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
                         </div>-->
-                    </div>
-            
+					</div>
+
 					<div class="row">
 						<div class="col-sm-22 offset-sm-1">
 							<div class="form__controls">
-                                <!-- 
+								<!--
 								<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
 								<div control-text [control]="controls.firstName" label="Nome"></div>
 								<div control-text [control]="controls.lastName" label="Cognome"></div>
@@ -80,7 +82,7 @@
 							    -->
 							</div>
 							<test-component [form]="form" (test)="test($event)" (reset)="reset($event)"></test-component>
-                            <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
+							<div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
 							<div class="form__error" *if="error">
 								<span class="status-code" [innerHTML]="error.statusCode"></span>
 								<span class="status-message" [innerHTML]="error.statusMessage"></span>
@@ -91,17 +93,17 @@
 
 					<div class="row">
 						<div class="col-sm-22 offset-sm-1">
-                            <button type="submit" class="btn--submit" data-title="Invia" *if="!form.submitted">
-                                <span>Apply</span>
-                            </button>
-                            <button type="submit" class="btn--submit" data-title="Inviato!" *if="form.submitted">
-                                <span>Inviato!</span>
-                            </button>        
-                        </div>
-                    </div>    
+							<button type="submit" class="btn--submit" data-title="Invia" *if="!form.submitted">
+								<span>Apply</span>
+							</button>
+							<button type="submit" class="btn--submit" data-title="Inviato!" *if="form.submitted">
+								<span>Inviato!</span>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
-            <!--
+			<!--
 			<div class="contact-modal__foot">
 				<button type="submit" class="btn--submit" data-title="Invia" *if="!form.submitted">
 					<span>Invia</span>

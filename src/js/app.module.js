@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CommonModule } from './common/common.module';
 import { ControlsModule } from './controls/controls.module';
 import { CardProductDetailComponent } from './pages/card-product-detail/card-product-detail.component';
+import { CardSaleDetailComponent } from './pages/card-sale-detail/card-sale-detail.component';
 import { ContactModalComponent } from './pages/contact-modal/contact-modal.component';
 import { OpenModallyDirective } from './pages/open-modally/open-modally.directive';
 import { SideModalComponent } from './pages/side-modal/side-modal.component';
@@ -22,6 +23,7 @@ AppModule.meta = {
 	declarations: [
 		ContactModalComponent,
 		CardProductDetailComponent,
+		CardSaleDetailComponent,
 		OpenModallyDirective,
 		SideModalComponent,
 	],

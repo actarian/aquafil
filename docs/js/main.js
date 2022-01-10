@@ -1,6 +1,6 @@
 /**
  * @license aquafil v1.0.0
- * (c) 2021 Luca Zampetti <lzampetti@gmail.com>
+ * (c) 2022 Luca Zampetti <lzampetti@gmail.com>
  * License: MIT
  */
 
@@ -1062,18 +1062,22 @@ DropdownDirective.dropdown$ = new rxjs.BehaviorSubject(null);var DropdownItemDir
   onDestroy() {
   	this.removeListeners();
   }
-  	onEnter(event) {
+  
+  onEnter(event) {
   	LocomotiveScrollService.stop();
   }
-  	onLeave(event) {
+  
+  onLeave(event) {
   	LocomotiveScrollService.start();
   }
-  	addListeners() {
+  
+  addListeners() {
   	const { node } = getContext(this);
   	node.addEventListener('mouseenter', this.onEnter);
   	node.addEventListener('mouseleave', this.onLeave);
   }
-  	removeListeners() {
+  
+  removeListeners() {
   	const { node } = getContext(this);
   	node.removeEventListener('mouseenter', this.onEnter);
   	node.removeEventListener('mouseleave', this.onLeave);
@@ -3657,21 +3661,7 @@ ControlsModule.meta = {
 CardProductDetailComponent.meta = {
   selector: '[card-product-detail]',
   inputs: ['id']
-};function push_(event) {
-  var dataLayer = window.dataLayer || [];
-  dataLayer.push(event);
-  console.log('GtmService.dataLayer', event);
-}
-
-var GtmService = /*#__PURE__*/function () {
-  function GtmService() {}
-
-  GtmService.push = function push(event) {
-    return push_(event);
-  };
-
-  return GtmService;
-}();var FormService = /*#__PURE__*/function () {
+};var FormService = /*#__PURE__*/function () {
   function FormService() {}
 
   FormService.toOptions = function toOptions(options) {
@@ -3699,24 +3689,7 @@ var GtmService = /*#__PURE__*/function () {
   };
 
   return FormService;
-}();function RequiredIfValidator(fieldName, formGroup, shouldBe) {
-  return new rxcompForm.FormValidator(function (value) {
-    var field = null;
-
-    if (typeof formGroup === 'function') {
-      field = formGroup().get(fieldName);
-    } else if (formGroup) {
-      field = formGroup.get(fieldName);
-    }
-
-    return !value && field && (shouldBe != null ? field.value === shouldBe : field.value != null) ? {
-      required: {
-        value: value,
-        requiredIf: fieldName
-      }
-    } : null;
-  });
-}var HttpService = /*#__PURE__*/function () {
+}();var HttpService = /*#__PURE__*/function () {
   function HttpService() {}
 
   HttpService.http$ = function http$(method, url, data, format, userPass, options) {
@@ -4105,38 +4078,20 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   };
 
   return ContactsService;
-}();var ContactModalComponent = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(ContactModalComponent, _Component);
+}();var CardSaleDetailComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(CardSaleDetailComponent, _Component);
 
-  function ContactModalComponent() {
+  function CardSaleDetailComponent() {
     return _Component.apply(this, arguments) || this;
   }
 
-  var _proto = ContactModalComponent.prototype;
+  var _proto = CardSaleDetailComponent.prototype;
 
   _proto.onInit = function onInit() {
     var _this = this;
 
-    this.error = null;
-    this.success = false;
     var form = this.form = new rxcompForm.FormGroup({
-      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
-      telephone: new rxcompForm.FormControl(null),
-      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      message: new rxcompForm.FormControl(null),
-      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
-      newsletter: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      commercial: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      promotion: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      newsletterLanguage: new rxcompForm.FormControl(null, [RequiredIfValidator('newsletter', form)]),
-      checkRequest: window.antiforgery,
-      checkField: ''
+      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()])
     });
     var controls = this.controls = form.controls;
     form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
@@ -4156,19 +4111,124 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
     }));
   };
 
+  _proto.onRequestInfo = function onRequestInfo() {
+    if (this.form.valid) {
+      ModalService.open$({
+        src: environment.template.modal.contactModal,
+        data: {
+          id: this.id,
+          countryId: this.form.value.country
+        }
+      }).pipe(operators.first()).subscribe(function (event) {
+        console.log('CardSaleDetailComponent.open$', event);
+      });
+    }
+  };
+
+  return CardSaleDetailComponent;
+}(rxcomp.Component);
+CardSaleDetailComponent.meta = {
+  selector: '[card-sale-detail]',
+  inputs: ['id']
+};function push_(event) {
+  var dataLayer = window.dataLayer || [];
+  dataLayer.push(event);
+  console.log('GtmService.dataLayer', event);
+}
+
+var GtmService = /*#__PURE__*/function () {
+  function GtmService() {}
+
+  GtmService.push = function push(event) {
+    return push_(event);
+  };
+
+  return GtmService;
+}();var ContactModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(ContactModalComponent, _Component);
+
+  function ContactModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ContactModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+      var id = data.id;
+      var countryId = data.countryId;
+      this.countryId = countryId ? countryId : this.countryId;
+      console.log('ContactModalComponent.onInit', id, countryId);
+    }
+
+    this.error = null;
+    this.success = false;
+    var form = this.form = new rxcompForm.FormGroup({
+      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
+      file: new rxcompForm.FormControl(null),
+      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      // lastName: new FormControl(null, [Validators.RequiredValidator()]),
+      // telephone: new FormControl(null),
+      // message: new FormControl(null),
+      // newsletter: new FormControl(null, [Validators.RequiredValidator()]),
+      // commercial: new FormControl(null, [Validators.RequiredValidator()]),
+      // promotion: new FormControl(null, [Validators.RequiredValidator()]),
+      // newsletterLanguage: new FormControl(null, [RequiredIfValidator('newsletter', form)]),
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+    var controls = this.controls = form.controls;
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      _this.pushChanges();
+    });
+    this.load$().pipe(operators.first()).subscribe();
+  };
+
+  _proto.load$ = function load$() {
+    var _this2 = this;
+
+    return ContactsService.data$().pipe(operators.tap(function (data) {
+      var controls = _this2.controls;
+      controls.country.options = FormService.toSelectOptions(data.country.options);
+
+      if (_this2.countryId) {
+        _this2.form.patch({
+          country: _this2.countryId
+        });
+      }
+
+      _this2.pushChanges();
+    }));
+  };
+
   _proto.test = function test() {
     var form = this.form;
     var controls = this.controls;
     var country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
     form.patch({
       firstName: 'Jhon',
-      lastName: 'Appleseed',
-      email: 'jhonappleseed@gmail.com',
-      telephone: '0721 411112',
-      country: country,
+      company: 'Websolute',
+      address: 'Strada della Campanara, 15',
       city: 'Pesaro',
-      message: 'Hi!',
+      zip: 61122,
+      country: country,
+      email: 'jhonappleseed@gmail.com',
       privacy: true,
+      // lastName: 'Appleseed',
+      // telephone: '0721 411112',
+      // message: 'Hi!',
       checkRequest: window.antiforgery,
       checkField: ''
     });
@@ -4220,7 +4280,8 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   return ContactModalComponent;
 }(rxcomp.Component);
 ContactModalComponent.meta = {
-  selector: '[contact-modal]'
+  selector: '[contact-modal]',
+  inputs: ['countryId']
 };var OpenModallyDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(OpenModallyDirective, _Directive);
 
@@ -5270,7 +5331,24 @@ UserDetailComponent.meta = {
 UserEditPasswordComponent.meta = {
   selector: '[user-edit-password]',
   inputs: ['tokenEncoded']
-};var UserEditComponent = /*#__PURE__*/function (_Component) {
+};function RequiredIfValidator(fieldName, formGroup, shouldBe) {
+  return new rxcompForm.FormValidator(function (value) {
+    var field = null;
+
+    if (typeof formGroup === 'function') {
+      field = formGroup().get(fieldName);
+    } else if (formGroup) {
+      field = formGroup.get(fieldName);
+    }
+
+    return !value && field && (shouldBe != null ? field.value === shouldBe : field.value != null) ? {
+      required: {
+        value: value,
+        requiredIf: fieldName
+      }
+    } : null;
+  });
+}var UserEditComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(UserEditComponent, _Component);
 
   function UserEditComponent() {
@@ -5905,7 +5983,7 @@ SharedModule.meta = {
 }(rxcomp.Module);
 AppModule.meta = {
   imports: [rxcomp.CoreModule, rxcompForm.FormModule, CommonModule, ControlsModule, SharedModule],
-  declarations: [ContactModalComponent, CardProductDetailComponent, OpenModallyDirective, SideModalComponent],
+  declarations: [ContactModalComponent, CardProductDetailComponent, CardSaleDetailComponent, OpenModallyDirective, SideModalComponent],
   bootstrap: AppComponent
 };rxcomp.Browser.bootstrap(AppModule);
 [].forEach.call(document.getElementsByClassName('page--investors__accordion-title'), function (classnameElement) {
