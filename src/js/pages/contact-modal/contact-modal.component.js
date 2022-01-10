@@ -22,21 +22,16 @@ export class ContactModalComponent extends Component {
 		this.success = false;
 		const form = this.form = new FormGroup({
 			firstName: new FormControl(null, [Validators.RequiredValidator()]),
+			lastName: new FormControl(null, [Validators.RequiredValidator()]),
 			company: new FormControl(null, [Validators.RequiredValidator()]),
 			address: new FormControl(null, [Validators.RequiredValidator()]),
 			city: new FormControl(null, [Validators.RequiredValidator()]),
 			zip: new FormControl(null, [Validators.RequiredValidator()]),
 			country: new FormControl(null, [Validators.RequiredValidator()]),
 			email: new FormControl(null, [Validators.RequiredValidator(), Validators.EmailValidator()]),
-			file: new FormControl(null),
+			subject: new FormControl(null, [Validators.RequiredValidator()]),
+			message: new FormControl(null, [Validators.RequiredValidator()]),
 			privacy: new FormControl(null, [Validators.RequiredTrueValidator()]),
-			// lastName: new FormControl(null, [Validators.RequiredValidator()]),
-			// telephone: new FormControl(null),
-			// message: new FormControl(null),
-			// newsletter: new FormControl(null, [Validators.RequiredValidator()]),
-			// commercial: new FormControl(null, [Validators.RequiredValidator()]),
-			// promotion: new FormControl(null, [Validators.RequiredValidator()]),
-			// newsletterLanguage: new FormControl(null, [RequiredIfValidator('newsletter', form)]),
 			checkRequest: window.antiforgery,
 			checkField: '',
 		});
@@ -72,16 +67,16 @@ export class ContactModalComponent extends Component {
 		const country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
 		form.patch({
 			firstName: 'Jhon',
+			lastName: 'Appleseed',
 			company: 'Websolute',
 			address: 'Strada della Campanara, 15',
 			city: 'Pesaro',
 			zip: 61122,
 			country: country,
 			email: 'jhonappleseed@gmail.com',
+			subject: 'Subject',
+			message: 'Hi!',
 			privacy: true,
-			// lastName: 'Appleseed',
-			// telephone: '0721 411112',
-			// message: 'Hi!',
 			checkRequest: window.antiforgery,
 			checkField: ''
 		});
@@ -108,12 +103,6 @@ export class ContactModalComponent extends Component {
 					'event': "Contact",
 					'form_name': "Contatti"
 				});
-				if (form.value.newsletter) {
-					GtmService.push({
-						'event': "ContactNewsletter",
-						'form_name': "ContattiNewsletter"
-					});
-				}
 			}, error => {
 				console.log('ContactModalComponent.error', error);
 				this.error = error;

@@ -15,9 +15,9 @@ export class SideModalComponent extends Component {
 				const content = node.querySelector('.side-modal__content');
 				content.appendChild(data.target);
 				const instances = this.instances = module.compile(content);
-				console.log('SideModalComponent.onInit', instances);
+				// console.log('SideModalComponent.onInit', instances);
 			}
-			console.log('SideModalComponent.onInit', data);
+			// console.log('SideModalComponent.onInit', data);
 		}
 		/*
 		this.resize$().pipe(

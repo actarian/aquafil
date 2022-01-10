@@ -35,7 +35,7 @@ export class CardSaleDetailComponent extends Component {
 
 	onRequestInfo() {
 		if (this.form.valid) {
-			ModalService.open$({ src: environment.template.modal.contactModal, data: { id: this.id, countryId: this.form.value.country } }).pipe(
+			ModalService.open$({ src: environment.template.modal.salesModal, data: { id: this.id, productName: this.productName, countryOfInterestId: this.form.value.country } }).pipe(
 				first(),
 			).subscribe(event => {
 				console.log('CardSaleDetailComponent.open$', event);
@@ -47,5 +47,5 @@ export class CardSaleDetailComponent extends Component {
 
 CardSaleDetailComponent.meta = {
 	selector: '[card-sale-detail]',
-	inputs: ['id'],
+	inputs: ['id', 'productName'],
 };

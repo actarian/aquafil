@@ -6504,8 +6504,11 @@ fieldset,
   border: none; }
 
 .group--form--textarea {
-  padding: 10px;
-  border: 2px solid var(--background-quaternary); }
+  padding: 20px 30px;
+  background: var(--foreground-negative);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  margin-bottom: 20px; }
   .group--form--textarea .control--text {
     resize: vertical;
     font-size: 16px; }

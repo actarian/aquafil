@@ -439,6 +439,7 @@ ClickOutsideDirective.meta = {
       genericModal: '/template/modals/generic-modal.cshtml',
       sideModal: '/template/modals/side-modal.cshtml',
       contactModal: '/template/modals/contact-modal.cshtml',
+      salesModal: '/template/modals/sales-modal.cshtml',
       galleryModal: '/template/modals/gallery-modal.cshtml',
       userModal: '/template/modals/user-modal.cshtml'
     }
@@ -493,6 +494,7 @@ ClickOutsideDirective.meta = {
       genericModal: '/aquafil/partials/modals/generic-modal.html',
       sideModal: '/aquafil/partials/modals/side-modal.html',
       contactModal: '/aquafil/partials/modals/contact-modal.html',
+      salesModal: '/aquafil/partials/modals/sales-modal.html',
       galleryModal: '/aquafil/partials/modals/gallery-modal.html',
       userModal: '/aquafil/partials/modals/user-modal.html'
     }
@@ -3569,7 +3571,7 @@ ControlTextareaComponent.meta = {
   inputs: ['control', 'label', 'disabled'],
   template:
   /* html */
-  "\n\t\t<div class=\"group--form--textarea\" [class]=\"{ required: control.validators.length, disabled: disabled }\">\n\t\t\t<label [labelFor]=\"uniqueId\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>\n\t\t\t<textarea [id]=\"uniqueId\" class=\"control--text\" [formControl]=\"control\" [placeholder]=\"label\" [innerHTML]=\"label\" rows=\"4\" [disabled]=\"disabled\"></textarea>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
+  "\n\t\t<div class=\"group--form--textarea\" [class]=\"{ required: control.validators.length, disabled: disabled }\">\n\t\t\t<!--<label [labelFor]=\"uniqueId\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>-->\n\t\t\t<textarea [id]=\"uniqueId\" class=\"control--text\" [formControl]=\"control\" [placeholder]=\"label\" [innerHTML]=\"label\" rows=\"4\" [disabled]=\"disabled\"></textarea>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
 };var ErrorsComponent = /*#__PURE__*/function (_ControlComponent) {
   _inheritsLoose(ErrorsComponent, _ControlComponent);
 
@@ -4114,10 +4116,11 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   _proto.onRequestInfo = function onRequestInfo() {
     if (this.form.valid) {
       ModalService.open$({
-        src: environment.template.modal.contactModal,
+        src: environment.template.modal.salesModal,
         data: {
           id: this.id,
-          countryId: this.form.value.country
+          productName: this.productName,
+          countryOfInterestId: this.form.value.country
         }
       }).pipe(operators.first()).subscribe(function (event) {
         console.log('CardSaleDetailComponent.open$', event);
@@ -4129,7 +4132,7 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
 }(rxcomp.Component);
 CardSaleDetailComponent.meta = {
   selector: '[card-sale-detail]',
-  inputs: ['id']
+  inputs: ['id', 'productName']
 };function push_(event) {
   var dataLayer = window.dataLayer || [];
   dataLayer.push(event);
@@ -4144,7 +4147,151 @@ var GtmService = /*#__PURE__*/function () {
   };
 
   return GtmService;
-}();var ContactModalComponent = /*#__PURE__*/function (_Component) {
+}();var CareersService = /*#__PURE__*/function () {
+  function CareersService() {}
+
+  CareersService.data$ = function data$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/careers/data');
+    } else {
+      return ApiService.get$('/contacts/data.json');
+    }
+  };
+
+  CareersService.submit$ = function submit$(payload) {
+    if (environment.flags.production) {
+      return ApiService.post$('/careers/submit', payload);
+    } else {
+      return ApiService.get$('/contacts/submit.json');
+    }
+  };
+
+  return CareersService;
+}();var CareersModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(CareersModalComponent, _Component);
+
+  function CareersModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CareersModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+      var id = data.id;
+      var countryId = data.countryId;
+      this.countryId = countryId ? countryId : this.countryId;
+      console.log('CareersModalComponent.onInit', id, countryId);
+    }
+
+    this.error = null;
+    this.success = false;
+    var form = this.form = new rxcompForm.FormGroup({
+      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
+      file: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+    var controls = this.controls = form.controls;
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      _this.pushChanges();
+    });
+    this.load$().pipe(operators.first()).subscribe();
+  };
+
+  _proto.load$ = function load$() {
+    var _this2 = this;
+
+    return CareersService.data$().pipe(operators.tap(function (data) {
+      var controls = _this2.controls;
+      controls.country.options = FormService.toSelectOptions(data.country.options);
+
+      if (_this2.countryId) {
+        _this2.form.patch({
+          country: _this2.countryId
+        });
+      }
+
+      _this2.pushChanges();
+    }));
+  };
+
+  _proto.test = function test() {
+    var form = this.form;
+    var controls = this.controls;
+    var country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
+    form.patch({
+      firstName: 'Jhon',
+      lastName: 'Appleseed',
+      company: 'Websolute',
+      address: 'Strada della Campanara, 15',
+      city: 'Pesaro',
+      zip: 61122,
+      country: country,
+      email: 'jhonappleseed@gmail.com',
+      file: 'file',
+      privacy: true,
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+  };
+
+  _proto.reset = function reset() {
+    var form = this.form;
+    form.reset();
+  };
+
+  _proto.onSubmit = function onSubmit(model) {
+    var _this3 = this;
+
+    var form = this.form;
+    console.log('CareersModalComponent.onSubmit', form.value); // console.log('CareersModalComponent.onSubmit', 'form.valid', valid);
+
+    if (form.valid) {
+      // console.log('CareersModalComponent.onSubmit', form.value);
+      form.submitted = true;
+      CareersService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        _this3.success = true;
+        form.reset();
+        GtmService.push({
+          'event': "Careers",
+          'form_name': "Contatti"
+        });
+      }, function (error) {
+        console.log('CareersModalComponent.error', error);
+        _this3.error = error;
+
+        _this3.pushChanges();
+      });
+    } else {
+      form.touched = true;
+    }
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return CareersModalComponent;
+}(rxcomp.Component);
+CareersModalComponent.meta = {
+  selector: '[careers-modal]',
+  inputs: ['countryId']
+};var ContactModalComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(ContactModalComponent, _Component);
 
   function ContactModalComponent() {
@@ -4171,21 +4318,16 @@ var GtmService = /*#__PURE__*/function () {
     this.success = false;
     var form = this.form = new rxcompForm.FormGroup({
       firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
-      file: new rxcompForm.FormControl(null),
+      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
-      // lastName: new FormControl(null, [Validators.RequiredValidator()]),
-      // telephone: new FormControl(null),
-      // message: new FormControl(null),
-      // newsletter: new FormControl(null, [Validators.RequiredValidator()]),
-      // commercial: new FormControl(null, [Validators.RequiredValidator()]),
-      // promotion: new FormControl(null, [Validators.RequiredValidator()]),
-      // newsletterLanguage: new FormControl(null, [RequiredIfValidator('newsletter', form)]),
       checkRequest: window.antiforgery,
       checkField: ''
     });
@@ -4219,16 +4361,16 @@ var GtmService = /*#__PURE__*/function () {
     var country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
     form.patch({
       firstName: 'Jhon',
+      lastName: 'Appleseed',
       company: 'Websolute',
       address: 'Strada della Campanara, 15',
       city: 'Pesaro',
       zip: 61122,
       country: country,
       email: 'jhonappleseed@gmail.com',
+      subject: 'Subject',
+      message: 'Hi!',
       privacy: true,
-      // lastName: 'Appleseed',
-      // telephone: '0721 411112',
-      // message: 'Hi!',
       checkRequest: window.antiforgery,
       checkField: ''
     });
@@ -4255,13 +4397,6 @@ var GtmService = /*#__PURE__*/function () {
           'event': "Contact",
           'form_name': "Contatti"
         });
-
-        if (form.value.newsletter) {
-          GtmService.push({
-            'event': "ContactNewsletter",
-            'form_name': "ContattiNewsletter"
-          });
-        }
       }, function (error) {
         console.log('ContactModalComponent.error', error);
         _this3.error = error;
@@ -4326,6 +4461,262 @@ ContactModalComponent.meta = {
 }(rxcomp.Directive);
 OpenModallyDirective.meta = {
   selector: '[open-modally]'
+};var ProductRequestService = /*#__PURE__*/function () {
+  function ProductRequestService() {}
+
+  ProductRequestService.submit$ = function submit$(payload) {
+    if (environment.flags.production) {
+      return ApiService.post$('/product-request/submit', payload);
+    } else {
+      return ApiService.get$('/contacts/submit.json');
+    }
+  };
+
+  return ProductRequestService;
+}();var ProductRequestComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(ProductRequestComponent, _Component);
+
+  function ProductRequestComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ProductRequestComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+      var id = data.id;
+      var productName = data.productName;
+      this.productName = productName ? productName : this.productName;
+      console.log('ProductRequestComponent.onInit', id, productName);
+    }
+
+    this.error = null;
+    this.success = false;
+    var form = this.form = new rxcompForm.FormGroup({
+      productName: new rxcompForm.FormControl(this.productName),
+      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
+      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+    var controls = this.controls = form.controls;
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      _this.pushChanges();
+    });
+  };
+
+  _proto.test = function test() {
+    var form = this.form;
+    var controls = this.controls;
+    form.patch({
+      firstName: 'Jhon',
+      lastName: 'Appleseed',
+      company: 'Websolute',
+      email: 'jhonappleseed@gmail.com',
+      subject: 'Subject',
+      message: 'Hi!',
+      privacy: true,
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+  };
+
+  _proto.reset = function reset() {
+    var form = this.form;
+    form.reset();
+  };
+
+  _proto.onSubmit = function onSubmit(model) {
+    var _this2 = this;
+
+    var form = this.form;
+    console.log('ProductRequestComponent.onSubmit', form.value); // console.log('ProductRequestComponent.onSubmit', 'form.valid', valid);
+
+    if (form.valid) {
+      // console.log('ProductRequestComponent.onSubmit', form.value);
+      form.submitted = true;
+      ProductRequestService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        _this2.success = true;
+        form.reset();
+        GtmService.push({
+          'event': "Product Request",
+          'form_name': "Product Request"
+        });
+      }, function (error) {
+        console.log('ProductRequestComponent.error', error);
+        _this2.error = error;
+
+        _this2.pushChanges();
+      });
+    } else {
+      form.touched = true;
+    }
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return ProductRequestComponent;
+}(rxcomp.Component);
+ProductRequestComponent.meta = {
+  selector: '[product-request]',
+  inputs: ['productName']
+};var SalesService = /*#__PURE__*/function () {
+  function SalesService() {}
+
+  SalesService.data$ = function data$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/sales/data');
+    } else {
+      return ApiService.get$('/contacts/data.json');
+    }
+  };
+
+  SalesService.submit$ = function submit$(payload) {
+    if (environment.flags.production) {
+      return ApiService.post$('/sales/submit', payload);
+    } else {
+      return ApiService.get$('/contacts/submit.json');
+    }
+  };
+
+  return SalesService;
+}();var SalesModalComponent = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(SalesModalComponent, _Component);
+
+  function SalesModalComponent() {
+    return _Component.apply(this, arguments) || this;
+  }
+
+  var _proto = SalesModalComponent.prototype;
+
+  _proto.onInit = function onInit() {
+    var _this = this;
+
+    var _getContext = rxcomp.getContext(this),
+        parentInstance = _getContext.parentInstance;
+
+    if (parentInstance instanceof ModalOutletComponent) {
+      var data = parentInstance.modal.data;
+      var id = data.id;
+      var productName = data.productName;
+      this.productName = productName ? productName : this.productName;
+      var countryOfInterestId = data.countryOfInterestId;
+      this.countryOfInterestId = countryOfInterestId ? countryOfInterestId : this.countryOfInterestId;
+      console.log('SalesModalComponent.onInit', id, productName, countryOfInterestId);
+    }
+
+    this.error = null;
+    this.success = false;
+    var form = this.form = new rxcompForm.FormGroup({
+      productName: new rxcompForm.FormControl(this.productName),
+      countryOfInterest: new rxcompForm.FormControl(this.countryOfInterestId),
+      firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
+      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+    var controls = this.controls = form.controls;
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+      _this.pushChanges();
+    });
+    this.load$().pipe(operators.first()).subscribe();
+  };
+
+  _proto.load$ = function load$() {
+    var _this2 = this;
+
+    return SalesService.data$().pipe(operators.tap(function (data) {
+      var controls = _this2.controls;
+      controls.country.options = FormService.toSelectOptions(data.country.options);
+
+      _this2.pushChanges();
+    }));
+  };
+
+  _proto.test = function test() {
+    var form = this.form;
+    var controls = this.controls;
+    var country = controls.country.options.length > 1 ? controls.country.options[1].id : null;
+    form.patch({
+      firstName: 'Jhon',
+      lastName: 'Appleseed',
+      company: 'Websolute',
+      address: 'Strada della Campanara, 15',
+      city: 'Pesaro',
+      zip: 61122,
+      country: country,
+      email: 'jhonappleseed@gmail.com',
+      subject: 'Subject',
+      message: 'Hi!',
+      privacy: true,
+      checkRequest: window.antiforgery,
+      checkField: ''
+    });
+  };
+
+  _proto.reset = function reset() {
+    var form = this.form;
+    form.reset();
+  };
+
+  _proto.onSubmit = function onSubmit(model) {
+    var _this3 = this;
+
+    var form = this.form;
+    console.log('SalesModalComponent.onSubmit', form.value); // console.log('SalesModalComponent.onSubmit', 'form.valid', valid);
+
+    if (form.valid) {
+      // console.log('SalesModalComponent.onSubmit', form.value);
+      form.submitted = true;
+      SalesService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        _this3.success = true;
+        form.reset();
+        GtmService.push({
+          'event': "Sales",
+          'form_name': "Contatti"
+        });
+      }, function (error) {
+        console.log('SalesModalComponent.error', error);
+        _this3.error = error;
+
+        _this3.pushChanges();
+      });
+    } else {
+      form.touched = true;
+    }
+  };
+
+  _proto.onClose = function onClose() {
+    ModalService.reject();
+  };
+
+  return SalesModalComponent;
+}(rxcomp.Component);
+SalesModalComponent.meta = {
+  selector: '[sales-modal]',
+  inputs: ['productName', 'countryOfInterestId']
 };var SideModalComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(SideModalComponent, _Component);
 
@@ -4349,11 +4740,9 @@ OpenModallyDirective.meta = {
 
         var content = node.querySelector('.side-modal__content');
         content.appendChild(data.target);
-        var instances = this.instances = module.compile(content);
-        console.log('SideModalComponent.onInit', instances);
-      }
+        var instances = this.instances = module.compile(content); // console.log('SideModalComponent.onInit', instances);
+      } // console.log('SideModalComponent.onInit', data);
 
-      console.log('SideModalComponent.onInit', data);
     }
     /*
     this.resize$().pipe(
@@ -5983,7 +6372,7 @@ SharedModule.meta = {
 }(rxcomp.Module);
 AppModule.meta = {
   imports: [rxcomp.CoreModule, rxcompForm.FormModule, CommonModule, ControlsModule, SharedModule],
-  declarations: [ContactModalComponent, CardProductDetailComponent, CardSaleDetailComponent, OpenModallyDirective, SideModalComponent],
+  declarations: [CareersModalComponent, ContactModalComponent, CardProductDetailComponent, CardSaleDetailComponent, OpenModallyDirective, ProductRequestComponent, SalesModalComponent, SideModalComponent],
   bootstrap: AppComponent
 };rxcomp.Browser.bootstrap(AppModule);
 [].forEach.call(document.getElementsByClassName('page--investors__accordion-title'), function (classnameElement) {

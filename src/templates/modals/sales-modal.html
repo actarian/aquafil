@@ -1,4 +1,4 @@
-<div class="contact-modal" contact-modal>
+<div class="contact-modal" sales-modal>
 	<div *if="!success">
 		<!--
 		<div class="contact-modal__head">
@@ -23,10 +23,10 @@
 					<div class="row">
 						<div class="col-sm-10 offset-sm-1">
 							<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
-							<div control-text [control]="controls.firstName" label="First Name"></div>
+							<div control-text [control]="controls.firstName" label="Name"></div>
 						</div>
 						<div class="col-sm-10 offset-sm-1">
-							<div control-text [control]="controls.lastName" label="Last Name"></div>
+							<div control-text [control]="controls.lastName" label="Name"></div>
 						</div>
 						<div class="col-sm-10 offset-sm-1">
 							<div control-text [control]="controls.email" label="Email"></div>

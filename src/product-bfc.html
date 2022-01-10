@@ -18,10 +18,84 @@
 	</div>
 
 	<!-- @@include ./templates/product/secondary-hero.html { "title": "Yarn for carpet (BCF)", "abstract": "The production of textile floorings yarns has been Aquafil's core business since the Company was founded. Today, Aquafil is recognized as the leading manufacturer in Europe and the second largest global player in the Bulk Continuous Filament sector.<br><br>Moreover, its constant research into more sustainable products and processes, has led the Group to be one of the main suppliers of sustainable synthetic fibers for carpet flooring around the world.", "image" : "/aquafil/img/product/hero-bfc.jpg" } -->
-    <!-- @@include ./templates/product/media-text-secondary.html { "title":"Customer centered", "abstract":"<p>Almost 20,000 different products are handled, all of which are produced internally.</p><p>Aquafil has set up Carpet centres in each of the main production markets (Italy, USA and China) whereby specialist technicians support customers in the creation of designer products in step with the market trends, developing ad-hoc chromatic solutions and tailor-made production techniques.</p><p>A considerable share of flooring yarn sales involve ECONYL® regenerated nylon, of which Aquafil is the manufacturer.</p>", "image":"/aquafil/img/product/media-1.jpg" } -->
-    <!-- @@include ./templates/product/text-media-secondary.html { "title":"The importance of colors", "abstract":"<p>Today, we provide ECONYL® carpet yarn in more than 176 colors. Furthermore, our Carpet Center's team constantly deals with tailored-made color solutions, when necessary. </p><p>High quality is our standard. The entire collection is reviewed regularly to ensure that the  customers’ needs are met and they provide the most up-to-date trends in the industry.</p>", "image":"/aquafil/img/product/media-2.jpg", "cta": "Request color catalogue" } -->
-	
-    <div class="title-text borders negative">
+	<!-- @@include ./templates/product/media-text-secondary.html { "title":"Customer centered", "abstract":"<p>Almost 20,000 different products are handled, all of which are produced internally.</p><p>Aquafil has set up Carpet centres in each of the main production markets (Italy, USA and China) whereby specialist technicians support customers in the creation of designer products in step with the market trends, developing ad-hoc chromatic solutions and tailor-made production techniques.</p><p>A considerable share of flooring yarn sales involve ECONYL® regenerated nylon, of which Aquafil is the manufacturer.</p>", "image":"/aquafil/img/product/media-1.jpg" } -->
+
+	<div class="text-media-secondary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 col-md-7 offset-md-3">
+					<div class="text-media-secondary__content" appear>
+						<div class="text-media-secondary__title">The importance of colors</div>
+						<div class="text-media-secondary__abstract">
+							<p>Today, we provide ECONYL® carpet yarn in more than 176 colors. Furthermore, our Carpet Center's team constantly deals with tailored-made color solutions, when necessary. </p>
+							<p>High quality is our standard. The entire collection is reviewed regularly to ensure that the customers’ needs are met and they provide the most up-to-date trends in the industry.</p>
+						</div>
+						<div class="text-media-secondary__cta">
+							<button type="button" class="btn--right" open-modally="#product-request"><span>Request color catalogue</span> <svg><use xlink:href="#arrow-next-md"></use></svg></button>
+							<div class="card--side-modal" product-request productName="Request color catalogue" id="product-request">
+								<div class="card--side-modal__content">
+									<div *if="!success">
+										<div class="card--side-modal__title">Request color catalogue</div>
+										<form class="form" [formGroup]="form" (submit)="onSubmit($event)" name="form" role="form" novalidate autocomplete="off">
+											<div class="container-fluid">
+												<div class="row">
+													<div class="col-sm-11">
+														<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
+														<div control-text [control]="controls.firstName" label="First Name"></div>
+													</div>
+													<div class="col-sm-11 offset-sm-2">
+														<div control-text [control]="controls.lastName" label="Last Name"></div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-11">
+														<div control-text [control]="controls.company" label="Company"></div>
+													</div>
+													<div class="col-sm-11 offset-sm-2">
+														<div control-text [control]="controls.email" label="Email"></div>
+													</div>
+												</div>
+												<div control-text [control]="controls.subject" label="Subject"></div>
+												<div control-textarea [control]="controls.message" label="Message"></div>
+												<test-component [form]="form" (test)="test($event)" (reset)="reset($event)"></test-component>
+												<div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
+												<div class="form__error" *if="error">
+													<span class="status-code" [innerHTML]="error.statusCode"></span>
+													<span class="status-message" [innerHTML]="error.statusMessage"></span>
+													<span class="friendly-message" [innerHTML]="error.friendlyMessage"></span>
+												</div>
+												<button type="submit" class="btn--submit" data-title="Invia" *if="!form.submitted">
+													<span>Apply</span>
+												</button>
+												<button type="submit" class="btn--submit" data-title="Inviato!" *if="form.submitted">
+													<span>Inviato!</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="container-fluid" *if="success">
+										<div class="card--side-modal__title">Richiesta Inviata</div>
+										<div class="card--side-modal__abstract">Grazie per averci contattato. La tua richiesta è stata inviata correttamente.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-3">
+					<div class="text-media-secondary__offset">
+						<div class="text-media-secondary__picture" gallery="/aquafil/img/product/media-2.jpg" scroll scrollSpeed="1">
+							<img loading="lazy" src="/aquafil/img/product/media-2.jpg" />
+							<!-- @@include ./templates/shared/zoom-button.html -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="title-text borders negative">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3 title-text__divline"></div>
@@ -52,7 +126,7 @@
 
 	<!-- @@include ./templates/product/content-slider-bfc.html -->
 
-    <div class="title-text" id="applications">
+	<div class="title-text" id="applications">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
@@ -62,91 +136,91 @@
 				</div>
 			</div>
 		</div>
-        <!-- @@include ./templates/product/horizontal-menu-bfc.html -->
+		<!-- @@include ./templates/product/horizontal-menu-bfc.html -->
 	</div>
 
-    <!-- @@include ./templates/product/product-proposition-bfc.html -->
+	<!-- @@include ./templates/product/product-proposition-bfc.html -->
 
-    <div class="global-capabilities">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
+	<div class="global-capabilities">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-20 offset-sm-2 col-md-18 offset-md-3">
 					<div class="global-capabilities__content" appear>
 						<div class="global-capabilities__title">Global capabilities</div>
-                        <div class="global-capabilities__image"><img src="/aquafil/img/product/world.png"></div>
+						<div class="global-capabilities__image"><img src="/aquafil/img/product/world.png"></div>
 					</div>
 				</div>
-            </div>
-            <div class="row global-capabilities__contacts" appear>
-                <div class="col-sm-20 offset-sm-2 col-md-5 offset-md-3 global-capabilities__contacts-item">
-                    <div class="global-capabilities__contacts-icon">
-                        <svg><use xlink:href="#pin"></use></svg>
-                    </div>
-                    <div class="global-capabilities__contacts-block">
-                        <div class="global-capabilities__contacts-title">Cartersville (Georgia)</div>
-                        <div class="global-capabilities__contacts-text">
-                            <p>Carpet yarn spinning</p>
-                            <p>
-                                Aquafil USA INC.
-                            </p>
-                            <p>
-                                1 Aquafil Drive Cartersville, GA 30120<br>
-                                <a href="phone:+1(678)605-8100">+1 (678) 605-8100</a><br>
-                                <a href="phone:+1(678)605-8100">+1 (678) 605-8120</a><br>
-                                <a href="mailto:sales.us@aquafil.com">sales.us@aquafil.com</a><br>
-                                <a href="mailto:info@aquafilusa.com">info@aquafilusa.com</a>
-                            </p>
-                        </div>
-                    </div>
+			</div>
+			<div class="row global-capabilities__contacts" appear>
+				<div class="col-sm-20 offset-sm-2 col-md-5 offset-md-3 global-capabilities__contacts-item">
+					<div class="global-capabilities__contacts-icon">
+						<svg><use xlink:href="#pin"></use></svg>
+					</div>
+					<div class="global-capabilities__contacts-block">
+						<div class="global-capabilities__contacts-title">Cartersville (Georgia)</div>
+						<div class="global-capabilities__contacts-text">
+							<p>Carpet yarn spinning</p>
+							<p>
+								Aquafil USA INC.
+							</p>
+							<p>
+								1 Aquafil Drive Cartersville, GA 30120<br>
+								<a href="phone:+1(678)605-8100">+1 (678) 605-8100</a><br>
+								<a href="phone:+1(678)605-8100">+1 (678) 605-8120</a><br>
+								<a href="mailto:sales.us@aquafil.com">sales.us@aquafil.com</a><br>
+								<a href="mailto:info@aquafilusa.com">info@aquafilusa.com</a>
+							</p>
+						</div>
+					</div>
 				</div>
-                <div class="col-sm-20 offset-sm-2 col-md-5 offset-md-1 global-capabilities__contacts-item">
-                    <div class="global-capabilities__contacts-icon">
-                        <svg><use xlink:href="#pin"></use></svg>
-                    </div>
-                    <div class="global-capabilities__contacts-block">
-                        <div class="global-capabilities__contacts-title">Arco (TN)</div>
-                        <div class="global-capabilities__contacts-text">
-                            <p>Polymerization, carpet yarn spinning</p>
-                            <p>
-                                Aquafil USA INC.
-                            </p>
-                            <p>
-                                via Linfano, 9 - 38062 Arco (Trento) ITALY<br>
-                                <a href="phone:+390464581111">+39 0464 581111</a><br>
-                                <a href="phone:+390464532267">+39 0464 532267</a><br>
-                                <a href="mailto:info@aquafil.com">info@aquafil.com</a><br>
-                                <a href="mailto:pec.aquafil@aquafil.legalmail.it">pec.aquafil@aquafil.legalmail.it</a>
-                            </p>
-                        </div>
-                    </div>
+				<div class="col-sm-20 offset-sm-2 col-md-5 offset-md-1 global-capabilities__contacts-item">
+					<div class="global-capabilities__contacts-icon">
+						<svg><use xlink:href="#pin"></use></svg>
+					</div>
+					<div class="global-capabilities__contacts-block">
+						<div class="global-capabilities__contacts-title">Arco (TN)</div>
+						<div class="global-capabilities__contacts-text">
+							<p>Polymerization, carpet yarn spinning</p>
+							<p>
+								Aquafil USA INC.
+							</p>
+							<p>
+								via Linfano, 9 - 38062 Arco (Trento) ITALY<br>
+								<a href="phone:+390464581111">+39 0464 581111</a><br>
+								<a href="phone:+390464532267">+39 0464 532267</a><br>
+								<a href="mailto:info@aquafil.com">info@aquafil.com</a><br>
+								<a href="mailto:pec.aquafil@aquafil.legalmail.it">pec.aquafil@aquafil.legalmail.it</a>
+							</p>
+						</div>
+					</div>
 				</div>
-                <div class="col-sm-20 offset-sm-2 col-md-5 offset-md-1 global-capabilities__contacts-item">
-                    <div class="global-capabilities__contacts-icon">
-                        <svg><use xlink:href="#pin"></use></svg>
-                    </div>
-                    <div class="global-capabilities__contacts-block">
-                        <div class="global-capabilities__contacts-title">Jiaxing</div>
-                        <div class="global-capabilities__contacts-text">
-                            <p>Carpet yarn spinning/interlacing/twisting and heat setting</p>
-                            <p>
-                                AQUAFIL SYNTHETIC FIBRES AND POLYMERS (JIAXING) CO., LTD
-                            </p>
-                            <p>
-                                338 Changsheng North Road, Jiaxing, Zhejiang<br>
-                                <a href="phone:+86(0)57389970255">+86 (0)573 89970255</a><br>
-                                <a href="phone:+86(0)57389970250">+86 (0)573 89970250</a><br>
-                                <a href="mailto:info.china@aquafil.com">info.china@aquafil.com</a>
-                            </p>
-                        </div>
-                    </div>
+				<div class="col-sm-20 offset-sm-2 col-md-5 offset-md-1 global-capabilities__contacts-item">
+					<div class="global-capabilities__contacts-icon">
+						<svg><use xlink:href="#pin"></use></svg>
+					</div>
+					<div class="global-capabilities__contacts-block">
+						<div class="global-capabilities__contacts-title">Jiaxing</div>
+						<div class="global-capabilities__contacts-text">
+							<p>Carpet yarn spinning/interlacing/twisting and heat setting</p>
+							<p>
+								AQUAFIL SYNTHETIC FIBRES AND POLYMERS (JIAXING) CO., LTD
+							</p>
+							<p>
+								338 Changsheng North Road, Jiaxing, Zhejiang<br>
+								<a href="phone:+86(0)57389970255">+86 (0)573 89970255</a><br>
+								<a href="phone:+86(0)57389970250">+86 (0)573 89970250</a><br>
+								<a href="mailto:info.china@aquafil.com">info.china@aquafil.com</a>
+							</p>
+						</div>
+					</div>
 				</div>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
-    <!-- @@include ./templates/product/research-proposition.html { "title": "Research initiative", "abstract": "Research allows us to always look ahead, to innovate, to continuously improve and to develop products that are increasingly efficient and sustainable. This is the reason why research is one of the basic pillars of the Group.", "cta": "Tutti i case studies" } -->
+	<!-- @@include ./templates/product/research-proposition.html { "title": "Research initiative", "abstract": "Research allows us to always look ahead, to innovate, to continuously improve and to develop products that are increasingly efficient and sustainable. This is the reason why research is one of the basic pillars of the Group.", "cta": "Tutti i case studies" } -->
 	<!-- @@include ./templates/product/sales-country.html -->
-    <!-- @@include ./templates/homepage/newsletter-proposition.html -->
+	<!-- @@include ./templates/homepage/newsletter-proposition.html -->
 
 </main>
 <!-- @@close-->

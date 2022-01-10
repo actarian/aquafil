@@ -5,22 +5,26 @@ import { GtmService } from '../../common/gtm/gtm.service';
 import { ModalOutletComponent } from '../../common/modal/modal-outlet.component';
 import { ModalService } from '../../common/modal/modal.service';
 import { FormService } from '../../controls/form.service';
-import { CareersService } from './careers.service';
+import { SalesService } from './sales.service';
 
-export class CareersModalComponent extends Component {
+export class SalesModalComponent extends Component {
 
 	onInit() {
 		const { parentInstance } = getContext(this);
 		if (parentInstance instanceof ModalOutletComponent) {
 			const data = parentInstance.modal.data;
 			const id = data.id;
-			const countryId = data.countryId;
-			this.countryId = countryId ? countryId : this.countryId;
-			console.log('CareersModalComponent.onInit', id, countryId);
+			const productName = data.productName;
+			this.productName = productName ? productName : this.productName;
+			const countryOfInterestId = data.countryOfInterestId;
+			this.countryOfInterestId = countryOfInterestId ? countryOfInterestId : this.countryOfInterestId;
+			console.log('SalesModalComponent.onInit', id, productName, countryOfInterestId);
 		}
 		this.error = null;
 		this.success = false;
 		const form = this.form = new FormGroup({
+			productName: new FormControl(this.productName),
+			countryOfInterest: new FormControl(this.countryOfInterestId),
 			firstName: new FormControl(null, [Validators.RequiredValidator()]),
 			lastName: new FormControl(null, [Validators.RequiredValidator()]),
 			company: new FormControl(null, [Validators.RequiredValidator()]),
@@ -29,7 +33,8 @@ export class CareersModalComponent extends Component {
 			zip: new FormControl(null, [Validators.RequiredValidator()]),
 			country: new FormControl(null, [Validators.RequiredValidator()]),
 			email: new FormControl(null, [Validators.RequiredValidator(), Validators.EmailValidator()]),
-			file: new FormControl(null, [Validators.RequiredValidator()]),
+			subject: new FormControl(null, [Validators.RequiredValidator()]),
+			message: new FormControl(null, [Validators.RequiredValidator()]),
 			privacy: new FormControl(null, [Validators.RequiredTrueValidator()]),
 			checkRequest: window.antiforgery,
 			checkField: '',
@@ -46,15 +51,10 @@ export class CareersModalComponent extends Component {
 	}
 
 	load$() {
-		return CareersService.data$().pipe(
+		return SalesService.data$().pipe(
 			tap(data => {
 				const controls = this.controls;
 				controls.country.options = FormService.toSelectOptions(data.country.options);
-				if (this.countryId) {
-					this.form.patch({
-						country: this.countryId,
-					});
-				}
 				this.pushChanges();
 			})
 		);
@@ -73,7 +73,8 @@ export class CareersModalComponent extends Component {
 			zip: 61122,
 			country: country,
 			email: 'jhonappleseed@gmail.com',
-			file: 'file',
+			subject: 'Subject',
+			message: 'Hi!',
 			privacy: true,
 			checkRequest: window.antiforgery,
 			checkField: ''
@@ -87,22 +88,19 @@ export class CareersModalComponent extends Component {
 
 	onSubmit(model) {
 		const form = this.form;
-		console.log('CareersModalComponent.onSubmit', form.value);
-		// console.log('CareersModalComponent.onSubmit', 'form.valid', valid);
+		console.log('SalesModalComponent.onSubmit', form.value);
+		// console.log('SalesModalComponent.onSubmit', 'form.valid', valid);
 		if (form.valid) {
-			// console.log('CareersModalComponent.onSubmit', form.value);
+			// console.log('SalesModalComponent.onSubmit', form.value);
 			form.submitted = true;
-			CareersService.submit$(form.value).pipe(
+			SalesService.submit$(form.value).pipe(
 				first(),
 			).subscribe(_ => {
 				this.success = true;
 				form.reset();
-				GtmService.push({
-					'event': "Careers",
-					'form_name': "Contatti"
-				});
+				GtmService.push({ 'event': "Sales", 'form_name': "Contatti" });
 			}, error => {
-				console.log('CareersModalComponent.error', error);
+				console.log('SalesModalComponent.error', error);
 				this.error = error;
 				this.pushChanges();
 			});
@@ -116,7 +114,7 @@ export class CareersModalComponent extends Component {
 	}
 }
 
-CareersModalComponent.meta = {
-	selector: '[careers-modal]',
-	inputs: ['countryId'],
+SalesModalComponent.meta = {
+	selector: '[sales-modal]',
+	inputs: ['productName', 'countryOfInterestId'],
 };

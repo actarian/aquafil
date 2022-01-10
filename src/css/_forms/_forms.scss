@@ -300,8 +300,12 @@ fieldset,
 
 .group--form--textarea {
 	@extend %group--form;
-	padding: 10px;
-	border: 2px solid $background-quaternary;
+	padding: 20px 30px;
+	// border: 2px solid $background-quaternary;
+	background: $foreground-negative;
+	border: 1px solid $border;
+	font-size: 16px;
+	margin-bottom: 20px;
 
 	.control--text {
 		resize: vertical;
@@ -980,101 +984,95 @@ test-component {
 
 
 // restyle form
-.group--form
-{
-    border:0;
+.group--form {
+	border: 0;
 }
 
 .group--form,
 .group--form--file,
-.group--form--select
-{
-    background:$foreground-negative;
-    border:1px solid $border;
-    color:$border;
-    padding:0 30px;
-    height:70px;
-    font-size: 16px;
-    margin-bottom:20px;
-    input,
-    select,
-    *::placeholder
-    {
-        color:$foreground;
-        font-size: 16px;
-        font-family: inherit;
-    }
-    *::placeholder
-    {
-        color:$border;
-    }
+.group--form--select {
+	background: $foreground-negative;
+	border: 1px solid $border;
+	color: $border;
+	padding: 0 30px;
+	height: 70px;
+	font-size: 16px;
+	margin-bottom: 20px;
+
+	input,
+	select,
+	*::placeholder {
+		color: $foreground;
+		font-size: 16px;
+		font-family: inherit;
+	}
+
+	*::placeholder {
+		color: $border;
+	}
 }
 
 .test-component,
-test-component .test-component
-{
-    border:1px solid $border;
-    color:$border;
-    padding:0 30px;
-    border-radius: 0;
-    margin:0 0 20px 0;
-    text-align:left;
-    background:$foreground-negative;
-    input,
-    select,
-    *::placeholder
-    {
-        color:$foreground;
-        font-size: 16px;
-        font-family: inherit;
-    }    
-    *::placeholder
-    {
-        color:$border;
-    }   
+test-component .test-component {
+	border: 1px solid $border;
+	color: $border;
+	padding: 0 30px;
+	border-radius: 0;
+	margin: 0 0 20px 0;
+	text-align: left;
+	background: $foreground-negative;
+
+	input,
+	select,
+	*::placeholder {
+		color: $foreground;
+		font-size: 16px;
+		font-family: inherit;
+	}
+
+	*::placeholder {
+		color: $border;
+	}
 }
 
 .control--custom-select,
-.control--text
-{
-    font-size:inherit;
-    color:inherit;
-    color:$foreground;
-    display: flex;
-    align-items: center;
+.control--text {
+	font-size: inherit;
+	color: inherit;
+	color: $foreground;
+	display: flex;
+	align-items: center;
 }
 
-.group--form--file
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right:0;
-    .upload
-    {
-        height:70px;
-        width:64px;
-        margin-right:-1px;
-        margin-top:-1px;
-    }
+.group--form--file {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 0;
+
+	.upload {
+		height: 70px;
+		width: 64px;
+		margin-right: -1px;
+		margin-top: -1px;
+	}
 }
 
-.group--form--checkbox
-{
-    label
-    {
-        color:$foreground;
-        font-weight: 400;
-    }
-    .icon
-    {
-        color:$border;
-    }
-    .icon--checkbox-checked
-    {
-        color:$foreground;
-    }
-    font-weight: inherit;
-    border:0;
-    margin-bottom:20px;
+.group--form--checkbox {
+	label {
+		color: $foreground;
+		font-weight: 400;
+	}
+
+	.icon {
+		color: $border;
+	}
+
+	.icon--checkbox-checked {
+		color: $foreground;
+	}
+
+	font-weight: inherit;
+	border:0;
+	margin-bottom:20px;
 }

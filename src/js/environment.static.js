@@ -22,6 +22,7 @@ export const environmentStatic = {
 			genericModal: '/aquafil/partials/modals/generic-modal.html',
 			sideModal: '/aquafil/partials/modals/side-modal.html',
 			contactModal: '/aquafil/partials/modals/contact-modal.html',
+			salesModal: '/aquafil/partials/modals/sales-modal.html',
 			galleryModal: '/aquafil/partials/modals/gallery-modal.html',
 			userModal: '/aquafil/partials/modals/user-modal.html',
 		}

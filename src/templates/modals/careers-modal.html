@@ -1,4 +1,4 @@
-<div class="contact-modal" contact-modal [countryId]="<!--@@var=countryId-->">
+<div careers-modal [countryId]="<!--@@var=countryId-->">
 	<div *if="!success">
 		<!--
 		<div class="contact-modal__head">
@@ -20,20 +20,19 @@
 							</p>
 						</div>
 					</div>
-
-					<div class="row">
-						<div class="col-sm-22 offset-sm-1">
-							<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
-						</div>
-					</div>
-
 					<div class="row">
 						<div class="col-sm-10 offset-sm-1">
 							<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
-							<div control-text [control]="controls.firstName" label="Name"></div>
+							<div control-text [control]="controls.firstName" label="First Name"></div>
+						</div>
+						<div class="col-sm-10 offset-sm-1">
+							<div control-text [control]="controls.lastName" label="Last Name"></div>
 						</div>
 						<div class="col-sm-10 offset-sm-1">
 							<div control-text [control]="controls.company" label="Company"></div>
+						</div>
+						<div class="col-sm-10 offset-sm-1">
+							<div control-text [control]="controls.email" label="Email"></div>
 						</div>
 						<div class="col-sm-10 offset-sm-1">
 							<div control-text [control]="controls.address" label="Address"></div>
@@ -47,25 +46,15 @@
 						<div class="col-sm-10 offset-sm-1">
 							<div control-custom-select [control]="controls.country" label="Country"></div>
 						</div>
-						<div class="col-sm-10 offset-sm-1">
-							<div control-text [control]="controls.email" label="Email"></div>
-						</div>
-						<div class="col-sm-10 offset-sm-1">
+						<div class="col-sm-21 offset-sm-1">
 							<div control-file [control]="controls.file" label="cv"></div>
 						</div>
-						<!--
-						<div class="col-sm-22">
-                            <div control-textarea [control]="controls.message" label="Message"></div>
-                        </div>
-						<div class="col-sm-22">
-                            <div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
-                        </div>-->
 					</div>
 
 					<div class="row">
 						<div class="col-sm-22 offset-sm-1">
+							<!--
 							<div class="form__controls">
-								<!--
 								<input name="checkField" [formControl]="controls.checkField" value="" type="text" style="display:none !important;" />
 								<div control-text [control]="controls.firstName" label="Nome"></div>
 								<div control-text [control]="controls.lastName" label="Cognome"></div>
@@ -79,8 +68,8 @@
 								<div control-custom-select [control]="controls.newsletterLanguage" label="Lingua della newsletter" *if="controls.newsletter.value"></div>
 								<div class="full" control-privacy [control]="controls.commercial" label="Al trattamento dei miei dati personali per attività di profilazione, al fine di proporle comunicazioni commerciali più vicine ai miei interessi."></div>
 								<div class="full" control-privacy [control]="controls.promotion" label="Alla cessione dei miei dati personali per attività promozionali di terzi. I soggetti terzi a cui i dati saranno ceduti sono unicamente Società del gruppo."></div>
-							    -->
 							</div>
+							-->
 							<test-component [form]="form" (test)="test($event)" (reset)="reset($event)"></test-component>
 							<div class="full" control-checkbox [control]="controls.privacy" label="Ho letto l&amp;#39;&amp;lt;a href=&amp;quot;/it/it/privacy-policy&amp;quot; target=&amp;quot;_blank&amp;quot;&gt;informativa&amp;lt;/a&gt; e do il consenso al trattamento del dato"></div>
 							<div class="form__error" *if="error">

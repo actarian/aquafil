@@ -1,11 +1,11 @@
 import { ApiService } from '../../common/api/api.service';
 import { environment } from '../../environment';
 
-export class CareersService {
+export class SalesService {
 
 	static data$() {
 		if (environment.flags.production) {
-			return ApiService.get$('/careers/data');
+			return ApiService.get$('/sales/data');
 		} else {
 			return ApiService.get$('/contacts/data.json');
 		}
@@ -13,7 +13,7 @@ export class CareersService {
 
 	static submit$(payload) {
 		if (environment.flags.production) {
-			return ApiService.post$('/careers/submit', payload);
+			return ApiService.post$('/sales/submit', payload);
 		} else {
 			return ApiService.get$('/contacts/submit.json');
 		}

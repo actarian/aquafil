@@ -4,7 +4,6 @@ import { ModalService } from '../../common/modal/modal.service';
 import { environment } from '../../environment';
 
 export class CardProductDetailComponent extends Component {
-
 	onRequestInfo() {
 		ModalService.open$({ src: environment.template.modal.contactModal, data: { id: this.id } }).pipe(
 			first(),
