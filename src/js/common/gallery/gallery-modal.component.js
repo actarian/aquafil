@@ -11,6 +11,10 @@ export class GalleryModalComponent extends Component {
 		if (parentInstance instanceof ModalOutletComponent) {
 			const data = parentInstance.modal.data;
 			const items = this.items = data.items;
+			items.forEach(item => {
+				item.isImg = this.isImg(item);
+				item.isVideo = this.isVideo(item);
+			});
 			const initialSlide = this.initialSlide = data.initialSlide;
 			console.log(items, initialSlide);
 			/*
@@ -44,6 +48,28 @@ export class GalleryModalComponent extends Component {
 
 	onClose() {
 		ModalService.reject();
+	}
+
+	isImg(item) {
+		const src = item.src.split('?')[0];
+		const lastIndex = src.lastIndexOf('.');
+		if (lastIndex !== -1) {
+			const ext = src.substring(lastIndex + 1, src.length);
+			return ['jpg', 'jpeg', 'png', 'gif'].indexOf(ext) !== -1
+		} else {
+			return false;
+		}
+	}
+
+	isVideo(item) {
+		const src = item.src.split('?')[0];
+		const lastIndex = src.lastIndexOf('.');
+		if (lastIndex !== -1) {
+			const ext = src.substring(lastIndex + 1, src.length);
+			return ['mp4', 'webm'].indexOf(ext) !== -1
+		} else {
+			return false;
+		}
 	}
 }
 

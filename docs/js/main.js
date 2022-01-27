@@ -1409,12 +1409,18 @@ ModalOutletComponent.meta = {
   var _proto = GalleryModalComponent.prototype;
 
   _proto.onInit = function onInit() {
+    var _this = this;
+
     var _getContext = rxcomp.getContext(this),
         parentInstance = _getContext.parentInstance;
 
     if (parentInstance instanceof ModalOutletComponent) {
       var data = parentInstance.modal.data;
       var items = this.items = data.items;
+      items.forEach(function (item) {
+        item.isImg = _this.isImg(item);
+        item.isVideo = _this.isVideo(item);
+      });
       var initialSlide = this.initialSlide = data.initialSlide;
       console.log(items, initialSlide);
       /*
@@ -1449,6 +1455,30 @@ ModalOutletComponent.meta = {
 
   _proto.onClose = function onClose() {
     ModalService.reject();
+  };
+
+  _proto.isImg = function isImg(item) {
+    var src = item.src.split('?')[0];
+    var lastIndex = src.lastIndexOf('.');
+
+    if (lastIndex !== -1) {
+      var ext = src.substring(lastIndex + 1, src.length);
+      return ['jpg', 'jpeg', 'png', 'gif'].indexOf(ext) !== -1;
+    } else {
+      return false;
+    }
+  };
+
+  _proto.isVideo = function isVideo(item) {
+    var src = item.src.split('?')[0];
+    var lastIndex = src.lastIndexOf('.');
+
+    if (lastIndex !== -1) {
+      var ext = src.substring(lastIndex + 1, src.length);
+      return ['mp4', 'webm'].indexOf(ext) !== -1;
+    } else {
+      return false;
+    }
   };
 
   return GalleryModalComponent;
@@ -4816,7 +4846,7 @@ SwiperContentDirective.meta = {
   _proto.onInit = function onInit() {
     var _this = this;
 
-    console.log(this.initialSlide);
+    // console.log(this.initialSlide);
     this.options = {
       initialSlide: this.initialSlide,
       slidesPerView: 1,

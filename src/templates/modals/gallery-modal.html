@@ -6,7 +6,8 @@
 				<!-- slide -->
 				<div class="swiper-slide" *for="let item of items">
 					<div class="gallery-modal__picture">
-						<img [src]="item.src" />
+						<img [src]="item.src" *if="item.isImg" />
+						<video [src]="item.src" playsinline autoplay loop muted *if="item.isVideo"></video>
 					</div>
 				</div>
 			</div>
@@ -16,7 +17,7 @@
 					<svg class="caret"><use xlink:href="#caret-left"></use></svg>
 				</button>
 				<!-- index -->
-				<div class="gallery-modal__index">{{slideIndex}}/{{slideTotal}}</div>
+				<div class="gallery-modal__index" [innerHTML]="slideIndex + '/' + slideTotal"></div>
 				<!-- next button -->
 				<button type="button" class="btn--gallery-next">
 					<svg class="caret"><use xlink:href="#caret-right"></use></svg>

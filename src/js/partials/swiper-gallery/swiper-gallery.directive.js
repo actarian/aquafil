@@ -3,7 +3,7 @@ import { SwiperDirective } from '../../common/swiper/swiper.directive';
 export class SwiperGalleryDirective extends SwiperDirective {
 
 	onInit() {
-		console.log(this.initialSlide);
+		// console.log(this.initialSlide);
 		this.options = {
 			initialSlide: this.initialSlide,
 			slidesPerView: 1,
