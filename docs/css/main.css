@@ -7196,12 +7196,11 @@ test-component .test-component {
       height: 90px; } }
   @media (min-width: 1024px) {
     .header > .container-fluid > .row {
-      border-top: 1px solid #F1F1F1;
+      border-top: 1px solid currentColor;
       margin-top: 20px;
       padding-top: 30px; }
     .header .nav--main {
-      border-right: 1px solid #CDCDCD;
-      margin-right: 40px; } }
+      border-right: 1px solid #CDCDCD; } }
 
 .header__logo .btn--logo {
   margin-right: var(--p40); }
@@ -7219,7 +7218,7 @@ test-component .test-component {
     flex: 0 0 75%;
     flex-wrap: wrap; }
     .header__menu .nav--main {
-      flex: 1 0 75%;
+      flex: 1 0 70%;
       order: 3; }
     .header__menu .btn--investor, .header__menu .page--investors .header .btn--back, .page--investors .header .header__menu .btn--back {
       flex: 0 1 auto;
@@ -7227,14 +7226,20 @@ test-component .test-component {
     .header__menu .nav--service {
       flex: 1 1 calc(100% - 100px);
       order: 1;
-      margin-top: -100px; }
+      margin-top: -85px; }
     .header__menu .nav--language {
       flex: 0 1 auto;
       order: 2;
       max-width: 65px;
-      margin-top: -100px; }
+      margin-top: -85px; }
     .header__menu .btn--menu {
       display: none; } }
+
+@media (min-width: 1440px) {
+  .header__menu .nav--service {
+    margin-top: -100px; }
+  .header__menu .nav--language {
+    margin-top: -100px; } }
 
 @media (max-width: 1023.98px) {
   .header__menu {
@@ -7305,6 +7310,12 @@ test-component .test-component {
   font-size: Max(12px, Min(18px, 1vw));
   margin: 0;
   padding: var(--p10) 0; }
+  .nav--main > .nav__item > a > span,
+  .nav--main > .nav__item > span > span {
+    white-space: nowrap;
+    max-width: calc(20vw - 150px);
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .nav--main > .nav__item > a svg,
   .nav--main > .nav__item > span svg {
     flex: 0 0 0.5em;
@@ -7355,13 +7366,15 @@ test-component .test-component {
           display: none; } }
 
 .nav--service .search {
-  display: flex; }
+  display: flex;
+  color: currentColor; }
   .nav--service .search svg {
     width: 12px;
-    height: auto; }
+    height: auto;
+    fill: currentColor; }
   .nav--service .search input:-ms-input-placeholder {
     background-color: transparent;
-    color: var(--foreground);
+    color: currentColor;
     border: 0;
     padding: 0;
     font-family: inherit;
@@ -7379,7 +7392,7 @@ test-component .test-component {
   .nav--service .search input::placeholder,
   .nav--service .search input:focus {
     background-color: transparent;
-    color: var(--foreground);
+    color: currentColor;
     border: 0;
     padding: 0;
     font-family: inherit;
@@ -7481,8 +7494,8 @@ test-component .test-component {
   font-weight: bold; }
   .btn--investor, .page--investors .header .btn--back, .btn--investor:active, .page--investors .header .btn--back:active, .btn--investor:focus, .page--investors .header .btn--back:focus, .btn--investor:visited, .page--investors .header .btn--back:visited {
     background-color: transparent;
-    color: #3D5D6C;
-    border: 1px solid #3D5D6C; }
+    color: currentColor;
+    border: 1px solid currentColor; }
   @media (min-width: 1024px) {
     .btn--investor, .page--investors .header .btn--back {
       font-size: Max(12px, Min(16px, 1vw)); } }

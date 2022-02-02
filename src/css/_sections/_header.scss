@@ -51,21 +51,17 @@
 		height: 90px;
 	}
 
-    @include media-up(md)
-    {
-        &>.container-fluid>.row
-        {
-            border-top:1px solid #F1F1F1;
-            margin-top:20px;
-            padding-top:30px;
-        }
+	@include media-up(md) {
+		&>.container-fluid>.row {
+			border-top: 1px solid currentColor;
+			margin-top: 20px;
+			padding-top: 30px;
+		}
 
-        .nav--main
-        {
-            border-right:1px solid #CDCDCD;
-            margin-right:40px;
-        }
-    }
+		.nav--main {
+			border-right: 1px solid #CDCDCD;
+		}
+	}
 
 }
 
@@ -91,7 +87,7 @@
 		flex-wrap: wrap;
 
 		.nav--main {
-			flex: 1 0 75%;
+			flex: 1 0 70%;
 			order: 3;
 		}
 
@@ -103,18 +99,28 @@
 		.nav--service {
 			flex: 1 1 calc(100% - 100px);
 			order: 1;
-			margin-top: -100px;
+			margin-top: -85px;
 		}
 
 		.nav--language {
 			flex: 0 1 auto;
 			order: 2;
 			max-width: 65px;
-			margin-top: -100px;
+			margin-top: -85px;
 		}
 
 		.btn--menu {
 			display: none;
+		}
+	}
+
+	@include media-up(lg) {
+		.nav--service {
+			margin-top: -100px;
+		}
+
+		.nav--language {
+			margin-top: -100px;
 		}
 	}
 
@@ -202,6 +208,13 @@
 			margin: 0;
 			padding: var(--p10) 0;
 
+			&>span {
+				white-space: nowrap;
+				max-width: calc(20vw - 150px);
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
 			svg {
 				flex: 0 0 0.5em;
 				width: 0.5em;
@@ -280,36 +293,37 @@
 .nav--service {
 	@extend %nav;
 
-    .search
-    {
-        display: flex;
-        svg
-        {
-            width:12px;
-            height:auto;
-        }
-        input,
-        input::placeholder,
-        input:focus
-        {
-            @extend .smallest;
-            background-color: transparent;
-            color: $foreground;        
-            border:0;
-            padding:0;
-            font-family: inherit; 
-            outline:none;
-            box-shadow: 0;
-            font-size: inherit;
-            letter-spacing: inherit;
-            line-height: inherit;
-            font-weight: inherit;
-            width:60px;
-            float:right;
-            text-align: right;
-            outline-color:  rgb(0, 58, 86);
-        }
-    }
+	.search {
+		display: flex;
+		color: currentColor;
+
+		svg {
+			width: 12px;
+			height: auto;
+			fill: currentColor;
+		}
+
+		input,
+		input::placeholder,
+		input:focus {
+			@extend .smallest;
+			background-color: transparent;
+			color: currentColor;
+			border: 0;
+			padding: 0;
+			font-family: inherit;
+			outline: none;
+			box-shadow: 0;
+			font-size: inherit;
+			letter-spacing: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+			width: 60px;
+			float: right;
+			text-align: right;
+			outline-color: rgb(0, 58, 86);
+		}
+	}
 
 	&>.nav__item {
 
@@ -457,8 +471,8 @@
 	&:focus,
 	&:visited {
 		background-color: transparent;
-		color: $text;
-        border:1px solid $text;
+		color: currentColor;
+		border: 1px solid currentColor;
 	}
 
 	@include media-up(md) {
@@ -472,11 +486,10 @@
 		padding: 10px 30px;
 	}
 
-    &:hover
-    {
-        color:$foreground-negative;
-        background-color: $text;
-    }
+	&:hover {
+		color: $foreground-negative;
+		background-color: $text;
+	}
 }
 
 .nav--submenu {
