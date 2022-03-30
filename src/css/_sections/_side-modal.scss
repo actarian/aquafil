@@ -8,7 +8,6 @@
 
 	&__content {
 		flex: 1 1 auto;
-		padding: var(--p60) var(--p40);
 		overflow-x: hidden;
 		overflow-y: auto;
 		@include scrollbar();
@@ -30,6 +29,23 @@
 	&__cta {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@include media-up(md) {
+		&__content {
+			padding: var(--p60) var(--p40);
+		}
+
+	}
+
+	@include media-down(sm) {
+		&__content {
+			padding: var(--p140) var(--p40);
+		}
+
+		&__cta {
+			margin: 20px;
+		}
 	}
 }
 
@@ -60,5 +76,10 @@
 
 	@include media-up(md) {
 		width: 40.625vw;
+	}
+
+	@include media-down(sm) {
+		width: 100%;
+		max-width: 600px;
 	}
 }

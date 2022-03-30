@@ -13,7 +13,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin: var(--n10) var(--n10);
+			margin: 0 var(--n10);
 			width: calc(100% + var(--p20));
 		}
 
@@ -28,6 +28,15 @@
 			margin-bottom: var(--p40);
 		}
 	}
+
+	padding-top: var(--p30);
+	padding-bottom: var(--p30);
+	border-top: 1px solid $background-quaternary;
+	border-bottom: 1px solid $background-quaternary;
+}
+
+.horizontal-menu+.horizontal-menu {
+	border-top: none;
 }
 
 .nav--horizontal-menu {
@@ -53,8 +62,8 @@
 
 			&:hover,
 			&.active {
-				color: $foreground-negative;
 				background: $foreground-primary;
+				color: $foreground-negative;
 			}
 		}
 	}

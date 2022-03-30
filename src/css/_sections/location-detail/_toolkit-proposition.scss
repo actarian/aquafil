@@ -8,32 +8,56 @@
 }
 
 .card--toolkit {
-	display: flex;
-	align-items: stretch;
-	margin-bottom: var(--p80);
-
-	&__picture,
-	&__content {
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-
 	&__content {
 		background: $background-quaternary;
-		padding: var(--p80) var(--p70);
 	}
 
 	&__title {
 		@extend .h5;
-		margin-bottom: var(--p40);
 	}
 
 	&__abstract {
 		@extend .small;
 	}
 
-	&__cta {
-		margin-top: var(--p40);
+	@include media-up(sm) {
+		display: flex;
+		align-items: stretch;
+		margin-bottom: var(--p80);
+
+		&__picture,
+		&__content {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		&__content {
+			padding: var(--p80) var(--p70);
+		}
+
+		&__title {
+			margin-bottom: var(--p40);
+		}
+
+		&__cta {
+			margin-top: var(--p40);
+		}
+	}
+
+	@include media-down(xs) {
+		margin-bottom: var(--p40);
+
+		&__content {
+			padding: var(--p40) var(--p30);
+		}
+
+		&__title {
+			margin-bottom: var(--p20);
+		}
+
+		&__cta {
+			margin-top: var(--p20);
+		}
 	}
 }
 

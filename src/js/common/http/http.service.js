@@ -21,18 +21,29 @@ export class HttpResponse {
 
 export class HttpService {
 
-	static http$(method, url, data, format = 'json', userPass = null, options = {}) {
+	static http$(method, url, data, format = 'application/json', userPass = null, options = {}) {
 		const methods = ['POST', 'PUT', 'PATCH'];
 		let response_ = null;
 		// url = this.getUrl(url, format);
+		//
+		let _body = undefined;
+		if (data && methods.indexOf(method) !== -1) {
+			if (format == 'application/json') {
+				_body = JSON.stringify(data)
+			} else if (format == 'application/x-www-form-urlencoded') {
+				_body = jQuery.param(data);
+			}
+		}
+		//
 		options = Object.assign({
 			method: method,
 			headers: {
 				'Accept': 'application/json',
-				'Content-Type': 'application/json',
+				'Content-Type': format,
 			},
 		}, options, {
-			body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+			// body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+			body: _body
 		});
 		if (userPass) {
 			// options.mode = 'no-cors';

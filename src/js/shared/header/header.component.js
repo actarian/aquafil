@@ -63,6 +63,10 @@ export class HeaderComponent extends Component {
 	}
 
 	onMenu(id) {
+		const headerMenu = document.querySelector('.header__menu');
+		if (headerMenu) {
+			headerMenu.scrollTo(0, 0);
+		}
 		MenuService.setMenu(id);
 	}
 

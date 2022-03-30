@@ -3414,7 +3414,7 @@ ControlFileComponent.meta = {
   inputs: ['control', 'label'],
   template:
   /* html */
-  "\n\t\t<div class=\"group--form--file\" [class]=\"{ required: control.validators.length }\">\n\t\t\t<!--<label for=\"file\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>-->\n\t\t\t<span class=\"control--text\" [innerHTML]=\"file?.name || labels.select_file\"></span>\n\t\t\t<svg class=\"upload\"><use xlink:href=\"#upload\"></use></svg>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t\t<input name=\"file\" type=\"file\" accept=\".pdf,.doc,.docx,*.txt\" class=\"control--file\" (change)=\"onInputDidChange($event)\" />\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
+  "\n\t\t<div class=\"group--form--file\" [class]=\"{ required: control.validators.length }\">\n\t\t\t<!--<label for=\"file\"><span [innerHTML]=\"label\"></span> <span class=\"required__sign\">*</span></label>-->\n\t\t\t<span class=\"control--text\" [innerHTML]=\"file?.name || label\"></span>\n\t\t\t<svg class=\"upload\"><use xlink:href=\"#upload\"></use></svg>\n\t\t\t<span class=\"required__badge\" [innerHTML]=\"'required' | label\"></span>\n\t\t\t<input name=\"file\" type=\"file\" accept=\".pdf,.doc,.docx,*.txt\" class=\"control--file\" (change)=\"onInputDidChange($event)\" />\n\t\t</div>\n\t\t<errors-component [control]=\"control\"></errors-component>\n\t"
 };var ControlPasswordComponent = /*#__PURE__*/function (_ControlComponent) {
   _inheritsLoose(ControlPasswordComponent, _ControlComponent);
 
@@ -3677,11 +3677,14 @@ ControlsModule.meta = {
 
   var _proto = CardProductDetailComponent.prototype;
 
-  _proto.onRequestInfo = function onRequestInfo() {
+  _proto.onRequestInfo = function onRequestInfo(id, product, download, recipient) {
     ModalService.open$({
-      src: environment.template.modal.contactModal,
+      src: environment.template.modal.productRequestModal,
       data: {
-        id: this.id
+        id: id,
+        productName: product,
+        download: download,
+        recipient: recipient
       }
     }).pipe(operators.first()).subscribe(function (event) {
       console.log('CardProductDetailComponent.open$', event);
@@ -3727,6 +3730,10 @@ CardProductDetailComponent.meta = {
   HttpService.http$ = function http$(method, url, data, format, userPass, options) {
     var _this = this;
 
+    if (format === void 0) {
+      format = 'application/json';
+    }
+
     if (userPass === void 0) {
       userPass = null;
     }
@@ -3737,15 +3744,28 @@ CardProductDetailComponent.meta = {
 
     var methods = ['POST', 'PUT', 'PATCH'];
     var response_ = null; // url = this.getUrl(url, format);
+    //
+
+    var _body = undefined;
+
+    if (data && methods.indexOf(method) !== -1) {
+      if (format == 'application/json') {
+        _body = JSON.stringify(data);
+      } else if (format == 'application/x-www-form-urlencoded') {
+        _body = jQuery.param(data);
+      }
+    } //
+
 
     options = Object.assign({
       method: method,
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': format
       }
     }, options, {
-      body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+      // body: methods.indexOf(method) !== -1 ? JSON.stringify(data) : undefined
+      body: _body
     });
 
     if (userPass) {
@@ -4090,26 +4110,26 @@ _defineProperty(LanguageService, "selectedLanguage", LanguageService.defaultLang
   return ApiService;
 }(HttpService);
 
-_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var ContactsService = /*#__PURE__*/function () {
-  function ContactsService() {}
+_defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);var SalesService = /*#__PURE__*/function () {
+  function SalesService() {}
 
-  ContactsService.data$ = function data$() {
+  SalesService.data$ = function data$() {
     if (environment.flags.production) {
-      return ApiService.get$('/contacts/data');
+      return ApiService.get$('/wp-json/aquafil/v1/sales?page=' + ws_vars.post_id);
     } else {
       return ApiService.get$('/contacts/data.json');
     }
   };
 
-  ContactsService.submit$ = function submit$(payload) {
+  SalesService.submit$ = function submit$(payload) {
     if (environment.flags.production) {
-      return ApiService.post$('/contacts/submit', payload);
+      return ApiService.http$('POST', environment.api + '/wp-admin/admin-ajax.php', payload, 'application/x-www-form-urlencoded');
     } else {
       return ApiService.get$('/contacts/submit.json');
     }
   };
 
-  return ContactsService;
+  return SalesService;
 }();var CardSaleDetailComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(CardSaleDetailComponent, _Component);
 
@@ -4122,11 +4142,19 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   _proto.onInit = function onInit() {
     var _this = this;
 
+    this.data = null;
+    this.agent = null;
     var form = this.form = new rxcompForm.FormGroup({
       country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()])
     });
     var controls = this.controls = form.controls;
-    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
+    form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (values) {
+      if (_this.data) {
+        _this.agent = _this.data.agent.find(function (x) {
+          return x.country.value == values.country && x.area.label == _this.area;
+        });
+      }
+
       _this.pushChanges();
     });
     this.load$().pipe(operators.first()).subscribe();
@@ -4135,7 +4163,8 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   _proto.load$ = function load$() {
     var _this2 = this;
 
-    return ContactsService.data$().pipe(operators.tap(function (data) {
+    return SalesService.data$().pipe(operators.tap(function (data) {
+      _this2.data = data;
       var controls = _this2.controls;
       controls.country.options = FormService.toSelectOptions(data.country.options);
 
@@ -4144,15 +4173,19 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
   };
 
   _proto.onRequestInfo = function onRequestInfo() {
+    var _this3 = this;
+
     if (this.form.valid) {
       ModalService.open$({
         src: environment.template.modal.salesModal,
         data: {
-          id: this.id,
           productName: this.productName,
-          countryOfInterestId: this.form.value.country
+          countryOfInterestId: this.form.value.country,
+          agent: this.agent.email
         }
       }).pipe(operators.first()).subscribe(function (event) {
+        _this3.data = null;
+        _this3.agent = null;
         console.log('CardSaleDetailComponent.open$', event);
       });
     }
@@ -4162,7 +4195,7 @@ _defineProperty(ApiService, "currentLanguage", LanguageService.activeLanguage);v
 }(rxcomp.Component);
 CardSaleDetailComponent.meta = {
   selector: '[card-sale-detail]',
-  inputs: ['id', 'productName']
+  inputs: ['id', 'productName', 'area']
 };function push_(event) {
   var dataLayer = window.dataLayer || [];
   dataLayer.push(event);
@@ -4182,7 +4215,7 @@ var GtmService = /*#__PURE__*/function () {
 
   CareersService.data$ = function data$() {
     if (environment.flags.production) {
-      return ApiService.get$('/careers/data');
+      return ApiService.get$('/wp-json/aquafil/v1/careers?page=' + ws_vars.post_id);
     } else {
       return ApiService.get$('/contacts/data.json');
     }
@@ -4190,7 +4223,7 @@ var GtmService = /*#__PURE__*/function () {
 
   CareersService.submit$ = function submit$(payload) {
     if (environment.flags.production) {
-      return ApiService.post$('/careers/submit', payload);
+      return ApiService.http$('POST', environment.api + '/wp-admin/admin-ajax.php', payload, 'application/x-www-form-urlencoded');
     } else {
       return ApiService.get$('/contacts/submit.json');
     }
@@ -4209,32 +4242,25 @@ var GtmService = /*#__PURE__*/function () {
   _proto.onInit = function onInit() {
     var _this = this;
 
-    var _getContext = rxcomp.getContext(this),
-        parentInstance = _getContext.parentInstance;
-
-    if (parentInstance instanceof ModalOutletComponent) {
-      var data = parentInstance.modal.data;
-      var id = data.id;
-      var countryId = data.countryId;
-      this.countryId = countryId ? countryId : this.countryId;
-      console.log('CareersModalComponent.onInit', id, countryId);
-    }
-
     this.error = null;
     this.success = false;
+    this.response = null;
+    this.message = null;
     var form = this.form = new rxcompForm.FormGroup({
+      countryOfInterest: new rxcompForm.FormControl(this.countryOfInterestId),
       firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null),
+      address: new rxcompForm.FormControl(null),
+      city: new rxcompForm.FormControl(null),
+      zip: new rxcompForm.FormControl(null),
       country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
       file: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
       checkRequest: window.antiforgery,
-      checkField: ''
+      checkField: '',
+      action: 'save_career'
     });
     var controls = this.controls = form.controls;
     form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
@@ -4247,14 +4273,16 @@ var GtmService = /*#__PURE__*/function () {
     var _this2 = this;
 
     return CareersService.data$().pipe(operators.tap(function (data) {
+      _this2.data = data;
       var controls = _this2.controls;
       controls.country.options = FormService.toSelectOptions(data.country.options);
-
-      if (_this2.countryId) {
-        _this2.form.patch({
-          country: _this2.countryId
-        });
+      /*
+      if (this.countryId) {
+      	this.form.patch({
+      		country: this.countryId,
+      	});
       }
+      */
 
       _this2.pushChanges();
     }));
@@ -4295,12 +4323,17 @@ var GtmService = /*#__PURE__*/function () {
       // console.log('CareersModalComponent.onSubmit', form.value);
       form.submitted = true;
       CareersService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        if (_.success) {
+          GtmService.push({
+            'event': "Careers",
+            'form_name': "Contatti"
+          });
+        }
+
         _this3.success = true;
         form.reset();
-        GtmService.push({
-          'event': "Careers",
-          'form_name': "Contatti"
-        });
+        _this3.response = _.data["response"];
+        _this3.message = _.data["message"];
       }, function (error) {
         console.log('CareersModalComponent.error', error);
         _this3.error = error;
@@ -4320,8 +4353,28 @@ var GtmService = /*#__PURE__*/function () {
 }(rxcomp.Component);
 CareersModalComponent.meta = {
   selector: '[careers-modal]',
-  inputs: ['countryId']
-};var ContactModalComponent = /*#__PURE__*/function (_Component) {
+  inputs: ['countryOfInterestId']
+};var ContactsService = /*#__PURE__*/function () {
+  function ContactsService() {}
+
+  ContactsService.data$ = function data$() {
+    if (environment.flags.production) {
+      return ApiService.get$('/wp-json/aquafil/v1/countries?page=' + ws_vars.post_id);
+    } else {
+      return ApiService.get$('/contacts/data.json');
+    }
+  };
+
+  ContactsService.submit$ = function submit$(payload) {
+    if (environment.flags.production) {
+      return ApiService.http$('POST', environment.api + '/wp-admin/admin-ajax.php', payload, 'application/x-www-form-urlencoded');
+    } else {
+      return ApiService.get$('/contacts/submit.json');
+    }
+  };
+
+  return ContactsService;
+}();var ContactModalComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(ContactModalComponent, _Component);
 
   function ContactModalComponent() {
@@ -4333,33 +4386,25 @@ CareersModalComponent.meta = {
   _proto.onInit = function onInit() {
     var _this = this;
 
-    var _getContext = rxcomp.getContext(this),
-        parentInstance = _getContext.parentInstance;
-
-    if (parentInstance instanceof ModalOutletComponent) {
-      var data = parentInstance.modal.data;
-      var id = data.id;
-      var countryId = data.countryId;
-      this.countryId = countryId ? countryId : this.countryId;
-      console.log('ContactModalComponent.onInit', id, countryId);
-    }
-
     this.error = null;
     this.success = false;
+    this.response = null;
+    this.message = null;
     var form = this.form = new rxcompForm.FormGroup({
       firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null),
+      address: new rxcompForm.FormControl(null),
+      city: new rxcompForm.FormControl(null),
+      zip: new rxcompForm.FormControl(null),
       country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
-      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      subject: new rxcompForm.FormControl(null),
+      message: new rxcompForm.FormControl(null),
       privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
       checkRequest: window.antiforgery,
-      checkField: ''
+      checkField: '',
+      action: 'save_contact'
     });
     var controls = this.controls = form.controls;
     form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
@@ -4373,13 +4418,11 @@ CareersModalComponent.meta = {
 
     return ContactsService.data$().pipe(operators.tap(function (data) {
       var controls = _this2.controls;
-      controls.country.options = FormService.toSelectOptions(data.country.options);
-
-      if (_this2.countryId) {
-        _this2.form.patch({
-          country: _this2.countryId
-        });
-      }
+      controls.country.options = FormService.toSelectOptions(data.country.options); //if (this.countryId) {
+      //	this.form.patch({
+      //		country: this.countryId,
+      //	});
+      //}
 
       _this2.pushChanges();
     }));
@@ -4421,12 +4464,17 @@ CareersModalComponent.meta = {
       // console.log('ContactModalComponent.onSubmit', form.value);
       form.submitted = true;
       ContactsService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        if (_.success) {
+          GtmService.push({
+            'event': "Contact",
+            'form_name': "Contatti"
+          });
+        }
+
         _this3.success = true;
         form.reset();
-        GtmService.push({
-          'event': "Contact",
-          'form_name': "Contatti"
-        });
+        _this3.response = _.data["response"];
+        _this3.message = _.data["message"];
       }, function (error) {
         console.log('ContactModalComponent.error', error);
         _this3.error = error;
@@ -4446,7 +4494,7 @@ CareersModalComponent.meta = {
 }(rxcomp.Component);
 ContactModalComponent.meta = {
   selector: '[contact-modal]',
-  inputs: ['countryId']
+  inputs: []
 };var OpenModallyDirective = /*#__PURE__*/function (_Directive) {
   _inheritsLoose(OpenModallyDirective, _Directive);
 
@@ -4479,7 +4527,7 @@ ContactModalComponent.meta = {
       ModalService.open$({
         src: environment.template.modal.sideModal,
         data: {
-          target: target
+          target: target.cloneNode(true)
         }
       }).pipe(operators.first()).subscribe(function (event) {
         console.log('OpenModallyDirective.open$', event);
@@ -4496,7 +4544,7 @@ OpenModallyDirective.meta = {
 
   ProductRequestService.submit$ = function submit$(payload) {
     if (environment.flags.production) {
-      return ApiService.post$('/product-request/submit', payload);
+      return ApiService.http$('POST', environment.api + '/wp-admin/admin-ajax.php', payload, 'application/x-www-form-urlencoded');
     } else {
       return ApiService.get$('/contacts/submit.json');
     }
@@ -4523,22 +4571,31 @@ OpenModallyDirective.meta = {
       var id = data.id;
       var productName = data.productName;
       this.productName = productName ? productName : this.productName;
+      var recipient = data.recipient;
+      this.recipient = recipient ? recipient : this.recipient;
+      var download = data.download;
+      this.download = download ? download : this.download;
       console.log('ProductRequestComponent.onInit', id, productName);
     }
 
     this.error = null;
     this.success = false;
+    this.response = '';
+    this.message = '';
     var form = this.form = new rxcompForm.FormGroup({
-      productName: new rxcompForm.FormControl(this.productName),
+      productName: this.productName,
+      recipient: this.recipient,
+      download: this.download,
       firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null),
       email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
-      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      subject: new rxcompForm.FormControl(null),
+      message: new rxcompForm.FormControl(null),
       privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
       checkRequest: window.antiforgery,
-      checkField: ''
+      checkField: '',
+      action: 'save_product_request'
     });
     var controls = this.controls = form.controls;
     form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
@@ -4577,12 +4634,17 @@ OpenModallyDirective.meta = {
       // console.log('ProductRequestComponent.onSubmit', form.value);
       form.submitted = true;
       ProductRequestService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        if (_.success) {
+          GtmService.push({
+            'event': "Product Request",
+            'form_name': "Product Request"
+          });
+        }
+
         _this2.success = true;
         form.reset();
-        GtmService.push({
-          'event': "Product Request",
-          'form_name': "Product Request"
-        });
+        _this2.response = _.data["response"];
+        _this2.message = _.data["message"];
       }, function (error) {
         console.log('ProductRequestComponent.error', error);
         _this2.error = error;
@@ -4602,28 +4664,8 @@ OpenModallyDirective.meta = {
 }(rxcomp.Component);
 ProductRequestComponent.meta = {
   selector: '[product-request]',
-  inputs: ['productName']
-};var SalesService = /*#__PURE__*/function () {
-  function SalesService() {}
-
-  SalesService.data$ = function data$() {
-    if (environment.flags.production) {
-      return ApiService.get$('/sales/data');
-    } else {
-      return ApiService.get$('/contacts/data.json');
-    }
-  };
-
-  SalesService.submit$ = function submit$(payload) {
-    if (environment.flags.production) {
-      return ApiService.post$('/sales/submit', payload);
-    } else {
-      return ApiService.get$('/contacts/submit.json');
-    }
-  };
-
-  return SalesService;
-}();var SalesModalComponent = /*#__PURE__*/function (_Component) {
+  inputs: ['productName', 'download']
+};var SalesModalComponent = /*#__PURE__*/function (_Component) {
   _inheritsLoose(SalesModalComponent, _Component);
 
   function SalesModalComponent() {
@@ -4641,31 +4683,35 @@ ProductRequestComponent.meta = {
     if (parentInstance instanceof ModalOutletComponent) {
       var data = parentInstance.modal.data;
       var id = data.id;
-      var productName = data.productName;
-      this.productName = productName ? productName : this.productName;
-      var countryOfInterestId = data.countryOfInterestId;
-      this.countryOfInterestId = countryOfInterestId ? countryOfInterestId : this.countryOfInterestId;
-      console.log('SalesModalComponent.onInit', id, productName, countryOfInterestId);
+      var productName = this.productName = data.productName ? data.productName : this.productName;
+      var area = this.area = data.area ? data.area : this.area;
+      var countryOfInterestId = this.countryOfInterestId = data.countryOfInterestId ? data.countryOfInterestId : this.countryOfInterestId;
+      var agent = this.agent = data.agent;
+      console.log('SalesModalComponent.onInit', id, productName, area, countryOfInterestId, agent);
     }
 
     this.error = null;
     this.success = false;
+    this.response = '';
+    this.message = '';
     var form = this.form = new rxcompForm.FormGroup({
-      productName: new rxcompForm.FormControl(this.productName),
+      productName: this.productName,
       countryOfInterest: new rxcompForm.FormControl(this.countryOfInterestId),
       firstName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       lastName: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      company: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      address: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      city: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      zip: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      company: new rxcompForm.FormControl(null),
+      address: new rxcompForm.FormControl(null),
+      city: new rxcompForm.FormControl(null),
+      zip: new rxcompForm.FormControl(null),
       country: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
       email: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator(), rxcompForm.Validators.EmailValidator()]),
-      subject: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
-      message: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredValidator()]),
+      subject: new rxcompForm.FormControl(null),
+      message: new rxcompForm.FormControl(null),
       privacy: new rxcompForm.FormControl(null, [rxcompForm.Validators.RequiredTrueValidator()]),
+      agent: this.agent,
       checkRequest: window.antiforgery,
-      checkField: ''
+      checkField: '',
+      action: 'save_agent_contact'
     });
     var controls = this.controls = form.controls;
     form.changes$.pipe(operators.takeUntil(this.unsubscribe$)).subscribe(function (_) {
@@ -4721,12 +4767,17 @@ ProductRequestComponent.meta = {
       // console.log('SalesModalComponent.onSubmit', form.value);
       form.submitted = true;
       SalesService.submit$(form.value).pipe(operators.first()).subscribe(function (_) {
+        if (_.success) {
+          GtmService.push({
+            'event': "Sales",
+            'form_name': "Contatti"
+          });
+        }
+
         _this3.success = true;
         form.reset();
-        GtmService.push({
-          'event': "Sales",
-          'form_name': "Contatti"
-        });
+        _this3.response = _.data["response"];
+        _this3.message = _.data["message"];
       }, function (error) {
         console.log('SalesModalComponent.error', error);
         _this3.error = error;
@@ -5079,6 +5130,12 @@ _defineProperty(HeaderService, "header$_", new rxjs.BehaviorSubject(-1));var Hea
   };
 
   _proto.onMenu = function onMenu(id) {
+    var headerMenu = document.querySelector('.header__menu');
+
+    if (headerMenu) {
+      headerMenu.scrollTo(0, 0);
+    }
+
     MenuService.setMenu(id);
   };
 

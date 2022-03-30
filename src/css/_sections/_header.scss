@@ -62,7 +62,6 @@
 			border-right: 1px solid #CDCDCD;
 		}
 	}
-
 }
 
 .header__logo {
@@ -167,6 +166,13 @@
 			height: 32px;
 		}
 	}
+
+	@include media-down(xs) {
+		svg {
+			width: 160px;
+			height: 28px;
+		}
+	}
 }
 
 .btn--menu {
@@ -210,7 +216,6 @@
 
 			&>span {
 				white-space: nowrap;
-				max-width: calc(20vw - 150px);
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
@@ -221,6 +226,10 @@
 				height: 0.3333em;
 				margin-left: 0.6em;
 				fill: $tertiary;
+			}
+
+			&:after {
+				display: none;
 			}
 		}
 	}
@@ -239,34 +248,41 @@
 		}
 	}
 
-	@include media-up(md) {
-		justify-content: flex-end;
-		align-items: stretch;
-		width: 100%;
-		max-width: 57.3vw;
-		padding-right: var(--p30);
-
+	@include media-up(lg) {
 		&>.nav__item {
-			position: relative;
 
 			&>a,
 			&>span {
-				svg {
-					margin-left: var(--p10);
-				}
+				max-width: calc(20vw - 150px);
+			}
+		}
+	}
 
+	@include media-only(md) {
+		&>.nav__item {
+
+			&>a,
+			&>span {
+				max-width: calc(20vw - 105px);
+			}
+		}
+	}
+
+	@include media-up(md) {
+		justify-content: space-around;
+
+		&>.nav__item {
+
+			&>a,
+			&>span {
 				.next {
 					display: none;
 				}
 			}
 		}
-
-		&>.nav__item+.nav__item {
-			margin-left: var(--p30);
-		}
 	}
 
-	@include media-down(sm) {
+	@include media-only(sm) {
 		flex-direction: column;
 		padding-top: var(--p80);
 
@@ -288,40 +304,110 @@
 			}
 		}
 	}
+
+	@include media-down(xs) {
+		flex-direction: column;
+		padding-top: var(--p40);
+
+		&>.nav__item {
+			position: static;
+
+			&>a,
+			&>span {
+				font-size: 22px;
+				line-height: 1.2;
+				padding: var(--p20) var(--cw2);
+
+				svg {
+					fill: currentColor;
+				}
+
+				.down {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .nav--service {
 	@extend %nav;
 
 	.search {
+		flex-grow: 1;
 		display: flex;
 		color: currentColor;
 
 		svg {
-			width: 12px;
 			height: auto;
 			fill: currentColor;
+		}
+
+		form,
+		input,
+		input::placeholder,
+		input:focus {
+			@extend .smallest;
+			border: 0;
+			padding: 0;
+			font-family: inherit;
+			font-size: inherit;
+			letter-spacing: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+		}
+
+		form {
+			display: flex;
+			align-items: center;
 		}
 
 		input,
 		input::placeholder,
 		input:focus {
-			@extend .smallest;
 			background-color: transparent;
 			color: currentColor;
-			border: 0;
-			padding: 0;
-			font-family: inherit;
-			outline: none;
-			box-shadow: 0;
-			font-size: inherit;
-			letter-spacing: inherit;
-			line-height: inherit;
-			font-weight: inherit;
-			width: 60px;
-			float: right;
-			text-align: right;
 			outline-color: rgb(0, 58, 86);
+			outline: none;
+			box-shadow: none;
+		}
+
+		@include media-up(md) {
+			padding-right: var(--p10);
+			margin-right: 5px;
+			border-right: 1px solid $border;
+			justify-content: flex-end;
+
+			svg {
+				width: 12px;
+			}
+
+			input,
+			input::placeholder,
+			input:focus {
+				text-align: right;
+			}
+
+			input,
+			input:focus {
+				padding: 0 8px;
+			}
+
+			span {
+				margin: 0;
+			}
+
+			span,
+			form,
+			input {
+				width: 100%;
+			}
+		}
+
+		@include media-down(sm) {
+			svg {
+				width: 24px;
+			}
 		}
 	}
 
@@ -332,6 +418,10 @@
 			display: flex;
 			align-items: center;
 			@extend .smallest;
+
+			&:after {
+				display: none;
+			}
 		}
 	}
 
@@ -350,7 +440,7 @@
 		}
 	}
 
-	@include media-down(sm) {
+	@include media-only(sm) {
 		flex-direction: column;
 
 		&>.nav__item {
@@ -359,6 +449,22 @@
 			&>a,
 			&>span {
 				font-size: 30px;
+				padding: var(--p20) var(--cw2);
+				text-transform: none;
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		flex-direction: column;
+
+		&>.nav__item {
+			position: static;
+
+			&>a,
+			&>span {
+				font-size: 22px;
+				line-height: 1.2;
 				padding: var(--p20) var(--cw2);
 				text-transform: none;
 			}
@@ -389,6 +495,10 @@
 				height: 0.3888em;
 				margin-left: 0.4em;
 				fill: $tertiary;
+			}
+
+			&:after {
+				display: none;
 			}
 		}
 	}
@@ -435,7 +545,7 @@
 		}
 	}
 
-	@include media-down(sm) {
+	@include media-only(sm) {
 		flex-direction: column;
 		padding-top: 1em;
 
@@ -445,6 +555,30 @@
 			&>a,
 			&>span {
 				font-size: 30px;
+				padding: var(--p20) var(--cw2);
+
+				svg {
+					fill: currentColor;
+				}
+
+				.down {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		flex-direction: column;
+		padding-top: 20px;
+
+		&>.nav__item {
+			position: static;
+
+			&>a,
+			&>span {
+				font-size: 22px;
+				line-height: 1.2;
 				padding: var(--p20) var(--cw2);
 
 				svg {
@@ -479,11 +613,22 @@
 		font-size: Max(12px, Min(16px, 1vw));
 	}
 
-	@include media-down(sm) {
+	@include media-only(sm) {
+		display: block;
 		font-size: 24px;
 		margin: var(--p50) var(--cw2);
 		border: 1px solid white;
 		padding: 10px 30px;
+	}
+
+	@include media-down(xs) {
+		display: block;
+		font-size: 22px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin: var(--p20) var(--cw2);
+		border: 1px solid white;
+		padding: 10px 20px;
 	}
 
 	&:hover {
@@ -509,6 +654,10 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+
+			&:after {
+				display: none;
+			}
 		}
 	}
 
@@ -544,8 +693,7 @@
 			}
 		}
 
-		.nav__item:hover>&,
-		&.active {
+		.nav__item:hover>& {
 			display: block;
 		}
 	}
@@ -557,13 +705,16 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		padding-top: var(--p80);
 		background: $background-primary;
 		z-index: 100;
 
 		&:not(.active) {
 			display: none;
 		}
+	}
+
+	@include media-only(sm) {
+		padding-top: var(--p80);
 
 		&>.nav__item {
 
@@ -572,10 +723,33 @@
 				font-size: 30px;
 				padding: var(--p20) var(--cw2);
 
-				svg {
-					width: 1em;
-					height: 1em;
-					margin-right: var(--p10);
+				.back {
+					flex: 0 0 0.5em;
+					width: 0.5em;
+					height: 0.3333em;
+					fill: currentColor;
+					position: absolute;
+					transform: translateX(-150%);
+				}
+			}
+		}
+	}
+
+	@include media-down(xs) {
+		padding-top: var(--p40);
+
+		&>.nav__item {
+
+			&>a,
+			&>span {
+				font-size: 22px;
+				line-height: 1.2;
+				padding: var(--p20) var(--cw2);
+
+				.back {
+					flex: 0 0 0.5em;
+					width: 0.5em;
+					height: 0.3333em;
 					fill: currentColor;
 					position: absolute;
 					transform: translateX(-150%);

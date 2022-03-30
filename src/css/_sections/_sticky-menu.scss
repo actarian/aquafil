@@ -1,6 +1,6 @@
 .sticky-menu {
 	position: sticky;
-	height: 60px;
+	min-height: 60px;
 	z-index: 2;
 	background: white;
 	border-bottom: 1px solid $border;

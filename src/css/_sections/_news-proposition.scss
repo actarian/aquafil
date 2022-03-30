@@ -1,10 +1,18 @@
 .news-proposition {
 	padding: var(--p120) 0 var(--p60) 0;
-	background: $background-quaternary;
+
+	&.secondary {
+		background: $background-quaternary;
+	}
 
 	&__title {
 		@extend .h2;
 		color: $foreground;
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: center;
 	}
 }
 
@@ -30,6 +38,13 @@
 		&>img {
 			transition: transform ease-in-out $fast;
 		}
+	}
+
+	&__date {
+		margin-bottom: var(--p10);
+		@extend .smallest;
+		font-weight: bold;
+		color: $foreground-primary;
 	}
 
 	&__title {

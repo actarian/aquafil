@@ -125,19 +125,13 @@
 @import '_pages/_product';
 
 
-.section-generic
-{
-    padding-top:80px;
-    &:last-child
-    {
-        padding-bottom:80px;
-    }
-    @include media-up(md)
-    {
-        padding-top:120px;
-        &:last-child
-        {
-            padding-bottom:120px;
-        }    
-    }
+.section-generic {
+
+	@include media-up(md) {
+		padding: 60px 0;
+	}
+
+	@include media-down(sm) {
+		padding: 40px 0;
+	}
 }

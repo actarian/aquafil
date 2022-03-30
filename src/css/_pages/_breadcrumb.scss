@@ -23,6 +23,12 @@
 		&:last-child {
 			color: $foreground;
 		}
+
+		&>a {
+			&:after {
+				display: none;
+			}
+		}
 	}
 
 	&>.nav__item+.nav__item {

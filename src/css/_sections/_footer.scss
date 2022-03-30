@@ -42,6 +42,10 @@
 			position: relative;
 			@extend .extrasmall;
 			margin-bottom: 1.25em;
+
+			&:after {
+				display: none;
+			}
 		}
 	}
 

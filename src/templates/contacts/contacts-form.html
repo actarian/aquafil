@@ -1,4 +1,4 @@
-<div class="contacts-form" contact-modal>
+<div class="contacts-form secondary" contact-modal>
 	<div class="contacts-form__wrapper">
 		<div *if="!success">
 			<form class="form" [formGroup]="form" (submit)="onSubmit($event)" name="form" role="form" novalidate autocomplete="off">

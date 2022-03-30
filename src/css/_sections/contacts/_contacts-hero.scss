@@ -1,29 +1,30 @@
-.contacts-hero
-{
-    .row
-    {
-        align-items: center;
-    }
-    &__title
-    {
-        @extend .h2;
-        color:$foreground;
-        margin-bottom:40px;
-        @include media-up(md)
-        {
-            margin-bottom:60px;
-        }
-    }
-    &__paragraph-title
-    {
-        @extend .h5;
-        margin-bottom:20px;
-    }
-    &__map
-    {
-        img
-        {
-            width:100%;
-        }
-    }
+.contacts-hero {
+	.row {
+		align-items: center;
+	}
+
+	&__title {
+		@extend .h2;
+		color: $foreground;
+	}
+
+	&__title,
+	&__text {
+		margin-bottom: 40px;
+
+		@include media-up(md) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__paragraph-title {
+		@extend .h5;
+		margin-bottom: 20px;
+	}
+
+	&__map {
+		img {
+			width: 100%;
+		}
+	}
 }

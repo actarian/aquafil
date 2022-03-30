@@ -5,7 +5,7 @@ export class CareersService {
 
 	static data$() {
 		if (environment.flags.production) {
-			return ApiService.get$('/careers/data');
+			return ApiService.get$('/wp-json/aquafil/v1/careers?page=' + ws_vars.post_id);
 		} else {
 			return ApiService.get$('/contacts/data.json');
 		}
@@ -13,7 +13,7 @@ export class CareersService {
 
 	static submit$(payload) {
 		if (environment.flags.production) {
-			return ApiService.post$('/careers/submit', payload);
+			return ApiService.http$('POST', environment.api + '/wp-admin/admin-ajax.php', payload, 'application/x-www-form-urlencoded');
 		} else {
 			return ApiService.get$('/contacts/submit.json');
 		}

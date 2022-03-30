@@ -1,5 +1,8 @@
 .report-proposition {
-	background: $background-quaternary;
+
+	&.secondary {
+		background: $background-quaternary;
+	}
 
 	.row {
 		align-items: stretch;

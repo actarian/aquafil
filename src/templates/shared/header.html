@@ -19,7 +19,7 @@
 									<li class="nav__item"><a href="/aquafil/mission.html"><span>Mission</span></a></li>
 									<li class="nav__item"><a href="/aquafil/history.html"><span>Storia</span></a></li>
 									<li class="nav__item"><a href="/aquafil/location.html"><span>Sedi</span></a></li>
-									<li class="nav__item back"><span (click)="onBack()"><svg><use xlink:href="#back"></use></svg> <span>Back</span></span></li>
+									<li class="nav__item back"><span (click)="onBack()"><svg class="back"><use xlink:href="#arrow-back"></use></svg> <span>Back</span></span></li>
 								</ul>
 							</li>
 							<li class="nav__item">
@@ -32,7 +32,7 @@
 									<li class="nav__item"><a href="#"><span>Nylon textile filament</span></a></li>
 									<li class="nav__item"><a href="#"><span>Polymer</span></a></li>
 									<li class="nav__item"><a href="#"><span>Engineering</span></a></li>
-									<li class="nav__item back"><span (click)="onBack()"><svg><use xlink:href="#back"></use></svg> <span>Back</span></span></li>
+									<li class="nav__item back"><span (click)="onBack()"><svg class="back"><use xlink:href="#arrow-back"></use></svg> <span>Back</span></span></li>
 								</ul>
 							</li>
 							<li class="nav__item">
@@ -47,7 +47,7 @@
 									<li class="nav__item"><a href="#"><span>Economica</span></a></li>
 									<li class="nav__item"><a href="#"><span>Certificazioni</span></a></li>
 									<li class="nav__item"><a href="#"><span>Report sostenibilità</span></a></li>
-									<li class="nav__item back"><span (click)="onBack()"><svg><use xlink:href="#back"></use></svg> <span>Back</span></span></li>
+									<li class="nav__item back"><span (click)="onBack()"><svg class="back"><use xlink:href="#arrow-back"></use></svg> <span>Back</span></span></li>
 								</ul>
 							</li>
 							<li class="nav__item">
@@ -59,7 +59,7 @@
 									<li class="nav__item"><a href="#"><span>The future</span></a></li>
 									<li class="nav__item"><a href="#"><span>Partners</span></a></li>
 									<li class="nav__item"><a href="/aquafil/case-studies.html"><span>Case studies</span></a></li>
-									<li class="nav__item back"><span (click)="onBack()"><svg><use xlink:href="#back"></use></svg> <span>Back</span></span></li>
+									<li class="nav__item back"><span (click)="onBack()"><svg class="back"><use xlink:href="#arrow-back"></use></svg> <span>Back</span></span></li>
 								</ul>
 							</li>
 							<li class="nav__item">
@@ -70,7 +70,7 @@
 							</li>
 						</ul>
 						<a href="#" type="button" class="btn--investor">Investor relations</a>
-                        <!-- @@include ../shared/navigation-top.html -->
+						<!-- @@include ../shared/navigation-top.html -->
 					</div>
 					<button type="button" class="btn--menu" [class]="{ active: header == 'menu' }" (click)="onToggle('menu')">
 						<svg class="menu"><use xlink:href="#menu"></use></svg>

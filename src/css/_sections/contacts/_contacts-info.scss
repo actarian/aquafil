@@ -1,51 +1,47 @@
-.contacts-info
-{
-    background-color: $foreground;
-    color:$foreground-negative;
-    padding:40px 0;
+.contacts-info {
+	padding: 40px 0;
 
-    @include media-up(md)
-    {
-        padding:80px 0;
-    }
+	@include media-up(md) {
+		padding: 80px 0;
+	}
 
-    @include media-up(lg)
-    {
-        padding:140px 0;
-    }
+	@include media-up(lg) {
+		padding: 140px 0;
+	}
 
-    .row
-    {
-        align-items: center;
-    }
+	.row {
+		align-items: center;
+	}
 
-    &__text-block
-    {
-        padding:20px 0;
-        @include media-up(md)
-        {
-            padding:40px 0;
-        }
-    }
+	&__text-block {
+		padding: 20px 0;
 
-    &__title
-    {
-        @extend .h5;
-        margin-bottom:20px;
-        display: inline-flex;
-        align-items: center;
-    }
+		@include media-up(md) {
+			padding: 40px 0;
+		}
+	}
 
-    &__arrow
-    {
-        width:36px;
-        height:16px;
-        fill:$foreground-negative;
-        margin-left:10px;
-    }
+	&__title {
+		@extend .h5;
+		margin-bottom: 20px;
+		display: inline-flex;
+		align-items: center;
+	}
 
-    &__content
-    {
-        font-size: 18px;
-    }
+	&__arrow {
+		width: 36px;
+		height: 16px;
+		margin-left: 10px;
+	}
+
+	&__content {
+		font-size: 18px;
+	}
+
+	&.negative {
+
+		.contacts-info__arrow {
+			fill: $foreground-negative;
+		}
+	}
 }

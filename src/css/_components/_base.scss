@@ -44,6 +44,42 @@ main {
 	min-height: 100vh;
 }
 
+main {
+	@include media-up(md) {
+
+		&>div:not(.breadcrumb):not(.horizontal-menu):not(.primary-hero):not(.secondary-hero):not(.media-text-primary):not(.negative):not(.secondary)+div:not(.breadcrumb):not(.horizontal-menu):not(.primary-hero):not(.secondary-hero):not(.media-text-primary):not(.negative):not(.secondary),
+		&>div.negative+div.negative,
+		&>div.secondary+div.secondary {
+			padding-top: 0;
+		}
+
+		&>.borders+.borders {
+			padding-top: var(--p80) !important;
+		}
+	}
+
+	@include media-down(md) {
+
+		&>div,
+		&>section {
+			overflow-x: hidden;
+		}
+	}
+
+	@include media-down(sm) {
+
+		&>div:not(.breadcrumb):not(.horizontal-menu):not(.negative):not(.secondary)+div:not(.breadcrumb):not(.horizontal-menu):not(.negative):not(.secondary),
+		&>div.negative+div.negative,
+		&>div.secondary+div.secondary {
+			padding-top: 0;
+		}
+
+		&>.borders+.borders {
+			padding-top: var(--p40) !important;
+		}
+	}
+}
+
 .hidden {
 	display: none;
 }
@@ -56,4 +92,73 @@ main {
 .background-primary {
 	background: $background-primary;
 	color: $foreground-negative;
+}
+
+.negative {
+	background: $foreground;
+	color: $foreground-negative;
+}
+
+.borders {
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		display: none;
+		position: absolute;
+		height: 1px;
+		background: $background-quaternary;
+	}
+
+	&:before {
+		top: 0;
+		//border-top: 1px solid $border;
+	}
+
+	&:after {
+		bottom: 0;
+		//border-bottom: 1px solid $border;
+	}
+
+	@include media-up(md) {
+
+		&:before,
+		&:after {
+			left: 100% / 24 * 3;
+			width: 100% / 24 * 18;
+		}
+	}
+
+	@include media-down(sm) {
+
+		&:before,
+		&:after {
+			left: 100% / 24 * 2;
+			width: 100% / 24 * 20;
+		}
+	}
+
+	@include media-down(xs) {
+
+		&:before,
+		&:after {
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&.negative {
+
+		&:before,
+		&:after {
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+
+.borders+.borders {
+	&:before {
+		display: block;
+	}
 }

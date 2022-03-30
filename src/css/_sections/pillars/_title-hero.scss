@@ -99,12 +99,9 @@
 
 	&__title {
 		@extend .h2;
-		color: $foreground-negative;
 	}
 
-	&__abstract {
-		color: $foreground-negative;
-	}
+	&__abstract {}
 
 	@include media-up(sm) {
 		&:before {
@@ -116,6 +113,14 @@
 			width: 100% / 24 * 21;
 			bottom: 0;
 			background: $background-negative;
+		}
+
+		&__title {
+			color: $foreground-negative;
+		}
+
+		&__abstract {
+			color: $foreground-negative;
 		}
 	}
 
@@ -137,8 +142,15 @@
 .media-text-secondary {
 	position: relative;
 
+	/*
 	&__title {
 		@extend .h2;
+	}
+	*/
+
+	&__title {
+		@extend .h5;
+		margin-bottom: var(--p40);
 	}
 
 	@include media-up(sm) {
@@ -174,7 +186,7 @@
 		padding: var(--p120) 0;
 
 		&__content {
-			padding: var(--p120) 0;
+			padding: var(--p60) 0 0 0;
 		}
 	}
 
@@ -227,7 +239,7 @@
 		padding: var(--p120) 0;
 
 		&__content {
-			padding: var(--p120) 0;
+			padding: var(--p120) 0 0 0;
 		}
 	}
 
@@ -236,6 +248,10 @@
 
 		&__picture {
 			margin-bottom: var(--p80);
+		}
+
+		&__cta {
+			margin-bottom: 40px;
 		}
 	}
 }
@@ -326,7 +342,6 @@
 	}
 
 	&.negative {
-		background: $background-negative;
 		color: #BDCFD8;
 
 		.title-text__title {
@@ -352,6 +367,10 @@
 		&__cta {
 			margin-bottom: var(--p80);
 		}
+
+		&__cta {
+			margin-top: var(--p40);
+		}
 	}
 
 	@include media-down(xs) {
@@ -362,11 +381,16 @@
 		&__cta {
 			margin-bottom: var(--p60);
 		}
+
+		&__cta {
+			margin-top: var(--p20);
+		}
 	}
 }
 
 .image-full {
-    position:relative;
+	position: relative;
+
 	&__picture {
 		img {
 			width: 100%;
@@ -415,6 +439,10 @@
 
 	@include media-up(sm) {
 		padding: var(--p80) 0 var(--p120) 0;
+
+		&.negative {
+			padding: var(--p120) 0;
+		}
 	}
 
 	@include media-down(xs) {
@@ -447,6 +475,10 @@
 		@extend .extrasmall;
 		max-width: 320px;
 	}
+}
+
+.negative .card--icon__title {
+	color: $foreground-negative;
 }
 
 .card--numbers {

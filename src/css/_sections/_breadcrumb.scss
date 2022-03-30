@@ -1,6 +1,7 @@
 .breadcrumb {
 	padding: 20px 0 40px 0;
-	color: $foreground-negative;
+	z-index: 1;
+	// color: $foreground-negative;
 
 	.col-sm-20 {
 		display: flex;
@@ -18,10 +19,31 @@
 		white-space: nowrap;
 		font-size: 14px;
 		line-height: 1.35714;
+		// font-weight: 600;
+
+		&>a,
+		&>span {
+			display: inline-block;
+			max-width: 300px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&>a {
+			&:hover {
+				color: $foreground-primary;
+			}
+		}
 
 		&:last-child {
 			&>* {
-				color: $foreground-primary;
+				// color: $foreground-primary;
+				font-weight: normal;
+				cursor: auto;
 			}
 		}
 	}
@@ -30,6 +52,8 @@
 		&:before {
 			content: '/';
 			padding: 0 0.58em;
+			z-index: 1;
+			font-weight: normal;
 		}
 	}
 

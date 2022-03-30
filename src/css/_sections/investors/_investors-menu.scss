@@ -1,112 +1,120 @@
-.page--investor__menu-toggle
-{
-    position:absolute;
-    top:10px;
-    left:calc(100% + 10px);
-    z-index: 1;
-    right:27px;
-    background:$foreground-negative;
-    border:1px solid red;
-    width:34px;
-    height:34px;
-    background:$foreground-negative;
-    border:1px solid $primary;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition:all 0.5s ease-in-out;
-    svg
-    {
-        transition:all 0.5s ease-in-out;
-        display: block;
-        width:16px;
-        height:16px;
-        fill:$primary;
-        transform:rotate(90deg);
-    }
+.page--investor__menu-toggle {
+	position: absolute;
+	top: 10px;
+	left: calc(100% + 10px);
+	z-index: 1;
+	right: 27px;
+	background: $foreground-negative;
+	border: 1px solid red;
+	width: 34px;
+	height: 34px;
+	background: $foreground-negative;
+	border: 1px solid $primary;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+
+	svg {
+		transition: all 0.5s ease-in-out;
+		display: block;
+		width: 16px;
+		height: 16px;
+		fill: $primary;
+		transform: rotate(90deg);
+	}
 }
 
-.page--investor__menu
-{
-    transition:all 0.5s ease-in-out;
-    height:calc(100vh - 90px);
-    //overflow: scroll;
-    transform:translateX(-100%);
-    padding-bottom:80px;
-    @include media-down(xs)
-    {
-        padding-bottom:0px;
-        position:fixed;
-        top:90px;
-        z-index: 1;
-        background:$foreground-negative;
-    }
+.page--investor__menu {
+	transition: all 0.5s ease-in-out;
+	height: calc(100vh - 90px);
+	//overflow: scroll;
+	transform: translateX(-100%);
+	padding-bottom: 80px;
 
-    &-title
-    {
-        @extend .h5;
-        color:$foreground;
-        margin-top:40px;
-        @include media-up(md)
-        {
-            font-size: 24px;
-        }
-    }
+	&-title {
+		@extend .h5;
+		color: $foreground;
+		margin-top: 40px;
 
-    &-links
-    {
-        display: flex;
-        flex-direction: column;
-        width:100%;
-    }
+		@include media-up(md) {
+			font-size: 24px;
+		}
+	}
 
-    &-link
-    {
-        //margin-bottom: 10px;
-        color:$tertiary;
-        &.active
-        {
-            color:$foreground;
-        }
-        @include media-up(md)
-        {
-            margin-bottom:10px;
-        }
-    }
+	&-links {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&-link {
+		//margin-bottom: 10px;
+		color: $tertiary;
+
+		&.active {
+			color: $foreground;
+		}
+
+		@include media-up(md) {
+			margin-bottom: 10px;
+		}
+	}
+
+	@include media-down(xs) {
+		padding-bottom: 0px;
+		position: fixed;
+		top: 90px;
+		z-index: 1;
+		background: $foreground-negative;
+	}
 }
 
-@include media-up(md)
-{
-    .page--investor__menu-toggle
-    {
-        display: none;
-    }
-    .page--investor__menu
-    {
-        height:auto;
-        position: relative;
-        transform:none;
-        padding-top:90px;
-        padding-right:40px;
-    }
+@include media-up(md) {
+	.page--investor__menu-toggle {
+		display: none;
+	}
+
+	.page--investor__menu {
+		height: auto;
+		position: relative;
+		transform: none;
+		padding-top: 90px;
+		padding-right: 40px;
+	}
 }
 
+@include media-only(sm) {
+	.page--investor__menu {
+		position: fixed;
+		margin: 0;
+		left: 0;
+		z-index: 1;
+		background: white;
+		padding: 0 20px;
+		max-width: 30%;
+		flex: 0 0 30%;
+	}
 
-.investor-menu-open
-{
-    .page--investor__menu-toggle
-    {
-        left:auto;
-        right:10px;
-        svg
-        {
-            transform:rotate(-90deg);
-        }
-    } 
-    
-    .page--investor__menu
-    {
-        transform:none;
-    }
+	.page--investors__content {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0 9vw;
+	}
+}
+
+.investor-menu-open {
+	.page--investor__menu-toggle {
+		left: auto;
+		right: 10px;
+
+		svg {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.page--investor__menu {
+		transform: none;
+	}
 }

@@ -1,14 +1,6 @@
 a {
 	color: inherit;
 	text-decoration: none;
-
-	&:not([class]) {
-		transition: color ease-in-out $fast;
-
-		&:hover {
-			color: $foreground-primary;
-		}
-	}
 }
 
 %btn-reset {
@@ -375,10 +367,10 @@ a {
 
 .btn--right {
 	@extend %btn-download;
-    @include media-up(md)
-    {
-        min-width: 20vw;
-    }
+
+	@include media-up(md) {
+		min-width: 20vw;
+	}
 }
 
 %btn-certification {
@@ -388,23 +380,18 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	height: var(--p60);
+	min-height: var(--p60);
 
 	&>span {
 		display: flex;
 		align-items: center;
-		padding: 0 var(--p20);
+		padding: var(--p10) var(--p20);
 	}
 
 	&>.icon {
 		background-color: $foreground-primary;
 		color: $foreground-negative;
 		padding: 0 var(--p10);
-	}
-
-	svg {
-		width: 33px;
-		height: 29px;
 	}
 
 	&,
@@ -419,10 +406,37 @@ a {
 		background-color: $background-primary;
 		color: $foreground-negative;
 	}
+
+	@include media-up(md) {
+		svg {
+			width: 33px;
+			height: 29px;
+		}
+	}
+
+	@include media-down(sm) {
+		svg {
+			width: 24px;
+			height: 24px;
+			margin: 5px;
+		}
+	}
 }
 
 .btn--certification {
 	@extend %btn-certification;
+}
+
+.btn--press {
+	@extend %btn-certification;
+	word-break: break-all;
+	max-width: calc(100% - 40px);
+	white-space: normal;
+	margin: 0;
+
+	.icon {
+		padding: 0 var(--p10);
+	}
 }
 
 %btn-plus {
@@ -639,6 +653,10 @@ a {
 
 .btn--submit {
 	@extend %btn-submit;
+}
+
+.btn--search {
+	@extend %btn;
 }
 
 @keyframes rotate-center {

@@ -1,7 +1,10 @@
 .generic-hero {
 	margin-top: -80px;
 	z-index: -1;
-	background: $background-quaternary;
+
+	&.secondary {
+		background: $background-quaternary;
+	}
 
 	&__content {
 		display: flex;
@@ -13,6 +16,8 @@
 	&__category {
 		@extend .category;
 		color: $foreground-primary;
+		font-weight: 600;
+		margin-bottom: 0.5em;
 	}
 
 	&__title {

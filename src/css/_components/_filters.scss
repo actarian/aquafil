@@ -128,6 +128,10 @@
 
 			background: $background;
 			color: $foreground;
+
+			&:after {
+				display: none;
+			}
 		}
 
 		&:hover,

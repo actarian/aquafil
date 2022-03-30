@@ -23,7 +23,7 @@ export class OpenModallyDirective extends Directive {
 		const { node, module } = getContext(this);
 		return fromEvent(node, 'click').pipe(
 			tap(_ => {
-				ModalService.open$({ src: environment.template.modal.sideModal, data: { target } }).pipe(
+				ModalService.open$({ src: environment.template.modal.sideModal, data: { target: target.cloneNode(true) } }).pipe(
 					first(),
 				).subscribe(event => {
 					console.log('OpenModallyDirective.open$', event);

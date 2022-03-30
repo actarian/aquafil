@@ -6,7 +6,7 @@
 	}
 
 	&__title {
-		@extend .h2;
+		@extend .h4;
 		color: $foreground;
 		margin-bottom: 60px;
 	}
